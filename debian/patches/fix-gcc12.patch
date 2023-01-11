@@ -1,0 +1,14 @@
+Description: Fix build problems with GCC 12
+Author: Clansty <i@gao4.pw>
+
+--- akonadi-contacts-21.08.1.orig/src/contact-editor/abstractcontacteditorwidget_p.h
++++ akonadi-contacts-21.08.1/src/contact-editor/abstractcontacteditorwidget_p.h
+@@ -54,7 +54,7 @@ public:
+      */
+     virtual void setReadOnly(bool readOnly) = 0;
+ 
+-    virtual Q_REQUIRED_RESULT bool hasNoSavedData() const
++    Q_REQUIRED_RESULT virtual bool hasNoSavedData() const
+     {
+         return false;
+     }

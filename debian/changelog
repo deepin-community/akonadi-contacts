@@ -1,3 +1,9 @@
+akonadi-contacts (4:21.08.1-2deepin1) unstable; urgency=medium
+
+  * Fix build problems with GCC 12
+
+ -- Clansty <i@gao4.pw>  Wed, 11 Jan 2023 19:42:37 +0800
+
 akonadi-contacts (4:21.08.1-1-deepin1) unstable; urgency=medium
 
   * Rebuild
