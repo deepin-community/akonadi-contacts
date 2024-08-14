@@ -19,7 +19,7 @@ BlogfeedWidget::BlogfeedWidget(QWidget *parent)
     : QWidget(parent)
 {
     auto topLayout = new QVBoxLayout(this);
-    topLayout->setContentsMargins(0, 0, 0, 0);
+    topLayout->setContentsMargins({});
     topLayout->setObjectName(QStringLiteral("mainlayout"));
     auto blogFeedLabel = new QLabel(i18n("Blog Feed"), this);
     blogFeedLabel->setObjectName(QStringLiteral("blogFeedLabel"));
@@ -32,9 +32,7 @@ BlogfeedWidget::BlogfeedWidget(QWidget *parent)
     topLayout->addWidget(mBlogFeed);
 }
 
-BlogfeedWidget::~BlogfeedWidget()
-{
-}
+BlogfeedWidget::~BlogfeedWidget() = default;
 
 void BlogfeedWidget::loadContact(const KContacts::Addressee &contact)
 {

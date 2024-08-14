@@ -1,5 +1,6 @@
-usr/include/KF5/Akonadi/Contact/
-usr/include/KF5/akonadi/contact/
+usr/include/KF5/AkonadiContact/akonadi/
+usr/include/KF5/AkonadiContact/Akonadi/
+usr/include/KF5/AkonadiContact/akonadi-contact_version.h
 usr/lib/*/cmake/KF5AkonadiContact/
 usr/lib/*/libKF5AkonadiContact.so
 usr/lib/*/qt5/mkspecs/modules/qt_AkonadiContact.pri

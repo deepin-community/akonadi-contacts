@@ -9,10 +9,10 @@
 
 #include "emailaddressselectionproxymodel_p.h"
 
+#include <Akonadi/Item>
+#include <KContacts/Addressee>
+#include <KContacts/ContactGroup>
 #include <KLocalizedString>
-#include <item.h>
-#include <kcontacts/addressee.h>
-#include <kcontacts/contactgroup.h>
 
 using namespace Akonadi;
 
@@ -46,9 +46,7 @@ EmailAddressSelectionProxyModel::EmailAddressSelectionProxyModel(QObject *parent
 {
 }
 
-EmailAddressSelectionProxyModel::~EmailAddressSelectionProxyModel()
-{
-}
+EmailAddressSelectionProxyModel::~EmailAddressSelectionProxyModel() = default;
 
 QVariant EmailAddressSelectionProxyModel::data(const QModelIndex &index, int role) const
 {
@@ -173,5 +171,5 @@ QVariant EmailAddressSelectionProxyModel::leafData(const QModelIndex &index, int
         return index.data(role);
     }
 
-    return QVariant();
+    return {};
 }

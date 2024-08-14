@@ -11,6 +11,8 @@
 #include "abstractcontactformatter.h"
 #include "akonadi-contact_export.h"
 
+#include <memory>
+
 namespace GrantleeTheme
 {
 class Theme;
@@ -18,6 +20,8 @@ class Theme;
 
 namespace KAddressBookGrantlee
 {
+class GrantleeContactFormatterPrivate;
+
 /**
  * @short A class that formats a contact as HTML code.
  *
@@ -55,9 +59,7 @@ public:
 
 private:
     //@cond PRIVATE
-    class Private;
-    Private *const d;
+    std::unique_ptr<GrantleeContactFormatterPrivate> const d;
     //@endcond
 };
 }
-

@@ -1,7 +1,7 @@
 /*
     This file is part of Contact Editor.
 
-    SPDX-FileCopyrightText: 2017-2021 Laurent Montel <montel@kde.org>
+    SPDX-FileCopyrightText: 2017-2022 Laurent Montel <montel@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -10,7 +10,7 @@
 
 using namespace ContactEditor;
 
-class Q_DECL_HIDDEN ContactMetaDataBase::Private
+class ContactEditor::ContactMetaDataBasePrivate
 {
 public:
     int mDisplayNameMode = -1;
@@ -18,14 +18,11 @@ public:
 };
 
 ContactMetaDataBase::ContactMetaDataBase()
-    : d(new Private)
+    : d(new ContactMetaDataBasePrivate)
 {
 }
 
-ContactMetaDataBase::~ContactMetaDataBase()
-{
-    delete d;
-}
+ContactMetaDataBase::~ContactMetaDataBase() = default;
 
 void ContactMetaDataBase::loadMetaData(const QVariantMap &metaData)
 {

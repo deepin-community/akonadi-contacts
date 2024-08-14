@@ -1,7 +1,7 @@
 /*
     This file is part of Contact Editor.
 
-    SPDX-FileCopyrightText: 2017-2021 Laurent Montel <montel@kde.org>
+    SPDX-FileCopyrightText: 2017-2022 Laurent Montel <montel@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -23,7 +23,7 @@ class CONTACTEDITOR_EXPORT CategoriesEditAbstractWidget : public QWidget
     Q_OBJECT
 public:
     explicit CategoriesEditAbstractWidget(QWidget *parent = nullptr);
-    ~CategoriesEditAbstractWidget();
+    ~CategoriesEditAbstractWidget() override;
 
     virtual void loadContact(const KContacts::Addressee &contact);
     virtual void storeContact(KContacts::Addressee &contact) const;

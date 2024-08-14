@@ -16,10 +16,9 @@ class CustomFieldEditorWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit CustomFieldEditorWidgetTest(QObject *parent = nullptr);
-    ~CustomFieldEditorWidgetTest();
+    ~CustomFieldEditorWidgetTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldEnableAddButtonWhenTextIsNotEmpty();
     void shouldClearEditorWhenPressAdd();
 };
-

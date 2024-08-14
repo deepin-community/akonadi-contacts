@@ -10,15 +10,22 @@
 
 #include "actions/dialphonenumberaction.h"
 #include "actions/sendsmsaction.h"
-#include "actions/showaddressaction.h"
+
+#include <KContacts/Address>
+#include <KContacts/Addressee>
+#include <KContacts/PhoneNumber>
+
+#include <KCountry>
 
 #include <QDesktopServices>
 #include <QUrl>
-#include <kcontacts/address.h>
-#include <kcontacts/addressee.h>
-#include <kcontacts/phonenumber.h>
+#include <QUrlQuery>
 
 using namespace Akonadi;
+
+class Akonadi::ContactDefaultActionsPrivate
+{
+};
 
 ContactDefaultActions::ContactDefaultActions(QObject *parent)
     : QObject(parent)
@@ -26,9 +33,7 @@ ContactDefaultActions::ContactDefaultActions(QObject *parent)
 {
 }
 
-ContactDefaultActions::~ContactDefaultActions()
-{
-}
+ContactDefaultActions::~ContactDefaultActions() = default;
 
 void ContactDefaultActions::connectToView(QObject *view)
 {
@@ -39,7 +44,9 @@ void ContactDefaultActions::connectToView(QObject *view)
     }
 
     if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("emailClicked(const QString&, const QString&)").constData()) != -1) {
-        connect(view, SIGNAL(emailClicked(QString, QString)), this, SLOT(sendEmail(QString, QString)));
+        // clang-format off
+        connect(view, SIGNAL(emailClicked(QString,QString)), this, SLOT(sendEmail(QString,QString)));
+        // clang-format on
     }
 
     if (metaObject->indexOfSignal(QMetaObject::normalizedSignature("phoneNumberClicked(const KContacts::PhoneNumber&)").constData()) != -1) {
@@ -85,6 +92,33 @@ void ContactDefaultActions::sendSms(const KContacts::PhoneNumber &number)
 
 void ContactDefaultActions::showAddress(const KContacts::Address &address)
 {
-    ShowAddressAction action;
-    action.showAddress(address);
+    // ### move geo: URI generation to KContacts::Address?
+    QUrl url;
+    url.setScheme(QStringLiteral("geo"));
+    if (address.geo().isValid()) {
+        url.setPath(QString::number(address.geo().latitude()) + QLatin1Char(',') + QString::number(address.geo().longitude()));
+    } else if (!address.isEmpty()) {
+        url.setPath(QStringLiteral("0,0"));
+        QStringList q;
+        if (!address.street().isEmpty()) {
+            q.push_back(address.street());
+        }
+        if (!address.locality().isEmpty()) {
+            q.push_back(address.postalCode().isEmpty() ? address.locality() : (address.postalCode() + QLatin1Char(' ') + address.locality()));
+        }
+        if (!address.region().isEmpty()) {
+            q.push_back(address.region());
+        }
+        if (!address.country().isEmpty()) {
+            const auto c = KCountry::fromName(address.country());
+            q.push_back(c.alpha2());
+        }
+        QUrlQuery query;
+        query.addQueryItem(QStringLiteral("q"), q.join(QLatin1String(", ")));
+        url.setQuery(query);
+    } else {
+        return;
+    }
+
+    QDesktopServices::openUrl(url);
 }

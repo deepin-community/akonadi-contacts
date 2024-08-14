@@ -1,7 +1,7 @@
 /*
     This file is part of Contact Editor.
 
-    SPDX-FileCopyrightText: 2017-2021 Laurent Montel <montel@kde.org>
+    SPDX-FileCopyrightText: 2017-2022 Laurent Montel <montel@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -20,7 +20,7 @@ class CONTACTEDITOR_TESTS_EXPORT MessageFormattingWidget : public QWidget
     Q_OBJECT
 public:
     explicit MessageFormattingWidget(QWidget *parent = nullptr);
-    ~MessageFormattingWidget();
+    ~MessageFormattingWidget() override;
 
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact) const;

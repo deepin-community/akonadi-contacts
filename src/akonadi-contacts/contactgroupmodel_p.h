@@ -9,11 +9,16 @@
 #pragma once
 
 #include <QAbstractItemModel>
+#include <QSortFilterProxyModel>
 
-#include <kcontacts/contactgroup.h>
+#include <KContacts/ContactGroup>
+
+#include <memory>
 
 namespace Akonadi
 {
+class ContactGroupModelPrivate;
+
 class ContactGroupModel : public QAbstractItemModel
 {
     Q_OBJECT
@@ -41,8 +46,17 @@ public:
     bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex()) override;
 
 private:
-    class Private;
-    Private *const d;
+    friend class ContactGroupModelPrivate;
+    std::unique_ptr<ContactGroupModelPrivate> const d;
 };
-}
 
+class GroupFilterModel : public QSortFilterProxyModel
+{
+public:
+    explicit GroupFilterModel(QObject *parent = nullptr);
+
+    bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
+    bool lessThan(const QModelIndex &left, const QModelIndex &right) const override;
+};
+
+}

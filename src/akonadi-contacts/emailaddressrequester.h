@@ -10,10 +10,14 @@
 
 #include <QWidget>
 
+#include <memory>
+
 class KLineEdit;
 
 namespace Akonadi
 {
+class EmailAddressRequesterPrivate;
+
 /**
  * @short A widget to input one or more email addresses.
  *
@@ -67,9 +71,7 @@ Q_SIGNALS:
 
 private:
     //@cond PRIVATE
-    class Private;
-    Private *const d;
+    std::unique_ptr<EmailAddressRequesterPrivate> const d;
     //@endcond
 };
 }
-

@@ -12,8 +12,8 @@
 
 #include "ui_contactgroupeditor.h"
 
-#include <collection.h>
-#include <item.h>
+#include <Akonadi/Collection>
+#include <Akonadi/Item>
 
 class KJob;
 
@@ -22,11 +22,11 @@ namespace Akonadi
 class ContactGroupModel;
 class Monitor;
 
-class Q_DECL_HIDDEN ContactGroupEditor::Private
+class ContactGroupEditorPrivate
 {
 public:
-    Private(ContactGroupEditor *parent);
-    ~Private();
+    ContactGroupEditorPrivate(ContactGroupEditor *parent);
+    ~ContactGroupEditorPrivate();
 
     void itemFetchDone(KJob *job);
     void parentCollectionFetchDone(KJob *job);
@@ -51,4 +51,3 @@ public:
     bool mReadOnly = false;
 };
 }
-

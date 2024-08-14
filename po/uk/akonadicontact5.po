@@ -3,102 +3,25 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020.
+# Yuri Chornoivan <yurchor@ukr.net>, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-07-15 01:40+0000\n"
-"PO-Revision-Date: 2020-12-17 08:49+0200\n"
+"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"PO-Revision-Date: 2022-03-23 08:43+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.11.70\n"
+"X-Generator: Lokalize 20.12.0\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#. i18n: ectx: whatsthis, entry (ShowAddressAction), group (Show Address Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:18
-#, kde-format
-msgid ""
-"Defines which application shall be used to show the postal address of a "
-"contact on a map. If 'Web Browser' is selected, an URL can be defined with "
-"placeholders for the single address parts. If 'External Application' is "
-"selected, a command with placeholders can be defined."
-msgstr ""
-"Визначає програму, яку слід використовувати для показу поштової адреси "
-"контакту на карті. Якщо буде обрано «Переглядач інтернету», адресу URL можна "
-"буде визначити за допомогою замінників окремих частин адреси. Якщо буде "
-"обрано «Зовнішню програму», можна буде обрати команду з замінниками "
-"елементів адреси."
-
-#. i18n: ectx: whatsthis, entry (AddressUrl), group (Show Address Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:23
-#, kde-format
-msgid ""
-"This URL defines the website that shall be used to show a contact's postal "
-"address."
-msgstr ""
-"Ця адреса URL визначає веб-сайт, яким слід скористатися для показу поштової "
-"адреси контакту."
-
-#. i18n: ectx: tooltip, entry (AddressUrl), group (Show Address Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:29
-#, no-c-format, kde-format
-msgid ""
-"The following placeholders can be used in the URL:\n"
-"   %s: Street\n"
-"   %r: Region\n"
-"   %l: Location\n"
-"   %z: Zip Code\n"
-"   %c: Country ISO Code"
-msgstr ""
-"У адресі URL можна використовувати такі замінники:\n"
-"   %s: адреса на вулиці\n"
-"   %r: область\n"
-"   %l: регіон\n"
-"   %z: поштовий код\n"
-"   %c: код ISO країни"
-
-#. i18n: ectx: label, entry (AddressCommand), group (Show Address Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:32
-#, kde-format
-msgid "Address Command"
-msgstr "Команда адреси"
-
-#. i18n: ectx: whatsthis, entry (AddressCommand), group (Show Address Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:33
-#, kde-format
-msgid ""
-"This command defines the application that shall be executed to show a "
-"contact's postal address."
-msgstr ""
-"Ця адреса URL визначає програму, якою слід скористатися для показу поштової "
-"адреси контакту."
-
-#. i18n: ectx: tooltip, entry (AddressCommand), group (Show Address Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:39
-#, no-c-format, kde-format
-msgid ""
-"The following placeholders can be used in the command:\n"
-"   %s: Street\n"
-"   %r: Region\n"
-"   %l: Location\n"
-"   %z: Zip Code\n"
-"   %c: Country ISO Code"
-msgstr ""
-"У команді можна використовувати такі замінники:\n"
-"   %s: адреса на вулиці\n"
-"   %r: область\n"
-"   %l: регіон\n"
-"   %z: поштовий код\n"
-"   %c: код ISO країни"
-
 #. i18n: ectx: whatsthis, entry (DialPhoneNumberAction), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:52
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:18
 #, kde-format
 msgid ""
 "Define how a phone number of a contact should be dialed. 'System Default' "
@@ -114,13 +37,13 @@ msgstr ""
 "ви можете вказати команду для набору номера із замінниками вручну."
 
 #. i18n: ectx: label, entry (PhoneCommand), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:56
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:22
 #, kde-format
 msgid "Phone Command"
 msgstr "Команда телефону"
 
 #. i18n: ectx: whatsthis, entry (PhoneCommand), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:57
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:23
 #, kde-format
 msgid ""
 "This command defines the application that shall be executed to dial a "
@@ -130,7 +53,7 @@ msgstr ""
 "телефонного номера контакту."
 
 #. i18n: ectx: tooltip, entry (PhoneCommand), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:60
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:26
 #, no-c-format, kde-format
 msgid ""
 "The following placeholders can be used in the command:\n"
@@ -142,7 +65,7 @@ msgstr ""
 "   %n: нормалізований номер без всіх нецифрових символів."
 
 #. i18n: ectx: whatsthis, entry (SendSmsAction), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:72
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:38
 #, kde-format
 msgid ""
 "Defines which application shall be used to send an SMS to the phone number "
@@ -161,13 +84,13 @@ msgstr ""
 "відповідну команду з замінниками частин номера."
 
 #. i18n: ectx: label, entry (SmsCommand), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:76
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:42
 #, kde-format
 msgid "SMS Command"
 msgstr "Команда SMS"
 
 #. i18n: ectx: whatsthis, entry (SmsCommand), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:77
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:43
 #, kde-format
 msgid ""
 "This command defines the application that shall be executed to send an SMS "
@@ -177,7 +100,7 @@ msgstr ""
 "телефонний номер контакту."
 
 #. i18n: ectx: tooltip, entry (SmsCommand), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:81
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:47
 #, no-c-format, kde-format
 msgid ""
 "The following placeholders can be used in the command:\n"
@@ -200,17 +123,17 @@ msgstr ""
 "Не вказано програму, яку слід виконати.\n"
 "Будь ласка, вкажіть її у вікні налаштування."
 
-#: akonadi-contacts/actions/qdialer.cpp:26
+#: akonadi-contacts/actions/qdialer.cpp:24
 #, kde-format
 msgid "Dialing a number is not supported"
 msgstr "Набирання номерів не підтримується"
 
-#: akonadi-contacts/actions/qdialer.cpp:35
+#: akonadi-contacts/actions/qdialer.cpp:33
 #, kde-format
 msgid "Sending an SMS is not supported"
 msgstr "Надсилання SMS не підтримується"
 
-#: akonadi-contacts/actions/qekigadialer.cpp:70
+#: akonadi-contacts/actions/qekigadialer.cpp:72
 #, kde-format
 msgid ""
 "Unable to start ekiga process, check that ekiga executable is in your PATH "
@@ -219,12 +142,12 @@ msgstr ""
 "Не вдалося запустити процес ekiga, перевірте, чи зберігається програма ekiga "
 "у одній з тек, вказаних за допомогою змінної PATH."
 
-#: akonadi-contacts/actions/qekigadialer.cpp:95
+#: akonadi-contacts/actions/qekigadialer.cpp:97
 #, kde-format
 msgid "Ekiga Public API (D-Bus) seems to be disabled."
 msgstr "Здається, відкритий програмний інтерфейс Ekiga (D-Bus) було вимкнено."
 
-#: akonadi-contacts/actions/qekigadialer.cpp:115
+#: akonadi-contacts/actions/qekigadialer.cpp:117
 #, kde-format
 msgid "Sending an SMS is currently not supported on Ekiga."
 msgstr "У поточній версії для Ekiga підтримки надсилання SMS не передбачено."
@@ -239,7 +162,7 @@ msgstr ""
 "програма sflphone-client-kde у одній з тек, вказаних за допомогою змінної "
 "PATH."
 
-#: akonadi-contacts/actions/qskypedialer.cpp:75
+#: akonadi-contacts/actions/qskypedialer.cpp:77
 #, kde-format
 msgid ""
 "Unable to start skype process, check that skype executable is in your PATH "
@@ -248,38 +171,38 @@ msgstr ""
 "Не вдалося запустити процес skype, перевірте, чи зберігається програма skype "
 "у одній з тек, вказаних за допомогою змінної PATH."
 
-#: akonadi-contacts/actions/qskypedialer.cpp:100
+#: akonadi-contacts/actions/qskypedialer.cpp:102
 #, kde-format
 msgid "Skype Public API (D-Bus) seems to be disabled."
 msgstr "Здається, відкритий програмний інтерфейс Skype (D-Bus) було вимкнено."
 
-#: akonadi-contacts/actions/qskypedialer.cpp:109
+#: akonadi-contacts/actions/qskypedialer.cpp:111
 #, kde-format
 msgid "Skype registration failed."
 msgstr "Спроба реєстрації Skype зазнала невдачі."
 
-#: akonadi-contacts/actions/qskypedialer.cpp:118
+#: akonadi-contacts/actions/qskypedialer.cpp:120
 #, kde-format
 msgid "Protocol mismatch."
 msgstr "Протоколи не збігаються."
 
-#: akonadi-contacts/actions/smsdialog.cpp:37
+#: akonadi-contacts/actions/smsdialog.cpp:35
 #, kde-format
 msgctxt "@title:window"
 msgid "SMS text"
 msgstr "Текст SMS"
 
-#: akonadi-contacts/actions/smsdialog.cpp:41
+#: akonadi-contacts/actions/smsdialog.cpp:39
 #, kde-format
 msgid "Please insert SMS text for an SMS to the following number: %1"
 msgstr "Будь ласка, вставте текст SMS на такий номер: %1"
 
-#: akonadi-contacts/actions/smsdialog.cpp:82
+#: akonadi-contacts/actions/smsdialog.cpp:80
 #, kde-format
 msgid "%1/%2 (%3 SMS)"
 msgstr "%1/%2 (%3 SMS)"
 
-#: akonadi-contacts/contacteditor.cpp:160
+#: akonadi-contacts/contacteditor.cpp:162
 #, kde-format
 msgid ""
 "The contact has been changed by someone else.\n"
@@ -288,69 +211,97 @@ msgstr ""
 "Запис контакту було кимось змінено.\n"
 "Якими будуть наступні дії?"
 
-#: akonadi-contacts/contacteditor.cpp:161
-#: akonadi-contacts/contactgroupeditor.cpp:134
+#: akonadi-contacts/contacteditor.cpp:163
+#: akonadi-contacts/contactgroupeditor.cpp:135
 #, kde-format
 msgid "Take over changes"
 msgstr "Поглинати зміни"
 
-#: akonadi-contacts/contacteditor.cpp:162
-#: akonadi-contacts/contactgroupeditor.cpp:135
+#: akonadi-contacts/contacteditor.cpp:164
+#: akonadi-contacts/contactgroupeditor.cpp:136
 #, kde-format
 msgid "Ignore and Overwrite changes"
 msgstr "Ігнорувати і перезаписувати зміни"
 
-#: akonadi-contacts/contacteditor.cpp:276
-#: akonadi-contacts/contactgroupeditor.cpp:282
-#: akonadi-contacts/selectaddressbookdialog.cpp:24
+#: akonadi-contacts/contacteditor.cpp:278
+#: akonadi-contacts/contactgroupeditor.cpp:290
+#: akonadi-contacts/selectaddressbookdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Address Book"
 msgstr "Виберіть адресну книгу"
 
-#: akonadi-contacts/contacteditor.cpp:277
+#: akonadi-contacts/contacteditor.cpp:279
 #, kde-format
 msgid "Select the address book the new contact shall be saved in:"
 msgstr "Оберіть адресну книгу, у якій слід зберегти новий запис контакту:"
 
-#: akonadi-contacts/contacteditordialog.cpp:43
+#: akonadi-contacts/contacteditordialog.cpp:46
 #, kde-format
+msgctxt "@title:window"
 msgid "New Contact"
 msgstr "Новий контакт"
 
-#: akonadi-contacts/contacteditordialog.cpp:43
+#: akonadi-contacts/contacteditordialog.cpp:46
 #, kde-format
+msgctxt "@title:window"
 msgid "Edit Contact"
-msgstr "Змінити параметри контакту"
+msgstr "Зміна параметрів контакту"
 
-#: akonadi-contacts/contacteditordialog.cpp:70
-#: akonadi-contacts/contactgroupeditordialog.cpp:99
+#: akonadi-contacts/contacteditordialog.cpp:73
+#: akonadi-contacts/contactgroupeditordialog.cpp:103
 #, kde-format
 msgid "Add to:"
 msgstr "Додати до:"
 
-#: akonadi-contacts/contacteditordialog.cpp:179
+#: akonadi-contacts/contacteditordialog.cpp:186
 #, kde-format
 msgctxt "@info"
 msgid "Location was not saved. Do you want to close editor?"
 msgstr "Запис місця не збережено. Хочете закрити вікно редактора попри це?"
 
-#: akonadi-contacts/contacteditordialog.cpp:179
-#: akonadi-contacts/contacteditordialog.cpp:192
-#: akonadi-contacts/contactgroupeditordialog.cpp:161
+#: akonadi-contacts/contacteditordialog.cpp:187
+#: akonadi-contacts/contacteditordialog.cpp:212
+#: akonadi-contacts/contactgroupeditordialog.cpp:170
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirmation"
 msgstr "Підтвердження"
 
-#: akonadi-contacts/contacteditordialog.cpp:192
-#: akonadi-contacts/contactgroupeditordialog.cpp:161
+#: akonadi-contacts/contacteditordialog.cpp:188
+#, kde-format
+msgctxt "@action:button"
+msgid "Close Editor"
+msgstr "Закрити вікно редактора"
+
+#: akonadi-contacts/contacteditordialog.cpp:189
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Close"
+msgstr "Не закривати"
+
+#: akonadi-contacts/contacteditordialog.cpp:211
+#: akonadi-contacts/contactgroupeditordialog.cpp:169
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "Ви дійсно хочете скасувати дію?"
 
-#: akonadi-contacts/contactgroupeditor.cpp:133
+#: akonadi-contacts/contacteditordialog.cpp:213
+#: akonadi-contacts/contactgroupeditordialog.cpp:171
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel Editing"
+msgstr "Скасувати редагування"
+
+#: akonadi-contacts/contacteditordialog.cpp:214
+#: akonadi-contacts/contactgroupeditordialog.cpp:172
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Cancel"
+msgstr "Не скасовувати"
+
+#: akonadi-contacts/contactgroupeditor.cpp:134
 #, kde-format
 msgid ""
 "The contact group has been changed by someone else.\n"
@@ -359,12 +310,12 @@ msgstr ""
 "Групу записів контактів було кимось змінено.\n"
 "Якими будуть наступні дії?"
 
-#: akonadi-contacts/contactgroupeditor.cpp:169
+#: akonadi-contacts/contactgroupeditor.cpp:175
 #, kde-format
 msgid "The name of the contact group must not be empty."
 msgstr "Назва групи контактів не може бути порожньою."
 
-#: akonadi-contacts/contactgroupeditor.cpp:283
+#: akonadi-contacts/contactgroupeditor.cpp:291
 #, kde-format
 msgid "Select the address book the new contact group shall be saved in:"
 msgstr "Оберіть адресну книгу, у якій слід зберегти нову групу контактів:"
@@ -383,118 +334,120 @@ msgctxt "@label"
 msgid "Contact group members:"
 msgstr "Учасники групи контактів:"
 
-#: akonadi-contacts/contactgroupeditordialog.cpp:76
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, searchField)
+#: akonadi-contacts/contactgroupeditor.ui:53
 #, kde-format
+msgid "Search..."
+msgstr "Пошук…"
+
+#: akonadi-contacts/contactgroupeditordialog.cpp:80
+#, kde-format
+msgctxt "@title:window"
 msgid "New Contact Group"
-msgstr "Створити групу контактів"
+msgstr "Нова група контактів"
 
-#: akonadi-contacts/contactgroupeditordialog.cpp:76
+#: akonadi-contacts/contactgroupeditordialog.cpp:80
 #, kde-format
+msgctxt "@title:window"
 msgid "Edit Contact Group"
-msgstr "Змінити групу контактів"
+msgstr "Зміна групи контактів"
 
-#: akonadi-contacts/contactgroupmodel.cpp:197
+#: akonadi-contacts/contactgroupmodel.cpp:194
 #, kde-format
 msgid "The member with name <b>%1</b> is missing an email address"
 msgstr "Для учасника з іменем <b>%1</b> не вказано адреси електронної пошти"
 
-#: akonadi-contacts/contactgroupmodel.cpp:244
+#: akonadi-contacts/contactgroupmodel.cpp:241
 #, kde-format
 msgid "Contact does not exist any more"
 msgstr "Запису контакту вже не існує"
 
-#: akonadi-contacts/contactgroupmodel.cpp:398
+#: akonadi-contacts/contactgroupmodel.cpp:395
 #, kde-format
 msgctxt "contact's name"
 msgid "Name"
 msgstr "Ім’я"
 
-#: akonadi-contacts/contactgroupmodel.cpp:400
+#: akonadi-contacts/contactgroupmodel.cpp:397
 #, kde-format
 msgctxt "contact's email address"
 msgid "EMail"
 msgstr "Ел. пошта"
 
-#: akonadi-contacts/contactgroupviewer.cpp:53
+#: akonadi-contacts/contactgroupviewer.cpp:51
 #, kde-format
 msgctxt "@title:window"
 msgid "Contact Group %1"
 msgstr "Група контактів %1"
 
-#: akonadi-contacts/contactgroupviewer.cpp:67
-#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:32
-#: akonadi-contacts/standardcontactformatter.cpp:185
+#: akonadi-contacts/contactgroupviewer.cpp:65
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:28
+#: akonadi-contacts/standardcontactformatter.cpp:182
 #, kde-format
 msgid "Address Book"
 msgstr "Адресна книга"
 
-#: akonadi-contacts/contactgroupviewerdialog.cpp:32
-#, kde-format
-msgctxt "@title:window"
-msgid "Show Contact Group"
-msgstr "Показ групи контактів"
-
-#: akonadi-contacts/contactstreemodel.cpp:215
+#: akonadi-contacts/contactstreemodel.cpp:212
 #, kde-format
 msgctxt "@title:column address books overview"
 msgid "Address Books"
 msgstr "Адресні книги"
 
-#: akonadi-contacts/contactstreemodel.cpp:225
+#: akonadi-contacts/contactstreemodel.cpp:222
 #, kde-format
 msgctxt "@title:column name of a person"
 msgid "Name"
 msgstr "Ім’я"
 
-#: akonadi-contacts/contactstreemodel.cpp:227
+#: akonadi-contacts/contactstreemodel.cpp:224
 #, kde-format
 msgctxt "@title:column family name of a person"
 msgid "Family Name"
 msgstr "Прізвище"
 
-#: akonadi-contacts/contactstreemodel.cpp:229
+#: akonadi-contacts/contactstreemodel.cpp:226
 #, kde-format
 msgctxt "@title:column given name of a person"
 msgid "Given Name"
 msgstr "Ім’я"
 
-#: akonadi-contacts/contactstreemodel.cpp:233
+#: akonadi-contacts/contactstreemodel.cpp:230
 #, kde-format
 msgctxt "@title:column home address of a person"
 msgid "Home"
 msgstr "Домашня адреса"
 
-#: akonadi-contacts/contactstreemodel.cpp:235
+#: akonadi-contacts/contactstreemodel.cpp:232
 #, kde-format
 msgctxt "@title:column work address of a person"
 msgid "Work"
 msgstr "Робоча адреса"
 
-#: akonadi-contacts/contactstreemodel.cpp:237
+#: akonadi-contacts/contactstreemodel.cpp:234
 #, kde-format
 msgctxt "@title:column phone numbers of a person"
 msgid "Phone Numbers"
 msgstr "Номери телефонів"
 
-#: akonadi-contacts/contactstreemodel.cpp:239
+#: akonadi-contacts/contactstreemodel.cpp:236
 #, kde-format
 msgctxt "@title:column the preferred email addresses of a person"
 msgid "Preferred EMail"
 msgstr "Основна адреса ел. пошти"
 
-#: akonadi-contacts/contactstreemodel.cpp:241
+#: akonadi-contacts/contactstreemodel.cpp:238
 #, kde-format
 msgctxt "@title:column all email addresses of a person"
 msgid "All EMails"
 msgstr "Всі адреси ел. пошти"
 
-#: akonadi-contacts/contactviewer.cpp:64
+#: akonadi-contacts/contactviewer.cpp:68
 #, kde-format
 msgctxt "@title:window"
 msgid "Contact %1"
 msgstr "Контакт %1"
 
-#: akonadi-contacts/contactviewerdialog.cpp:58
+#: akonadi-contacts/contactviewerdialog.cpp:62
 #, kde-format
 msgctxt "@title:window"
 msgid "Show Contact"
@@ -510,7 +463,7 @@ msgstr "Відкрити адресну книгу"
 msgid "Distribution List %1"
 msgstr "Список розповсюдження %1"
 
-#: akonadi-contacts/emailaddressselectionproxymodel.cpp:132
+#: akonadi-contacts/emailaddressselectionproxymodel.cpp:130
 #, kde-format
 msgctxt "Name and email address of a contact"
 msgid "%1 <%2>"
@@ -522,52 +475,57 @@ msgctxt "@label Search in a list of contacts"
 msgid "Search:"
 msgstr "Пошук:"
 
-#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:37
-#: akonadi-contacts/standardcontactformatter.cpp:184
+#: akonadi-contacts/emailaddressselectionwidget.cpp:132
+#, kde-format
+msgid "Search Contact..."
+msgstr "Шукати контакт…"
+
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:33
+#: akonadi-contacts/standardcontactformatter.cpp:181
 #, kde-format
 msgid "Anniversary"
 msgstr "Річниця весілля"
 
-#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:42
-#: akonadi-contacts/standardcontactformatter.cpp:179
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:38
+#: akonadi-contacts/standardcontactformatter.cpp:176
 #, kde-format
 msgid "Assistant's Name"
 msgstr "Ім'я заступника"
 
-#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:47
-#: akonadi-contacts/standardcontactformatter.cpp:180
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:43
+#: akonadi-contacts/standardcontactformatter.cpp:177
 #, kde-format
 msgid "Manager's Name"
 msgstr "Ім'я керівника"
 
-#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:52
-#: akonadi-contacts/standardcontactformatter.cpp:182
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:48
+#: akonadi-contacts/standardcontactformatter.cpp:179
 #, kde-format
 msgid "Office"
 msgstr "Офіс"
 
-#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:57
-#: akonadi-contacts/standardcontactformatter.cpp:178
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:53
+#: akonadi-contacts/standardcontactformatter.cpp:175
 #, kde-format
 msgid "Profession"
 msgstr "Професія"
 
-#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:62
-#: akonadi-contacts/standardcontactformatter.cpp:181
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:58
+#: akonadi-contacts/standardcontactformatter.cpp:178
 #, kde-format
 msgctxt "Wife/Husband/..."
 msgid "Partner's Name"
 msgstr "Ім'я чоловіка/дружини"
 
-#: akonadi-contacts/grantlee/grantleecontactformatter.cpp:189
-#: akonadi-contacts/standardcontactformatter.cpp:242
+#: akonadi-contacts/grantlee/grantleecontactformatter.cpp:211
+#: akonadi-contacts/standardcontactformatter.cpp:239
 #, kde-format
 msgctxt "Boolean value"
 msgid "yes"
 msgstr "так"
 
-#: akonadi-contacts/grantlee/grantleecontactformatter.cpp:191
-#: akonadi-contacts/standardcontactformatter.cpp:244
+#: akonadi-contacts/grantlee/grantleecontactformatter.cpp:213
+#: akonadi-contacts/standardcontactformatter.cpp:241
 #, kde-format
 msgctxt "Boolean value"
 msgid "no"
@@ -605,8 +563,8 @@ msgstr ""
 "Запис контакту з адресою електронної пошти <email>%1</email> вже є у вашій "
 "адресній книзі."
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:120
-#: akonadi-contacts/job/addemaildisplayjob.cpp:161
+#: akonadi-contacts/job/addemailaddressjob.cpp:126
+#: akonadi-contacts/job/addemaildisplayjob.cpp:165
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -616,22 +574,29 @@ msgstr ""
 "Перед додаванням запису контакту вам слід створити адресну книгу. Хочете "
 "створити її зараз?"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:121
-#: akonadi-contacts/job/addemaildisplayjob.cpp:162
+#: akonadi-contacts/job/addemailaddressjob.cpp:127
+#: akonadi-contacts/job/addemaildisplayjob.cpp:166
 #, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
 msgstr "Немає доступних адресних книг"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:124
-#: akonadi-contacts/job/addemaildisplayjob.cpp:165
-#: akonadi-contacts/standardcontactactionmanager.cpp:193
+#: akonadi-contacts/job/addemailaddressjob.cpp:128
+#: akonadi-contacts/job/addemaildisplayjob.cpp:167
+#, kde-format
+msgctxt "@action:button"
+msgid "Create Address Book"
+msgstr "Створити адресну книгу"
+
+#: akonadi-contacts/job/addemailaddressjob.cpp:136
+#: akonadi-contacts/job/addemaildisplayjob.cpp:175
+#: akonadi-contacts/standardcontactactionmanager.cpp:191
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Address Book"
 msgstr "Додати адресну книгу"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:213
+#: akonadi-contacts/job/addemailaddressjob.cpp:226
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -641,24 +606,36 @@ msgstr ""
 "<para>До вашої адресної книги було успішно додано запис контакту для «%1».</"
 "para><para>Хочете розпочати редагування цього нового запису зараз?</para>"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:238
-#: akonadi-contacts/standardcontactactionmanager.cpp:468
+#: akonadi-contacts/job/addemailaddressjob.cpp:239
+#, kde-format
+msgctxt "@action:button"
+msgid "Edit"
+msgstr "Змінити"
+
+#: akonadi-contacts/job/addemailaddressjob.cpp:240
+#, kde-format
+msgctxt "@action:button"
+msgid "Finish"
+msgstr "Завершити"
+
+#: akonadi-contacts/job/addemailaddressjob.cpp:265
+#: akonadi-contacts/standardcontactactionmanager.cpp:466
 #, kde-format
 msgid "Contact cannot be stored: %1"
 msgstr "Не вдалося зберегти запис контакту: %1"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:238
-#: akonadi-contacts/standardcontactactionmanager.cpp:468
+#: akonadi-contacts/job/addemailaddressjob.cpp:265
+#: akonadi-contacts/standardcontactactionmanager.cpp:466
 #, kde-format
 msgid "Failed to store contact"
 msgstr "Помилка під час збереження запису контакту"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:245
+#: akonadi-contacts/job/addemailaddressjob.cpp:272
 #, kde-format
 msgid "Contact created successfully"
 msgstr "Запис контакту успішно створено"
 
-#: akonadi-contacts/selectaddressbookdialog.cpp:25
+#: akonadi-contacts/selectaddressbookdialog.cpp:29
 #, kde-format
 msgctxt "@info"
 msgid "Select the address book where the contact will be saved:"
@@ -692,7 +669,7 @@ msgstr "Не вдалося створити теку адресної книг�
 msgid "Address book folder creation failed"
 msgstr "Спроба створення теки адресної книги зазнала невдачі"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:117
+#: akonadi-contacts/standardcontactactionmanager.cpp:115
 #, kde-format
 msgid "Copy Address Book Folder"
 msgid_plural "Copy %1 Address Book Folders"
@@ -701,12 +678,12 @@ msgstr[1] "Копіювати %1 теки адресної книги"
 msgstr[2] "Копіювати %1 тек адресної книги"
 msgstr[3] "Копіювати теку адресної книги"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:119
+#: akonadi-contacts/standardcontactactionmanager.cpp:117
 #, kde-format
 msgid "Copy the selected address book folders to the clipboard."
 msgstr "Копіювати обрані теки адресної книги до буфера обміну даними."
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:123
+#: akonadi-contacts/standardcontactactionmanager.cpp:121
 #, kde-format
 msgid "Delete Address Book Folder"
 msgid_plural "Delete %1 Address Book Folders"
@@ -715,12 +692,12 @@ msgstr[1] "Вилучити %1 теки адресної книги"
 msgstr[2] "Вилучити %1 тек адресної книги"
 msgstr[3] "Вилучити теку адресної книги"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:125
+#: akonadi-contacts/standardcontactactionmanager.cpp:123
 #, kde-format
 msgid "Delete the selected address book folders from the address book."
 msgstr "Вилучити позначені теки адресної книги з адресної книги."
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:129
+#: akonadi-contacts/standardcontactactionmanager.cpp:127
 #, kde-format
 msgid ""
 "Do you really want to delete this address book folder and all its sub-"
@@ -737,7 +714,7 @@ msgstr[2] ""
 msgstr[3] ""
 "Ви справді бажаєте вилучити цю теку адресної книги і всі її підтеки?"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:133
+#: akonadi-contacts/standardcontactactionmanager.cpp:131
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete address book folder?"
@@ -747,17 +724,17 @@ msgstr[1] "Вилучити теки адресної книги?"
 msgstr[2] "Вилучити теки адресної книги?"
 msgstr[3] "Вилучити теку адресної книги?"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:137
+#: akonadi-contacts/standardcontactactionmanager.cpp:135
 #, kde-format
 msgid "Could not delete address book folder: %1"
 msgstr "Не вдалося вилучити теку адресної книги: %1"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:141
+#: akonadi-contacts/standardcontactactionmanager.cpp:139
 #, kde-format
 msgid "Address book folder deletion failed"
 msgstr "Спроба вилучення теки адресної книги зазнала невдачі"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:145
+#: akonadi-contacts/standardcontactactionmanager.cpp:143
 #, kde-format
 msgid "Update Address Book Folder"
 msgid_plural "Update %1 Address Book Folders"
@@ -766,12 +743,12 @@ msgstr[1] "Оновити %1 теки адресної книги"
 msgstr[2] "Оновити %1 тек адресної книги"
 msgstr[3] "Оновити теку адресної книги"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:147
+#: akonadi-contacts/standardcontactactionmanager.cpp:145
 #, kde-format
 msgid "Update the content of the selected address book folders."
 msgstr "Оновити вміст позначених тек адресної книги."
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:150
+#: akonadi-contacts/standardcontactactionmanager.cpp:148
 #, kde-format
 msgid "Cut Address Book Folder"
 msgid_plural "Cut %1 Address Book Folders"
@@ -780,17 +757,17 @@ msgstr[1] "Вирізати %1 теки адресної книги"
 msgstr[2] "Вирізати %1 тек адресної книги"
 msgstr[3] "Вирізати теку адресної книги"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:152
+#: akonadi-contacts/standardcontactactionmanager.cpp:150
 #, kde-format
 msgid "Cut the selected address book folders from the address book."
 msgstr "Вирізати позначені теки адресної книги з адресної книги."
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:155
+#: akonadi-contacts/standardcontactactionmanager.cpp:153
 #, kde-format
 msgid "Folder Properties..."
 msgstr "Властивості теки…"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:157
+#: akonadi-contacts/standardcontactactionmanager.cpp:155
 #, kde-format
 msgid ""
 "Open a dialog to edit the properties of the selected address book folder."
@@ -798,14 +775,14 @@ msgstr ""
 "Відкрити діалогове вікно для зміни властивостей позначеної теки адресної "
 "книги."
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:160
+#: akonadi-contacts/standardcontactactionmanager.cpp:158
 #, kde-format
 msgctxt "@title:window"
 msgid "Properties of Address Book Folder %1"
 msgstr "Властивості теки адресної книги %1"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:163
-#: akonadi-contacts/standardcontactactionmanager.cpp:292
+#: akonadi-contacts/standardcontactactionmanager.cpp:161
+#: akonadi-contacts/standardcontactactionmanager.cpp:290
 #, kde-format
 msgid "Copy Contact"
 msgid_plural "Copy %1 Contacts"
@@ -814,13 +791,13 @@ msgstr[1] "Копіювати %1 контакти"
 msgstr[2] "Копіювати %1 контактів"
 msgstr[3] "Копіювати контакт"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:164
+#: akonadi-contacts/standardcontactactionmanager.cpp:162
 #, kde-format
 msgid "Copy the selected contacts to the clipboard."
 msgstr "Копіювати позначені записи контактів до буфера обміну даними."
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:167
-#: akonadi-contacts/standardcontactactionmanager.cpp:303
+#: akonadi-contacts/standardcontactactionmanager.cpp:165
+#: akonadi-contacts/standardcontactactionmanager.cpp:301
 #, kde-format
 msgid "Delete Contact"
 msgid_plural "Delete %1 Contacts"
@@ -829,12 +806,12 @@ msgstr[1] "Вилучити %1 контакти"
 msgstr[2] "Вилучити %1 контактів"
 msgstr[3] "Вилучити контакт"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:168
+#: akonadi-contacts/standardcontactactionmanager.cpp:166
 #, kde-format
 msgid "Delete the selected contacts from the address book."
 msgstr "Вилучити позначені записи контактів з адресної книги."
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:171
+#: akonadi-contacts/standardcontactactionmanager.cpp:169
 #, kde-format
 msgid "Do you really want to delete the selected contact?"
 msgid_plural "Do you really want to delete %1 contacts?"
@@ -843,7 +820,7 @@ msgstr[1] "Ви справді бажаєте вилучити %1 позначе
 msgstr[2] "Ви справді бажаєте вилучити %1 позначених записів контактів?"
 msgstr[3] "Ви справді бажаєте вилучити позначений запис контакту?"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:175
+#: akonadi-contacts/standardcontactactionmanager.cpp:173
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Contact?"
@@ -853,18 +830,18 @@ msgstr[1] "Вилучити контакти?"
 msgstr[2] "Вилучити контакти?"
 msgstr[3] "Вилучити контакт?"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:177
+#: akonadi-contacts/standardcontactactionmanager.cpp:175
 #, kde-format
 msgid "Could not delete contact: %1"
 msgstr "Не вдалося вилучити запис контакту: %1"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:179
+#: akonadi-contacts/standardcontactactionmanager.cpp:177
 #, kde-format
 msgid "Contact deletion failed"
 msgstr "Помилка вилучення запису контакту"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:182
-#: akonadi-contacts/standardcontactactionmanager.cpp:306
+#: akonadi-contacts/standardcontactactionmanager.cpp:180
+#: akonadi-contacts/standardcontactactionmanager.cpp:304
 #, kde-format
 msgid "Cut Contact"
 msgid_plural "Cut %1 Contacts"
@@ -873,17 +850,17 @@ msgstr[1] "Вирізати %1 контакти"
 msgstr[2] "Вирізати %1 контактів"
 msgstr[3] "Вирізати контакт"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:183
+#: akonadi-contacts/standardcontactactionmanager.cpp:181
 #, kde-format
 msgid "Cut the selected contacts from the address book."
 msgstr "Вирізати позначені записи контактів з адресної книги."
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:186
+#: akonadi-contacts/standardcontactactionmanager.cpp:184
 #, kde-format
 msgid "Add &Address Book..."
 msgstr "&Додати адресну книгу…"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:188
+#: akonadi-contacts/standardcontactactionmanager.cpp:186
 #, kde-format
 msgid ""
 "Add a new address book<p>You will be presented with a dialog where you can "
@@ -892,17 +869,17 @@ msgstr ""
 "Додати нову адресну книгу<p>Програма відкриє діалогове вікно, у якому ви "
 "зможете обрати тип адресної книги, яку буде додано.</p>"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:197
+#: akonadi-contacts/standardcontactactionmanager.cpp:195
 #, kde-format
 msgid "Could not create address book: %1"
 msgstr "Не вдалося створити адресну книгу: %1"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:201
+#: akonadi-contacts/standardcontactactionmanager.cpp:199
 #, kde-format
 msgid "Address book creation failed"
 msgstr "Створення адресної книги зазнало невдачі"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:205
+#: akonadi-contacts/standardcontactactionmanager.cpp:203
 #, kde-format
 msgid "&Delete Address Book"
 msgid_plural "&Delete %1 Address Books"
@@ -911,7 +888,7 @@ msgstr[1] "Ви&лучити %1 адресних книги"
 msgstr[2] "Ви&лучити %1 адресних книг"
 msgstr[3] "Ви&лучити адресну книгу"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:207
+#: akonadi-contacts/standardcontactactionmanager.cpp:205
 #, kde-format
 msgid ""
 "Delete the selected address books<p>The currently selected address books "
@@ -921,7 +898,7 @@ msgstr ""
 "Вилучити позначені адресні книги.<p>Буде вилучено поточні позначені адресні "
 "книги, всі записи контактів і груп контактів, що у них містяться.</p>"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:212
+#: akonadi-contacts/standardcontactactionmanager.cpp:210
 #, kde-format
 msgid "Do you really want to delete this address book?"
 msgid_plural "Do you really want to delete %1 address books?"
@@ -930,7 +907,7 @@ msgstr[1] "Ви справді бажаєте вилучити ці %1 адре�
 msgstr[2] "Ви справді бажаєте вилучити ці %1 адресних книг?"
 msgstr[3] "Ви справді бажаєте вилучити цю адресну книгу?"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:216
+#: akonadi-contacts/standardcontactactionmanager.cpp:214
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Address Book?"
@@ -940,18 +917,18 @@ msgstr[1] "Вилучити адресні книги?"
 msgstr[2] "Вилучити адресні книги?"
 msgstr[3] "Вилучити адресну книгу?"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:221
+#: akonadi-contacts/standardcontactactionmanager.cpp:219
 #, kde-format
 msgid "Address Book Properties..."
 msgstr "Властивості адресної книги…"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:223
+#: akonadi-contacts/standardcontactactionmanager.cpp:221
 #, kde-format
 msgid "Open a dialog to edit properties of the selected address book."
 msgstr ""
 "Відкрити діалогове вікно для зміни властивостей позначеної адресної книги."
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:226
+#: akonadi-contacts/standardcontactactionmanager.cpp:224
 #, kde-format
 msgid "Update Address Book"
 msgid_plural "Update %1 Address Books"
@@ -960,40 +937,40 @@ msgstr[1] "Оновити %1 адресні книги"
 msgstr[2] "Оновити %1 адресних книг"
 msgstr[3] "Оновити адресну книгу"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:229
+#: akonadi-contacts/standardcontactactionmanager.cpp:227
 #, kde-format
 msgid "Updates the content of all folders of the selected address books."
 msgstr "Оновлює вміст всіх тек позначених адресних книг."
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:233
+#: akonadi-contacts/standardcontactactionmanager.cpp:231
 #, kde-format
 msgid "Could not paste contact: %1"
 msgstr "Не вдалося вставити запис контакту: %1"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:235
+#: akonadi-contacts/standardcontactactionmanager.cpp:233
 #, kde-format
 msgid "Paste failed"
 msgstr "Спроба вставлення зазнала невдачі"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:296
-#: akonadi-contacts/standardcontactactionmanager.cpp:300
+#: akonadi-contacts/standardcontactactionmanager.cpp:294
+#: akonadi-contacts/standardcontactactionmanager.cpp:298
 #, kde-format
 msgid "Copy Contact To"
 msgstr "Копіювати контакт до"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:310
-#: akonadi-contacts/standardcontactactionmanager.cpp:314
+#: akonadi-contacts/standardcontactactionmanager.cpp:308
+#: akonadi-contacts/standardcontactactionmanager.cpp:312
 #, kde-format
 msgid "Move Contact To"
 msgstr "Пересунути контакт до"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:318
-#: akonadi-contacts/standardcontactactionmanager.cpp:558
+#: akonadi-contacts/standardcontactactionmanager.cpp:316
+#: akonadi-contacts/standardcontactactionmanager.cpp:553
 #, kde-format
 msgid "Edit Contact..."
 msgstr "Змінити параметри контакту…"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:322
+#: akonadi-contacts/standardcontactactionmanager.cpp:320
 #, kde-format
 msgid "Copy Group"
 msgid_plural "Copy %1 Groups"
@@ -1002,13 +979,13 @@ msgstr[1] "Копіювати %1 групи"
 msgstr[2] "Копіювати %1 груп"
 msgstr[3] "Копіювати групу"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:326
-#: akonadi-contacts/standardcontactactionmanager.cpp:330
+#: akonadi-contacts/standardcontactactionmanager.cpp:324
+#: akonadi-contacts/standardcontactactionmanager.cpp:328
 #, kde-format
 msgid "Copy Group To"
 msgstr "Копіювати групу до"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:333
+#: akonadi-contacts/standardcontactactionmanager.cpp:331
 #, kde-format
 msgid "Delete Group"
 msgid_plural "Delete %1 Groups"
@@ -1017,7 +994,7 @@ msgstr[1] "Вилучити %1 групи"
 msgstr[2] "Вилучити %1 груп"
 msgstr[3] "Вилучити групу"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:336
+#: akonadi-contacts/standardcontactactionmanager.cpp:334
 #, kde-format
 msgid "Cut Group"
 msgid_plural "Cut %1 Groups"
@@ -1026,23 +1003,23 @@ msgstr[1] "Вирізати %1 групи"
 msgstr[2] "Вирізати %1 груп"
 msgstr[3] "Вирізати групу"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:340
-#: akonadi-contacts/standardcontactactionmanager.cpp:344
+#: akonadi-contacts/standardcontactactionmanager.cpp:338
+#: akonadi-contacts/standardcontactactionmanager.cpp:342
 #, kde-format
 msgid "Move Group To"
 msgstr "Пересунути групу до"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:348
+#: akonadi-contacts/standardcontactactionmanager.cpp:346
 #, kde-format
 msgid "Edit Group..."
 msgstr "Редагувати групу…"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:533
+#: akonadi-contacts/standardcontactactionmanager.cpp:528
 #, kde-format
 msgid "New &Contact..."
 msgstr "Створити &контакт…"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:535
+#: akonadi-contacts/standardcontactactionmanager.cpp:530
 #, kde-format
 msgid ""
 "Create a new contact<p>You will be presented with a dialog where you can add "
@@ -1052,12 +1029,12 @@ msgstr ""
 "ввести потрібні дані, що стосуються особи, зокрема адреси та номери "
 "телефонів.</p>"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:546
+#: akonadi-contacts/standardcontactactionmanager.cpp:541
 #, kde-format
 msgid "New &Group..."
 msgstr "С&творити групу…"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:547
+#: akonadi-contacts/standardcontactactionmanager.cpp:542
 #, kde-format
 msgid ""
 "Create a new group<p>You will be presented with a dialog where you can add a "
@@ -1066,7 +1043,7 @@ msgstr ""
 "Створити нову групу <p>Буде показано нове вікно, у якому ви зможете додати "
 "нову групу контактів.</p>"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:560
+#: akonadi-contacts/standardcontactactionmanager.cpp:555
 #, kde-format
 msgid ""
 "Edit the selected contact<p>You will be presented with a dialog where you "
@@ -1077,7 +1054,7 @@ msgstr ""
 "буде змінити збережені дані щодо особи, зокрема адреси та номери телефонів.</"
 "p>"
 
-#: akonadi-contacts/standardcontactformatter.cpp:97
+#: akonadi-contacts/standardcontactformatter.cpp:94
 #, kde-format
 msgid "(One year old)"
 msgid_plural "(%1 years old)"
@@ -1086,46 +1063,46 @@ msgstr[1] "(Вік — %1 роки)"
 msgstr[2] "(Вік — %1 років)"
 msgstr[3] "(Вік — один рік)"
 
-#: akonadi-contacts/standardcontactformatter.cpp:110
+#: akonadi-contacts/standardcontactformatter.cpp:107
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Send SMS"
 msgstr "Надіслати SMS"
 
-#: akonadi-contacts/standardcontactformatter.cpp:121
+#: akonadi-contacts/standardcontactformatter.cpp:118
 #, kde-format
 msgctxt "a contact's email address"
 msgid "Email"
 msgstr "Ел. пошта"
 
-#: akonadi-contacts/standardcontactformatter.cpp:136
+#: akonadi-contacts/standardcontactformatter.cpp:133
 #, kde-format
 msgid "Homepage"
 msgstr "Домашня сторінка"
 
-#: akonadi-contacts/standardcontactformatter.cpp:142
+#: akonadi-contacts/standardcontactformatter.cpp:139
 #: contact-editor/editor/generalinfoeditor/blogfeedwidget.cpp:24
 #, kde-format
 msgid "Blog Feed"
 msgstr "Подача блогу"
 
-#: akonadi-contacts/standardcontactformatter.cpp:161
+#: akonadi-contacts/standardcontactformatter.cpp:158
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show address on map"
 msgstr "Показувати адресу на карті"
 
-#: akonadi-contacts/standardcontactformatter.cpp:170
+#: akonadi-contacts/standardcontactformatter.cpp:167
 #, kde-format
 msgid "Notes"
 msgstr "Примітки"
 
-#: akonadi-contacts/standardcontactformatter.cpp:177
+#: akonadi-contacts/standardcontactformatter.cpp:174
 #, kde-format
 msgid "Department"
 msgstr "Відділ"
 
-#: akonadi-contacts/standardcontactformatter.cpp:183
+#: akonadi-contacts/standardcontactformatter.cpp:180
 #, kde-format
 msgid "IM Address"
 msgstr "Адреса МЗ"
@@ -1165,65 +1142,65 @@ msgstr "Копіювати код"
 msgid "<p style=\"color: white;\"><b>Waiting for operation</b><br/></p>"
 msgstr "<p style=\"color: white;\"><b>Очікування на дію</b><br/></p>"
 
-#: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:64
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:129
+#: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:65
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:130
 #, kde-format
 msgid "Remove Address"
 msgstr "Вилучити адресу"
 
-#: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:67
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:292
+#: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:73
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:297
 #, kde-format
 msgid "Do you really want to delete this address?"
 msgstr "Ви справді бажаєте вилучити цю адресу?"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:45
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:46
 #, kde-format
 msgid "Add Street"
 msgstr "Додати запис вулиці"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:56
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:57
 #, kde-format
 msgid "Add Post Office Box"
 msgstr "Додати запис абонентської скриньки"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:66
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:67
 #, kde-format
 msgid "Add Postal Code"
 msgstr "Додати поштовий індекс"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:76
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:77
 #, kde-format
 msgid "Add Locality"
 msgstr "Додати запис місцевості"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:86
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:87
 #, kde-format
 msgid "Add Region"
 msgstr "Додати запис області"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:101
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:102
 #, kde-format
 msgid "Add a Country"
 msgstr "Додати запис країни"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:106
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:107
 #, kde-format
 msgctxt "street/postal"
 msgid "This is the preferred address"
 msgstr "Це основна поштова адреса"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:117
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:118
 #, kde-format
 msgid "Add Address"
 msgstr "Додати адресу"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:134
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:135
 #, kde-format
 msgid "Update Address"
 msgstr "Оновити адресу"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:139
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:140
 #, kde-format
 msgid "Cancel"
 msgstr "Скасувати"
@@ -1240,14 +1217,14 @@ msgctxt "street/postal"
 msgid "Address Types"
 msgstr "Типи адрес"
 
-#: contact-editor/editor/addresseditor/selectaddresstypecombobox.cpp:63
-#: contact-editor/editor/generalinfoeditor/phone/phonecomboboxtype.cpp:68
+#: contact-editor/editor/addresseditor/selectaddresstypecombobox.cpp:61
+#: contact-editor/editor/generalinfoeditor/phone/phonecomboboxtype.cpp:66
 #, kde-format
 msgctxt "@item:inlistbox Category of contact info field"
 msgid "Other..."
 msgstr "Інше…"
 
-#: contact-editor/editor/addresseditor/selectaddresstypecombobox.cpp:65
+#: contact-editor/editor/addresseditor/selectaddresstypecombobox.cpp:63
 #, kde-format
 msgctxt "@item:inlistbox Category of contact info field"
 msgid "New Address Type"
@@ -1398,59 +1375,59 @@ msgstr "Додати поле"
 msgid "Use field for all contacts"
 msgstr "Використовувати поле для всіх контактів"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:63
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:61
 #, kde-format
 msgid "Text"
 msgstr "Текст"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:64
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:62
 #, kde-format
 msgid "Numeric"
 msgstr "Число"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:65
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:63
 #, kde-format
 msgid "Boolean"
 msgstr "Логічне значення"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:66
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:64
 #, kde-format
 msgid "Date"
 msgstr "Дата"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:67
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:65
 #, kde-format
 msgid "Time"
 msgstr "Час"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:68
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:66
 #, kde-format
 msgid "DateTime"
 msgstr "Дата і час"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:69
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:67
 #, kde-format
 msgid "Url"
 msgstr "Адреса"
 
-#: contact-editor/editor/customfieldeditor/customfieldslistdelegate.cpp:216
+#: contact-editor/editor/customfieldeditor/customfieldslistdelegate.cpp:214
 #, kde-format
 msgctxt "Custom Fields"
 msgid "Do you really want to delete the selected custom field?"
 msgstr "Ви справді бажаєте вилучити позначене нетипове поле?"
 
-#: contact-editor/editor/customfieldeditor/customfieldslistdelegate.cpp:217
+#: contact-editor/editor/customfieldeditor/customfieldslistdelegate.cpp:215
 #, kde-format
 msgid "Confirm Delete"
 msgstr "Підтвердження вилучення"
 
-#: contact-editor/editor/customfieldeditor/customfieldsmodel.cpp:197
+#: contact-editor/editor/customfieldeditor/customfieldsmodel.cpp:195
 #, kde-format
 msgctxt "custom field title"
 msgid "Title"
 msgstr "Заголовок"
 
-#: contact-editor/editor/customfieldeditor/customfieldsmodel.cpp:199
+#: contact-editor/editor/customfieldeditor/customfieldsmodel.cpp:197
 #, kde-format
 msgctxt "custom field value"
 msgid "Value"
@@ -1461,38 +1438,38 @@ msgstr "Значення"
 msgid "Add a Blog Feed"
 msgstr "Додати подачу блогу"
 
-#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:46
+#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:45
 #, kde-format
 msgid "Short Name"
 msgstr "Скорочене ім’я"
 
-#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:47
+#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:46
 #, kde-format
 msgid "Full Name"
 msgstr "Повне ім'я"
 
-#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:48
+#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:47
 #, kde-format
 msgid "Reverse Name with Comma"
 msgstr "Ім'я в оберненому порядку з комою"
 
-#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:49
+#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:48
 #, kde-format
 msgid "Reverse Name"
 msgstr "Ім'я в оберненому порядку"
 
-#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:50
+#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:49
 #, kde-format
 msgid "Organization"
 msgstr "Установа"
 
-#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:51
+#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:50
 #, kde-format
 msgctxt "@item:inlistbox A custom name format"
 msgid "Custom"
 msgstr "Нетиповий"
 
-#: contact-editor/editor/generalinfoeditor/generalinfowidget.cpp:74
+#: contact-editor/editor/generalinfoeditor/generalinfowidget.cpp:73
 #, kde-format
 msgid "Tags"
 msgstr "Мітки"
@@ -1751,45 +1728,15 @@ msgstr "Додати сайт"
 msgid "Remove Web Site"
 msgstr "Вилучити сайт"
 
-#: contact-editor/editor/personaleditor/dateeditwidget.cpp:24
+#: contact-editor/editor/personaleditor/dateeditwidget.cpp:23
 #, kde-format
 msgid "Click to add date"
 msgstr "Натисніть, щоб додати дату"
 
-#: contact-editor/editor/personaleditor/dateeditwidget.cpp:35
+#: contact-editor/editor/personaleditor/dateeditwidget.cpp:34
 #, kde-format
 msgid "Remove"
 msgstr "Вилучити"
-
-#: contact-editor/editor/personaleditor/kdatepickerpopup.cpp:81
-#, kde-format
-msgctxt "@option today"
-msgid "&Today"
-msgstr "&Сьогодні"
-
-#: contact-editor/editor/personaleditor/kdatepickerpopup.cpp:84
-#, kde-format
-msgctxt "@option tomorrow"
-msgid "To&morrow"
-msgstr "&Завтра"
-
-#: contact-editor/editor/personaleditor/kdatepickerpopup.cpp:87
-#, kde-format
-msgctxt "@option next week"
-msgid "Next &Week"
-msgstr "Наступний &тиждень"
-
-#: contact-editor/editor/personaleditor/kdatepickerpopup.cpp:90
-#, kde-format
-msgctxt "@option next month"
-msgid "Next M&onth"
-msgstr "Наступний м&ісяць"
-
-#: contact-editor/editor/personaleditor/kdatepickerpopup.cpp:100
-#, kde-format
-msgctxt "@option do not specify a date"
-msgid "No Date"
-msgstr "Без дати"
 
 #: contact-editor/editor/personaleditor/personaleditorwidget.cpp:27
 #, kde-format
@@ -1880,6 +1827,89 @@ msgstr "Зображення (%1)"
 #, kde-format
 msgid "Set as Preferred"
 msgstr "Зробити бажаною"
+
+#~ msgctxt "@option today"
+#~ msgid "&Today"
+#~ msgstr "&Сьогодні"
+
+#~ msgctxt "@option tomorrow"
+#~ msgid "To&morrow"
+#~ msgstr "&Завтра"
+
+#~ msgctxt "@option next week"
+#~ msgid "Next &Week"
+#~ msgstr "Наступний &тиждень"
+
+#~ msgctxt "@option next month"
+#~ msgid "Next M&onth"
+#~ msgstr "Наступний м&ісяць"
+
+#~ msgctxt "@option do not specify a date"
+#~ msgid "No Date"
+#~ msgstr "Без дати"
+
+#~ msgid ""
+#~ "Defines which application shall be used to show the postal address of a "
+#~ "contact on a map. If 'Web Browser' is selected, an URL can be defined "
+#~ "with placeholders for the single address parts. If 'External Application' "
+#~ "is selected, a command with placeholders can be defined."
+#~ msgstr ""
+#~ "Визначає програму, яку слід використовувати для показу поштової адреси "
+#~ "контакту на карті. Якщо буде обрано «Переглядач інтернету», адресу URL "
+#~ "можна буде визначити за допомогою замінників окремих частин адреси. Якщо "
+#~ "буде обрано «Зовнішню програму», можна буде обрати команду з замінниками "
+#~ "елементів адреси."
+
+#~ msgid ""
+#~ "This URL defines the website that shall be used to show a contact's "
+#~ "postal address."
+#~ msgstr ""
+#~ "Ця адреса URL визначає вебсайт, яким слід скористатися для показу "
+#~ "поштової адреси контакту."
+
+#~ msgid ""
+#~ "The following placeholders can be used in the URL:\n"
+#~ "   %s: Street\n"
+#~ "   %r: Region\n"
+#~ "   %l: Location\n"
+#~ "   %z: Zip Code\n"
+#~ "   %c: Country ISO Code"
+#~ msgstr ""
+#~ "У адресі URL можна використовувати такі замінники:\n"
+#~ "   %s: адреса на вулиці\n"
+#~ "   %r: область\n"
+#~ "   %l: регіон\n"
+#~ "   %z: поштовий код\n"
+#~ "   %c: код ISO країни"
+
+#~ msgid "Address Command"
+#~ msgstr "Команда адреси"
+
+#~ msgid ""
+#~ "This command defines the application that shall be executed to show a "
+#~ "contact's postal address."
+#~ msgstr ""
+#~ "Ця адреса URL визначає програму, якою слід скористатися для показу "
+#~ "поштової адреси контакту."
+
+#~ msgid ""
+#~ "The following placeholders can be used in the command:\n"
+#~ "   %s: Street\n"
+#~ "   %r: Region\n"
+#~ "   %l: Location\n"
+#~ "   %z: Zip Code\n"
+#~ "   %c: Country ISO Code"
+#~ msgstr ""
+#~ "У команді можна використовувати такі замінники:\n"
+#~ "   %s: адреса на вулиці\n"
+#~ "   %r: область\n"
+#~ "   %l: регіон\n"
+#~ "   %z: поштовий код\n"
+#~ "   %c: код ISO країни"
+
+#~ msgctxt "@title:window"
+#~ msgid "Show Contact Group"
+#~ msgstr "Показ групи контактів"
 
 #~ msgid "Select Address Book"
 #~ msgstr "Вибір адресної книги"
@@ -1986,9 +2016,6 @@ msgstr "Зробити бажаною"
 
 #~ msgid "Add..."
 #~ msgstr "Додати…"
-
-#~ msgid "Edit..."
-#~ msgstr "Змінити…"
 
 #~ msgid "New Email:"
 #~ msgstr "Нова адреса ел. пошти:"

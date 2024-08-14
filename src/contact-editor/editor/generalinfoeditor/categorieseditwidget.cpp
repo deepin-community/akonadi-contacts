@@ -14,12 +14,10 @@ CategoriesEditWidget::CategoriesEditWidget(QWidget *parent)
     : ContactEditor::CategoriesEditAbstractWidget(parent)
 {
     auto layout = new QHBoxLayout(this);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
 }
 
-CategoriesEditWidget::~CategoriesEditWidget()
-{
-}
+CategoriesEditWidget::~CategoriesEditWidget() = default;
 
 void CategoriesEditWidget::setReadOnly(bool readOnly)
 {

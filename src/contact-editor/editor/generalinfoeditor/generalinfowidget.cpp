@@ -20,7 +20,6 @@
 #include "web/weblistwidget.h"
 #include <KLocalizedString>
 #include <KPluginFactory>
-#include <KPluginLoader>
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QVBoxLayout>
@@ -70,19 +69,22 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
 
     auto categoryWidget = new QWidget(this);
     auto categoryWidgetLayout = new QVBoxLayout(categoryWidget);
-    categoryWidgetLayout->setContentsMargins(0, 0, 0, 0);
+    categoryWidgetLayout->setContentsMargins({});
     auto label = new QLabel(i18n("Tags"), this);
     label->setObjectName(QStringLiteral("categorylabel"));
     categoryWidgetLayout->addWidget(label);
 
-    KPluginLoader loader(QStringLiteral("akonadi/contacts/plugins/categorieseditwidgetplugin"));
-    KPluginFactory *factory = loader.factory();
-    if (factory) {
-        mCategoriesWidget = factory->create<ContactEditor::CategoriesEditAbstractWidget>(parent);
+    const KPluginMetaData editWidgetPlugin(QStringLiteral("pim" QT_STRINGIFY(QT_VERSION_MAJOR))
+                                           + QStringLiteral("/akonadi/contacts/plugins/categorieseditwidgetplugin"));
+    const auto result = KPluginFactory::instantiatePlugin<ContactEditor::CategoriesEditAbstractWidget>(editWidgetPlugin, parent);
+
+    if (result) {
+        mCategoriesWidget = result.plugin;
     } else {
         mCategoriesWidget = new CategoriesEditWidget(parent);
         label->setVisible(false);
     }
+
     mCategoriesWidget->setObjectName(QStringLiteral("categories"));
     categoryWidgetLayout->addWidget(mCategoriesWidget);
     leftLayout->addWidget(categoryWidget);
@@ -99,9 +101,7 @@ GeneralInfoWidget::GeneralInfoWidget(QWidget *parent)
     rightLayout->addStretch(1);
 }
 
-GeneralInfoWidget::~GeneralInfoWidget()
-{
-}
+GeneralInfoWidget::~GeneralInfoWidget() = default;
 
 void GeneralInfoWidget::setDisplayType(DisplayNameEditWidget::DisplayType type)
 {

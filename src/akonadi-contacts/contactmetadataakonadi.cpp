@@ -10,17 +10,13 @@
 
 #include "attributes/contactmetadataattribute_p.h"
 
-#include <item.h>
+#include <Akonadi/Item>
 
 using namespace Akonadi;
 
-ContactMetaDataAkonadi::ContactMetaDataAkonadi()
-{
-}
+ContactMetaDataAkonadi::ContactMetaDataAkonadi() = default;
 
-ContactMetaDataAkonadi::~ContactMetaDataAkonadi()
-{
-}
+ContactMetaDataAkonadi::~ContactMetaDataAkonadi() = default;
 
 void ContactMetaDataAkonadi::load(const Akonadi::Item &contact)
 {

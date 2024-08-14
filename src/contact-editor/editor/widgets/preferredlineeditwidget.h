@@ -1,7 +1,7 @@
 /*
     This file is part of Contact Editor.
 
-    SPDX-FileCopyrightText: 2016-2021 Laurent Montel <montel@kde.org>
+    SPDX-FileCopyrightText: 2016-2022 Laurent Montel <montel@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -18,7 +18,7 @@ class PreferredLineEditWidget : public KLineEdit
     Q_OBJECT
 public:
     explicit PreferredLineEditWidget(QWidget *parent = nullptr);
-    ~PreferredLineEditWidget();
+    ~PreferredLineEditWidget() override;
 
     Q_REQUIRED_RESULT bool preferred() const;
 

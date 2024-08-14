@@ -20,6 +20,7 @@
 #include <QPushButton>
 #include <QStackedWidget>
 #include <QVBoxLayout>
+#include <kwidgetsaddons_version.h>
 
 using namespace ContactEditor;
 
@@ -113,7 +114,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
 
     auto addButtonWidget = new QWidget(this);
     auto addButtonWidgetLayout = new QHBoxLayout(addButtonWidget);
-    addButtonWidgetLayout->setContentsMargins(0, 0, 0, 0);
+    addButtonWidgetLayout->setContentsMargins({});
     mAddAddress = new QPushButton(i18n("Add Address"), this);
     mAddAddress->setObjectName(QStringLiteral("addbuttonaddress"));
     connect(mAddAddress, &QPushButton::clicked, this, &AddressLocationWidget::slotAddAddress);
@@ -123,7 +124,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
 
     auto modifyButtonWidget = new QWidget(this);
     auto modifyButtonWidgetLayout = new QHBoxLayout(modifyButtonWidget);
-    modifyButtonWidgetLayout->setContentsMargins(0, 0, 0, 0);
+    modifyButtonWidgetLayout->setContentsMargins({});
     mButtonStack->addWidget(modifyButtonWidget);
 
     mRemoveAddress = new QPushButton(i18n("Remove Address"), this);
@@ -150,9 +151,7 @@ AddressLocationWidget::AddressLocationWidget(QWidget *parent)
     switchMode();
 }
 
-AddressLocationWidget::~AddressLocationWidget()
-{
-}
+AddressLocationWidget::~AddressLocationWidget() = default;
 
 void AddressLocationWidget::slotChanged()
 {
@@ -208,8 +207,9 @@ void AddressLocationWidget::fillCountryCombo()
 
 void AddressLocationWidget::slotAddAddress()
 {
-    KContacts::Address addr = address();
-    if (!addr.isEmpty()) {
+    const KContacts::Address addr = address();
+    if (!mLocalityEdit->text().trimmed().isEmpty() || !mRegionEdit->text().trimmed().isEmpty() || !mPostalCodeEdit->text().trimmed().isEmpty()
+        || !mStreetEdit->text().trimmed().isEmpty() || !mPOBoxEdit->text().trimmed().isEmpty()) {
         Q_EMIT addNewAddress(addr);
         reset();
     }
@@ -289,8 +289,20 @@ void AddressLocationWidget::slotUpdateAddress()
 void AddressLocationWidget::slotRemoveAddress()
 {
     if (mCurrentMode == ModifyAddress) {
-        const auto result = KMessageBox::questionYesNo(this, i18n("Do you really want to delete this address?"));
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        const auto result = KMessageBox::questionTwoActions(this,
+#else
+        const auto result = KMessageBox::questionYesNo(this,
+#endif
+                                                            i18n("Do you really want to delete this address?"),
+                                                            QString(),
+                                                            KStandardGuiItem::del(),
+                                                            KStandardGuiItem::cancel());
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        if (result == KMessageBox::ButtonCode::PrimaryAction) {
+#else
         if (result == KMessageBox::Yes) {
+#endif
             Q_EMIT removeAddress(mCurrentAddress);
             reset();
         }

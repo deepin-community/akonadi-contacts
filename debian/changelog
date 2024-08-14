@@ -1,15 +1,116 @@
-akonadi-contacts (4:21.08.1-2deepin1) unstable; urgency=medium
+akonadi-contacts (4:22.12.3-1) unstable; urgency=medium
 
-  * Fix build problems with GCC 12
+  [ Patrick Franz ]
+  * New upstream release (22.12.3).
+  * Update build-deps and deps with the info from cmake.
+  * Remove inactive uploaders, thanks for your work.
 
- -- Clansty <i@gao4.pw>  Wed, 11 Jan 2023 19:42:37 +0800
+ -- Patrick Franz <deltaone@debian.org>  Wed, 01 Mar 2023 21:32:05 +0100
 
-akonadi-contacts (4:21.08.1-1-deepin1) unstable; urgency=medium
+akonadi-contacts (4:22.12.2-1) unstable; urgency=medium
 
-  * Rebuild
-  * skip test
+  [ Patrick Franz ]
+  * New upstream release (22.12.2).
+  * Update build-deps and deps with the info from cmake.
 
- -- Deepin Packages Builder <packages@deepin.org>  Mon, 28 Nov 2022 10:19:51 +0900
+ -- Patrick Franz <deltaone@debian.org>  Sun, 05 Feb 2023 00:25:39 +0100
+
+akonadi-contacts (4:22.12.0-2) unstable; urgency=medium
+
+  [ Patrick Franz ]
+  * Upload to unstable.
+
+ -- Patrick Franz <deltaone@debian.org>  Wed, 04 Jan 2023 21:35:14 +0100
+
+akonadi-contacts (4:22.12.0-1) experimental; urgency=medium
+
+  [ Patrick Franz ]
+  * New upstream release (22.12.0).
+  * Update build-deps and deps with the info from cmake.
+  * Bump Standards-Version to 4.6.2 (No changes needed).
+
+ -- Patrick Franz <deltaone@debian.org>  Thu, 22 Dec 2022 21:03:44 +0100
+
+akonadi-contacts (4:22.08.3-1) unstable; urgency=medium
+
+  [ Patrick Franz ]
+  * New upstream release (22.08.3).
+  * Update build-deps and deps with the info from cmake.
+
+ -- Patrick Franz <deltaone@debian.org>  Fri, 04 Nov 2022 21:53:46 +0100
+
+akonadi-contacts (4:22.08.2-1) unstable; urgency=medium
+
+  [ Patrick Franz ]
+  * New upstream release (22.08.2).
+  * Update build-deps and deps with the info from cmake.
+
+ -- Patrick Franz <deltaone@debian.org>  Sat, 29 Oct 2022 00:10:32 +0200
+
+akonadi-contacts (4:22.08.0-2) unstable; urgency=medium
+
+  [ Patrick Franz ]
+  * Upload to unstable.
+
+ -- Patrick Franz <deltaone@debian.org>  Sat, 10 Sep 2022 13:08:48 +0200
+
+akonadi-contacts (4:22.08.0-1) experimental; urgency=medium
+
+  [ Patrick Franz ]
+  * Update upstream signing-key.
+  * Bump Standards-Version to 4.6.1 (No changes needed).
+  * New upstream release (22.08.0).
+  * Update build-deps and deps with the info from cmake.
+
+ -- Patrick Franz <deltaone@debian.org>  Wed, 31 Aug 2022 01:45:45 +0200
+
+akonadi-contacts (4:22.04.3-1) unstable; urgency=medium
+
+  [ Patrick Franz ]
+  * New upstream release (22.04.3).
+  * Update build-deps and deps with the info from cmake.
+
+ -- Patrick Franz <deltaone@debian.org>  Thu, 14 Jul 2022 21:57:15 +0200
+
+akonadi-contacts (4:22.04.2-2) unstable; urgency=medium
+
+  [ Patrick Franz ]
+  * Upload to unstable.
+
+ -- Patrick Franz <deltaone@debian.org>  Mon, 27 Jun 2022 22:01:20 +0200
+
+akonadi-contacts (4:22.04.2-1) experimental; urgency=medium
+
+  [ Patrick Franz ]
+  * New upstream release (22.04.2).
+  * Update build-deps and deps with the info from cmake.
+
+ -- Patrick Franz <deltaone@debian.org>  Sun, 19 Jun 2022 02:47:02 +0200
+
+akonadi-contacts (4:22.04.1-1) experimental; urgency=medium
+
+  [ Patrick Franz ]
+  * New upstream release (22.04.1).
+  * Update build-deps and deps with the info from cmake.
+  * Update list of installed files.
+
+ -- Patrick Franz <deltaone@debian.org>  Wed, 25 May 2022 23:43:55 +0200
+
+akonadi-contacts (4:21.12.3-2) unstable; urgency=medium
+
+  [ Patrick Franz ]
+  * Upload to unstable.
+
+ -- Patrick Franz <deltaone@debian.org>  Fri, 01 Apr 2022 22:09:55 +0200
+
+akonadi-contacts (4:21.12.3-1) experimental; urgency=medium
+
+  [ Patrick Franz ]
+  * New upstream release (21.12.3).
+  * Update build-deps and deps with the info from cmake.
+  * Add myself to Uploaders.
+
+ -- Patrick Franz <deltaone@debian.org>  Thu, 24 Mar 2022 23:23:07 +0100
 
 akonadi-contacts (4:21.08.1-1) unstable; urgency=medium
 

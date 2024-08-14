@@ -7,7 +7,6 @@
 */
 
 #include "contacteditorwidget.h"
-#include "config-contact-editor.h"
 
 #include "contacteditorpageplugin.h"
 #include "contactmetadatabase_p.h"
@@ -22,14 +21,15 @@
 #include "businesseditor/businesseditorwidget.h"
 #include "customfieldeditor/customfieldswidget.h"
 #include "generalinfoeditor/generalinfowidget.h"
+#include <QCoreApplication>
 #include <QDirIterator>
 #include <QPluginLoader>
 #include <QVBoxLayout>
 
-class Q_DECL_HIDDEN ContactEditorWidget::Private
+class ContactEditorWidgetPrivate
 {
 public:
-    Private(ContactEditorWidget::DisplayMode displayMode, ContactEditorWidget *parent)
+    ContactEditorWidgetPrivate(ContactEditorWidget::DisplayMode displayMode, ContactEditorWidget *parent)
         : mDisplayMode(displayMode)
         , mParent(parent)
     {
@@ -71,10 +71,10 @@ public:
     QList<ContactEditor::ContactEditorPagePlugin *> mCustomPages;
 };
 
-void ContactEditorWidget::Private::initGui()
+void ContactEditorWidgetPrivate::initGui()
 {
     auto layout = new QVBoxLayout(mParent);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
 
     mTabWidget = new QTabWidget(mParent);
     layout->addWidget(mTabWidget);
@@ -84,37 +84,37 @@ void ContactEditorWidget::Private::initGui()
     initGuiBusinessTab();
     initGuiPersonalTab();
     initGuiNotesTab();
-    if (mDisplayMode == FullMode) {
+    if (mDisplayMode == ContactEditorWidget::FullMode) {
         initGuiCustomFieldsTab();
         loadCustomPages();
     }
 }
 
-void ContactEditorWidget::Private::initGuiContactTab()
+void ContactEditorWidgetPrivate::initGuiContactTab()
 {
     mGeneralInfoWidget = new ContactEditor::GeneralInfoWidget;
     mTabWidget->addTab(mGeneralInfoWidget, i18nc("@title:tab", "Contact"));
 }
 
-void ContactEditorWidget::Private::initGuiLocationTab()
+void ContactEditorWidgetPrivate::initGuiLocationTab()
 {
     mAddressesLocationWidget = new ContactEditor::AddressesLocationWidget;
     mTabWidget->addTab(mAddressesLocationWidget, i18nc("@title:tab", "Location"));
 }
 
-void ContactEditorWidget::Private::initGuiBusinessTab()
+void ContactEditorWidgetPrivate::initGuiBusinessTab()
 {
     mBusinessEditorWidget = new ContactEditor::BusinessEditorWidget();
     mTabWidget->addTab(mBusinessEditorWidget, i18nc("@title:tab", "Business"));
 }
 
-void ContactEditorWidget::Private::initGuiPersonalTab()
+void ContactEditorWidgetPrivate::initGuiPersonalTab()
 {
     mPersonalEditorWidget = new ContactEditor::PersonalEditorWidget;
     mTabWidget->addTab(mPersonalEditorWidget, i18nc("@title:tab Personal properties of a contact", "Personal"));
 }
 
-void ContactEditorWidget::Private::initGuiNotesTab()
+void ContactEditorWidgetPrivate::initGuiNotesTab()
 {
     auto widget = new QWidget;
     auto layout = new QVBoxLayout(widget);
@@ -126,32 +126,35 @@ void ContactEditorWidget::Private::initGuiNotesTab()
     layout->addWidget(mNotesWidget);
 }
 
-void ContactEditorWidget::Private::initGuiCustomFieldsTab()
+void ContactEditorWidgetPrivate::initGuiCustomFieldsTab()
 {
     mCustomFieldsWidget = new ContactEditor::CustomFieldsWidget(mParent);
     mTabWidget->addTab(mCustomFieldsWidget, i18nc("@title:tab", "Custom Fields"));
 }
 
-void ContactEditorWidget::Private::loadCustomPages()
+void ContactEditorWidgetPrivate::loadCustomPages()
 {
     qDeleteAll(mCustomPages);
     mCustomPages.clear();
 
-    const QString pluginDirectory = QStringLiteral("%1/contacteditor/editorpageplugins/").arg(QStringLiteral(EDITOR_CONTACT_LIB));
-    QDirIterator it(pluginDirectory, QDir::Files);
+    const QStringList pluginDirs = QCoreApplication::libraryPaths();
 
-    while (it.hasNext()) {
-        QPluginLoader loader(it.next());
-        if (!loader.load()) {
-            continue;
+    for (const QString &dir : pluginDirs) {
+        QDirIterator it(dir + QLatin1String("/pim" QT_STRINGIFY(QT_VERSION_MAJOR) "/contacteditor/editorpageplugins"), QDir::Files);
+
+        while (it.hasNext()) {
+            QPluginLoader loader(it.next());
+            if (!loader.load()) {
+                continue;
+            }
+
+            ContactEditor::ContactEditorPagePlugin *plugin = qobject_cast<ContactEditor::ContactEditorPagePlugin *>(loader.instance());
+            if (!plugin) {
+                continue;
+            }
+
+            mCustomPages.append(plugin);
         }
-
-        ContactEditor::ContactEditorPagePlugin *plugin = qobject_cast<ContactEditor::ContactEditorPagePlugin *>(loader.instance());
-        if (!plugin) {
-            continue;
-        }
-
-        mCustomPages.append(plugin);
     }
 
     for (ContactEditor::ContactEditorPagePlugin *plugin : std::as_const(mCustomPages)) {
@@ -159,12 +162,12 @@ void ContactEditorWidget::Private::loadCustomPages()
     }
 }
 
-QString ContactEditorWidget::Private::loadCustom(const KContacts::Addressee &contact, const QString &key) const
+QString ContactEditorWidgetPrivate::loadCustom(const KContacts::Addressee &contact, const QString &key) const
 {
     return contact.custom(QStringLiteral("KADDRESSBOOK"), key);
 }
 
-void ContactEditorWidget::Private::storeCustom(KContacts::Addressee &contact, const QString &key, const QString &value) const
+void ContactEditorWidgetPrivate::storeCustom(KContacts::Addressee &contact, const QString &key, const QString &value) const
 {
     if (value.isEmpty()) {
         contact.removeCustom(QStringLiteral("KADDRESSBOOK"), key);
@@ -174,23 +177,20 @@ void ContactEditorWidget::Private::storeCustom(KContacts::Addressee &contact, co
 }
 
 ContactEditorWidget::ContactEditorWidget(QWidget *parent)
-    : d(new Private(FullMode, this))
+    : d(new ContactEditorWidgetPrivate(FullMode, this))
 {
     Q_UNUSED(parent)
     d->initGui();
 }
 
 ContactEditorWidget::ContactEditorWidget(ContactEditorWidget::DisplayMode displayMode, QWidget *parent)
-    : d(new Private(displayMode, this))
+    : d(new ContactEditorWidgetPrivate(displayMode, this))
 {
     Q_UNUSED(parent)
     d->initGui();
 }
 
-ContactEditorWidget::~ContactEditorWidget()
-{
-    delete d;
-}
+ContactEditorWidget::~ContactEditorWidget() = default;
 
 void ContactEditorWidget::loadContact(const KContacts::Addressee &contact, const ContactEditor::ContactMetaDataBase &metaData)
 {

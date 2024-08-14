@@ -12,19 +12,18 @@
 #include <QSharedData>
 #include <QString>
 
-#include <item.h>
+#include <Akonadi/Item>
 
 namespace Akonadi
 {
-class Q_DECL_HIDDEN EmailAddressSelection::Private : public QSharedData
+class EmailAddressSelectionPrivate : public QSharedData
 {
 public:
-    Private();
-    Private(const Private &other);
+    EmailAddressSelectionPrivate();
+    EmailAddressSelectionPrivate(const EmailAddressSelectionPrivate &other);
 
     QString mName;
     QString mEmailAddress;
     Akonadi::Item mItem;
 };
 }
-

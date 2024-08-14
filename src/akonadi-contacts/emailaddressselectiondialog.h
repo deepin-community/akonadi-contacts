@@ -14,8 +14,12 @@
 #include "abstractemailaddressselectiondialog.h"
 #include "emailaddressselectionwidget.h"
 
+#include <memory>
+
 namespace Akonadi
 {
+class EmailAddressSelectionDialogPrivate;
+
 /**
  * @short A dialog to select email addresses from Akonadi.
  *
@@ -78,9 +82,7 @@ public:
 
 private:
     //@cond PRIVATE
-    class Private;
-    Private *const d;
+    std::unique_ptr<EmailAddressSelectionDialogPrivate> const d;
     //@endcond
 };
 }
-

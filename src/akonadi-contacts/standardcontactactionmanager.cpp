@@ -11,10 +11,10 @@
 #include "contacteditordialog.h"
 #include "contactgroupeditordialog.h"
 
-#include <entitytreemodel.h>
-#include <kcontacts/addressee.h>
-#include <kcontacts/contactgroup.h>
-#include <mimetypechecker.h>
+#include <Akonadi/EntityTreeModel>
+#include <Akonadi/MimeTypeChecker>
+#include <KContacts/Addressee>
+#include <KContacts/ContactGroup>
 
 #include <KActionCollection>
 #include <KLocalizedString>
@@ -26,10 +26,10 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN StandardContactActionManager::Private
+class Akonadi::StandardContactActionManagerPrivate
 {
 public:
-    Private(KActionCollection *actionCollection, QWidget *parentWidget, StandardContactActionManager *parent)
+    StandardContactActionManagerPrivate(KActionCollection *actionCollection, QWidget *parentWidget, StandardContactActionManager *parent)
         : mActionCollection(actionCollection)
         , mParentWidget(parentWidget)
         , mParent(parent)
@@ -42,7 +42,7 @@ public:
         mGenericManager->setCapabilityFilter(QStringList() << QStringLiteral("Resource"));
     }
 
-    ~Private()
+    ~StandardContactActionManagerPrivate()
     {
         delete mGenericManager;
     }
@@ -108,9 +108,7 @@ public:
                                             StandardActionManager::ErrorMessageTitle,
                                             i18n("Address book folder creation failed"));
             mGenericManager->action(Akonadi::StandardActionManager::CreateCollection)
-                ->setProperty("ContentMimeTypes",
-                              QStringList() << QStringLiteral("application/x-vnd.kde.contactgroup") << QStringLiteral("text/directory")
-                                            << QStringLiteral("application/x-vnd.kde.contactgroup"));
+                ->setProperty("ContentMimeTypes", QStringList() << QStringLiteral("application/x-vnd.kde.contactgroup") << QStringLiteral("text/directory"));
 
             break;
         case Akonadi::StandardActionManager::CopyCollections:
@@ -384,16 +382,16 @@ public:
     Collection selectedCollection() const
     {
         if (!mCollectionSelectionModel) {
-            return Collection();
+            return {};
         }
 
         if (mCollectionSelectionModel->selectedIndexes().isEmpty()) {
-            return Collection();
+            return {};
         }
 
         const QModelIndex index = mCollectionSelectionModel->selectedIndexes().first();
         if (!index.isValid()) {
-            return Collection();
+            return {};
         }
 
         return index.data(EntityTreeModel::CollectionRole).value<Collection>();
@@ -449,7 +447,7 @@ public:
 
         if (Akonadi::MimeTypeChecker::isWantedItem(item, KContacts::Addressee::mimeType())) {
             QPointer<Akonadi::ContactEditorDialog> dlg = new Akonadi::ContactEditorDialog(Akonadi::ContactEditorDialog::EditMode, mParentWidget);
-            connect(dlg.data(), &ContactEditorDialog::error, mParent, [this](const QString &error) {
+            QObject::connect(dlg.data(), &ContactEditorDialog::error, mParent, [this](const QString &error) {
                 slotContactEditorError(error);
             });
             dlg->setContact(item);
@@ -480,14 +478,11 @@ public:
 
 StandardContactActionManager::StandardContactActionManager(KActionCollection *actionCollection, QWidget *parent)
     : QObject(parent)
-    , d(new Private(actionCollection, parent, this))
+    , d(new StandardContactActionManagerPrivate(actionCollection, parent, this))
 {
 }
 
-StandardContactActionManager::~StandardContactActionManager()
-{
-    delete d;
-}
+StandardContactActionManager::~StandardContactActionManager() = default;
 
 void StandardContactActionManager::setCollectionSelectionModel(QItemSelectionModel *selectionModel)
 {

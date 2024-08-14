@@ -10,28 +10,41 @@
 
 #include <GrantleeTheme/GrantleeTheme>
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <grantlee/context.h>
 #include <grantlee/engine.h>
 #include <grantlee/templateloader.h>
+#else
+#include <KTextTemplate/context.h>
+#include <KTextTemplate/engine.h>
+#include <KTextTemplate/templateloader.h>
+#endif
 
-#include <Akonadi/Contact/ContactGroupExpandJob>
-#include <AkonadiCore/Item>
+#include <Akonadi/ContactGroupExpandJob>
+#include <Akonadi/Item>
 
 #include <KColorScheme>
 
 using namespace KAddressBookGrantlee;
 
-class Q_DECL_HIDDEN GrantleeContactGroupFormatter::Private
+class KAddressBookGrantlee::GrantleeContactGroupFormatterPrivate
 {
 public:
-    Private()
+    GrantleeContactGroupFormatterPrivate()
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
         : mEngine(new Grantlee::Engine)
+#else
+        : mEngine(new KTextTemplate::Engine)
+#endif
     {
-
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
         mTemplateLoader = QSharedPointer<Grantlee::FileSystemTemplateLoader>(new Grantlee::FileSystemTemplateLoader);
+#else
+        mTemplateLoader = QSharedPointer<KTextTemplate::FileSystemTemplateLoader>(new KTextTemplate::FileSystemTemplateLoader);
+#endif
     }
 
-    ~Private()
+    ~GrantleeContactGroupFormatterPrivate()
     {
         delete mEngine;
         mTemplateLoader.clear();
@@ -54,22 +67,26 @@ public:
     }
 
     QVector<QObject *> mObjects;
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     Grantlee::Engine *const mEngine;
     QSharedPointer<Grantlee::FileSystemTemplateLoader> mTemplateLoader;
     Grantlee::Template mSelfcontainedTemplate;
     Grantlee::Template mEmbeddableTemplate;
+#else
+    KTextTemplate::Engine *const mEngine;
+    QSharedPointer<KTextTemplate::FileSystemTemplateLoader> mTemplateLoader;
+    KTextTemplate::Template mSelfcontainedTemplate;
+    KTextTemplate::Template mEmbeddableTemplate;
+#endif
     QString mErrorMessage;
 };
 
 GrantleeContactGroupFormatter::GrantleeContactGroupFormatter()
-    : d(new Private)
+    : d(new GrantleeContactGroupFormatterPrivate)
 {
 }
 
-GrantleeContactGroupFormatter::~GrantleeContactGroupFormatter()
-{
-    delete d;
-}
+GrantleeContactGroupFormatter::~GrantleeContactGroupFormatter() = default;
 
 void GrantleeContactGroupFormatter::setAbsoluteThemePath(const QString &path)
 {
@@ -97,8 +114,8 @@ static QVariantHash memberHash(const KContacts::ContactGroup::Data &data)
 
     KContacts::Addressee contact;
     contact.setFormattedName(data.name());
-    contact.insertEmail(data.email());
-
+    KContacts::Email email(data.email());
+    contact.addEmail(email);
     const QString emailLink = QStringLiteral("<a href=\"mailto:") + QString::fromLatin1(QUrl::toPercentEncoding(contact.fullEmail()))
         + QStringLiteral("\">%1</a>").arg(contact.preferredEmail());
 
@@ -122,7 +139,7 @@ QString GrantleeContactGroupFormatter::toHtml(HtmlForm form) const
     }
 
     if (group.name().isEmpty() && group.count() == 0) { // empty group
-        return QString();
+        return {};
     }
 
     if (group.contactReferenceCount() != 0) {
@@ -179,14 +196,17 @@ QString GrantleeContactGroupFormatter::toHtml(HtmlForm form) const
     QVariantHash mapping;
     mapping.insert(QStringLiteral("contactGroup"), contactGroupObject);
     mapping.insert(QStringLiteral("colors"), colorsObject);
-
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     Grantlee::Context context(mapping);
+#else
+    KTextTemplate::Context context(mapping);
+#endif
 
     if (form == SelfcontainedForm) {
         return d->mSelfcontainedTemplate->render(&context);
     } else if (form == EmbeddableForm) {
         return d->mEmbeddableTemplate->render(&context);
     } else {
-        return QString();
+        return {};
     }
 }

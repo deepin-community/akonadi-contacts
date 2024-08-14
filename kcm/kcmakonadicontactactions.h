@@ -1,7 +1,7 @@
 /*
     This file is part of Akonadi Contact.
 
-    SPDX-FileCopyrightText: 2013-2021 Laurent Montel <montel@kde.org>
+    SPDX-FileCopyrightText: 2013-2022 Laurent Montel <montel@kde.org>
     SPDX-FileCopyrightText: 2009 Tobias Koenig <tokoe@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
@@ -28,10 +28,8 @@ public:
 private Q_SLOTS:
     void slotDialPhoneNumberActionChanged(int);
     void slotSmsPhoneNumberActionChanged(int value);
-    void slotShowAddressActionChanged(int value);
 
 private:
     KConfigDialogManager *mConfigManager = nullptr;
     Ui_AkonadiContactActions ui;
 };
-

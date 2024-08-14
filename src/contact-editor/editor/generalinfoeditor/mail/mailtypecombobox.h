@@ -1,7 +1,7 @@
 /*
     This file is part of Contact Editor.
 
-    SPDX-FileCopyrightText: 2016-2021 Laurent Montel <montel@kde.org>
+    SPDX-FileCopyrightText: 2016-2022 Laurent Montel <montel@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -18,7 +18,6 @@ class CONTACTEDITOR_TESTS_EXPORT MailTypeCombobox : public ContactEditor::Contac
     Q_OBJECT
 public:
     explicit MailTypeCombobox(QWidget *parent = nullptr);
-    ~MailTypeCombobox();
+    ~MailTypeCombobox() override;
 };
 }
-

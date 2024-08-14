@@ -12,14 +12,12 @@
 #include "standardcontactgroupformatter.h"
 #include "textbrowser_p.h"
 
-#include <KColorScheme>
-#include <collectionfetchjob.h>
-#include <entitydisplayattribute.h>
-#include <item.h>
-#include <itemfetchjob.h>
-#include <itemfetchscope.h>
-#include <kcontacts/addressee.h>
-#include <kcontacts/contactgroup.h>
+#include <Akonadi/CollectionFetchJob>
+#include <Akonadi/EntityDisplayAttribute>
+#include <Akonadi/Item>
+#include <Akonadi/ItemFetchScope>
+#include <KContacts/Addressee>
+#include <KContacts/ContactGroup>
 
 #include <KLocalizedString>
 
@@ -28,10 +26,10 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN ContactGroupViewer::Private
+class Akonadi::ContactGroupViewerPrivate
 {
 public:
-    Private(ContactGroupViewer *parent)
+    explicit ContactGroupViewerPrivate(ContactGroupViewer *parent)
         : mParent(parent)
     {
         mBrowser = new TextBrowser;
@@ -43,7 +41,7 @@ public:
         mContactGroupFormatter = mStandardContactGroupFormatter;
     }
 
-    ~Private()
+    ~ContactGroupViewerPrivate()
     {
         delete mStandardContactGroupFormatter;
     }
@@ -77,7 +75,8 @@ public:
 
     void slotMailClicked(const QUrl &email)
     {
-        QString name, address;
+        QString name;
+        QString address;
 
         // remove the 'mailto:' and split into name and email address
         KContacts::Addressee::parseEmailAddress(email.path(), name, address);
@@ -125,7 +124,7 @@ public:
 
     QMetaObject::Connection mCollectionFetchJobConnection;
     QMetaObject::Connection mJobConnection;
-    ContactGroupViewer *mParent = nullptr;
+    ContactGroupViewer *const mParent;
     TextBrowser *mBrowser = nullptr;
     QString mCurrentGroupName;
     KContacts::Addressee::List mCurrentContacts;
@@ -139,10 +138,10 @@ public:
 
 ContactGroupViewer::ContactGroupViewer(QWidget *parent)
     : QWidget(parent)
-    , d(new Private(this))
+    , d(new ContactGroupViewerPrivate(this))
 {
     auto layout = new QVBoxLayout(this);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
 
     connect(d->mBrowser, &TextBrowser::anchorClicked, this, [this](const QUrl &url) {
         d->slotMailClicked(url);
@@ -155,10 +154,7 @@ ContactGroupViewer::ContactGroupViewer(QWidget *parent)
     fetchScope().setAncestorRetrieval(ItemFetchScope::Parent);
 }
 
-ContactGroupViewer::~ContactGroupViewer()
-{
-    delete d;
-}
+ContactGroupViewer::~ContactGroupViewer() = default;
 
 Akonadi::Item ContactGroupViewer::contactGroup() const
 {
@@ -177,6 +173,11 @@ void ContactGroupViewer::setContactGroupFormatter(AbstractContactGroupFormatter 
     } else {
         d->mContactGroupFormatter = formatter;
     }
+}
+
+void ContactGroupViewer::updateView()
+{
+    itemChanged(d->mCurrentItem);
 }
 
 void ContactGroupViewer::itemChanged(const Item &item)

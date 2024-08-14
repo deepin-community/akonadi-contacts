@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadi_serializer_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-01-27 03:05+0100\n"
+"POT-Creation-Date: 2022-03-22 00:43+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -17,47 +17,47 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: akonadi_serializer_addressee.cpp:167
+#: akonadi_serializer_addressee.cpp:171
 #, kde-format
 msgid "Changed Contact"
 msgstr ""
 
-#: akonadi_serializer_addressee.cpp:168
+#: akonadi_serializer_addressee.cpp:172
 #, kde-format
 msgid "Conflicting Contact"
 msgstr ""
 
-#: akonadi_serializer_addressee.cpp:296
+#: akonadi_serializer_addressee.cpp:300
 #, kde-format
 msgid "Emails"
 msgstr "ئېلخەتلەر"
 
-#: akonadi_serializer_addressee.cpp:297
+#: akonadi_serializer_addressee.cpp:301
 #, kde-format
 msgid "Phone Numbers"
 msgstr "تېلېفون نومۇرلىرى"
 
-#: akonadi_serializer_addressee.cpp:298
+#: akonadi_serializer_addressee.cpp:302
 #, kde-format
 msgid "Addresses"
 msgstr "ئادرېسلار"
 
-#: akonadi_serializer_contactgroup.cpp:89
+#: akonadi_serializer_contactgroup.cpp:90
 #, kde-format
 msgid "Changed Contact Group"
 msgstr ""
 
-#: akonadi_serializer_contactgroup.cpp:90
+#: akonadi_serializer_contactgroup.cpp:91
 #, kde-format
 msgid "Conflicting Contact Group"
 msgstr ""
 
-#: akonadi_serializer_contactgroup.cpp:96
+#: akonadi_serializer_contactgroup.cpp:97
 #, kde-format
 msgid "Name"
 msgstr "ئاتى"
 
-#: akonadi_serializer_contactgroup.cpp:106
+#: akonadi_serializer_contactgroup.cpp:107
 #, kde-format
 msgid "Member"
 msgstr "ئەزا"

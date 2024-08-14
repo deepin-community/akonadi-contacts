@@ -10,18 +10,18 @@
 
 #include <KConfig>
 #include <KConfigGroup>
+#include <KContacts/Addressee>
 #include <KLineEdit>
 #include <KLocalizedString>
+#include <KUrlRequester>
 #include <QHBoxLayout>
 #include <QStandardPaths>
-#include <kcontacts/addressee.h>
-#include <kurlrequester.h>
 
 FreeBusyEditWidget::FreeBusyEditWidget(QWidget *parent)
     : QWidget(parent)
 {
     auto layout = new QHBoxLayout(this);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
 
     mURL = new KUrlRequester(this);
     mURL->lineEdit()->setTrapReturnKey(true);
@@ -31,9 +31,7 @@ FreeBusyEditWidget::FreeBusyEditWidget(QWidget *parent)
     setFocusPolicy(Qt::StrongFocus);
 }
 
-FreeBusyEditWidget::~FreeBusyEditWidget()
-{
-}
+FreeBusyEditWidget::~FreeBusyEditWidget() = default;
 
 static QString freeBusyUrlStore()
 {

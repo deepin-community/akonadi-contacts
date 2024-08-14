@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-01-27 03:05+0100\n"
+"POT-Creation-Date: 2022-03-22 00:43+0000\n"
 "PO-Revision-Date: 2014-08-22 14:45+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -18,47 +18,47 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: akonadi_serializer_addressee.cpp:167
+#: akonadi_serializer_addressee.cpp:171
 #, kde-format
 msgid "Changed Contact"
 msgstr "Changed Contact"
 
-#: akonadi_serializer_addressee.cpp:168
+#: akonadi_serializer_addressee.cpp:172
 #, kde-format
 msgid "Conflicting Contact"
 msgstr "Conflicting Contact"
 
-#: akonadi_serializer_addressee.cpp:296
+#: akonadi_serializer_addressee.cpp:300
 #, kde-format
 msgid "Emails"
 msgstr "Emails"
 
-#: akonadi_serializer_addressee.cpp:297
+#: akonadi_serializer_addressee.cpp:301
 #, kde-format
 msgid "Phone Numbers"
 msgstr "Phone Numbers"
 
-#: akonadi_serializer_addressee.cpp:298
+#: akonadi_serializer_addressee.cpp:302
 #, kde-format
 msgid "Addresses"
 msgstr "Addresses"
 
-#: akonadi_serializer_contactgroup.cpp:89
+#: akonadi_serializer_contactgroup.cpp:90
 #, kde-format
 msgid "Changed Contact Group"
 msgstr "Changed Contact Group"
 
-#: akonadi_serializer_contactgroup.cpp:90
+#: akonadi_serializer_contactgroup.cpp:91
 #, kde-format
 msgid "Conflicting Contact Group"
 msgstr "Conflicting Contact Group"
 
-#: akonadi_serializer_contactgroup.cpp:96
+#: akonadi_serializer_contactgroup.cpp:97
 #, kde-format
 msgid "Name"
 msgstr "Name"
 
-#: akonadi_serializer_contactgroup.cpp:106
+#: akonadi_serializer_contactgroup.cpp:107
 #, kde-format
 msgid "Member"
 msgstr "Member"

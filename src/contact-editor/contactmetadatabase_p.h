@@ -1,7 +1,7 @@
 /*
     This file is part of Contact Editor.
 
-    SPDX-FileCopyrightText: 2017-2021 Laurent Montel <montel@kde.org>
+    SPDX-FileCopyrightText: 2017-2022 Laurent Montel <montel@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -11,8 +11,12 @@
 #include "contacteditor_export.h"
 #include <QVariant>
 
+#include <memory>
+
 namespace ContactEditor
 {
+class ContactMetaDataBasePrivate;
+
 /**
  * @short A helper class for storing contact specific settings.
  */
@@ -78,9 +82,7 @@ private:
     //@cond PRIVATE
     Q_DISABLE_COPY(ContactMetaDataBase)
 
-    class Private;
-    Private *const d;
+    std::unique_ptr<ContactMetaDataBasePrivate> const d;
     //@endcond
 };
 }
-

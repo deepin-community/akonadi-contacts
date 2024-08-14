@@ -10,11 +10,15 @@
 
 #include "akonadi-contact_export.h"
 
-#include <itemsearchjob.h>
-#include <kcontacts/addressee.h>
+#include <Akonadi/ItemSearchJob>
+#include <KContacts/Addressee>
+
+#include <memory>
 
 namespace Akonadi
 {
+class ContactSearchJobPrivate;
+
 /**
  * @short Job that searches for contacts in the Akonadi storage.
  *
@@ -76,7 +80,7 @@ public:
     /**
      * Destroys the contact search job.
      */
-    ~ContactSearchJob();
+    ~ContactSearchJob() override;
 
     /**
      * Describes the criteria that can be searched for.
@@ -129,9 +133,7 @@ public:
 
 private:
     //@cond PRIVATE
-    class Private;
-    Private *const d;
+    std::unique_ptr<ContactSearchJobPrivate> const d;
     //@endcond
 };
 }
-

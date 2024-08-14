@@ -12,8 +12,12 @@
 
 #include <QSortFilterProxyModel>
 
+#include <memory>
+
 namespace Akonadi
 {
+class ContactsFilterProxyModelPrivate;
+
 /**
  * @short A proxy model for \a ContactsTreeModel models.
  *
@@ -109,11 +113,9 @@ protected:
 
 private:
     //@cond PRIVATE
-    class Private;
-    Private *const d;
+    std::unique_ptr<ContactsFilterProxyModelPrivate> const d;
     //@endcond
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(ContactsFilterProxyModel::FilterFlags)
 }
-

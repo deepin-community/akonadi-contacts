@@ -10,11 +10,11 @@
 
 #include "contactgroupeditor.h"
 #include "contactgroupeditor_p.h"
-
+#include <Akonadi/CollectionComboBox>
+#include <Akonadi/Item>
+#include <KContacts/ContactGroup>
 #include <KLocalizedString>
-#include <collectioncombobox.h>
-#include <item.h>
-#include <kcontacts/contactgroup.h>
+#include <kwidgetsaddons_version.h>
 
 #include <KConfig>
 #include <KMessageBox>
@@ -28,10 +28,14 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN ContactGroupEditorDialog::Private
+namespace
+{
+static const char myContactGroupEditorDialogGroupName[] = "ContactGroupEditorDialog";
+}
+class Akonadi::ContactGroupEditorDialogPrivate
 {
 public:
-    Private(ContactGroupEditorDialog *qq, ContactGroupEditorDialog::Mode mode)
+    ContactGroupEditorDialogPrivate(ContactGroupEditorDialog *qq, ContactGroupEditorDialog::Mode mode)
         : q(qq)
         , mMode(mode)
     {
@@ -47,7 +51,7 @@ public:
     void readConfig()
     {
         KConfig config(QStringLiteral("akonadi_contactrc"));
-        KConfigGroup group(&config, QStringLiteral("ContactGroupEditorDialog"));
+        KConfigGroup group(&config, myContactGroupEditorDialogGroupName);
         const QSize size = group.readEntry("Size", QSize(470, 400));
         if (size.isValid()) {
             q->resize(size);
@@ -57,7 +61,7 @@ public:
     void writeConfig()
     {
         KConfig config(QStringLiteral("akonadi_contactrc"));
-        KConfigGroup group(&config, QStringLiteral("ContactGroupEditorDialog"));
+        KConfigGroup group(&config, myContactGroupEditorDialogGroupName);
         group.writeEntry("Size", q->size());
         group.sync();
     }
@@ -65,15 +69,15 @@ public:
     ContactGroupEditorDialog *const q;
     CollectionComboBox *mAddressBookBox = nullptr;
     ContactGroupEditor *mEditor = nullptr;
-    ContactGroupEditorDialog::Mode mMode;
+    const ContactGroupEditorDialog::Mode mMode;
     QPushButton *okButton = nullptr;
 };
 
 ContactGroupEditorDialog::ContactGroupEditorDialog(Mode mode, QWidget *parent)
     : QDialog(parent)
-    , d(new Private(this, mode))
+    , d(new ContactGroupEditorDialogPrivate(this, mode))
 {
-    setWindowTitle(mode == CreateMode ? i18n("New Contact Group") : i18n("Edit Contact Group"));
+    setWindowTitle(mode == CreateMode ? i18nc("@title:window", "New Contact Group") : i18nc("@title:window", "Edit Contact Group"));
     auto mainLayout = new QVBoxLayout(this);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
@@ -91,7 +95,7 @@ ContactGroupEditorDialog::ContactGroupEditorDialog(Mode mode, QWidget *parent)
     auto mainWidget = new QWidget(this);
 
     auto layout = new QGridLayout(mainWidget);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
 
     d->mEditor = new Akonadi::ContactGroupEditor(mode == CreateMode ? Akonadi::ContactGroupEditor::CreateMode : Akonadi::ContactGroupEditor::EditMode, this);
 
@@ -123,7 +127,6 @@ ContactGroupEditorDialog::ContactGroupEditorDialog(Mode mode, QWidget *parent)
 ContactGroupEditorDialog::~ContactGroupEditorDialog()
 {
     d->writeConfig();
-    delete d;
 }
 
 void ContactGroupEditorDialog::setContactGroup(const Akonadi::Item &group)
@@ -158,9 +161,24 @@ void ContactGroupEditorDialog::slotAccepted()
 
 void ContactGroupEditorDialog::reject()
 {
-    if (KMessageBox::questionYesNo(this, i18nc("@info", "Do you really want to cancel?"), i18nc("@title:window", "Confirmation")) == KMessageBox::Yes) {
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+    const int answer = KMessageBox::questionTwoActions(this,
+#else
+    const int answer = KMessageBox::questionYesNo(this,
+#endif
+                                                       i18nc("@info", "Do you really want to cancel?"),
+                                                       i18nc("@title:window", "Confirmation"),
+                                                       KGuiItem(i18nc("@action:button", "Cancel Editing"), QStringLiteral("dialog-ok")),
+                                                       KGuiItem(i18nc("@action:button", "Do Not Cancel"), QStringLiteral("dialog-cancel")));
+
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+    if (answer == KMessageBox::ButtonCode::PrimaryAction) {
+#else
+    if (answer == KMessageBox::Yes) {
+#endif
         QDialog::reject(); // Discard current changes
     }
 }
 
 #include "moc_contactgroupeditordialog.cpp"
+#include <kwidgetsaddons_version.h>

@@ -10,7 +10,7 @@
 
 #include <QSortFilterProxyModel>
 
-#include <collection.h>
+#include <Akonadi/Collection>
 
 /**
  * @short A filter model for Akonadi collections.
@@ -62,4 +62,3 @@ private:
     QSet<QString> mContentMimeTypes;
     Akonadi::Collection::Rights mRights;
 };
-

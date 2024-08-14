@@ -8,9 +8,9 @@
 
 #include <QObject>
 
-#include <AkonadiCore/differencesalgorithminterface.h>
-#include <AkonadiCore/gidextractorinterface.h>
-#include <AkonadiCore/itemserializerplugin.h>
+#include <Akonadi/DifferencesAlgorithmInterface>
+#include <Akonadi/GidExtractorInterface>
+#include <Akonadi/ItemSerializerPlugin>
 
 namespace Akonadi
 {
@@ -33,4 +33,3 @@ public:
     QString extractGid(const Item &item) const override;
 };
 }
-

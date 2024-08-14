@@ -23,7 +23,7 @@ class FreeBusyEditWidget : public QWidget
 
 public:
     explicit FreeBusyEditWidget(QWidget *parent = nullptr);
-    ~FreeBusyEditWidget();
+    ~FreeBusyEditWidget() override;
 
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact) const;
@@ -34,4 +34,3 @@ private:
     KUrlRequester *mURL = nullptr;
     bool mReadOnly = false;
 };
-

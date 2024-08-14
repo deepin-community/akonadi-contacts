@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_akonadicontact_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-01-27 03:05+0100\n"
+"POT-Creation-Date: 2022-02-05 00:44+0000\n"
 "PO-Revision-Date: 2010-11-29 09:48+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -25,35 +25,21 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "khoemsokhem@khmeros.info,​​mornmet@khmeros.info,sutha@khmeros.info"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: akonadicontactactions.ui:29
-#, kde-format
-msgid "Show Address"
-msgstr "បង្ហាញ​អាសយដ្ឋាន"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: akonadicontactactions.ui:57
-#, kde-format
-msgid "Url:"
-msgstr "Url ៖"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: akonadicontactactions.ui:87 akonadicontactactions.ui:151
-#: akonadicontactactions.ui:217
-#, kde-format
-msgid "Command:"
-msgstr "ពាក្យ​បញ្ជា​ ៖"
-
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: akonadicontactactions.ui:122
+#: akonadicontactactions.ui:29
 #, kde-format
 msgid "Dial Phone Number"
 msgstr "ចុច​លេខ​ទូរស័ព្ទ"
 
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: akonadicontactactions.ui:58 akonadicontactactions.ui:124
+#, kde-format
+msgid "Command:"
+msgstr "ពាក្យ​បញ្ជា​ ៖"
+
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: akonadicontactactions.ui:188
+#: akonadicontactactions.ui:95
 #, kde-format
 msgid "Send SMS"
 msgstr "ផ្ញើ SMS"
@@ -94,30 +80,18 @@ msgid "SflPhone"
 msgstr ""
 
 #: kcmakonadicontactactions.cpp:44 kcmakonadicontactactions.cpp:49
-#: kcmakonadicontactactions.cpp:52
 #, kde-format
 msgid "External Application"
 msgstr "កម្មវិធី​ខាង​ក្រៅ"
 
-#: kcmakonadicontactactions.cpp:51
-#, kde-format
-msgid "Web Browser"
-msgstr "កម្មវិធី​​រុករក​បណ្តាញ"
+#~ msgid "Show Address"
+#~ msgstr "បង្ហាញ​អាសយដ្ឋាន"
 
-#: kcmakonadicontactactions.cpp:53
-#, kde-format
-msgid "Google map"
-msgstr ""
+#~ msgid "Url:"
+#~ msgstr "Url ៖"
 
-#: kcmakonadicontactactions.cpp:54
-#, kde-format
-msgid "Map quest"
-msgstr ""
-
-#: kcmakonadicontactactions.cpp:55
-#, kde-format
-msgid "OpenStreetMap"
-msgstr ""
+#~ msgid "Web Browser"
+#~ msgstr "កម្មវិធី​​រុករក​បណ្តាញ"
 
 #~ msgid "kcmakonadicontactactions"
 #~ msgstr "kcmakonadicontactactions"

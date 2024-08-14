@@ -8,20 +8,20 @@
 
 #include "job/addemailaddressjob.h"
 
-#include <Akonadi/Contact/ContactEditorDialog>
-#include <Akonadi/Contact/ContactSearchJob>
+#include <Akonadi/CollectionDialog>
+#include <Akonadi/ContactEditorDialog>
+#include <Akonadi/ContactSearchJob>
+#include <Akonadi/Item>
+#include <Akonadi/ItemCreateJob>
+#include <KContacts/Addressee>
 #include <QPointer>
-#include <collectiondialog.h>
-#include <item.h>
-#include <itemcreatejob.h>
-#include <kcontacts/addressee.h>
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN OpenEmailAddressJob::Private
+class Akonadi::OpenEmailAddressJobPrivate
 {
 public:
-    Private(OpenEmailAddressJob *qq, const QString &emailString, QWidget *parentWidget)
+    OpenEmailAddressJobPrivate(OpenEmailAddressJob *qq, const QString &emailString, QWidget *parentWidget)
         : q(qq)
         , mCompleteAddress(emailString)
         , mParentWidget(parentWidget)
@@ -80,7 +80,7 @@ public:
     }
 
     OpenEmailAddressJob *const q;
-    QString mCompleteAddress;
+    const QString mCompleteAddress;
     QString mEmail;
     QString mName;
     QWidget *const mParentWidget;
@@ -88,14 +88,11 @@ public:
 
 OpenEmailAddressJob::OpenEmailAddressJob(const QString &email, QWidget *parentWidget, QObject *parent)
     : KJob(parent)
-    , d(new Private(this, email, parentWidget))
+    , d(new OpenEmailAddressJobPrivate(this, email, parentWidget))
 {
 }
 
-OpenEmailAddressJob::~OpenEmailAddressJob()
-{
-    delete d;
-}
+OpenEmailAddressJob::~OpenEmailAddressJob() = default;
 
 void OpenEmailAddressJob::start()
 {

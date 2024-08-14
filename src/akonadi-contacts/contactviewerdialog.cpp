@@ -10,7 +10,7 @@
 #include "contactdefaultactions.h"
 #include "contactviewer.h"
 
-#include <item.h>
+#include <Akonadi/Item>
 using namespace Akonadi;
 
 #include <KConfig>
@@ -21,10 +21,14 @@ using namespace Akonadi;
 #include <QPushButton>
 #include <QVBoxLayout>
 
-class Q_DECL_HIDDEN ContactViewerDialog::Private
+namespace
+{
+static const char myContactViewerDialogGroupName[] = "ContactViewer";
+}
+class Akonadi::ContactViewerDialogPrivate
 {
 public:
-    Private(ContactViewerDialog *parent)
+    explicit ContactViewerDialogPrivate(ContactViewerDialog *parent)
         : q(parent)
     {
     }
@@ -32,7 +36,7 @@ public:
     void readConfig()
     {
         KConfig config(QStringLiteral("akonadi_contactrc"));
-        KConfigGroup group(&config, QStringLiteral("ContactViewer"));
+        KConfigGroup group(&config, myContactViewerDialogGroupName);
         const QSize size = group.readEntry("Size", QSize(500, 600));
         if (size.isValid()) {
             q->resize(size);
@@ -42,7 +46,7 @@ public:
     void writeConfig()
     {
         KConfig config(QStringLiteral("akonadi_contactrc"));
-        KConfigGroup group(&config, QStringLiteral("ContactViewer"));
+        KConfigGroup group(&config, myContactViewerDialogGroupName);
         group.writeEntry("Size", q->size());
         group.sync();
     }
@@ -53,7 +57,7 @@ public:
 
 ContactViewerDialog::ContactViewerDialog(QWidget *parent)
     : QDialog(parent)
-    , d(new Private(this))
+    , d(new ContactViewerDialogPrivate(this))
 {
     setWindowTitle(i18nc("@title:window", "Show Contact"));
     auto mainLayout = new QVBoxLayout(this);
@@ -83,7 +87,6 @@ ContactViewerDialog::ContactViewerDialog(QWidget *parent)
 ContactViewerDialog::~ContactViewerDialog()
 {
     d->writeConfig();
-    delete d;
 }
 
 Akonadi::Item ContactViewerDialog::contact() const

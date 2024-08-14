@@ -2,4 +2,4 @@
 /usr/lib/*/qt5/plugins/akonadi_serializer_contactgroup.so
 usr/lib/*/libKF5AkonadiContact.so.5
 usr/lib/*/libKF5AkonadiContact.so.5.*
-usr/lib/*/qt5/plugins/pim/kcms/kaddressbook/kcm_akonadicontact_actions.so
+usr/lib/*/qt5/plugins/pim5/kcms/kaddressbook/kcm_akonadicontact_actions.so

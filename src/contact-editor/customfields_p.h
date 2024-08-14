@@ -12,8 +12,13 @@
 #include <QString>
 #include <QVariant>
 #include <QVector>
-
-template<typename T> class QVector;
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+template<typename T>
+class QVector;
+#else
+template<typename T>
+class QList;
+#endif
 
 /**
  * @short A class that represents non-standard contact fields.
@@ -76,4 +81,3 @@ private:
     Scope mScope;
     QString mValue;
 };
-

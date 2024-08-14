@@ -7,11 +7,11 @@
 */
 
 #include "emailaddressselectionmodel.h"
-#include <Akonadi/Contact/ContactsTreeModel>
-#include <AkonadiCore/ChangeRecorder>
-#include <AkonadiCore/EntityDisplayAttribute>
-#include <AkonadiCore/ItemFetchScope>
-#include <AkonadiCore/Session>
+#include <Akonadi/ChangeRecorder>
+#include <Akonadi/ContactsTreeModel>
+#include <Akonadi/EntityDisplayAttribute>
+#include <Akonadi/ItemFetchScope>
+#include <Akonadi/Session>
 #include <KContacts/Addressee>
 #include <KContacts/ContactGroup>
 
@@ -37,9 +37,7 @@ EmailAddressSelectionModel::EmailAddressSelectionModel(QObject *parent)
     mModel = new Akonadi::ContactsTreeModel(changeRecorder, this);
 }
 
-EmailAddressSelectionModel::~EmailAddressSelectionModel()
-{
-}
+EmailAddressSelectionModel::~EmailAddressSelectionModel() = default;
 
 Akonadi::ContactsTreeModel *EmailAddressSelectionModel::model() const
 {

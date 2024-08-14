@@ -1,5 +1,5 @@
 /*
-   SPDX-FileCopyrightText: 2015-2021 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2015-2022 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -13,9 +13,7 @@ GrantleePrintTest::GrantleePrintTest(QObject *parent)
 {
 }
 
-GrantleePrintTest::~GrantleePrintTest()
-{
-}
+GrantleePrintTest::~GrantleePrintTest() = default;
 
 void GrantleePrintTest::shouldReturnEmptyStringWhenNotContentAndNoContacts()
 {
@@ -39,7 +37,9 @@ void GrantleePrintTest::shouldReturnStringWhenAddContentAndContacts()
     KContacts::Addressee::List lst;
     KContacts::Addressee address;
     address.setName(QStringLiteral("foo1"));
-    address.insertEmail(QStringLiteral("foo@kde.org"), true);
+    KContacts::Email email(QStringLiteral("foo@kde.org"));
+    email.setPreferred(true);
+    address.addEmail(email);
     lst << address;
 
     QCOMPARE(grantleePrint.contactsToHtml(lst), QStringLiteral("foo"));
@@ -51,7 +51,9 @@ void GrantleePrintTest::shouldReturnEmails()
     KContacts::Addressee::List lst;
     KContacts::Addressee address;
     address.setName(QStringLiteral("foo1"));
-    address.insertEmail(QStringLiteral("foo@kde.org"), true);
+    KContacts::Email email(QStringLiteral("foo@kde.org"));
+    email.setPreferred(true);
+    address.addEmail(email);
     lst << address;
     grantleePrint.setTemplateContent(
         QStringLiteral("{% if contacts %}{% for contact in contacts %}{% if contact.name %}{{ contact.name }}{% endif %}{% endfor %}{% endif %}"));
@@ -74,7 +76,7 @@ void GrantleePrintTest::shouldDisplayContactInfo_data()
     QTest::newRow("prefix") << QStringLiteral("prefix") << QStringLiteral("foo-prefix");
     QTest::newRow("department") << QStringLiteral("department") << QStringLiteral("foo-department");
     QTest::newRow("office") << QStringLiteral("office") << QStringLiteral("foo-office");
-    QTest::newRow("profesion") << QStringLiteral("profession") << QStringLiteral("foo-profession");
+    QTest::newRow("profession") << QStringLiteral("profession") << QStringLiteral("foo-profession");
     QTest::newRow("manager") << QStringLiteral("managersName") << QStringLiteral("foo-managersname");
     QTest::newRow("assistant") << QStringLiteral("assistantsName") << QStringLiteral("foo-assistantsname");
     QTest::newRow("spouse") << QStringLiteral("spousesName") << QStringLiteral("foo-spousesname");
@@ -93,7 +95,9 @@ void GrantleePrintTest::shouldDisplayContactInfo()
     address.setGivenName(QStringLiteral("foo-givenname"));
     address.setAdditionalName(QStringLiteral("foo-additionalname"));
     address.setName(QStringLiteral("foo1"));
-    address.insertEmail(QStringLiteral("foo@kde.org"), true);
+    KContacts::Email email(QStringLiteral("foo@kde.org"));
+    email.setPreferred(true);
+    address.addEmail(email);
     address.setOrganization(QStringLiteral("kde"));
     address.insertLang(KContacts::Lang(QStringLiteral("fr")));
     address.setNote(QStringLiteral("foo-note"));

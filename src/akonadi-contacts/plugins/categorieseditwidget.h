@@ -8,9 +8,10 @@
 
 #pragma once
 
-#include <ContactEditor/CategoriesEditAbstractWidget>
+#include <Akonadi/CategoriesEditAbstractWidget>
+#include <KContacts/Addressee>
+#include <KJob>
 #include <QVariant>
-#include <kcontacts/addressee.h>
 namespace Akonadi
 {
 class TagWidget;
@@ -34,5 +35,7 @@ public:
 
 private:
     Akonadi::TagWidget *const mTagWidget;
-};
 
+private Q_SLOTS:
+    void onMissingTagCreated(KJob *);
+};

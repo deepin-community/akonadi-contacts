@@ -10,13 +10,16 @@
 
 #include "akonadi-contact_export.h"
 
-#include <itemmonitor.h>
+#include <Akonadi/ItemMonitor>
 
 #include <QWidget>
+
+#include <memory>
 
 namespace Akonadi
 {
 class AbstractContactGroupFormatter;
+class ContactGroupViewerPrivate;
 
 /**
  * @short A viewer component for contact groups in Akonadi.
@@ -71,6 +74,11 @@ public:
      */
     void setContactGroupFormatter(AbstractContactGroupFormatter *formatter);
 
+    /**
+     * @since 5.20.41
+     */
+    void updateView();
+
 public Q_SLOTS:
     /**
      * Sets the contact @p group that shall be displayed in the viewer.
@@ -101,9 +109,7 @@ private:
 
 private:
     //@cond PRIVATE
-    class Private;
-    Private *const d;
+    std::unique_ptr<ContactGroupViewerPrivate> const d;
     //@endcond
 };
 }
-

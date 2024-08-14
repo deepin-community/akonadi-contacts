@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: None
+# SPDX-License-Identifier: CC0-1.0
+
+Dependencies:
+- 'on': ['@all']
+  'require':
+    'frameworks/extra-cmake-modules': '@latest'
+    'frameworks/kcontacts' : '@latest'
+    'frameworks/prison' : '@latest'
+    'frameworks/kcmutils': '@latest'
+    'pim/akonadi' : '@same'
+    'pim/kmime' : '@same'
+    'pim/grantleetheme' : '@same'
+
+- 'on': ['Linux/Qt6', 'FreeBSD/Qt6', 'Windows/Qt6']
+  'require':
+    'libraries/ktexttemplate': '@stable'
