@@ -15,17 +15,17 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 
-#include <assert.h>
+#include <cassert>
 
-class Q_DECL_HIDDEN KWidgetLister::Private
+class KWidgetListerPrivate
 {
 public:
-    Private(KWidgetLister *qq)
+    explicit KWidgetListerPrivate(KWidgetLister *qq)
         : q(qq)
     {
     }
 
-    ~Private()
+    ~KWidgetListerPrivate()
     {
         qDeleteAll(mWidgetList);
         mWidgetList.clear();
@@ -41,28 +41,25 @@ public:
 
 KWidgetLister::KWidgetLister(int minWidgets, int maxWidgets, QWidget *parent)
     : QWidget(parent)
-    , d(new Private(this))
+    , d(new KWidgetListerPrivate(this))
 {
     d->mMinWidgets = qMax(minWidgets, 1);
     d->mMaxWidgets = qMax(maxWidgets, d->mMinWidgets + 1);
     init();
 }
 
-KWidgetLister::~KWidgetLister()
-{
-    delete d;
-}
+KWidgetLister::~KWidgetLister() = default;
 
 void KWidgetLister::init()
 {
     //--------- the button box
     d->mLayout = new QVBoxLayout(this);
-    d->mLayout->setContentsMargins(0, 0, 0, 0);
+    d->mLayout->setContentsMargins({});
     d->mLayout->setSpacing(4);
 
     d->mButtonBox = new QWidget(this);
     auto mButtonBoxHBoxLayout = new QHBoxLayout(d->mButtonBox);
-    mButtonBoxHBoxLayout->setContentsMargins(0, 0, 0, 0);
+    mButtonBoxHBoxLayout->setContentsMargins({});
     d->mLayout->addWidget(d->mButtonBox);
     d->mLayout->addStretch(1);
 }

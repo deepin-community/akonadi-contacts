@@ -11,7 +11,7 @@
 
 #include <QWidget>
 
-#include <kcontacts/resourcelocatorurl.h>
+#include <KContacts/ResourceLocatorUrl>
 class QToolButton;
 namespace ContactEditor
 {
@@ -22,7 +22,7 @@ class WebWidget : public QWidget
     Q_OBJECT
 public:
     explicit WebWidget(QWidget *parent = nullptr);
-    ~WebWidget();
+    ~WebWidget() override;
     void updateAddRemoveButton(bool addButtonEnabled);
 
     void clearWidget();

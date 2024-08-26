@@ -3,38 +3,37 @@ Section: libs
 Priority: optional
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>,
-           Norbert Preining <norbert@preining.info>,
            Sandro Knauß <hefee@debian.org>,
            Sune Vuorela <sune@debian.org>,
+           Patrick Franz <deltaone@debian.org>,
 Build-Depends: cmake (>= 3.16~),
                debhelper-compat (= 13),
-               extra-cmake-modules (>= 5.83.0~),
+               extra-cmake-modules (>= 5.99.0~),
                gettext,
                libgrantlee5-dev (>= 5.2~),
-               libkf5akonadi-dev (>= 4:21.08.1~),
-               libkf5codecs-dev (>= 5.71.0~),
-               libkf5completion-dev (>= 5.83.0~),
-               libkf5config-dev (>= 5.83.0~),
-               libkf5contacts-dev (>= 5:5.83.0~),
-               libkf5grantleetheme-dev (>= 21.08.1~),
+               libkf5akonadi-dev (>= 4:22.12.3~),
+               libkf5completion-dev (>= 5.99.0~),
+               libkf5config-dev (>= 5.99.0~),
+               libkf5contacts-dev (>= 5:5.99.0~),
+               libkf5coreaddons-dev (>= 5.99.0~),
+               libkf5grantleetheme-dev (>= 22.12.3~),
                libkf5grantleetheme-plugins,
-               libkf5i18n-dev (>= 5.83.0~),
-               libkf5iconthemes-dev (>= 5.83.0~),
-               libkf5kcmutils-dev (>= 5.83.0~),
-               libkf5kio-dev (>= 5.83.0~),
-               libkf5libkleo-dev (>= 4:21.08.1~),
-               libkf5mime-dev (>= 21.08.1~),
-               libkf5prison-dev (>= 5.83.0~),
-               libkf5service-dev (>= 5.83.0~),
-               libkf5textwidgets-dev (>= 5.83.0~),
-               libkf5widgetsaddons-dev (>= 5.83.0~),
-               libkf5xmlgui-dev (>= 5.83.0~),
+               libkf5i18n-dev (>= 5.99.0~),
+               libkf5iconthemes-dev (>= 5.99.0~),
+               libkf5kcmutils-dev (>= 5.99.0~),
+               libkf5kio-dev (>= 5.99.0~),
+               libkf5mime-dev (>= 22.12.3~),
+               libkf5prison-dev (>= 5.99.0~),
+               libkf5service-dev (>= 5.99.0~),
+               libkf5textwidgets-dev (>= 5.99.0~),
+               libkf5widgetsaddons-dev (>= 5.99.0~),
+               libkf5xmlgui-dev (>= 5.99.0~),
                pkg-config,
                pkg-kde-tools (>= 0.12),
-               qtbase5-dev (>= 5.15.0~),
+               qtbase5-dev (>= 5.15.2~),
                xauth,
                xvfb,
-Standards-Version: 4.6.0
+Standards-Version: 4.6.2
 Homepage: https://invent.kde.org/pim/akonadi-contacts
 Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde/akonadi-contacts
 Vcs-Git: https://salsa.debian.org/qt-kde-team/kde/akonadi-contacts.git
@@ -44,7 +43,7 @@ Package: akonadi-contacts-data
 Section: kde
 Architecture: all
 Multi-Arch: foreign
-Depends: ${misc:Depends}
+Depends: ${misc:Depends},
 Description: Akonadi contacts access library - data files
  This library provides contacts manipulation helpers using the
  Akonadi PIM data server.
@@ -57,18 +56,18 @@ Package: libkf5akonadicontact-dev
 Section: libdevel
 Architecture: any
 Multi-Arch: same
-Depends: libkf5akonadi-dev (>= 4:21.08.1~),
+Depends: libkf5akonadi-dev (>= 4:22.12.3~),
          libkf5akonadicontact5 (= ${binary:Version}),
-         libkf5config-dev (>= 5.83.0~),
+         libkf5config-dev (>= 5.99.0~),
          libkf5contacteditor-dev (= ${binary:Version}),
-         libkf5contacts-dev (>= 5:5.83.0~),
-         libkf5grantleetheme-dev (>= 21.08.1~),
-         libkf5i18n-dev (>= 5.83.0~),
-         libkf5iconthemes-dev (>= 5.83.0~),
-         libkf5mime-dev (>= 21.08.1~),
-         libkf5prison-dev (>= 5.83.0~),
-         libkf5textwidgets-dev (>= 5.83.0~),
-         libkf5xmlgui-dev (>= 5.83.0~),
+         libkf5contacts-dev (>= 5:5.99.0~),
+         libkf5grantleetheme-dev (>= 22.12.3~),
+         libkf5i18n-dev (>= 5.99.0~),
+         libkf5iconthemes-dev (>= 5.99.0~),
+         libkf5mime-dev (>= 22.12.3~),
+         libkf5prison-dev (>= 5.99.0~),
+         libkf5textwidgets-dev (>= 5.99.0~),
+         libkf5xmlgui-dev (>= 5.99.0~),
          ${misc:Depends},
 Description: Akonadi contacts access library - development files
  This library provides contacts manipulation helpers using the
@@ -89,22 +88,21 @@ Description: Akonadi contacts access library
  Akonadi PIM data server.
  .
  This package is part of the KDE Development Platform PIM libraries module.
-Provides: ${ABI:VirtualPackage}
+Provides: ${ABI:VirtualPackage},
 
 Package: libkf5contacteditor-dev
 Section: libdevel
 Architecture: any
 Multi-Arch: same
-Depends: libkf5codecs-dev (>= 5.71.0~),
-         libkf5completion-dev (>= 5.83.0~),
-         libkf5config-dev (>= 5.83.0~),
+Depends: libkf5completion-dev (>= 5.99.0~),
+         libkf5config-dev (>= 5.99.0~),
          libkf5contacteditor5 (= ${binary:Version}),
-         libkf5i18n-dev (>= 5.83.0~),
-         libkf5iconthemes-dev (>= 5.83.0~),
-         libkf5mime-dev (>= 21.08.1~),
-         libkf5service-dev (>= 5.83.0~),
-         libkf5textwidgets-dev (>= 5.83.0~),
-         libkf5widgetsaddons-dev (>= 5.83.0~),
+         libkf5i18n-dev (>= 5.99.0~),
+         libkf5iconthemes-dev (>= 5.99.0~),
+         libkf5mime-dev (>= 22.12.3~),
+         libkf5service-dev (>= 5.99.0~),
+         libkf5textwidgets-dev (>= 5.99.0~),
+         libkf5widgetsaddons-dev (>= 5.99.0~),
          ${misc:Depends},
          ${shlibs:Depends},
 Description: Akonadi contacts editor library - development files
@@ -124,4 +122,4 @@ Description: Akonadi contact editor library
  This library provides contact editor using the Akonadi PIM data server.
  .
  This package is part of the KDE Development Platform PIM libraries module.
-Provides: ${ABI:VirtualPackage}
+Provides: ${ABI:VirtualPackage},

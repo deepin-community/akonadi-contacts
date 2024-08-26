@@ -1,9 +1,7 @@
-set(categorieseditwidgetplugin_SRCS
-    categorieseditwidget.cpp
-    )
-
-kcoreaddons_add_plugin(categorieseditwidgetplugin JSON categorieseditwidgetplugin.json SOURCES
-    ${categorieseditwidgetplugin_SRCS} INSTALL_NAMESPACE akonadi/contacts/plugins)
+# SPDX-FileCopyrightText: none
+# SPDX-License-Identifier: BSD-3-Clause
+kcoreaddons_add_plugin(categorieseditwidgetplugin SOURCES
+    categorieseditwidget.cpp categorieseditwidget.h INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/akonadi/contacts/plugins)
 
 target_link_libraries(categorieseditwidgetplugin
     KF5::AkonadiWidgets KF5::ContactEditor KF5::Service

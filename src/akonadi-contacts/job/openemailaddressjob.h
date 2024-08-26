@@ -10,8 +10,12 @@
 
 #include <KJob>
 
+#include <memory>
+
 namespace Akonadi
 {
+class OpenEmailAddressJobPrivate;
+
 /**
  * @short A job to open the contact editor for a contact with a given email address.
  *
@@ -45,9 +49,8 @@ public:
 
 private:
     //@cond PRIVATE
-    class Private;
-    Private *const d;
+    friend class OpenEmailAddressJobPrivate;
+    std::unique_ptr<OpenEmailAddressJobPrivate> const d;
     //@endcond
 };
 }
-

@@ -12,6 +12,8 @@
 
 #include <QWidget>
 
+#include <memory>
+
 namespace KContacts
 {
 class Addressee;
@@ -24,6 +26,7 @@ namespace Akonadi
 {
 class Collection;
 class Item;
+class AkonadiContactEditorPrivate;
 
 /**
  * @short An widget to edit contacts in Akonadi.
@@ -171,9 +174,7 @@ Q_SIGNALS:
 
 private:
     //@cond PRIVATE
-    class Private;
-    Private *const d;
+    std::unique_ptr<AkonadiContactEditorPrivate> const d;
     //@endcond
 };
 }
-

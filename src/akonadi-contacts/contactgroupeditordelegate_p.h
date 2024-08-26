@@ -13,7 +13,9 @@
 #include <QStyledItemDelegate>
 
 #include "contactcompletionmodel_p.h"
-#include <item.h>
+#include <Akonadi/Item>
+
+#include <memory>
 
 namespace Akonadi
 {
@@ -37,6 +39,8 @@ private:
     Item mItem;
 };
 
+class ContactGroupEditorDelegatePrivate;
+
 class ContactGroupEditorDelegate : public QStyledItemDelegate
 {
     Q_OBJECT
@@ -59,8 +63,8 @@ public:
 private:
     void completed(QWidget *widget);
     void setFirstColumnAsCurrent();
-    class Private;
-    Private *const d;
+
+private:
+    std::unique_ptr<ContactGroupEditorDelegatePrivate> const d;
 };
 }
-

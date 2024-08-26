@@ -8,13 +8,13 @@
 
 #include "contactgroupsearchjob.h"
 
+#include <Akonadi/ItemFetchScope>
+#include <Akonadi/SearchQuery>
 #include <QStringList>
-#include <itemfetchscope.h>
-#include <searchquery.h>
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN ContactGroupSearchJob::Private
+class Akonadi::ContactGroupSearchJobPrivate
 {
 public:
     int mLimit = -1;
@@ -22,7 +22,7 @@ public:
 
 ContactGroupSearchJob::ContactGroupSearchJob(QObject *parent)
     : ItemSearchJob(parent)
-    , d(new Private)
+    , d(new ContactGroupSearchJobPrivate)
 {
     fetchScope().fetchFullPayload();
     d->mLimit = -1;
@@ -35,10 +35,7 @@ ContactGroupSearchJob::ContactGroupSearchJob(QObject *parent)
     ItemSearchJob::setQuery(query);
 }
 
-ContactGroupSearchJob::~ContactGroupSearchJob()
-{
-    delete d;
-}
+ContactGroupSearchJob::~ContactGroupSearchJob() = default;
 
 void ContactGroupSearchJob::setQuery(Criterion criterion, const QString &value)
 {

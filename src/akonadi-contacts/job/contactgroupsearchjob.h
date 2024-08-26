@@ -10,12 +10,16 @@
 
 #include "akonadi-contact_export.h"
 
-#include <item.h>
-#include <itemsearchjob.h>
-#include <kcontacts/contactgroup.h>
+#include <Akonadi/Item>
+#include <Akonadi/ItemSearchJob>
+#include <KContacts/ContactGroup>
+
+#include <memory>
 
 namespace Akonadi
 {
+class ContactGroupSearchJobPrivate;
+
 /**
  * @short Job that searches for contact groups in the Akonadi storage.
  *
@@ -57,7 +61,7 @@ public:
     /**
      * Destroys the contact group search job.
      */
-    ~ContactGroupSearchJob();
+    ~ContactGroupSearchJob() override;
 
     /**
      * Describes the criteria that can be searched for.
@@ -111,9 +115,7 @@ public:
 
 private:
     //@cond PRIVATE
-    class Private;
-    Private *const d;
+    std::unique_ptr<ContactGroupSearchJobPrivate> const d;
     //@endcond
 };
 }
-

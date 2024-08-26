@@ -6,61 +6,48 @@
 # obsoleteman <tulliana@gmail.com>, 2009.
 # Volkan Gezer <volkangezer@gmail.com>, 2013-2014, 2017.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
+# Emir SARI <emir_sari@icloud.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-01-27 03:05+0100\n"
-"PO-Revision-Date: 2017-04-12 15:44+0100\n"
-"Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
+"POT-Creation-Date: 2022-02-05 00:44+0000\n"
+"PO-Revision-Date: 2022-04-12 12:51+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 21.12.3\n"
 "(http: //www.transifex.com/projects/p/kdepimlibs-k-tr/language/tr/)\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Serdar Soytetir"
+msgstr "Serdar Soytetir, Emir SARI"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "tulliana@gmail.com"
+msgstr "tulliana@gmail.com, emir_sari@icloud.com"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: akonadicontactactions.ui:29
 #, kde-format
-msgid "Show Address"
-msgstr "Adresi Göster"
+msgid "Dial Phone Number"
+msgstr "Telefon Numarasını Çevir"
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: akonadicontactactions.ui:57
-#, kde-format
-msgid "Url:"
-msgstr "Adres:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: akonadicontactactions.ui:87 akonadicontactactions.ui:151
-#: akonadicontactactions.ui:217
+#: akonadicontactactions.ui:58 akonadicontactactions.ui:124
 #, kde-format
 msgid "Command:"
 msgstr "Komut:"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: akonadicontactactions.ui:122
-#, kde-format
-msgid "Dial Phone Number"
-msgstr "Telefon Numarası"
-
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: akonadicontactactions.ui:188
+#: akonadicontactactions.ui:95
 #, kde-format
 msgid "Send SMS"
 msgstr "SMS Gönder"
@@ -83,7 +70,7 @@ msgstr "Tobias Koenig"
 #: kcmakonadicontactactions.cpp:40 kcmakonadicontactactions.cpp:46
 #, kde-format
 msgid "System Default"
-msgstr ""
+msgstr "Sistem Öntanımlısı"
 
 #: kcmakonadicontactactions.cpp:41 kcmakonadicontactactions.cpp:47
 #, kde-format
@@ -101,30 +88,27 @@ msgid "SflPhone"
 msgstr "SflPhone"
 
 #: kcmakonadicontactactions.cpp:44 kcmakonadicontactactions.cpp:49
-#: kcmakonadicontactactions.cpp:52
 #, kde-format
 msgid "External Application"
-msgstr "Harici Uygulama"
+msgstr "Dış Uygulama"
 
-#: kcmakonadicontactactions.cpp:51
-#, kde-format
-msgid "Web Browser"
-msgstr "Web Tarayıcı"
+#~ msgid "Show Address"
+#~ msgstr "Adresi Göster"
 
-#: kcmakonadicontactactions.cpp:53
-#, kde-format
-msgid "Google map"
-msgstr "Google haritalar"
+#~ msgid "Url:"
+#~ msgstr "Adres:"
 
-#: kcmakonadicontactactions.cpp:54
-#, kde-format
-msgid "Map quest"
-msgstr "Harita arayışı"
+#~ msgid "Web Browser"
+#~ msgstr "Web Tarayıcı"
 
-#: kcmakonadicontactactions.cpp:55
-#, kde-format
-msgid "OpenStreetMap"
-msgstr "OpenStreetHaritası"
+#~ msgid "Google map"
+#~ msgstr "Google haritalar"
+
+#~ msgid "Map quest"
+#~ msgstr "Harita arayışı"
+
+#~ msgid "OpenStreetMap"
+#~ msgstr "OpenStreetHaritası"
 
 #~ msgid "kcmakonadicontactactions"
 #~ msgstr "kcmakonadicontactactions"

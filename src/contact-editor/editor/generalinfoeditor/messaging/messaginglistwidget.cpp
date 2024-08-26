@@ -19,7 +19,7 @@ MessagingListWidget::MessagingListWidget(QWidget *parent)
     : QWidget(parent)
 {
     auto topLayout = new QVBoxLayout(this);
-    topLayout->setContentsMargins(0, 0, 0, 0);
+    topLayout->setContentsMargins({});
     topLayout->setSpacing(0);
 
     auto label = new QLabel(i18n("Messaging"), this);
@@ -31,9 +31,7 @@ MessagingListWidget::MessagingListWidget(QWidget *parent)
     topLayout->addWidget(mMessagingWidgetLister);
 }
 
-MessagingListWidget::~MessagingListWidget()
-{
-}
+MessagingListWidget::~MessagingListWidget() = default;
 
 void MessagingListWidget::loadContact(const KContacts::Addressee &contact)
 {

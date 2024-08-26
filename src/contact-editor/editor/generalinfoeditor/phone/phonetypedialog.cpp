@@ -1,7 +1,7 @@
 /*
     This file is part of Contact Editor.
 
-    SPDX-FileCopyrightText: 2016-2021 Laurent Montel <montel@kde.org>
+    SPDX-FileCopyrightText: 2016-2022 Laurent Montel <montel@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -32,7 +32,9 @@ PhoneTypeDialog::PhoneTypeDialog(KContacts::PhoneNumber::Type type, QWidget *par
     mTypeList = KContacts::PhoneNumber::typeList();
     mTypeList.removeAll(KContacts::PhoneNumber::Pref);
     KContacts::PhoneNumber::TypeList::ConstIterator it;
-    int row, column, counter;
+    int row;
+    int column;
+    int counter;
     row = column = counter = 0;
     mGroup = new QButtonGroup(this);
     mGroup->setExclusive(false);

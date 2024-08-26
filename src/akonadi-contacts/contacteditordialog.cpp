@@ -9,11 +9,11 @@
 #include "contacteditordialog.h"
 
 #include "contacteditor.h"
+#include <Akonadi/CollectionComboBox>
+#include <Akonadi/Item>
+#include <kwidgetsaddons_version.h>
 
-#include <collectioncombobox.h>
-#include <item.h>
-
-#include <kcontacts/addressee.h>
+#include <KContacts/Addressee>
 
 #include <KConfig>
 #include <KLocalizedString>
@@ -27,20 +27,23 @@
 #include <QVBoxLayout>
 
 using namespace Akonadi;
-
-class Q_DECL_HIDDEN ContactEditorDialog::Private
+namespace
+{
+static const char myContactEditorDialogDialogGroupName[] = "ContactEditor";
+}
+class Akonadi::ContactEditorDialogPrivate
 {
 public:
-    Private(ContactEditorDialog::Mode mode,
-            ContactEditorDialog::DisplayMode displaymode,
-            ContactEditor::AbstractContactEditorWidget *editorWidget,
-            ContactEditorDialog *parent)
+    ContactEditorDialogPrivate(ContactEditorDialog::Mode mode,
+                               ContactEditorDialog::DisplayMode displaymode,
+                               ContactEditor::AbstractContactEditorWidget *editorWidget,
+                               ContactEditorDialog *parent)
         : q(parent)
         , mMode(mode)
     {
         auto mainWidget = new QWidget(q);
 
-        q->setWindowTitle(mode == ContactEditorDialog::CreateMode ? i18n("New Contact") : i18n("Edit Contact"));
+        q->setWindowTitle(mode == ContactEditorDialog::CreateMode ? i18nc("@title:window", "New Contact") : i18nc("@title:window", "Edit Contact"));
         auto mainLayout = new QVBoxLayout(q);
         auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, q);
         q->connect(buttonBox, &QDialogButtonBox::accepted, q, [this]() {
@@ -54,7 +57,7 @@ public:
         mainLayout->addWidget(buttonBox);
 
         auto layout = new QGridLayout(mainWidget);
-        layout->setContentsMargins(0, 0, 0, 0);
+        layout->setContentsMargins({});
 
         if (editorWidget) {
             mEditor = new AkonadiContactEditor(mode == ContactEditorDialog::CreateMode ? AkonadiContactEditor::CreateMode : AkonadiContactEditor::EditMode,
@@ -80,11 +83,11 @@ public:
         layout->addWidget(mEditor, 1, 0, 1, 2);
         layout->setColumnStretch(1, 1);
 
-        connect(mEditor, &AkonadiContactEditor::contactStored, q, &ContactEditorDialog::contactStored);
+        QObject::connect(mEditor, &AkonadiContactEditor::contactStored, q, &ContactEditorDialog::contactStored);
 
-        connect(mEditor, &AkonadiContactEditor::error, q, &ContactEditorDialog::error);
+        QObject::connect(mEditor, &AkonadiContactEditor::error, q, &ContactEditorDialog::error);
 
-        connect(mEditor, &AkonadiContactEditor::finished, q, [this]() {
+        QObject::connect(mEditor, &AkonadiContactEditor::finished, q, [this]() {
             slotFinish();
         });
 
@@ -109,7 +112,7 @@ public:
     void readConfig()
     {
         KConfig config(QStringLiteral("akonadi_contactrc"));
-        KConfigGroup group(&config, QStringLiteral("ContactEditor"));
+        KConfigGroup group(&config, myContactEditorDialogDialogGroupName);
         const QSize size = group.readEntry("Size", QSize(800, 500));
         if (size.isValid()) {
             q->resize(size);
@@ -119,39 +122,38 @@ public:
     void writeConfig()
     {
         KConfig config(QStringLiteral("akonadi_contactrc"));
-        KConfigGroup group(&config, QStringLiteral("ContactEditor"));
+        KConfigGroup group(&config, myContactEditorDialogDialogGroupName);
         group.writeEntry("Size", q->size());
         group.sync();
     }
 
     ContactEditorDialog *const q;
     CollectionComboBox *mAddressBookBox = nullptr;
-    ContactEditorDialog::Mode mMode;
+    const ContactEditorDialog::Mode mMode;
     AkonadiContactEditor *mEditor = nullptr;
 };
 
 ContactEditorDialog::ContactEditorDialog(Mode mode, QWidget *parent)
     : QDialog(parent)
-    , d(new Private(mode, FullMode, nullptr, this))
+    , d(new ContactEditorDialogPrivate(mode, FullMode, nullptr, this))
 {
 }
 
 ContactEditorDialog::ContactEditorDialog(Mode mode, ContactEditor::AbstractContactEditorWidget *editorWidget, QWidget *parent)
     : QDialog(parent)
-    , d(new Private(mode, FullMode, editorWidget, this))
+    , d(new ContactEditorDialogPrivate(mode, FullMode, editorWidget, this))
 {
 }
 
 ContactEditorDialog::ContactEditorDialog(Mode mode, DisplayMode displayMode, QWidget *parent)
     : QDialog(parent)
-    , d(new Private(mode, displayMode, nullptr, this))
+    , d(new ContactEditorDialogPrivate(mode, displayMode, nullptr, this))
 {
 }
 
 ContactEditorDialog::~ContactEditorDialog()
 {
     d->writeConfig();
-    delete d;
 }
 
 void ContactEditorDialog::setContact(const Akonadi::Item &contact)
@@ -176,8 +178,20 @@ AkonadiContactEditor *ContactEditorDialog::editor() const
 void ContactEditorDialog::accept()
 {
     if (d->mEditor->hasNoSavedData()) {
-        if (KMessageBox::questionYesNo(this, i18nc("@info", "Location was not saved. Do you want to close editor?"), i18nc("@title:window", "Confirmation"))
-            == KMessageBox::No) {
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        const int answer = KMessageBox::questionTwoActions(this,
+#else
+        const int answer = KMessageBox::questionYesNo(this,
+#endif
+                                                           i18nc("@info", "Location was not saved. Do you want to close editor?"),
+                                                           i18nc("@title:window", "Confirmation"),
+                                                           KGuiItem(i18nc("@action:button", "Close Editor"), QStringLiteral("dialog-close")),
+                                                           KGuiItem(i18nc("@action:button", "Do Not Close"), QStringLiteral("dialog-cancel")));
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        if (answer == KMessageBox::ButtonCode::SecondaryAction) {
+#else
+        if (answer == KMessageBox::No) {
+#endif
             return;
         }
     }
@@ -189,9 +203,24 @@ void ContactEditorDialog::accept()
 
 void ContactEditorDialog::reject()
 {
-    if (KMessageBox::questionYesNo(this, i18nc("@info", "Do you really want to cancel?"), i18nc("@title:window", "Confirmation")) == KMessageBox::Yes) {
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+    const int answer = KMessageBox::questionTwoActions(this,
+#else
+    const int answer = KMessageBox::questionYesNo(this,
+#endif
+                                                       i18nc("@info", "Do you really want to cancel?"),
+                                                       i18nc("@title:window", "Confirmation"),
+                                                       KGuiItem(i18nc("@action:button", "Cancel Editing"), QStringLiteral("dialog-ok")),
+                                                       KGuiItem(i18nc("@action:button", "Do Not Cancel"), QStringLiteral("dialog-cancel")));
+
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+    if (answer == KMessageBox::ButtonCode::PrimaryAction) {
+#else
+    if (answer == KMessageBox::Yes) {
+#endif
         QDialog::reject(); // Discard current changes
     }
 }
 
 #include "moc_contacteditordialog.cpp"
+#include <kwidgetsaddons_version.h>

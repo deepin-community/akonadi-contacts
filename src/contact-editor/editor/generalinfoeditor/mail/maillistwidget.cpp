@@ -19,7 +19,7 @@ MailListWidget::MailListWidget(QWidget *parent)
     : QWidget(parent)
 {
     auto topLayout = new QVBoxLayout(this);
-    topLayout->setContentsMargins(0, 0, 0, 0);
+    topLayout->setContentsMargins({});
     topLayout->setSpacing(0);
 
     auto label = new QLabel(i18n("Email"), this);
@@ -31,9 +31,7 @@ MailListWidget::MailListWidget(QWidget *parent)
     topLayout->addWidget(mMailWidgetLister);
 }
 
-MailListWidget::~MailListWidget()
-{
-}
+MailListWidget::~MailListWidget() = default;
 
 void MailListWidget::loadContact(const KContacts::Addressee &contact)
 {

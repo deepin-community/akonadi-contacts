@@ -1,5 +1,5 @@
 /*
-   SPDX-FileCopyrightText: 2017-2021 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2017-2022 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -18,7 +18,7 @@ RecipientsPickerWidget::RecipientsPickerWidget(bool onlyShowEmailWithAddress, QA
     : QWidget(parent)
 {
     auto layout = new QHBoxLayout(this);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
 
     mView =
         new Akonadi::EmailAddressSelectionWidget(onlyShowEmailWithAddress, model ? model : Akonadi::RecipientsEditorManager::self()->model()->model(), this);
@@ -29,9 +29,7 @@ RecipientsPickerWidget::RecipientsPickerWidget(bool onlyShowEmailWithAddress, QA
     mView->view()->sortByColumn(0, Qt::AscendingOrder);
 }
 
-RecipientsPickerWidget::~RecipientsPickerWidget()
-{
-}
+RecipientsPickerWidget::~RecipientsPickerWidget() = default;
 
 QTreeView *RecipientsPickerWidget::view() const
 {

@@ -1,20 +1,20 @@
+# SPDX-FileCopyrightText: none
+# SPDX-License-Identifier: BSD-3-Clause
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
-set(PIM_VERSION "5.18.1")
+set(PIM_VERSION "5.22.3")
 
 project(Akonadi-Contact VERSION ${PIM_VERSION})
 
 # ECM setup
 
-set(KF5_MIN_VERSION "5.83.0")
+set(KF5_MIN_VERSION "5.99.0")
 
 find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
-include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
+include(KDECompilerSettings NO_POLICY_SCOPE)
 
 include(GenerateExportHeader)
 include(ECMGenerateHeaders)
@@ -23,22 +23,35 @@ include(ECMGeneratePriFile)
 include(ECMSetupVersion)
 include(FeatureSummary)
 include(KDEGitCommitHooks)
+include(KDEClangFormat)
+file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h *.c)
+kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
+
 include(ECMInstallIcons)
 include(ECMQtDeclareLoggingCategory)
+include(ECMDeprecationSettings)
+include(ECMAddQch)
+
+
+option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)" OFF)
+add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)")
 
 
 set(AKONADI_CONTACTS_VERSION ${PIM_VERSION})
-set(KMIMELIB_VERSION "5.18.1")
-set(AKONADI_VERSION "5.18.1")
-set(LIBKLEO_LIB_VERSION "5.18.1")
-set(GRANTLEETHEME_LIB_VERSION "5.18.1")
+set(KMIMELIB_VERSION "5.22.3")
+set(AKONADI_VERSION "5.22.3")
+set(GRANTLEETHEME_LIB_VERSION "5.22.3")
 set(GRANTLEE_LIB_VERSION "5.2")
 
-set(QT_REQUIRED_VERSION "5.15.0")
-find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test)
+set(QT_REQUIRED_VERSION "5.15.2")
+if (QT_MAJOR_VERSION STREQUAL "6")
+    set(QT_REQUIRED_VERSION "6.4.0")
+endif()
+find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test)
 ########### Find packages ###########
 find_package(KF5KIO ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5I18n ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5CoreAddons ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5Completion ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5Config ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5IconThemes ${KF5_MIN_VERSION} CONFIG REQUIRED)
@@ -53,15 +66,16 @@ find_package(KF5Contacts ${KF5_MIN_VERSION} CONFIG REQUIRED)
 
 find_package(KF5Mime ${KMIMELIB_VERSION} CONFIG REQUIRED)
 find_package(KF5Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
-find_package(KF5Libkleo ${LIBKLEO_LIB_VERSION} CONFIG)
-
-if (NOT WIN32)
-    set_package_properties(KF5Libkleo PROPERTIES TYPE REQUIRED)
-endif()
 
 find_package(KF5GrantleeTheme ${GRANTLEETHEME_LIB_VERSION} CONFIG REQUIRED)
 
-find_package(Grantlee5 ${GRANTLEE_LIB_VERSION} CONFIG REQUIRED)
+if (QT_MAJOR_VERSION STREQUAL "5")
+    find_package(Grantlee5 ${GRANTLEE_VERSION} CONFIG REQUIRED)
+    set(MAIN_LIB Grantlee5::Templates)
+else()
+    find_package(KF6TextTemplate CONFIG REQUIRED)
+    set(MAIN_LIB KF6TextTemplate::Templates)
+endif()
 
 ############### Compilers flags ###############
 
@@ -74,8 +88,8 @@ endif()
 ########### Targets ###########
 
 
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050e00)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055400)
+ecm_set_disabled_deprecation_versions(QT 5.14.0 KF 5.99.0)
+
 
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)

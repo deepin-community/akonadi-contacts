@@ -10,9 +10,11 @@
 
 #include "akonadi-contact_export.h"
 
-#include <standardactionmanager.h>
+#include <Akonadi/StandardActionManager>
 
 #include <QObject>
+
+#include <memory>
 
 class QAction;
 class KActionCollection;
@@ -22,6 +24,7 @@ class QWidget;
 namespace Akonadi
 {
 class Item;
+class StandardContactActionManagerPrivate;
 
 /**
  * @short Manages contact specific actions for collection and item views.
@@ -165,9 +168,7 @@ Q_SIGNALS:
 
 private:
     //@cond PRIVATE
-    class Private;
-    Private *const d;
+    std::unique_ptr<StandardContactActionManagerPrivate> const d;
     //@endcond
 };
 }
-

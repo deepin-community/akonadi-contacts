@@ -4,15 +4,15 @@
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Manuel Tortosa Moreno <manutortosa@chakra-project.org>, 2010.
-# Josep Ma. Ferrer <txemaq@gmail.com>, 2012, 2015.
+# Josep M. Ferrer <txemaq@gmail.com>, 2012, 2015.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: akonadi-contacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-01-27 03:05+0100\n"
+"POT-Creation-Date: 2022-03-22 00:43+0000\n"
 "PO-Revision-Date: 2015-05-27 12:28+0200\n"
-"Last-Translator: Josep Ma. Ferrer <txemaq@gmail.com>\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
@@ -22,47 +22,47 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
-#: akonadi_serializer_addressee.cpp:167
+#: akonadi_serializer_addressee.cpp:171
 #, kde-format
 msgid "Changed Contact"
 msgstr "Contacte canviat"
 
-#: akonadi_serializer_addressee.cpp:168
+#: akonadi_serializer_addressee.cpp:172
 #, kde-format
 msgid "Conflicting Contact"
 msgstr "Contacte amb conflictes"
 
-#: akonadi_serializer_addressee.cpp:296
+#: akonadi_serializer_addressee.cpp:300
 #, kde-format
 msgid "Emails"
 msgstr "Correus electrònics"
 
-#: akonadi_serializer_addressee.cpp:297
+#: akonadi_serializer_addressee.cpp:301
 #, kde-format
 msgid "Phone Numbers"
 msgstr "Números de telèfon"
 
-#: akonadi_serializer_addressee.cpp:298
+#: akonadi_serializer_addressee.cpp:302
 #, kde-format
 msgid "Addresses"
 msgstr "Adreces"
 
-#: akonadi_serializer_contactgroup.cpp:89
+#: akonadi_serializer_contactgroup.cpp:90
 #, kde-format
 msgid "Changed Contact Group"
 msgstr "Grup de contactes canviat"
 
-#: akonadi_serializer_contactgroup.cpp:90
+#: akonadi_serializer_contactgroup.cpp:91
 #, kde-format
 msgid "Conflicting Contact Group"
 msgstr "Grup de contactes amb conflictes"
 
-#: akonadi_serializer_contactgroup.cpp:96
+#: akonadi_serializer_contactgroup.cpp:97
 #, kde-format
 msgid "Name"
 msgstr "Nom"
 
-#: akonadi_serializer_contactgroup.cpp:106
+#: akonadi_serializer_contactgroup.cpp:107
 #, kde-format
 msgid "Member"
 msgstr "Membre"

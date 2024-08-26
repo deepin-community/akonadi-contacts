@@ -10,12 +10,16 @@
 
 #include "akonadi-contact_export.h"
 
-#include <attribute.h>
+#include <Akonadi/Attribute>
 
 #include <QVariant>
 
+#include <memory>
+
 namespace Akonadi
 {
+class ContactMetaDataAttributePrivate;
+
 /**
  * @short Attribute to store contact specific meta data.
  *
@@ -51,9 +55,7 @@ public:
 
 private:
     //@cond PRIVATE
-    class Private;
-    Private *const d;
+    std::unique_ptr<ContactMetaDataAttributePrivate> const d;
     //@endcond
 };
 }
-

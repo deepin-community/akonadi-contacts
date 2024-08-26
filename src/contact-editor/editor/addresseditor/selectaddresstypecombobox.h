@@ -32,7 +32,7 @@ public:
     /**
      * Destroys the address type combo.
      */
-    ~SelectAddressTypeComboBox();
+    ~SelectAddressTypeComboBox() override;
 
     /**
      * Sets the type that shall be selected in the combobox.
@@ -58,4 +58,3 @@ private:
 };
 
 }
-

@@ -18,6 +18,7 @@
 namespace Akonadi
 {
 class Item;
+class EmailAddressSelectionPrivate;
 
 /**
  * @short An selection of an email address and corresponding name.
@@ -95,11 +96,9 @@ private:
     //@cond PRIVATE
     friend class EmailAddressSelectionWidget;
 
-    class Private;
-    QSharedDataPointer<Private> d;
+    QSharedDataPointer<EmailAddressSelectionPrivate> d;
     //@endcond
 };
 }
 
 Q_DECLARE_TYPEINFO(Akonadi::EmailAddressSelection, Q_MOVABLE_TYPE);
-

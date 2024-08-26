@@ -21,7 +21,7 @@ WebWidget::WebWidget(QWidget *parent)
 {
     auto layout = new QHBoxLayout(this);
     layout->setSpacing(0);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
 
     mWebSiteEdit = new PreferredLineEditWidget(this);
     mWebSiteEdit->setTrapReturnKey(true);
@@ -49,9 +49,7 @@ WebWidget::WebWidget(QWidget *parent)
     layout->addWidget(mRemoveButton);
 }
 
-WebWidget::~WebWidget()
-{
-}
+WebWidget::~WebWidget() = default;
 
 void WebWidget::clearWidget()
 {
@@ -81,7 +79,7 @@ void WebWidget::setPreferred(bool b)
 
 KContacts::ResourceLocatorUrl WebWidget::url()
 {
-    mUrl.setUrl(QUrl(mWebSiteEdit->text()));
+    mUrl.setUrl(QUrl(mWebSiteEdit->text().trimmed()));
     mUrl.setPreferred(mWebSiteEdit->preferred());
     mUrl.setType(KContacts::ResourceLocatorUrl::Type(mWebType->currentData().toInt()));
     return mUrl;

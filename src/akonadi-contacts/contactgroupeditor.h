@@ -12,6 +12,8 @@
 
 #include <QWidget>
 
+#include <memory>
+
 namespace KContacts
 {
 class ContactGroup;
@@ -21,6 +23,7 @@ namespace Akonadi
 {
 class Collection;
 class Item;
+class ContactGroupEditorPrivate;
 
 /**
  * @short An widget to edit contact groups in Akonadi.
@@ -137,11 +140,9 @@ private:
     //@cond PRIVATE
     friend class ContactGroupEditorDialog;
 
-    class Private;
-    Private *const d;
+    std::unique_ptr<ContactGroupEditorPrivate> const d;
 
     Q_DISABLE_COPY(ContactGroupEditor)
     //@endcond
 };
 }
-

@@ -35,9 +35,7 @@ public:
     /**
      * Destroys the abstract contact editor widget.
      */
-    ~AbstractContactEditorWidget()
-    {
-    }
+    ~AbstractContactEditorWidget() override = default;
 
     /**
      * @param contact loads the given contact into the editor widget
@@ -54,10 +52,9 @@ public:
      */
     virtual void setReadOnly(bool readOnly) = 0;
 
-    virtual Q_REQUIRED_RESULT bool hasNoSavedData() const
+    Q_REQUIRED_RESULT virtual bool hasNoSavedData() const
     {
         return false;
     }
 };
 }
-

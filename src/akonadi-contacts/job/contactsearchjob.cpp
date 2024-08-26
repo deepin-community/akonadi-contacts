@@ -7,13 +7,13 @@
 */
 
 #include "contactsearchjob.h"
-#include <searchquery.h>
+#include <Akonadi/SearchQuery>
 
-#include <itemfetchscope.h>
+#include <Akonadi/ItemFetchScope>
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN ContactSearchJob::Private
+class Akonadi::ContactSearchJobPrivate
 {
 public:
     int mLimit = -1;
@@ -21,7 +21,7 @@ public:
 
 ContactSearchJob::ContactSearchJob(QObject *parent)
     : ItemSearchJob(parent)
-    , d(new Private())
+    , d(new ContactSearchJobPrivate())
 {
     fetchScope().fetchFullPayload();
     d->mLimit = -1;
@@ -34,10 +34,7 @@ ContactSearchJob::ContactSearchJob(QObject *parent)
     ItemSearchJob::setQuery(query);
 }
 
-ContactSearchJob::~ContactSearchJob()
-{
-    delete d;
-}
+ContactSearchJob::~ContactSearchJob() = default;
 
 static Akonadi::SearchTerm::Condition matchType(ContactSearchJob::Match match)
 {

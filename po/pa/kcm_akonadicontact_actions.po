@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-01-27 03:05+0100\n"
+"POT-Creation-Date: 2022-02-05 00:44+0000\n"
 "PO-Revision-Date: 2010-02-01 08:16+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: ਪੰਜਾਬੀ <punjabi-users@lists.sf.net>\n"
@@ -27,35 +27,21 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "aalam@users.sf.net"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: akonadicontactactions.ui:29
-#, kde-format
-msgid "Show Address"
-msgstr "ਐਡਰੈੱਸ ਵੇਖੋ"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: akonadicontactactions.ui:57
-#, kde-format
-msgid "Url:"
-msgstr "Url:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: akonadicontactactions.ui:87 akonadicontactactions.ui:151
-#: akonadicontactactions.ui:217
-#, kde-format
-msgid "Command:"
-msgstr "ਕਮਾਂਡ:"
-
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: akonadicontactactions.ui:122
+#: akonadicontactactions.ui:29
 #, kde-format
 msgid "Dial Phone Number"
 msgstr "ਫੋਨ ਨੰਬਰ ਡਾਇਲ ਕਰੋ"
 
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: akonadicontactactions.ui:58 akonadicontactactions.ui:124
+#, kde-format
+msgid "Command:"
+msgstr "ਕਮਾਂਡ:"
+
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: akonadicontactactions.ui:188
+#: akonadicontactactions.ui:95
 #, kde-format
 msgid "Send SMS"
 msgstr ""
@@ -96,30 +82,18 @@ msgid "SflPhone"
 msgstr ""
 
 #: kcmakonadicontactactions.cpp:44 kcmakonadicontactactions.cpp:49
-#: kcmakonadicontactactions.cpp:52
 #, kde-format
 msgid "External Application"
 msgstr "ਬਾਹਰੀ ਐਪਲੀਕੇਸ਼ਨ"
 
-#: kcmakonadicontactactions.cpp:51
-#, kde-format
-msgid "Web Browser"
-msgstr "ਵੈਬ ਬਰਾਊਜ਼ਰ"
+#~ msgid "Show Address"
+#~ msgstr "ਐਡਰੈੱਸ ਵੇਖੋ"
 
-#: kcmakonadicontactactions.cpp:53
-#, kde-format
-msgid "Google map"
-msgstr ""
+#~ msgid "Url:"
+#~ msgstr "Url:"
 
-#: kcmakonadicontactactions.cpp:54
-#, kde-format
-msgid "Map quest"
-msgstr ""
-
-#: kcmakonadicontactactions.cpp:55
-#, kde-format
-msgid "OpenStreetMap"
-msgstr ""
+#~ msgid "Web Browser"
+#~ msgstr "ਵੈਬ ਬਰਾਊਜ਼ਰ"
 
 #~ msgid "kcmakonadicontactactions"
 #~ msgstr "kcmakonadicontactactions"

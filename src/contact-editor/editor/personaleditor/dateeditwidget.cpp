@@ -8,9 +8,8 @@
 
 #include "dateeditwidget.h"
 
-#include "kdatepickerpopup_p.h"
-
 #include <KDatePicker>
+#include <KDatePickerPopup>
 
 #include <KLocalizedString>
 #include <QContextMenuEvent>
@@ -47,7 +46,7 @@ DateEditWidget::DateEditWidget(Type type, QWidget *parent)
     , mReadOnly(false)
 {
     auto layout = new QHBoxLayout(this);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
 
     mView = new DateView;
     layout->addWidget(mView);
@@ -88,9 +87,7 @@ DateEditWidget::DateEditWidget(Type type, QWidget *parent)
     updateView();
 }
 
-DateEditWidget::~DateEditWidget()
-{
-}
+DateEditWidget::~DateEditWidget() = default;
 
 void DateEditWidget::setDate(const QDate &date)
 {

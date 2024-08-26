@@ -8,12 +8,12 @@
 
 #include "abstractcontactformatter.h"
 
-#include <item.h>
-#include <kcontacts/addressee.h>
+#include <Akonadi/Item>
+#include <KContacts/Addressee>
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN AbstractContactFormatter::Private
+class Akonadi::AbstractContactFormatterPrivate
 {
 public:
     KContacts::Addressee mContact;
@@ -22,14 +22,11 @@ public:
 };
 
 AbstractContactFormatter::AbstractContactFormatter()
-    : d(new Private)
+    : d(new AbstractContactFormatterPrivate)
 {
 }
 
-AbstractContactFormatter::~AbstractContactFormatter()
-{
-    delete d;
-}
+AbstractContactFormatter::~AbstractContactFormatter() = default;
 
 void AbstractContactFormatter::setContact(const KContacts::Addressee &contact)
 {

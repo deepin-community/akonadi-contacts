@@ -12,8 +12,12 @@
 
 #include "abstractcontactformatter.h"
 
+#include <memory>
+
 namespace Akonadi
 {
+class StandardContactFormatterPrivate;
+
 /**
  * @short A class that formats a contact as HTML code.
  *
@@ -65,9 +69,7 @@ public:
 
 private:
     //@cond PRIVATE
-    class Private;
-    Private *const d;
+    std::unique_ptr<StandardContactFormatterPrivate> const d;
     //@endcond
 };
 }
-

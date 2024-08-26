@@ -20,7 +20,7 @@ MailWidget::MailWidget(QWidget *parent)
 {
     auto layout = new QHBoxLayout(this);
     layout->setSpacing(0);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
 
     mMailEdit = new PreferredLineEditWidget(this);
     mMailEdit->setTrapReturnKey(true);
@@ -48,9 +48,7 @@ MailWidget::MailWidget(QWidget *parent)
     layout->addWidget(mRemoveButton);
 }
 
-MailWidget::~MailWidget()
-{
-}
+MailWidget::~MailWidget() = default;
 
 void MailWidget::slotPreferredChanged()
 {

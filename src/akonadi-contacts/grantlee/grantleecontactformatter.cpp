@@ -14,12 +14,17 @@
 #include <GrantleeTheme/GrantleeKi18nLocalizer>
 #include <GrantleeTheme/GrantleeTheme>
 #include <GrantleeTheme/GrantleeThemeEngine>
-
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <grantlee/context.h>
 #include <grantlee/metatype.h>
 #include <grantlee/templateloader.h>
+#else
+#include <KTextTemplate/context.h>
+#include <KTextTemplate/metatype.h>
+#include <KTextTemplate/templateloader.h>
+#endif
 
-#include <AkonadiCore/Item>
+#include <Akonadi/Item>
 
 #include <KColorScheme>
 
@@ -30,33 +35,42 @@
 #include <QLocale>
 #include <QMetaProperty>
 #include <QSet>
-#include <memory>
 
 using namespace KAddressBookGrantlee;
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 GRANTLEE_BEGIN_LOOKUP(QUrl)
+#else
+KTEXTTEMPLATE_BEGIN_LOOKUP(QUrl)
+#endif
 if (property == QLatin1String("scheme")) {
     return object.scheme();
 } else if (property == QLatin1String("path")) {
     return object.path();
 }
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 GRANTLEE_END_LOOKUP
+#else
+KTEXTTEMPLATE_END_LOOKUP
+#endif
 
-class Q_DECL_HIDDEN GrantleeContactFormatter::Private
+class KAddressBookGrantlee::GrantleeContactFormatterPrivate
 {
 public:
-    Private()
+    GrantleeContactFormatterPrivate()
     {
         KConfig config(QStringLiteral("akonadi_contactrc"));
         KConfigGroup group(&config, QStringLiteral("View"));
         showQRCode = group.readEntry("QRCodes", true);
-
         mEngine = std::make_unique<GrantleeTheme::Engine>();
-
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
         mTemplateLoader = QSharedPointer<Grantlee::FileSystemTemplateLoader>(new Grantlee::FileSystemTemplateLoader());
+#else
+        mTemplateLoader = QSharedPointer<KTextTemplate::FileSystemTemplateLoader>(new KTextTemplate::FileSystemTemplateLoader());
+#endif
     }
 
-    ~Private()
+    ~GrantleeContactFormatterPrivate()
     {
         mTemplateLoader.clear();
     }
@@ -78,25 +92,33 @@ public:
     }
 
     QVector<QObject *> mObjects;
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     std::unique_ptr<GrantleeTheme::Engine> mEngine;
     QSharedPointer<Grantlee::FileSystemTemplateLoader> mTemplateLoader;
     Grantlee::Template mSelfcontainedTemplate;
     Grantlee::Template mEmbeddableTemplate;
+#else
+    std::unique_ptr<GrantleeTheme::Engine> mEngine;
+    QSharedPointer<KTextTemplate::FileSystemTemplateLoader> mTemplateLoader;
+    KTextTemplate::Template mSelfcontainedTemplate;
+    KTextTemplate::Template mEmbeddableTemplate;
+#endif
     QString mErrorMessage;
     bool forceDisableQRCode = false;
     bool showQRCode = true;
 };
 
 GrantleeContactFormatter::GrantleeContactFormatter()
-    : d(new Private)
+    : d(new GrantleeContactFormatterPrivate)
 {
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     Grantlee::registerMetaType<QUrl>();
+#else
+    KTextTemplate::registerMetaType<QUrl>();
+#endif
 }
 
-GrantleeContactFormatter::~GrantleeContactFormatter()
-{
-    delete d;
-}
+GrantleeContactFormatter::~GrantleeContactFormatter() = default;
 
 void GrantleeContactFormatter::setAbsoluteThemePath(const QString &path)
 {
@@ -138,7 +160,7 @@ QString GrantleeContactFormatter::toHtml(HtmlForm form) const
     }
 
     if (rawContact.isEmpty()) {
-        return QString();
+        return {};
     }
 
     // Custom fields
@@ -232,8 +254,11 @@ QString GrantleeContactFormatter::toHtml(HtmlForm form) const
     mapping.insert(QStringLiteral("customFields"), customFields);
     mapping.insert(QStringLiteral("customFieldsUrl"), customFieldsUrl);
     mapping.insert(QStringLiteral("hasqrcode"), !d->forceDisableQRCode && d->showQRCode);
-
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     Grantlee::Context context(mapping);
+#else
+    KTextTemplate::Context context(mapping);
+#endif
     context.setLocalizer(d->mEngine->localizer());
 
     if (form == SelfcontainedForm) {
@@ -241,7 +266,7 @@ QString GrantleeContactFormatter::toHtml(HtmlForm form) const
     } else if (form == EmbeddableForm) {
         return d->mEmbeddableTemplate->render(&context);
     } else {
-        return QString();
+        return {};
     }
 }
 

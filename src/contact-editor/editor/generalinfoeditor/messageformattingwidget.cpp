@@ -1,7 +1,7 @@
 /*
     This file is part of Contact Editor.
 
-    SPDX-FileCopyrightText: 2017-2021 Laurent Montel <montel@kde.org>
+    SPDX-FileCopyrightText: 2017-2022 Laurent Montel <montel@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -20,7 +20,7 @@ MessageFormattingWidget::MessageFormattingWidget(QWidget *parent)
     : QWidget(parent)
 {
     auto topLayout = new QVBoxLayout(this);
-    topLayout->setContentsMargins(0, 0, 0, 0);
+    topLayout->setContentsMargins({});
     auto label = new QLabel(i18n("Show messages received from this contact as:"), this);
     label->setObjectName(QStringLiteral("label"));
     topLayout->addWidget(label);
@@ -37,9 +37,7 @@ MessageFormattingWidget::MessageFormattingWidget(QWidget *parent)
     topLayout->addWidget(mAllowRemoteContent);
 }
 
-MessageFormattingWidget::~MessageFormattingWidget()
-{
-}
+MessageFormattingWidget::~MessageFormattingWidget() = default;
 
 void MessageFormattingWidget::loadContact(const KContacts::Addressee &contact)
 {

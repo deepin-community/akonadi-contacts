@@ -14,42 +14,46 @@
 #include "standardcontactformatter.h"
 #include "textbrowser_p.h"
 
-#include <KColorScheme>
+#include <Akonadi/Collection>
+#include <Akonadi/CollectionFetchJob>
+#include <Akonadi/EntityDisplayAttribute>
+#include <Akonadi/Item>
+#include <Akonadi/ItemFetchScope>
 #include <KConfigGroup>
-#include <KIOCore/kio/transferjob.h>
+#include <KContacts/Addressee>
 #include <KLocalizedString>
-#include <collection.h>
-#include <collectionfetchjob.h>
-#include <entitydisplayattribute.h>
-#include <item.h>
-#include <itemfetchscope.h>
-#include <kcontacts/addressee.h>
+#include <kio/transferjob.h>
 
+#include <KConfig>
+#include <KContacts/VCardConverter>
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+#include <prison/Prison>
+#else
+#include <Prison/Prison>
+#endif
 #include <QGuiApplication>
 #include <QIcon>
 #include <QScreen>
 #include <QUrlQuery>
 #include <QVBoxLayout>
-#include <kcontacts/vcardconverter.h>
-#include <prison/Prison>
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN ContactViewer::Private
+class Akonadi::ContactViewerPrivate
 {
 public:
-    Private(ContactViewer *parent)
+    explicit ContactViewerPrivate(ContactViewer *parent)
         : mParent(parent)
+        , mQRCode(Prison::createBarcode(Prison::QRCode))
     {
         mStandardContactFormatter = new StandardContactFormatter;
         mContactFormatter = mStandardContactFormatter;
         KConfig config(QStringLiteral("akonadi_contactrc"));
         KConfigGroup group(&config, QStringLiteral("View"));
         mShowQRCode = group.readEntry("QRCodes", true);
-        mQRCode = Prison::createBarcode(Prison::QRCode);
     }
 
-    ~Private()
+    ~ContactViewerPrivate()
     {
         delete mStandardContactFormatter;
         delete mQRCode;
@@ -174,7 +178,8 @@ public:
                 Q_EMIT mParent->addressClicked(addresses.at(pos));
             }
         } else if (urlScheme == QLatin1String("mailto")) {
-            QString name, address;
+            QString name;
+            QString address;
 
             // remove the 'mailto:' and split into name and email address
             KContacts::Addressee::parseEmailAddress(url.path(), name, address);
@@ -212,16 +217,16 @@ public:
     AbstractContactFormatter *mContactFormatter = nullptr;
     AbstractContactFormatter *mStandardContactFormatter = nullptr;
     CollectionFetchJob *mParentCollectionFetchJob = nullptr;
-    Prison::AbstractBarcode *mQRCode = nullptr;
+    Prison::AbstractBarcode *const mQRCode;
     bool mShowQRCode = true;
 };
 
 ContactViewer::ContactViewer(QWidget *parent)
     : QWidget(parent)
-    , d(new Private(this))
+    , d(new ContactViewerPrivate(this))
 {
     auto layout = new QVBoxLayout(this);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
 
     d->mBrowser = new TextBrowser;
 
@@ -237,10 +242,7 @@ ContactViewer::ContactViewer(QWidget *parent)
     fetchScope().setAncestorRetrieval(ItemFetchScope::Parent);
 }
 
-ContactViewer::~ContactViewer()
-{
-    delete d;
-}
+ContactViewer::~ContactViewer() = default;
 
 Akonadi::Item ContactViewer::contact() const
 {

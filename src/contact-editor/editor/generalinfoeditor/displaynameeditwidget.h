@@ -10,7 +10,7 @@
 
 #include <QWidget>
 
-#include <kcontacts/addressee.h>
+#include <KContacts/Addressee>
 
 class KComboBox;
 
@@ -66,4 +66,3 @@ private:
     DisplayType mDisplayType = DisplayType::SimpleName;
     int mAdditionalPopupWidth;
 };
-

@@ -9,24 +9,22 @@
 #include "contactmetadataattribute_p.h"
 
 #include <QDataStream>
+#include <QIODevice>
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN ContactMetaDataAttribute::Private
+class Akonadi::ContactMetaDataAttributePrivate
 {
 public:
     QVariantMap mData;
 };
 
 ContactMetaDataAttribute::ContactMetaDataAttribute()
-    : d(new Private)
+    : d(new ContactMetaDataAttributePrivate)
 {
 }
 
-ContactMetaDataAttribute::~ContactMetaDataAttribute()
-{
-    delete d;
-}
+ContactMetaDataAttribute::~ContactMetaDataAttribute() = default;
 
 void ContactMetaDataAttribute::setMetaData(const QVariantMap &data)
 {

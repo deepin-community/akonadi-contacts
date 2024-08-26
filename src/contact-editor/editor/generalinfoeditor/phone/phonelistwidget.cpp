@@ -19,7 +19,7 @@ PhoneListWidget::PhoneListWidget(QWidget *parent)
     : QWidget(parent)
 {
     auto topLayout = new QVBoxLayout(this);
-    topLayout->setContentsMargins(0, 0, 0, 0);
+    topLayout->setContentsMargins({});
     topLayout->setSpacing(0);
 
     auto label = new QLabel(i18n("Phone"), this);
@@ -31,9 +31,7 @@ PhoneListWidget::PhoneListWidget(QWidget *parent)
     topLayout->addWidget(mPhoneWidgetLister);
 }
 
-PhoneListWidget::~PhoneListWidget()
-{
-}
+PhoneListWidget::~PhoneListWidget() = default;
 
 void PhoneListWidget::loadContact(const KContacts::Addressee &contact)
 {

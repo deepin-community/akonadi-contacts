@@ -12,11 +12,14 @@
 
 #include <QDialog>
 
+#include <memory>
+
 namespace Akonadi
 {
 class Item;
 class Collection;
 class ContactGroupEditor;
+class ContactGroupEditorDialogPrivate;
 
 /**
  * @short A dialog for creating or editing a contact group in Akonadi.
@@ -111,9 +114,7 @@ private:
     void slotAccepted();
 
     //@cond PRIVATE
-    class Private;
-    Private *const d;
+    std::unique_ptr<ContactGroupEditorDialogPrivate> const d;
     //@endcond
 };
 }
-

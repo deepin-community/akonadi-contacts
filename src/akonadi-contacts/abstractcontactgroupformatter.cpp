@@ -8,12 +8,12 @@
 
 #include "abstractcontactgroupformatter.h"
 
-#include <item.h>
-#include <kcontacts/contactgroup.h>
+#include <Akonadi/Item>
+#include <KContacts/ContactGroup>
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN AbstractContactGroupFormatter::Private
+class Akonadi::AbstractContactGroupFormatterPrivate
 {
 public:
     KContacts::ContactGroup mContactGroup;
@@ -22,14 +22,11 @@ public:
 };
 
 AbstractContactGroupFormatter::AbstractContactGroupFormatter()
-    : d(new Private)
+    : d(new AbstractContactGroupFormatterPrivate)
 {
 }
 
-AbstractContactGroupFormatter::~AbstractContactGroupFormatter()
-{
-    delete d;
-}
+AbstractContactGroupFormatter::~AbstractContactGroupFormatter() = default;
 
 void AbstractContactGroupFormatter::setContactGroup(const KContacts::ContactGroup &group)
 {

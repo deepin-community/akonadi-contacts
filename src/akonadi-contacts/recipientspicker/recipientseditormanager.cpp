@@ -1,5 +1,5 @@
 /*
-   SPDX-FileCopyrightText: 2017-2021 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2017-2022 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -15,9 +15,7 @@ RecipientsEditorManager::RecipientsEditorManager(QObject *parent)
 {
 }
 
-RecipientsEditorManager::~RecipientsEditorManager()
-{
-}
+RecipientsEditorManager::~RecipientsEditorManager() = default;
 
 RecipientsEditorManager *RecipientsEditorManager::self()
 {

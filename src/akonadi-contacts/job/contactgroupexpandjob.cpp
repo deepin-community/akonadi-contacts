@@ -9,22 +9,21 @@
 #include "contactgroupexpandjob.h"
 #include "akonadi_contact_debug.h"
 #include "job/contactgroupsearchjob.h"
-#include <itemfetchjob.h>
-#include <itemfetchscope.h>
-#include <itemsearchjob.h>
-
+#include <Akonadi/ItemFetchJob>
+#include <Akonadi/ItemFetchScope>
+#include <Akonadi/ItemSearchJob>
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN ContactGroupExpandJob::Private
+class Akonadi::ContactGroupExpandJobPrivate
 {
 public:
-    Private(const KContacts::ContactGroup &group, ContactGroupExpandJob *parent)
+    ContactGroupExpandJobPrivate(const KContacts::ContactGroup &group, ContactGroupExpandJob *parent)
         : mParent(parent)
         , mGroup(group)
     {
     }
 
-    Private(const QString &name, ContactGroupExpandJob *parent)
+    ContactGroupExpandJobPrivate(const QString &name, ContactGroupExpandJob *parent)
         : mParent(parent)
         , mName(name)
     {
@@ -37,8 +36,9 @@ public:
 
             KContacts::Addressee contact;
             contact.setNameFromString(data.name());
-            contact.insertEmail(data.email(), true);
-
+            KContacts::Email email(data.email());
+            email.setPreferred(true);
+            contact.addEmail(email);
             mContacts.append(contact);
         }
 
@@ -93,15 +93,16 @@ public:
 
         const Item::List items = fetchJob->items();
         if (!items.isEmpty()) {
-            const QString email = fetchJob->property("preferredEmail").toString();
+            const QString preferredEmail = fetchJob->property("preferredEmail").toString();
 
             const Item item = items.first();
             if (item.hasPayload<KContacts::Addressee>()) {
                 auto contact = item.payload<KContacts::Addressee>();
-                if (!email.isEmpty()) {
-                    contact.insertEmail(email, true);
+                if (!preferredEmail.isEmpty()) {
+                    KContacts::Email email(preferredEmail);
+                    email.setPreferred(true);
+                    contact.addEmail(email);
                 }
-
                 mContacts.append(contact);
             } else {
                 qCWarning(AKONADICONTACT_LOG) << "Contact for Akonadi item" << item.id() << "does not exist anymore!";
@@ -115,7 +116,7 @@ public:
         }
     }
 
-    ContactGroupExpandJob *mParent = nullptr;
+    ContactGroupExpandJob *const mParent;
     KContacts::ContactGroup mGroup;
     QString mName;
     KContacts::Addressee::List mContacts;
@@ -125,20 +126,17 @@ public:
 
 ContactGroupExpandJob::ContactGroupExpandJob(const KContacts::ContactGroup &group, QObject *parent)
     : KJob(parent)
-    , d(new Private(group, this))
+    , d(new ContactGroupExpandJobPrivate(group, this))
 {
 }
 
 ContactGroupExpandJob::ContactGroupExpandJob(const QString &name, QObject *parent)
     : KJob(parent)
-    , d(new Private(name, this))
+    , d(new ContactGroupExpandJobPrivate(name, this))
 {
 }
 
-ContactGroupExpandJob::~ContactGroupExpandJob()
-{
-    delete d;
-}
+ContactGroupExpandJob::~ContactGroupExpandJob() = default;
 
 void ContactGroupExpandJob::start()
 {

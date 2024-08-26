@@ -1,5 +1,5 @@
 /*
-   SPDX-FileCopyrightText: 2019-2021 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2019-2022 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -19,7 +19,7 @@ class AKONADI_CONTACT_EXPORT AbstractEmailAddressSelectionDialog : public QDialo
     Q_OBJECT
 public:
     explicit AbstractEmailAddressSelectionDialog(QWidget *parent = nullptr);
-    virtual ~AbstractEmailAddressSelectionDialog();
+    ~AbstractEmailAddressSelectionDialog() override;
 
     /**
      * Returns the list of selected email addresses.
@@ -34,4 +34,3 @@ Q_SIGNALS:
     void insertAddresses(const KContacts::Addressee::List &list);
 };
 }
-

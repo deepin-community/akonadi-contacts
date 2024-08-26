@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadicontact\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-07-15 01:40+0000\n"
+"POT-Creation-Date: 2022-10-16 00:47+0000\n"
 "PO-Revision-Date: 2020-09-28 01:54+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -19,84 +19,8 @@ msgstr ""
 "X-Generator: Lokalize 20.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#. i18n: ectx: whatsthis, entry (ShowAddressAction), group (Show Address Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:18
-#, kde-format
-msgid ""
-"Defines which application shall be used to show the postal address of a "
-"contact on a map. If 'Web Browser' is selected, an URL can be defined with "
-"placeholders for the single address parts. If 'External Application' is "
-"selected, a command with placeholders can be defined."
-msgstr ""
-"Määrab, millist rakendust kasutada kontakti postiaadressi näitamiseks "
-"kaardil. Kui valida \"veebibrauser\", saab määrata URL-i, milles kohatäitjad "
-"vastavad konkreetse aadressi osadele. Kui valida \"väline rakendus\", saab "
-"määrata käsu, milles võib samuti kasutada kohatäitjaid."
-
-#. i18n: ectx: whatsthis, entry (AddressUrl), group (Show Address Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:23
-#, kde-format
-msgid ""
-"This URL defines the website that shall be used to show a contact's postal "
-"address."
-msgstr ""
-"See URL määrab veebilehekülje, mida kasutatakse kontakti postiaadressi "
-"näitamiseks."
-
-#. i18n: ectx: tooltip, entry (AddressUrl), group (Show Address Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:29
-#, no-c-format, kde-format
-msgid ""
-"The following placeholders can be used in the URL:\n"
-"   %s: Street\n"
-"   %r: Region\n"
-"   %l: Location\n"
-"   %z: Zip Code\n"
-"   %c: Country ISO Code"
-msgstr ""
-"URL-is saab kasutada järgmisi kohatäitjaid:\n"
-"   %s: tänav\n"
-"   %r: piirkond\n"
-"   %l: asula\n"
-"   %z: postiindeks\n"
-"   %c: riigi ISO kood"
-
-#. i18n: ectx: label, entry (AddressCommand), group (Show Address Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:32
-#, kde-format
-msgid "Address Command"
-msgstr "Aadressikäsk"
-
-#. i18n: ectx: whatsthis, entry (AddressCommand), group (Show Address Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:33
-#, kde-format
-msgid ""
-"This command defines the application that shall be executed to show a "
-"contact's postal address."
-msgstr ""
-"See käsk määrab rakenduse, mis tuleb käivitada kontakti postiaadressi "
-"näitamiseks."
-
-#. i18n: ectx: tooltip, entry (AddressCommand), group (Show Address Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:39
-#, no-c-format, kde-format
-msgid ""
-"The following placeholders can be used in the command:\n"
-"   %s: Street\n"
-"   %r: Region\n"
-"   %l: Location\n"
-"   %z: Zip Code\n"
-"   %c: Country ISO Code"
-msgstr ""
-"Käsus saab kasutada järgmisi kohatäitjaid:\n"
-"   %s: tänav\n"
-"   %r: piirkond\n"
-"   %l: asula\n"
-"   %z: postiindeks\n"
-"   %c: riigi ISO kood"
-
 #. i18n: ectx: whatsthis, entry (DialPhoneNumberAction), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:52
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:18
 #, kde-format
 msgid ""
 "Define how a phone number of a contact should be dialed. 'System Default' "
@@ -111,13 +35,13 @@ msgstr ""
 "rakendus\" võimaldab määrata telefonikäsu kohatäitjaid kasutades käsitsi."
 
 #. i18n: ectx: label, entry (PhoneCommand), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:56
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:22
 #, kde-format
 msgid "Phone Command"
 msgstr "Telefonikäsk"
 
 #. i18n: ectx: whatsthis, entry (PhoneCommand), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:57
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:23
 #, kde-format
 msgid ""
 "This command defines the application that shall be executed to dial a "
@@ -127,7 +51,7 @@ msgstr ""
 "valimiseks."
 
 #. i18n: ectx: tooltip, entry (PhoneCommand), group (Phone Dial Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:60
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:26
 #, no-c-format, kde-format
 msgid ""
 "The following placeholders can be used in the command:\n"
@@ -139,7 +63,7 @@ msgstr ""
 "   %n: normaliseeritud number, millest on eemaldatud mittearvudest märgid."
 
 #. i18n: ectx: whatsthis, entry (SendSmsAction), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:72
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:38
 #, kde-format
 msgid ""
 "Defines which application shall be used to send an SMS to the phone number "
@@ -156,13 +80,13 @@ msgstr ""
 "rakendus\" võimaldab määrata käsu kohatäitjaid kasutades käsitsi."
 
 #. i18n: ectx: label, entry (SmsCommand), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:76
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:42
 #, kde-format
 msgid "SMS Command"
 msgstr "SMS käsk"
 
 #. i18n: ectx: whatsthis, entry (SmsCommand), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:77
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:43
 #, kde-format
 msgid ""
 "This command defines the application that shall be executed to send an SMS "
@@ -172,7 +96,7 @@ msgstr ""
 "telefoninumbrile."
 
 #. i18n: ectx: tooltip, entry (SmsCommand), group (Send SMS Settings)
-#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:81
+#: akonadi-contacts/actions/contactactionssettings.kcfg.cmake:47
 #, no-c-format, kde-format
 msgid ""
 "The following placeholders can be used in the command:\n"
@@ -195,17 +119,17 @@ msgstr ""
 "Määratud pole ühtegi rakendust, mida käivitada.\n"
 "Palun määra see seadistustedialoogis."
 
-#: akonadi-contacts/actions/qdialer.cpp:26
+#: akonadi-contacts/actions/qdialer.cpp:24
 #, kde-format
 msgid "Dialing a number is not supported"
 msgstr "Numbri valimine ei ole toetatud"
 
-#: akonadi-contacts/actions/qdialer.cpp:35
+#: akonadi-contacts/actions/qdialer.cpp:33
 #, kde-format
 msgid "Sending an SMS is not supported"
 msgstr "SMS-i saatmine ei ole toetatud"
 
-#: akonadi-contacts/actions/qekigadialer.cpp:70
+#: akonadi-contacts/actions/qekigadialer.cpp:72
 #, kde-format
 msgid ""
 "Unable to start ekiga process, check that ekiga executable is in your PATH "
@@ -214,12 +138,12 @@ msgstr ""
 "Ekiga protsessi käivitamine nurjus. Palun kontrolli, et Ekiga käivitatav "
 "fail asuks keskkonnamuutujaga PATH määratud asukohas."
 
-#: akonadi-contacts/actions/qekigadialer.cpp:95
+#: akonadi-contacts/actions/qekigadialer.cpp:97
 #, kde-format
 msgid "Ekiga Public API (D-Bus) seems to be disabled."
 msgstr "Ekiga avalik API (D-Bus) paistab olevat keelatud."
 
-#: akonadi-contacts/actions/qekigadialer.cpp:115
+#: akonadi-contacts/actions/qekigadialer.cpp:117
 #, kde-format
 msgid "Sending an SMS is currently not supported on Ekiga."
 msgstr "Ekiga ei toeta praegu SMS-i saatmist"
@@ -234,7 +158,7 @@ msgstr ""
 "sflphone-client-kde käivitatav fail asuks keskkonnamuutujaga PATH määratud "
 "asukohas."
 
-#: akonadi-contacts/actions/qskypedialer.cpp:75
+#: akonadi-contacts/actions/qskypedialer.cpp:77
 #, kde-format
 msgid ""
 "Unable to start skype process, check that skype executable is in your PATH "
@@ -243,38 +167,38 @@ msgstr ""
 "Skype'i protsessi käivitamine nurjus. Palun kontrolli, et Skype'i käivitatav "
 "fail asuks keskkonnamuutujaga PATH määratud asukohas."
 
-#: akonadi-contacts/actions/qskypedialer.cpp:100
+#: akonadi-contacts/actions/qskypedialer.cpp:102
 #, kde-format
 msgid "Skype Public API (D-Bus) seems to be disabled."
 msgstr "Skype'i avalik API (D-Bus) paistab olevat keelatud."
 
-#: akonadi-contacts/actions/qskypedialer.cpp:109
+#: akonadi-contacts/actions/qskypedialer.cpp:111
 #, kde-format
 msgid "Skype registration failed."
 msgstr "Skype'i registreerimine nurjus."
 
-#: akonadi-contacts/actions/qskypedialer.cpp:118
+#: akonadi-contacts/actions/qskypedialer.cpp:120
 #, kde-format
 msgid "Protocol mismatch."
 msgstr "Protokollid ei klapi."
 
-#: akonadi-contacts/actions/smsdialog.cpp:37
+#: akonadi-contacts/actions/smsdialog.cpp:35
 #, kde-format
 msgctxt "@title:window"
 msgid "SMS text"
 msgstr "SMS tekst"
 
-#: akonadi-contacts/actions/smsdialog.cpp:41
+#: akonadi-contacts/actions/smsdialog.cpp:39
 #, kde-format
 msgid "Please insert SMS text for an SMS to the following number: %1"
 msgstr "Palun kirjuta SMS tekst sõnumi saatmiseks järgmisele numbrile. %1"
 
-#: akonadi-contacts/actions/smsdialog.cpp:82
+#: akonadi-contacts/actions/smsdialog.cpp:80
 #, kde-format
 msgid "%1/%2 (%3 SMS)"
 msgstr "%1/%2 (%3 SMS)"
 
-#: akonadi-contacts/contacteditor.cpp:160
+#: akonadi-contacts/contacteditor.cpp:162
 #, kde-format
 msgid ""
 "The contact has been changed by someone else.\n"
@@ -283,69 +207,101 @@ msgstr ""
 "Keegi teine on kontakti muutnud.\n"
 "Mida ette võtta?"
 
-#: akonadi-contacts/contacteditor.cpp:161
-#: akonadi-contacts/contactgroupeditor.cpp:134
+#: akonadi-contacts/contacteditor.cpp:163
+#: akonadi-contacts/contactgroupeditor.cpp:135
 #, kde-format
 msgid "Take over changes"
 msgstr "Võta muudatused üle"
 
-#: akonadi-contacts/contacteditor.cpp:162
-#: akonadi-contacts/contactgroupeditor.cpp:135
+#: akonadi-contacts/contacteditor.cpp:164
+#: akonadi-contacts/contactgroupeditor.cpp:136
 #, kde-format
 msgid "Ignore and Overwrite changes"
 msgstr "Eira muudatusi ja kirjuta nad üle"
 
-#: akonadi-contacts/contacteditor.cpp:276
-#: akonadi-contacts/contactgroupeditor.cpp:282
-#: akonadi-contacts/selectaddressbookdialog.cpp:24
+#: akonadi-contacts/contacteditor.cpp:278
+#: akonadi-contacts/contactgroupeditor.cpp:290
+#: akonadi-contacts/selectaddressbookdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Address Book"
 msgstr "Aadressiraamatu valimine"
 
-#: akonadi-contacts/contacteditor.cpp:277
+#: akonadi-contacts/contacteditor.cpp:279
 #, kde-format
 msgid "Select the address book the new contact shall be saved in:"
 msgstr "Aadressiraamat, kuhu salvestada uus kontakt:"
 
-#: akonadi-contacts/contacteditordialog.cpp:43
-#, kde-format
+#: akonadi-contacts/contacteditordialog.cpp:46
+#, fuzzy, kde-format
+#| msgid "New Contact"
+msgctxt "@title:window"
 msgid "New Contact"
 msgstr "Uus kontakt"
 
-#: akonadi-contacts/contacteditordialog.cpp:43
-#, kde-format
+#: akonadi-contacts/contacteditordialog.cpp:46
+#, fuzzy, kde-format
+#| msgid "Edit Contact"
+msgctxt "@title:window"
 msgid "Edit Contact"
 msgstr "Kontakti muutmine"
 
-#: akonadi-contacts/contacteditordialog.cpp:70
-#: akonadi-contacts/contactgroupeditordialog.cpp:99
+#: akonadi-contacts/contacteditordialog.cpp:73
+#: akonadi-contacts/contactgroupeditordialog.cpp:103
 #, kde-format
 msgid "Add to:"
 msgstr "Lisamise koht:"
 
-#: akonadi-contacts/contacteditordialog.cpp:179
+#: akonadi-contacts/contacteditordialog.cpp:186
 #, kde-format
 msgctxt "@info"
 msgid "Location was not saved. Do you want to close editor?"
 msgstr ""
 
-#: akonadi-contacts/contacteditordialog.cpp:179
-#: akonadi-contacts/contacteditordialog.cpp:192
-#: akonadi-contacts/contactgroupeditordialog.cpp:161
+#: akonadi-contacts/contacteditordialog.cpp:187
+#: akonadi-contacts/contacteditordialog.cpp:212
+#: akonadi-contacts/contactgroupeditordialog.cpp:170
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirmation"
 msgstr "Kinnitus"
 
-#: akonadi-contacts/contacteditordialog.cpp:192
-#: akonadi-contacts/contactgroupeditordialog.cpp:161
+#: akonadi-contacts/contacteditordialog.cpp:188
+#, kde-format
+msgctxt "@action:button"
+msgid "Close Editor"
+msgstr ""
+
+#: akonadi-contacts/contacteditordialog.cpp:189
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Close"
+msgstr ""
+
+#: akonadi-contacts/contacteditordialog.cpp:211
+#: akonadi-contacts/contactgroupeditordialog.cpp:169
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to cancel?"
 msgstr "Kas tõesti loobuda?"
 
-#: akonadi-contacts/contactgroupeditor.cpp:133
+#: akonadi-contacts/contacteditordialog.cpp:213
+#: akonadi-contacts/contactgroupeditordialog.cpp:171
+#, fuzzy, kde-format
+#| msgid "Cancel"
+msgctxt "@action:button"
+msgid "Cancel Editing"
+msgstr "Loobu"
+
+#: akonadi-contacts/contacteditordialog.cpp:214
+#: akonadi-contacts/contactgroupeditordialog.cpp:172
+#, fuzzy, kde-format
+#| msgid "Cancel"
+msgctxt "@action:button"
+msgid "Do Not Cancel"
+msgstr "Loobu"
+
+#: akonadi-contacts/contactgroupeditor.cpp:134
 #, kde-format
 msgid ""
 "The contact group has been changed by someone else.\n"
@@ -354,12 +310,12 @@ msgstr ""
 "Keegi teine on kontaktide gruppi muutnud.\n"
 "Mida ette võtta?"
 
-#: akonadi-contacts/contactgroupeditor.cpp:169
+#: akonadi-contacts/contactgroupeditor.cpp:175
 #, kde-format
 msgid "The name of the contact group must not be empty."
 msgstr "Kontaktirühmal peab nimi olema."
 
-#: akonadi-contacts/contactgroupeditor.cpp:283
+#: akonadi-contacts/contactgroupeditor.cpp:291
 #, kde-format
 msgid "Select the address book the new contact group shall be saved in:"
 msgstr "Aadressiraamat, kuhu salvestada uus kontaktigrupp:"
@@ -378,118 +334,124 @@ msgctxt "@label"
 msgid "Contact group members:"
 msgstr "Kontaktirühma liikmed:"
 
-#: akonadi-contacts/contactgroupeditordialog.cpp:76
-#, kde-format
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, searchField)
+#: akonadi-contacts/contactgroupeditor.ui:53
+#, fuzzy, kde-format
+#| msgctxt "@label Search in a list of contacts"
+#| msgid "Search:"
+msgid "Search..."
+msgstr "Otsing:"
+
+#: akonadi-contacts/contactgroupeditordialog.cpp:80
+#, fuzzy, kde-format
+#| msgid "New Contact Group"
+msgctxt "@title:window"
 msgid "New Contact Group"
 msgstr "Uus kontaktirühm"
 
-#: akonadi-contacts/contactgroupeditordialog.cpp:76
-#, kde-format
+#: akonadi-contacts/contactgroupeditordialog.cpp:80
+#, fuzzy, kde-format
+#| msgid "Edit Contact Group"
+msgctxt "@title:window"
 msgid "Edit Contact Group"
 msgstr "Kontaktirühma muutmine"
 
-#: akonadi-contacts/contactgroupmodel.cpp:197
+#: akonadi-contacts/contactgroupmodel.cpp:194
 #, kde-format
 msgid "The member with name <b>%1</b> is missing an email address"
 msgstr "Liikmel nimega <b>%1</b> puudub e-posti aadress"
 
-#: akonadi-contacts/contactgroupmodel.cpp:244
+#: akonadi-contacts/contactgroupmodel.cpp:241
 #, kde-format
 msgid "Contact does not exist any more"
 msgstr "Kontakti ei ole enam olemas"
 
-#: akonadi-contacts/contactgroupmodel.cpp:398
+#: akonadi-contacts/contactgroupmodel.cpp:395
 #, kde-format
 msgctxt "contact's name"
 msgid "Name"
 msgstr "Nimi"
 
-#: akonadi-contacts/contactgroupmodel.cpp:400
+#: akonadi-contacts/contactgroupmodel.cpp:397
 #, kde-format
 msgctxt "contact's email address"
 msgid "EMail"
 msgstr "E-post"
 
-#: akonadi-contacts/contactgroupviewer.cpp:53
+#: akonadi-contacts/contactgroupviewer.cpp:51
 #, kde-format
 msgctxt "@title:window"
 msgid "Contact Group %1"
 msgstr "Kontaktirühm %1"
 
-#: akonadi-contacts/contactgroupviewer.cpp:67
-#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:32
-#: akonadi-contacts/standardcontactformatter.cpp:185
+#: akonadi-contacts/contactgroupviewer.cpp:65
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:28
+#: akonadi-contacts/standardcontactformatter.cpp:182
 #, kde-format
 msgid "Address Book"
 msgstr "Aadressiraamat"
 
-#: akonadi-contacts/contactgroupviewerdialog.cpp:32
-#, kde-format
-msgctxt "@title:window"
-msgid "Show Contact Group"
-msgstr "Kontaktirühma näitamine"
-
-#: akonadi-contacts/contactstreemodel.cpp:215
+#: akonadi-contacts/contactstreemodel.cpp:212
 #, kde-format
 msgctxt "@title:column address books overview"
 msgid "Address Books"
 msgstr "Aadressiraamatud"
 
-#: akonadi-contacts/contactstreemodel.cpp:225
+#: akonadi-contacts/contactstreemodel.cpp:222
 #, kde-format
 msgctxt "@title:column name of a person"
 msgid "Name"
 msgstr "Nimi"
 
-#: akonadi-contacts/contactstreemodel.cpp:227
+#: akonadi-contacts/contactstreemodel.cpp:224
 #, kde-format
 msgctxt "@title:column family name of a person"
 msgid "Family Name"
 msgstr "Perekonnanimi"
 
-#: akonadi-contacts/contactstreemodel.cpp:229
+#: akonadi-contacts/contactstreemodel.cpp:226
 #, kde-format
 msgctxt "@title:column given name of a person"
 msgid "Given Name"
 msgstr "Eesnimi"
 
-#: akonadi-contacts/contactstreemodel.cpp:233
+#: akonadi-contacts/contactstreemodel.cpp:230
 #, kde-format
 msgctxt "@title:column home address of a person"
 msgid "Home"
 msgstr "Kodu"
 
-#: akonadi-contacts/contactstreemodel.cpp:235
+#: akonadi-contacts/contactstreemodel.cpp:232
 #, kde-format
 msgctxt "@title:column work address of a person"
 msgid "Work"
 msgstr "Töö"
 
-#: akonadi-contacts/contactstreemodel.cpp:237
+#: akonadi-contacts/contactstreemodel.cpp:234
 #, kde-format
 msgctxt "@title:column phone numbers of a person"
 msgid "Phone Numbers"
 msgstr "Telefoninumbrid"
 
-#: akonadi-contacts/contactstreemodel.cpp:239
+#: akonadi-contacts/contactstreemodel.cpp:236
 #, kde-format
 msgctxt "@title:column the preferred email addresses of a person"
 msgid "Preferred EMail"
 msgstr "Eelistatud e-posti aadress"
 
-#: akonadi-contacts/contactstreemodel.cpp:241
+#: akonadi-contacts/contactstreemodel.cpp:238
 #, kde-format
 msgctxt "@title:column all email addresses of a person"
 msgid "All EMails"
 msgstr "Kõik e-posti aadressid"
 
-#: akonadi-contacts/contactviewer.cpp:64
+#: akonadi-contacts/contactviewer.cpp:68
 #, kde-format
 msgctxt "@title:window"
 msgid "Contact %1"
 msgstr "Kontakt %1"
 
-#: akonadi-contacts/contactviewerdialog.cpp:58
+#: akonadi-contacts/contactviewerdialog.cpp:62
 #, kde-format
 msgctxt "@title:window"
 msgid "Show Contact"
@@ -505,7 +467,7 @@ msgstr "Ava aadressiraamat"
 msgid "Distribution List %1"
 msgstr "Postiloend %1"
 
-#: akonadi-contacts/emailaddressselectionproxymodel.cpp:132
+#: akonadi-contacts/emailaddressselectionproxymodel.cpp:130
 #, kde-format
 msgctxt "Name and email address of a contact"
 msgid "%1 <%2>"
@@ -517,52 +479,58 @@ msgctxt "@label Search in a list of contacts"
 msgid "Search:"
 msgstr "Otsing:"
 
-#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:37
-#: akonadi-contacts/standardcontactformatter.cpp:184
+#: akonadi-contacts/emailaddressselectionwidget.cpp:132
+#, fuzzy, kde-format
+#| msgid "New &Contact..."
+msgid "Search Contact..."
+msgstr "Uus &kontakt..."
+
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:33
+#: akonadi-contacts/standardcontactformatter.cpp:181
 #, kde-format
 msgid "Anniversary"
 msgstr "Aastapäev"
 
-#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:42
-#: akonadi-contacts/standardcontactformatter.cpp:179
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:38
+#: akonadi-contacts/standardcontactformatter.cpp:176
 #, kde-format
 msgid "Assistant's Name"
 msgstr "Assistendi nimi"
 
-#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:47
-#: akonadi-contacts/standardcontactformatter.cpp:180
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:43
+#: akonadi-contacts/standardcontactformatter.cpp:177
 #, kde-format
 msgid "Manager's Name"
 msgstr "Juhi nimi"
 
-#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:52
-#: akonadi-contacts/standardcontactformatter.cpp:182
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:48
+#: akonadi-contacts/standardcontactformatter.cpp:179
 #, kde-format
 msgid "Office"
 msgstr "Ettevõte"
 
-#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:57
-#: akonadi-contacts/standardcontactformatter.cpp:178
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:53
+#: akonadi-contacts/standardcontactformatter.cpp:175
 #, kde-format
 msgid "Profession"
 msgstr "Eriala"
 
-#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:62
-#: akonadi-contacts/standardcontactformatter.cpp:181
+#: akonadi-contacts/grantlee/contactgrantleewrapper.cpp:58
+#: akonadi-contacts/standardcontactformatter.cpp:178
 #, kde-format
 msgctxt "Wife/Husband/..."
 msgid "Partner's Name"
 msgstr "Elukaaslase nimi"
 
-#: akonadi-contacts/grantlee/grantleecontactformatter.cpp:189
-#: akonadi-contacts/standardcontactformatter.cpp:242
+#: akonadi-contacts/grantlee/grantleecontactformatter.cpp:211
+#: akonadi-contacts/standardcontactformatter.cpp:239
 #, kde-format
 msgctxt "Boolean value"
 msgid "yes"
 msgstr "jah"
 
-#: akonadi-contacts/grantlee/grantleecontactformatter.cpp:191
-#: akonadi-contacts/standardcontactformatter.cpp:244
+#: akonadi-contacts/grantlee/grantleecontactformatter.cpp:213
+#: akonadi-contacts/standardcontactformatter.cpp:241
 #, kde-format
 msgctxt "Boolean value"
 msgid "no"
@@ -598,8 +566,8 @@ msgid ""
 msgstr ""
 "Kontakt eposti aadressiga <email>%1</email> on juba sinu aadressiraamatus."
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:120
-#: akonadi-contacts/job/addemaildisplayjob.cpp:161
+#: akonadi-contacts/job/addemailaddressjob.cpp:126
+#: akonadi-contacts/job/addemaildisplayjob.cpp:165
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -608,22 +576,31 @@ msgid ""
 msgstr ""
 "Enne kontakti lisamist tuleb luua aadressiraamat. Kas luua aadressiraamat?"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:121
-#: akonadi-contacts/job/addemaildisplayjob.cpp:162
+#: akonadi-contacts/job/addemailaddressjob.cpp:127
+#: akonadi-contacts/job/addemaildisplayjob.cpp:166
 #, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
 msgstr "Ükski aadressiraamat pole saadaval"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:124
-#: akonadi-contacts/job/addemaildisplayjob.cpp:165
-#: akonadi-contacts/standardcontactactionmanager.cpp:193
+#: akonadi-contacts/job/addemailaddressjob.cpp:128
+#: akonadi-contacts/job/addemaildisplayjob.cpp:167
+#, fuzzy, kde-format
+#| msgid "Update Address Book"
+#| msgid_plural "Update %1 Address Books"
+msgctxt "@action:button"
+msgid "Create Address Book"
+msgstr "Uuenda aadressiraamatut"
+
+#: akonadi-contacts/job/addemailaddressjob.cpp:136
+#: akonadi-contacts/job/addemaildisplayjob.cpp:175
+#: akonadi-contacts/standardcontactactionmanager.cpp:191
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Address Book"
 msgstr "Aadressiraamatu lisamine"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:213
+#: akonadi-contacts/job/addemailaddressjob.cpp:226
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -633,24 +610,37 @@ msgstr ""
 "<para>Kontakt e-posti aadressiga \"%1\" lisati edukalt sinu "
 "aadressiraamatusse.</para><para>Kas soovid uut kontakti nüüd muuta?</para>"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:238
-#: akonadi-contacts/standardcontactactionmanager.cpp:468
+#: akonadi-contacts/job/addemailaddressjob.cpp:239
+#, fuzzy, kde-format
+#| msgid "Edit..."
+msgctxt "@action:button"
+msgid "Edit"
+msgstr "Muuda..."
+
+#: akonadi-contacts/job/addemailaddressjob.cpp:240
+#, kde-format
+msgctxt "@action:button"
+msgid "Finish"
+msgstr ""
+
+#: akonadi-contacts/job/addemailaddressjob.cpp:265
+#: akonadi-contacts/standardcontactactionmanager.cpp:466
 #, kde-format
 msgid "Contact cannot be stored: %1"
 msgstr "Kontakti ei saa salvestada: %1"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:238
-#: akonadi-contacts/standardcontactactionmanager.cpp:468
+#: akonadi-contacts/job/addemailaddressjob.cpp:265
+#: akonadi-contacts/standardcontactactionmanager.cpp:466
 #, kde-format
 msgid "Failed to store contact"
 msgstr "Kontakti salvestamine nurjus"
 
-#: akonadi-contacts/job/addemailaddressjob.cpp:245
+#: akonadi-contacts/job/addemailaddressjob.cpp:272
 #, kde-format
 msgid "Contact created successfully"
 msgstr "Kontakti loomine õnnestus"
 
-#: akonadi-contacts/selectaddressbookdialog.cpp:25
+#: akonadi-contacts/selectaddressbookdialog.cpp:29
 #, kde-format
 msgctxt "@info"
 msgid "Select the address book where the contact will be saved:"
@@ -684,31 +674,31 @@ msgstr "Aadressiraamatu kataloogi loomine nurjus: %1"
 msgid "Address book folder creation failed"
 msgstr "Aadressiraamatu kataloogi loomine nurjus"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:117
+#: akonadi-contacts/standardcontactactionmanager.cpp:115
 #, kde-format
 msgid "Copy Address Book Folder"
 msgid_plural "Copy %1 Address Book Folders"
 msgstr[0] "Kopeeri aadressiraamatu kataloog"
 msgstr[1] "Kopeeri %1 aadressiraamatu kataloogi"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:119
+#: akonadi-contacts/standardcontactactionmanager.cpp:117
 #, kde-format
 msgid "Copy the selected address book folders to the clipboard."
 msgstr "Valitud aadressiraamatu kataloogide kopeerimine lõikepuhvrisse."
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:123
+#: akonadi-contacts/standardcontactactionmanager.cpp:121
 #, kde-format
 msgid "Delete Address Book Folder"
 msgid_plural "Delete %1 Address Book Folders"
 msgstr[0] "Kustuta aadressiraamatu kataloog"
 msgstr[1] "Kustuta %1 aadressiraamatu kataloogi"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:125
+#: akonadi-contacts/standardcontactactionmanager.cpp:123
 #, kde-format
 msgid "Delete the selected address book folders from the address book."
 msgstr "Valitud aadressiraamatu kataloogide kustutamine aadressiraamatust."
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:129
+#: akonadi-contacts/standardcontactactionmanager.cpp:127
 #, kde-format
 msgid ""
 "Do you really want to delete this address book folder and all its sub-"
@@ -723,7 +713,7 @@ msgstr[1] ""
 "Kas tõesti kustutada %1 aadressiraamatu kataloogi ja kõik nende "
 "alamkataloogid?"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:133
+#: akonadi-contacts/standardcontactactionmanager.cpp:131
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete address book folder?"
@@ -731,92 +721,92 @@ msgid_plural "Delete address book folders?"
 msgstr[0] "Kas kustutada aadressiraamatu kataloog?"
 msgstr[1] "Kas kustutada aadressiraamatu kataloogid?"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:137
+#: akonadi-contacts/standardcontactactionmanager.cpp:135
 #, kde-format
 msgid "Could not delete address book folder: %1"
 msgstr "Aadressiraamatu kataloogi kustutamine nurjus: %1"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:141
+#: akonadi-contacts/standardcontactactionmanager.cpp:139
 #, kde-format
 msgid "Address book folder deletion failed"
 msgstr "Aadressiraamatu kataloogi kustutamine nurjus"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:145
+#: akonadi-contacts/standardcontactactionmanager.cpp:143
 #, kde-format
 msgid "Update Address Book Folder"
 msgid_plural "Update %1 Address Book Folders"
 msgstr[0] "Uuenda aadressiraamatu kataloogi"
 msgstr[1] "Uuenda %1 aadressiraamatu kataloogi"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:147
+#: akonadi-contacts/standardcontactactionmanager.cpp:145
 #, kde-format
 msgid "Update the content of the selected address book folders."
 msgstr "Valitud aadressiraamatute kataloogide sisu uuendamine."
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:150
+#: akonadi-contacts/standardcontactactionmanager.cpp:148
 #, kde-format
 msgid "Cut Address Book Folder"
 msgid_plural "Cut %1 Address Book Folders"
 msgstr[0] "Lõika aadressiraamatu kataloog"
 msgstr[1] "Lõika %1 aadressiraamatu kataloogi"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:152
+#: akonadi-contacts/standardcontactactionmanager.cpp:150
 #, kde-format
 msgid "Cut the selected address book folders from the address book."
 msgstr "Valitud aadressiraamatu kaustade lõikamine aadressiraamatust."
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:155
+#: akonadi-contacts/standardcontactactionmanager.cpp:153
 #, kde-format
 msgid "Folder Properties..."
 msgstr "Kataloogi omadused..."
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:157
+#: akonadi-contacts/standardcontactactionmanager.cpp:155
 #, kde-format
 msgid ""
 "Open a dialog to edit the properties of the selected address book folder."
 msgstr ""
 "Dialoogi avamine valitud aadressiraamatu kataloogi omaduste muutmiseks."
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:160
+#: akonadi-contacts/standardcontactactionmanager.cpp:158
 #, kde-format
 msgctxt "@title:window"
 msgid "Properties of Address Book Folder %1"
 msgstr "Aadressiraamatu kataloogi %1 omadused"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:163
-#: akonadi-contacts/standardcontactactionmanager.cpp:292
+#: akonadi-contacts/standardcontactactionmanager.cpp:161
+#: akonadi-contacts/standardcontactactionmanager.cpp:290
 #, kde-format
 msgid "Copy Contact"
 msgid_plural "Copy %1 Contacts"
 msgstr[0] "Kopeeri kontakt"
 msgstr[1] "Kopeeri %1 kontakti"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:164
+#: akonadi-contacts/standardcontactactionmanager.cpp:162
 #, kde-format
 msgid "Copy the selected contacts to the clipboard."
 msgstr "Valitud kontaktide kopeerimine lõikepuhvrisse."
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:167
-#: akonadi-contacts/standardcontactactionmanager.cpp:303
+#: akonadi-contacts/standardcontactactionmanager.cpp:165
+#: akonadi-contacts/standardcontactactionmanager.cpp:301
 #, kde-format
 msgid "Delete Contact"
 msgid_plural "Delete %1 Contacts"
 msgstr[0] "Kustuta kontakt"
 msgstr[1] "Kustuta %1 kontakti"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:168
+#: akonadi-contacts/standardcontactactionmanager.cpp:166
 #, kde-format
 msgid "Delete the selected contacts from the address book."
 msgstr "Valitud kontaktide kustutamine aadressiraamatust."
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:171
+#: akonadi-contacts/standardcontactactionmanager.cpp:169
 #, kde-format
 msgid "Do you really want to delete the selected contact?"
 msgid_plural "Do you really want to delete %1 contacts?"
 msgstr[0] "Kas tõesti kustutada valitud kontakt?"
 msgstr[1] "Kas tõesti kustutada %1 kontakti?"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:175
+#: akonadi-contacts/standardcontactactionmanager.cpp:173
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Contact?"
@@ -824,35 +814,35 @@ msgid_plural "Delete Contacts?"
 msgstr[0] "Kas kustutada kontakt?"
 msgstr[1] "Kas kustutada kontaktid?"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:177
+#: akonadi-contacts/standardcontactactionmanager.cpp:175
 #, kde-format
 msgid "Could not delete contact: %1"
 msgstr "Kontakti kustutamine nurjus: %1"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:179
+#: akonadi-contacts/standardcontactactionmanager.cpp:177
 #, kde-format
 msgid "Contact deletion failed"
 msgstr "Kontakti kustutamine nurjus"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:182
-#: akonadi-contacts/standardcontactactionmanager.cpp:306
+#: akonadi-contacts/standardcontactactionmanager.cpp:180
+#: akonadi-contacts/standardcontactactionmanager.cpp:304
 #, kde-format
 msgid "Cut Contact"
 msgid_plural "Cut %1 Contacts"
 msgstr[0] "Lõika kontakt"
 msgstr[1] "Lõika %1 kontakti"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:183
+#: akonadi-contacts/standardcontactactionmanager.cpp:181
 #, kde-format
 msgid "Cut the selected contacts from the address book."
 msgstr "Valitud kontaktide lõikamine aadressiraamatust."
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:186
+#: akonadi-contacts/standardcontactactionmanager.cpp:184
 #, kde-format
 msgid "Add &Address Book..."
 msgstr "Lisa &aadressiraamat..."
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:188
+#: akonadi-contacts/standardcontactactionmanager.cpp:186
 #, kde-format
 msgid ""
 "Add a new address book<p>You will be presented with a dialog where you can "
@@ -861,24 +851,24 @@ msgstr ""
 "Uue aadressiraamatu lisamine<p>Avatakse dialoog, kus saab valida lisatava "
 "aadressiraamatu tüübi.</p>"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:197
+#: akonadi-contacts/standardcontactactionmanager.cpp:195
 #, kde-format
 msgid "Could not create address book: %1"
 msgstr "Aadressiraamatu loomine nurjus: %1"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:201
+#: akonadi-contacts/standardcontactactionmanager.cpp:199
 #, kde-format
 msgid "Address book creation failed"
 msgstr "Aadressiraamatu loomine nurjus"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:205
+#: akonadi-contacts/standardcontactactionmanager.cpp:203
 #, kde-format
 msgid "&Delete Address Book"
 msgid_plural "&Delete %1 Address Books"
 msgstr[0] "Kustuta aa&dressiraamat"
 msgstr[1] "Kustuta %1 aa&dressiraamatut"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:207
+#: akonadi-contacts/standardcontactactionmanager.cpp:205
 #, kde-format
 msgid ""
 "Delete the selected address books<p>The currently selected address books "
@@ -888,14 +878,14 @@ msgstr ""
 "Valitud aadressiraamatute kustutamine<p>Valitud aadressiraamatud "
 "kustutatakse koos kõigi neis leiduvate kontaktide ja kontaktirühmadega.</p>"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:212
+#: akonadi-contacts/standardcontactactionmanager.cpp:210
 #, kde-format
 msgid "Do you really want to delete this address book?"
 msgid_plural "Do you really want to delete %1 address books?"
 msgstr[0] "Kas tõesti kustutada see aadressiraamat?"
 msgstr[1] "Kas tõesti kustutada %1 aadressiraamatut?"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:216
+#: akonadi-contacts/standardcontactactionmanager.cpp:214
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Address Book?"
@@ -903,100 +893,100 @@ msgid_plural "Delete Address Books?"
 msgstr[0] "Kas kustutada aadressiraamat?"
 msgstr[1] "Kas kustutada aadressiraamatud?"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:221
+#: akonadi-contacts/standardcontactactionmanager.cpp:219
 #, kde-format
 msgid "Address Book Properties..."
 msgstr "Aadressiraamatu omadused..."
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:223
+#: akonadi-contacts/standardcontactactionmanager.cpp:221
 #, kde-format
 msgid "Open a dialog to edit properties of the selected address book."
 msgstr "Dialoogi avamine valitud aadressiraamatu omaduste muutmiseks."
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:226
+#: akonadi-contacts/standardcontactactionmanager.cpp:224
 #, kde-format
 msgid "Update Address Book"
 msgid_plural "Update %1 Address Books"
 msgstr[0] "Uuenda aadressiraamatut"
 msgstr[1] "Uuenda %1 aadressiraamatut"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:229
+#: akonadi-contacts/standardcontactactionmanager.cpp:227
 #, kde-format
 msgid "Updates the content of all folders of the selected address books."
 msgstr "Valitud aadressiraamatute kõigi kataloogide sisu uuendamine."
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:233
+#: akonadi-contacts/standardcontactactionmanager.cpp:231
 #, kde-format
 msgid "Could not paste contact: %1"
 msgstr "Kontakti asetamine nurjus: %1"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:235
+#: akonadi-contacts/standardcontactactionmanager.cpp:233
 #, kde-format
 msgid "Paste failed"
 msgstr "Asetamine nurjus"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:296
-#: akonadi-contacts/standardcontactactionmanager.cpp:300
+#: akonadi-contacts/standardcontactactionmanager.cpp:294
+#: akonadi-contacts/standardcontactactionmanager.cpp:298
 #, kde-format
 msgid "Copy Contact To"
 msgstr "Kopeeri kontakt"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:310
-#: akonadi-contacts/standardcontactactionmanager.cpp:314
+#: akonadi-contacts/standardcontactactionmanager.cpp:308
+#: akonadi-contacts/standardcontactactionmanager.cpp:312
 #, kde-format
 msgid "Move Contact To"
 msgstr "Liiguta kontakt"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:318
-#: akonadi-contacts/standardcontactactionmanager.cpp:558
+#: akonadi-contacts/standardcontactactionmanager.cpp:316
+#: akonadi-contacts/standardcontactactionmanager.cpp:553
 #, kde-format
 msgid "Edit Contact..."
 msgstr "Muuda kontakti..."
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:322
+#: akonadi-contacts/standardcontactactionmanager.cpp:320
 #, kde-format
 msgid "Copy Group"
 msgid_plural "Copy %1 Groups"
 msgstr[0] "Kopeeri rühm"
 msgstr[1] "Kopeeri %1 rühma"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:326
-#: akonadi-contacts/standardcontactactionmanager.cpp:330
+#: akonadi-contacts/standardcontactactionmanager.cpp:324
+#: akonadi-contacts/standardcontactactionmanager.cpp:328
 #, kde-format
 msgid "Copy Group To"
 msgstr "Kopeeri rühm"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:333
+#: akonadi-contacts/standardcontactactionmanager.cpp:331
 #, kde-format
 msgid "Delete Group"
 msgid_plural "Delete %1 Groups"
 msgstr[0] "Kustuta rühm"
 msgstr[1] "Kustuta %1 rühma"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:336
+#: akonadi-contacts/standardcontactactionmanager.cpp:334
 #, kde-format
 msgid "Cut Group"
 msgid_plural "Cut %1 Groups"
 msgstr[0] "Lõika rühm"
 msgstr[1] "Lõika %1 rühma"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:340
-#: akonadi-contacts/standardcontactactionmanager.cpp:344
+#: akonadi-contacts/standardcontactactionmanager.cpp:338
+#: akonadi-contacts/standardcontactactionmanager.cpp:342
 #, kde-format
 msgid "Move Group To"
 msgstr "Liiguta rühm"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:348
+#: akonadi-contacts/standardcontactactionmanager.cpp:346
 #, kde-format
 msgid "Edit Group..."
 msgstr "Muuda rühma..."
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:533
+#: akonadi-contacts/standardcontactactionmanager.cpp:528
 #, kde-format
 msgid "New &Contact..."
 msgstr "Uus &kontakt..."
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:535
+#: akonadi-contacts/standardcontactactionmanager.cpp:530
 #, kde-format
 msgid ""
 "Create a new contact<p>You will be presented with a dialog where you can add "
@@ -1005,12 +995,12 @@ msgstr ""
 "Uue kontakti loomine<p>Ilmub dialoog, kus saab määrata kõik vastava isiku "
 "andmed, sealhulgas aadressid ja telefoninumbrid.</p>"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:546
+#: akonadi-contacts/standardcontactactionmanager.cpp:541
 #, kde-format
 msgid "New &Group..."
 msgstr "Uus rü&hm..."
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:547
+#: akonadi-contacts/standardcontactactionmanager.cpp:542
 #, kde-format
 msgid ""
 "Create a new group<p>You will be presented with a dialog where you can add a "
@@ -1018,7 +1008,7 @@ msgid ""
 msgstr ""
 "Uue rühma loomine<p>Avatakse dialoog, kus saab lisada uue kontaktirühma.</p>"
 
-#: akonadi-contacts/standardcontactactionmanager.cpp:560
+#: akonadi-contacts/standardcontactactionmanager.cpp:555
 #, kde-format
 msgid ""
 "Edit the selected contact<p>You will be presented with a dialog where you "
@@ -1028,53 +1018,53 @@ msgstr ""
 "Valitud kontakti muutmine<p>Ilmub dialoog, kus saab muuta kõiki vastava "
 "isiku andmeid, sealhulgas aadresse ja telefoninumbreid.</p>"
 
-#: akonadi-contacts/standardcontactformatter.cpp:97
+#: akonadi-contacts/standardcontactformatter.cpp:94
 #, kde-format
 msgid "(One year old)"
 msgid_plural "(%1 years old)"
 msgstr[0] "(üheaastane)"
 msgstr[1] "(%1-aastane)"
 
-#: akonadi-contacts/standardcontactformatter.cpp:110
+#: akonadi-contacts/standardcontactformatter.cpp:107
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Send SMS"
 msgstr "SMS-i saatmine"
 
-#: akonadi-contacts/standardcontactformatter.cpp:121
+#: akonadi-contacts/standardcontactformatter.cpp:118
 #, kde-format
 msgctxt "a contact's email address"
 msgid "Email"
 msgstr "E-post"
 
-#: akonadi-contacts/standardcontactformatter.cpp:136
+#: akonadi-contacts/standardcontactformatter.cpp:133
 #, kde-format
 msgid "Homepage"
 msgstr "Kodulehekülg"
 
-#: akonadi-contacts/standardcontactformatter.cpp:142
+#: akonadi-contacts/standardcontactformatter.cpp:139
 #: contact-editor/editor/generalinfoeditor/blogfeedwidget.cpp:24
 #, kde-format
 msgid "Blog Feed"
 msgstr "Veebipäeviku voog"
 
-#: akonadi-contacts/standardcontactformatter.cpp:161
+#: akonadi-contacts/standardcontactformatter.cpp:158
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show address on map"
 msgstr "Aadressi näitamine kaardil"
 
-#: akonadi-contacts/standardcontactformatter.cpp:170
+#: akonadi-contacts/standardcontactformatter.cpp:167
 #, kde-format
 msgid "Notes"
 msgstr "Märkused"
 
-#: akonadi-contacts/standardcontactformatter.cpp:177
+#: akonadi-contacts/standardcontactformatter.cpp:174
 #, kde-format
 msgid "Department"
 msgstr "Osakond"
 
-#: akonadi-contacts/standardcontactformatter.cpp:183
+#: akonadi-contacts/standardcontactformatter.cpp:180
 #, kde-format
 msgid "IM Address"
 msgstr "Kiirsuhtlusaadress"
@@ -1114,65 +1104,65 @@ msgstr "Kopeeri kood"
 msgid "<p style=\"color: white;\"><b>Waiting for operation</b><br/></p>"
 msgstr "<p style=\"color: white;\"><b>Oodatakse tegutsemist</b><br/></p>"
 
-#: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:64
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:129
+#: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:65
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:130
 #, kde-format
 msgid "Remove Address"
 msgstr "Eemalda aadress"
 
-#: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:67
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:292
+#: contact-editor/editor/addresseditor/addresseslocationwidget.cpp:73
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:297
 #, kde-format
 msgid "Do you really want to delete this address?"
 msgstr "Kas tõesti kustutada see aadress?"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:45
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:46
 #, kde-format
 msgid "Add Street"
 msgstr "Lisa tänav"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:56
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:57
 #, kde-format
 msgid "Add Post Office Box"
 msgstr "Lisa postkast"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:66
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:67
 #, kde-format
 msgid "Add Postal Code"
 msgstr "Lisa postiindeks"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:76
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:77
 #, kde-format
 msgid "Add Locality"
 msgstr "Lisa asukoht"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:86
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:87
 #, kde-format
 msgid "Add Region"
 msgstr "Lisa maakond/piirkond"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:101
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:102
 #, kde-format
 msgid "Add a Country"
 msgstr "Lisa riik"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:106
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:107
 #, kde-format
 msgctxt "street/postal"
 msgid "This is the preferred address"
 msgstr "See on eelisaadress"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:117
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:118
 #, kde-format
 msgid "Add Address"
 msgstr "Lisa aadress"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:134
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:135
 #, kde-format
 msgid "Update Address"
 msgstr "Uuenda aadressi"
 
-#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:139
+#: contact-editor/editor/addresseditor/addresslocationwidget.cpp:140
 #, kde-format
 msgid "Cancel"
 msgstr "Loobu"
@@ -1189,14 +1179,14 @@ msgctxt "street/postal"
 msgid "Address Types"
 msgstr "Aadressi tüübid"
 
-#: contact-editor/editor/addresseditor/selectaddresstypecombobox.cpp:63
-#: contact-editor/editor/generalinfoeditor/phone/phonecomboboxtype.cpp:68
+#: contact-editor/editor/addresseditor/selectaddresstypecombobox.cpp:61
+#: contact-editor/editor/generalinfoeditor/phone/phonecomboboxtype.cpp:66
 #, kde-format
 msgctxt "@item:inlistbox Category of contact info field"
 msgid "Other..."
 msgstr "Muu..."
 
-#: contact-editor/editor/addresseditor/selectaddresstypecombobox.cpp:65
+#: contact-editor/editor/addresseditor/selectaddresstypecombobox.cpp:63
 #, kde-format
 msgctxt "@item:inlistbox Category of contact info field"
 msgid "New Address Type"
@@ -1347,59 +1337,59 @@ msgstr "Lisa väli "
 msgid "Use field for all contacts"
 msgstr "Välja kasutamine kõigi kontaktide puhul"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:63
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:61
 #, kde-format
 msgid "Text"
 msgstr "Tekst"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:64
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:62
 #, kde-format
 msgid "Numeric"
 msgstr "Arv"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:65
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:63
 #, kde-format
 msgid "Boolean"
 msgstr "Tõeväärtus"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:66
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:64
 #, kde-format
 msgid "Date"
 msgstr "Kuupäev"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:67
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:65
 #, kde-format
 msgid "Time"
 msgstr "Kellaaeg"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:68
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:66
 #, kde-format
 msgid "DateTime"
 msgstr "KuupäevKellaaeg"
 
-#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:69
+#: contact-editor/editor/customfieldeditor/customfieldeditorwidget.cpp:67
 #, kde-format
 msgid "Url"
 msgstr "URL"
 
-#: contact-editor/editor/customfieldeditor/customfieldslistdelegate.cpp:216
+#: contact-editor/editor/customfieldeditor/customfieldslistdelegate.cpp:214
 #, kde-format
 msgctxt "Custom Fields"
 msgid "Do you really want to delete the selected custom field?"
 msgstr "Kas tõesti kustutada valitud kohandatud väli?"
 
-#: contact-editor/editor/customfieldeditor/customfieldslistdelegate.cpp:217
+#: contact-editor/editor/customfieldeditor/customfieldslistdelegate.cpp:215
 #, kde-format
 msgid "Confirm Delete"
 msgstr "Kustutamise kinnitus"
 
-#: contact-editor/editor/customfieldeditor/customfieldsmodel.cpp:197
+#: contact-editor/editor/customfieldeditor/customfieldsmodel.cpp:195
 #, kde-format
 msgctxt "custom field title"
 msgid "Title"
 msgstr "Nimetus"
 
-#: contact-editor/editor/customfieldeditor/customfieldsmodel.cpp:199
+#: contact-editor/editor/customfieldeditor/customfieldsmodel.cpp:197
 #, kde-format
 msgctxt "custom field value"
 msgid "Value"
@@ -1410,38 +1400,38 @@ msgstr "Väärtus"
 msgid "Add a Blog Feed"
 msgstr "Blogi lisamine"
 
-#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:46
+#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:45
 #, kde-format
 msgid "Short Name"
 msgstr "Lühinimi"
 
-#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:47
+#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:46
 #, kde-format
 msgid "Full Name"
 msgstr "Täielik nimi"
 
-#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:48
+#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:47
 #, kde-format
 msgid "Reverse Name with Comma"
 msgstr "Tagurpidi nimi (komaga)"
 
-#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:49
+#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:48
 #, kde-format
 msgid "Reverse Name"
 msgstr "Tagurpidi nimi"
 
-#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:50
+#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:49
 #, kde-format
 msgid "Organization"
 msgstr "Organisatsioon"
 
-#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:51
+#: contact-editor/editor/generalinfoeditor/displaynameeditwidget.cpp:50
 #, kde-format
 msgctxt "@item:inlistbox A custom name format"
 msgid "Custom"
 msgstr "Kohandatud"
 
-#: contact-editor/editor/generalinfoeditor/generalinfowidget.cpp:74
+#: contact-editor/editor/generalinfoeditor/generalinfowidget.cpp:73
 #, kde-format
 msgid "Tags"
 msgstr "Sildid"
@@ -1700,45 +1690,15 @@ msgstr "Lisa veebileht"
 msgid "Remove Web Site"
 msgstr "Eemalda veebileht"
 
-#: contact-editor/editor/personaleditor/dateeditwidget.cpp:24
+#: contact-editor/editor/personaleditor/dateeditwidget.cpp:23
 #, kde-format
 msgid "Click to add date"
 msgstr "Klõpsa kuupäeva lisamiseks"
 
-#: contact-editor/editor/personaleditor/dateeditwidget.cpp:35
+#: contact-editor/editor/personaleditor/dateeditwidget.cpp:34
 #, kde-format
 msgid "Remove"
 msgstr "Eemalda"
-
-#: contact-editor/editor/personaleditor/kdatepickerpopup.cpp:81
-#, kde-format
-msgctxt "@option today"
-msgid "&Today"
-msgstr "&Täna"
-
-#: contact-editor/editor/personaleditor/kdatepickerpopup.cpp:84
-#, kde-format
-msgctxt "@option tomorrow"
-msgid "To&morrow"
-msgstr "&Homme"
-
-#: contact-editor/editor/personaleditor/kdatepickerpopup.cpp:87
-#, kde-format
-msgctxt "@option next week"
-msgid "Next &Week"
-msgstr "Järgmine &nädal"
-
-#: contact-editor/editor/personaleditor/kdatepickerpopup.cpp:90
-#, kde-format
-msgctxt "@option next month"
-msgid "Next M&onth"
-msgstr "Järgmine &kuu"
-
-#: contact-editor/editor/personaleditor/kdatepickerpopup.cpp:100
-#, kde-format
-msgctxt "@option do not specify a date"
-msgid "No Date"
-msgstr "Kuupäevata"
 
 #: contact-editor/editor/personaleditor/personaleditorwidget.cpp:27
 #, kde-format
@@ -1829,6 +1789,88 @@ msgstr "Pildid (%1)"
 #, kde-format
 msgid "Set as Preferred"
 msgstr "Määra eelistatuks"
+
+#~ msgctxt "@option today"
+#~ msgid "&Today"
+#~ msgstr "&Täna"
+
+#~ msgctxt "@option tomorrow"
+#~ msgid "To&morrow"
+#~ msgstr "&Homme"
+
+#~ msgctxt "@option next week"
+#~ msgid "Next &Week"
+#~ msgstr "Järgmine &nädal"
+
+#~ msgctxt "@option next month"
+#~ msgid "Next M&onth"
+#~ msgstr "Järgmine &kuu"
+
+#~ msgctxt "@option do not specify a date"
+#~ msgid "No Date"
+#~ msgstr "Kuupäevata"
+
+#~ msgid ""
+#~ "Defines which application shall be used to show the postal address of a "
+#~ "contact on a map. If 'Web Browser' is selected, an URL can be defined "
+#~ "with placeholders for the single address parts. If 'External Application' "
+#~ "is selected, a command with placeholders can be defined."
+#~ msgstr ""
+#~ "Määrab, millist rakendust kasutada kontakti postiaadressi näitamiseks "
+#~ "kaardil. Kui valida \"veebibrauser\", saab määrata URL-i, milles "
+#~ "kohatäitjad vastavad konkreetse aadressi osadele. Kui valida \"väline "
+#~ "rakendus\", saab määrata käsu, milles võib samuti kasutada kohatäitjaid."
+
+#~ msgid ""
+#~ "This URL defines the website that shall be used to show a contact's "
+#~ "postal address."
+#~ msgstr ""
+#~ "See URL määrab veebilehekülje, mida kasutatakse kontakti postiaadressi "
+#~ "näitamiseks."
+
+#~ msgid ""
+#~ "The following placeholders can be used in the URL:\n"
+#~ "   %s: Street\n"
+#~ "   %r: Region\n"
+#~ "   %l: Location\n"
+#~ "   %z: Zip Code\n"
+#~ "   %c: Country ISO Code"
+#~ msgstr ""
+#~ "URL-is saab kasutada järgmisi kohatäitjaid:\n"
+#~ "   %s: tänav\n"
+#~ "   %r: piirkond\n"
+#~ "   %l: asula\n"
+#~ "   %z: postiindeks\n"
+#~ "   %c: riigi ISO kood"
+
+#~ msgid "Address Command"
+#~ msgstr "Aadressikäsk"
+
+#~ msgid ""
+#~ "This command defines the application that shall be executed to show a "
+#~ "contact's postal address."
+#~ msgstr ""
+#~ "See käsk määrab rakenduse, mis tuleb käivitada kontakti postiaadressi "
+#~ "näitamiseks."
+
+#~ msgid ""
+#~ "The following placeholders can be used in the command:\n"
+#~ "   %s: Street\n"
+#~ "   %r: Region\n"
+#~ "   %l: Location\n"
+#~ "   %z: Zip Code\n"
+#~ "   %c: Country ISO Code"
+#~ msgstr ""
+#~ "Käsus saab kasutada järgmisi kohatäitjaid:\n"
+#~ "   %s: tänav\n"
+#~ "   %r: piirkond\n"
+#~ "   %l: asula\n"
+#~ "   %z: postiindeks\n"
+#~ "   %c: riigi ISO kood"
+
+#~ msgctxt "@title:window"
+#~ msgid "Show Contact Group"
+#~ msgstr "Kontaktirühma näitamine"
 
 #~ msgid "Select Address Book"
 #~ msgstr "Aadressiraamatu valik"
@@ -1935,9 +1977,6 @@ msgstr "Määra eelistatuks"
 
 #~ msgid "Add..."
 #~ msgstr "Lisa..."
-
-#~ msgid "Edit..."
-#~ msgstr "Muuda..."
 
 #~ msgid "New Email:"
 #~ msgstr "Uus aadress:"

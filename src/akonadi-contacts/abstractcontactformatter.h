@@ -12,6 +12,8 @@
 
 #include <QVariantMap>
 
+#include <memory>
+
 namespace KContacts
 {
 class Addressee;
@@ -20,6 +22,7 @@ class Addressee;
 namespace Akonadi
 {
 class Item;
+class AbstractContactFormatterPrivate;
 
 /**
  * @short The interface for all contact formatters.
@@ -113,9 +116,7 @@ private:
     //@cond PRIVATE
     Q_DISABLE_COPY(AbstractContactFormatter)
 
-    class Private;
-    Private *const d;
+    std::unique_ptr<AbstractContactFormatterPrivate> const d;
     //@endcond
 };
 }
-

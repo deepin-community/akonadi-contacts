@@ -25,7 +25,7 @@ class SmsDialog : public QDialog
 
 public:
     explicit SmsDialog(const KContacts::PhoneNumber &number);
-    ~SmsDialog();
+    ~SmsDialog() override;
 
     Q_REQUIRED_RESULT QString message() const;
 
@@ -42,4 +42,3 @@ private:
     QLabel *mLengthLabel = nullptr;
     QString mText;
 };
-

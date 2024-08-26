@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: none
+# SPDX-License-Identifier: BSD-3-Clause
 add_definitions(-DTRANSLATION_DOMAIN=\"akonadicontact5-serializer\")
 
 if (BUILD_TESTING)
@@ -7,6 +9,7 @@ endif()
 add_library(akonadi_serializer_addressee MODULE)
 target_sources(akonadi_serializer_addressee PRIVATE
     akonadi_serializer_addressee.cpp
+    akonadi_serializer_addressee.h
 )
 
 
@@ -33,6 +36,7 @@ install(FILES akonadi_serializer_addressee.desktop
 add_library(akonadi_serializer_contactgroup MODULE)
 target_sources(akonadi_serializer_contactgroup PRIVATE
     akonadi_serializer_contactgroup.cpp
+    akonadi_serializer_contactgroup.h
 )
 target_link_libraries(akonadi_serializer_contactgroup
     KF5::Contacts

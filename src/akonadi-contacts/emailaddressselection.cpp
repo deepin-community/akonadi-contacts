@@ -10,17 +10,17 @@
 #include "emailaddressselection.h"
 #include "emailaddressselection_p.h"
 
-#include <kcontacts/contactgroup.h>
-#include <kmime/kmime_header_parsing.h>
+#include <KContacts/ContactGroup>
+#include <KMime/HeaderParsing>
 
 using namespace Akonadi;
 
-EmailAddressSelection::Private::Private()
+EmailAddressSelectionPrivate::EmailAddressSelectionPrivate()
     : QSharedData()
 {
 }
 
-EmailAddressSelection::Private::Private(const Private &other)
+EmailAddressSelectionPrivate::EmailAddressSelectionPrivate(const EmailAddressSelectionPrivate &other)
     : QSharedData(other)
 {
     mName = other.mName;
@@ -29,14 +29,13 @@ EmailAddressSelection::Private::Private(const Private &other)
 }
 
 EmailAddressSelection::EmailAddressSelection()
-    : d(new Private)
+    : d(new EmailAddressSelectionPrivate)
 {
 }
 
 EmailAddressSelection::EmailAddressSelection(const EmailAddressSelection &other)
-    : d(other.d)
-{
-}
+
+    = default;
 
 EmailAddressSelection &EmailAddressSelection::operator=(const EmailAddressSelection &other)
 {
@@ -47,9 +46,7 @@ EmailAddressSelection &EmailAddressSelection::operator=(const EmailAddressSelect
     return *this;
 }
 
-EmailAddressSelection::~EmailAddressSelection()
-{
-}
+EmailAddressSelection::~EmailAddressSelection() = default;
 
 bool EmailAddressSelection::isValid() const
 {

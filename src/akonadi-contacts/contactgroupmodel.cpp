@@ -8,9 +8,9 @@
 
 #include "contactgroupmodel_p.h"
 
-#include <itemfetchjob.h>
-#include <itemfetchscope.h>
-#include <kcontacts/addressee.h>
+#include <Akonadi/ItemFetchJob>
+#include <Akonadi/ItemFetchScope>
+#include <KContacts/Addressee>
 
 #include <KIconEngine>
 #include <KIconLoader>
@@ -27,10 +27,10 @@ struct GroupMember {
     bool loadingError = false;
 };
 
-class Q_DECL_HIDDEN ContactGroupModel::Private
+class Akonadi::ContactGroupModelPrivate
 {
 public:
-    Private(ContactGroupModel *parent)
+    ContactGroupModelPrivate(ContactGroupModel *parent)
         : mParent(parent)
     {
     }
@@ -133,7 +133,7 @@ public:
         } while (foundEmpty);
     }
 
-    ContactGroupModel *mParent = nullptr;
+    ContactGroupModel *const mParent;
     QVector<GroupMember> mMembers;
     KContacts::ContactGroup mGroup;
     QString mLastErrorMessage;
@@ -141,14 +141,11 @@ public:
 
 ContactGroupModel::ContactGroupModel(QObject *parent)
     : QAbstractItemModel(parent)
-    , d(new Private(this))
+    , d(new ContactGroupModelPrivate(this))
 {
 }
 
-ContactGroupModel::~ContactGroupModel()
-{
-    delete d;
-}
+ContactGroupModel::~ContactGroupModel() = default;
 
 void ContactGroupModel::loadContactGroup(const KContacts::ContactGroup &contactGroup)
 {
@@ -219,21 +216,21 @@ QModelIndex ContactGroupModel::index(int row, int col, const QModelIndex &index)
 QModelIndex ContactGroupModel::parent(const QModelIndex &index) const
 {
     Q_UNUSED(index)
-    return QModelIndex();
+    return {};
 }
 
 QVariant ContactGroupModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
-        return QVariant();
+        return {};
     }
 
     if (index.row() < 0 || index.row() >= d->mMembers.count()) {
-        return QVariant();
+        return {};
     }
 
     if (index.column() < 0 || index.column() > 1) {
-        return QVariant();
+        return {};
     }
 
     const GroupMember &member = d->mMembers[index.row()];
@@ -268,7 +265,7 @@ QVariant ContactGroupModel::data(const QModelIndex &index, int role) const
 
     if (role == Qt::DecorationRole) {
         if (index.column() == 1) {
-            return QVariant();
+            return {};
         }
 
         if (member.loadingError) {
@@ -318,7 +315,7 @@ QVariant ContactGroupModel::data(const QModelIndex &index, int role) const
         }
     }
 
-    return QVariant();
+    return {};
 }
 
 bool ContactGroupModel::setData(const QModelIndex &index, const QVariant &value, int role)
@@ -383,15 +380,15 @@ bool ContactGroupModel::setData(const QModelIndex &index, const QVariant &value,
 QVariant ContactGroupModel::headerData(int section, Qt::Orientation orientation, int role) const
 {
     if (section < 0 || section > 1) {
-        return QVariant();
+        return {};
     }
 
     if (orientation != Qt::Horizontal) {
-        return QVariant();
+        return {};
     }
 
     if (role != Qt::DisplayRole) {
-        return QVariant();
+        return {};
     }
 
     if (section == 0) {
@@ -408,7 +405,7 @@ Qt::ItemFlags ContactGroupModel::flags(const QModelIndex &index) const
     }
 
     if (d->mMembers[index.row()].loadingError) {
-        return Qt::ItemFlags(Qt::ItemIsEnabled);
+        return {Qt::ItemIsEnabled};
     }
 
     Qt::ItemFlags parentFlags = QAbstractItemModel::flags(index);
@@ -446,6 +443,35 @@ bool ContactGroupModel::removeRows(int row, int count, const QModelIndex &parent
     endRemoveRows();
 
     return true;
+}
+
+GroupFilterModel::GroupFilterModel(QObject *parent)
+    : QSortFilterProxyModel(parent)
+{
+    setFilterCaseSensitivity(Qt::CaseInsensitive);
+    setFilterKeyColumn(-1);
+}
+
+bool GroupFilterModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
+{
+    if (sourceRow == sourceModel()->rowCount() - 1) {
+        return true;
+    }
+
+    return QSortFilterProxyModel::filterAcceptsRow(sourceRow, sourceParent);
+}
+
+bool GroupFilterModel::lessThan(const QModelIndex &left, const QModelIndex &right) const
+{
+    if (left.row() == sourceModel()->rowCount() - 1) {
+        return true;
+    }
+
+    if (right.row() == sourceModel()->rowCount() - 1) {
+        return false;
+    }
+
+    return QSortFilterProxyModel::lessThan(left, right);
 }
 
 #include "moc_contactgroupmodel_p.cpp"

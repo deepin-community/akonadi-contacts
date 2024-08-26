@@ -1,7 +1,7 @@
 /*
     This file is part of Contact Editor.
 
-    SPDX-FileCopyrightText: 2016-2021 Laurent Montel <montel@kde.org>
+    SPDX-FileCopyrightText: 2016-2022 Laurent Montel <montel@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -23,7 +23,7 @@ class PersonalEditorWidget : public QWidget
     Q_OBJECT
 public:
     explicit PersonalEditorWidget(QWidget *parent = nullptr);
-    ~PersonalEditorWidget();
+    ~PersonalEditorWidget() override;
     void loadContact(const KContacts::Addressee &contact);
     void storeContact(KContacts::Addressee &contact);
     void setReadOnly(bool readOnly);

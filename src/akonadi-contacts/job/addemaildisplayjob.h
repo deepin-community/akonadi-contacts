@@ -1,5 +1,5 @@
 /*
-  SPDX-FileCopyrightText: 2013-2021 Laurent Montel <montel@kde.org>
+  SPDX-FileCopyrightText: 2013-2022 Laurent Montel <montel@kde.org>
 
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -7,12 +7,16 @@
 #pragma once
 
 #include "akonadi-contact_export.h"
-#include <AkonadiCore/Item>
+#include <Akonadi/Item>
 #include <KJob>
+
+#include <memory>
 
 namespace Akonadi
 {
 class Item;
+class AddEmailDisplayJobPrivate;
+
 /**
  * @brief The AddEmailDisplayJob class
  * @author Laurent Montel <montel@kde.org>
@@ -37,9 +41,8 @@ Q_SIGNALS:
 
 private:
     //@cond PRIVATE
-    class Private;
-    Private *const d;
+    friend class AddEmailDisplayJobPrivate;
+    std::unique_ptr<AddEmailDisplayJobPrivate> const d;
     //@endcond
 };
 }
-

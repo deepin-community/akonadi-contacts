@@ -1,12 +1,14 @@
 /*
-    SPDX-FileCopyrightText: 2013-2021 Laurent Montel <montel@kde.org>
+    SPDX-FileCopyrightText: 2013-2022 Laurent Montel <montel@kde.org>
     SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
 #pragma once
 
 #include "akonadi-contact_export.h"
-#include <AkonadiWidgets/CollectionDialog>
+#include <Akonadi/CollectionDialog>
+
+#include <memory>
 
 namespace Akonadi
 {
@@ -23,7 +25,6 @@ public:
     ~SelectAddressBookDialog() override;
 
 private:
-    SelectAddressBookDialogPrivate *const d;
+    std::unique_ptr<SelectAddressBookDialogPrivate> const d;
 };
 }
-

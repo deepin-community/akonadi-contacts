@@ -15,6 +15,5 @@ class CustomFielsListWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit CustomFielsListWidgetTest(QObject *parent = nullptr);
-    ~CustomFielsListWidgetTest();
+    ~CustomFielsListWidgetTest() override;
 };
-

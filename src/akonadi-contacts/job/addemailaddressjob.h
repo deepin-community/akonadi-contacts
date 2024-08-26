@@ -10,9 +10,13 @@
 
 #include <KJob>
 
+#include <memory>
+
 namespace Akonadi
 {
 class Item;
+class AddEmailAddressJobPrivate;
+
 /**
  * @short A job to add a new contact with a given email address to Akonadi.
  *
@@ -55,9 +59,8 @@ Q_SIGNALS:
 
 private:
     //@cond PRIVATE
-    class Private;
-    Private *const d;
+    friend class AddEmailAddressJobPrivate;
+    std::unique_ptr<AddEmailAddressJobPrivate> const d;
     //@endcond
 };
 }
-

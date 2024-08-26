@@ -6,13 +6,13 @@
 
 #include "akonadi_serializer_contactgroup.h"
 
-#include <Akonadi/Contact/ContactGroupExpandJob>
-#include <AkonadiCore/abstractdifferencesreporter.h>
-#include <AkonadiCore/item.h>
+#include <Akonadi/AbstractDifferencesReporter>
+#include <Akonadi/ContactGroupExpandJob>
+#include <Akonadi/Item>
 
+#include <KContacts/ContactGroup>
+#include <KContacts/ContactGroupTool>
 #include <KLocalizedString>
-#include <kcontacts/contactgroup.h>
-#include <kcontacts/contactgrouptool.h>
 
 #include <qplugin.h>
 
@@ -65,7 +65,8 @@ static QString toString(const KContacts::Addressee &contact)
     return contact.fullEmail();
 }
 
-template<class T> static void compareVector(AbstractDifferencesReporter *reporter, const QString &id, const QVector<T> &left, const QVector<T> &right)
+template<class T>
+static void compareVector(AbstractDifferencesReporter *reporter, const QString &id, const QVector<T> &left, const QVector<T> &right)
 {
     for (int i = 0; i < left.count(); ++i) {
         if (!right.contains(left[i])) {
@@ -111,7 +112,7 @@ void SerializerPluginContactGroup::compare(Akonadi::AbstractDifferencesReporter 
 QString SerializerPluginContactGroup::extractGid(const Item &item) const
 {
     if (!item.hasPayload<KContacts::ContactGroup>()) {
-        return QString();
+        return {};
     }
     return item.payload<KContacts::ContactGroup>().id();
 }

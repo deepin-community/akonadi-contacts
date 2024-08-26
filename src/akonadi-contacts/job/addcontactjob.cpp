@@ -5,31 +5,31 @@
 */
 
 #include "addcontactjob.h"
-#include "akonadi/contact/selectaddressbookdialog.h"
-#include <Collection>
+#include "selectaddressbookdialog.h"
+#include <Akonadi/Collection>
 
-#include <Akonadi/Contact/ContactSearchJob>
+#include <Akonadi/ContactSearchJob>
+#include <Akonadi/Item>
+#include <Akonadi/ItemCreateJob>
+#include <KContacts/Addressee>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <item.h>
-#include <itemcreatejob.h>
-#include <kcontacts/addressee.h>
 
 #include <QPointer>
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN AddContactJob::Private
+class Akonadi::AddContactJobPrivate
 {
 public:
-    Private(AddContactJob *qq, const KContacts::Addressee &contact, QWidget *parentWidget)
+    AddContactJobPrivate(AddContactJob *qq, const KContacts::Addressee &contact, QWidget *parentWidget)
         : q(qq)
         , mContact(contact)
         , mParentWidget(parentWidget)
     {
     }
 
-    Private(AddContactJob *qq, const KContacts::Addressee &contact, const Akonadi::Collection &collection)
+    AddContactJobPrivate(AddContactJob *qq, const KContacts::Addressee &contact, const Akonadi::Collection &collection)
         : q(qq)
         , mContact(contact)
         , mCollection(collection)
@@ -57,7 +57,7 @@ public:
                                            "a file and import it into the address book manually.");
                 KMessageBox::information(mParentWidget, text);
             }
-            q->setError(UserDefinedError);
+            q->setError(KJob::UserDefinedError);
             q->emitResult();
             return;
         }
@@ -68,7 +68,7 @@ public:
 
             bool gotIt = true;
             if (!dlg->exec()) {
-                q->setError(UserDefinedError);
+                q->setError(KJob::UserDefinedError);
                 q->emitResult();
                 gotIt = false;
             } else {
@@ -92,7 +92,7 @@ public:
                 slotAddContactDone(job);
             });
         } else {
-            q->setError(UserDefinedError);
+            q->setError(KJob::UserDefinedError);
             q->emitResult();
         }
     }
@@ -125,20 +125,17 @@ public:
 
 AddContactJob::AddContactJob(const KContacts::Addressee &contact, QWidget *parentWidget, QObject *parent)
     : KJob(parent)
-    , d(new Private(this, contact, parentWidget))
+    , d(new AddContactJobPrivate(this, contact, parentWidget))
 {
 }
 
 AddContactJob::AddContactJob(const KContacts::Addressee &contact, const Akonadi::Collection &collection, QObject *parent)
     : KJob(parent)
-    , d(new Private(this, contact, collection))
+    , d(new AddContactJobPrivate(this, contact, collection))
 {
 }
 
-AddContactJob::~AddContactJob()
-{
-    delete d;
-}
+AddContactJob::~AddContactJob() = default;
 
 void AddContactJob::showMessageBox(bool b)
 {

@@ -8,7 +8,7 @@
 
 #include "imagewidget.h"
 
-#include <kcontacts/addressee.h>
+#include <KContacts/Addressee>
 
 #include <KIO/TransferJob>
 #include <KLocalizedString>
@@ -74,7 +74,7 @@ QImage ImageLoader::loadImage(const QUrl &url, bool *ok, bool selectPictureSize)
 
     if (!(*ok)) {
         // image does not exist (any more)
-        KMessageBox::sorry(mParent, i18n("This contact's image cannot be found."));
+        KMessageBox::error(mParent, i18n("This contact's image cannot be found."));
         return image;
     }
 

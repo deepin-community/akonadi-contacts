@@ -18,4 +18,4 @@ override_dh_makeshlibs:
 	done
 
 override_dh_auto_test:
-#	xvfb-run -- dh_auto_test --no-parallel
+	xvfb-run -- dh_auto_test --no-parallel

@@ -8,9 +8,9 @@
 
 #include "smsdialog.h"
 
+#include <KContacts/PhoneNumber>
 #include <KLocalizedString>
 #include <KTextEdit>
-#include <kcontacts/phonenumber.h>
 
 #include <QDialogButtonBox>
 #include <QLabel>
@@ -23,9 +23,7 @@ SmsDialog::SmsDialog(const KContacts::PhoneNumber &number)
     initUI();
 }
 
-SmsDialog::~SmsDialog()
-{
-}
+SmsDialog::~SmsDialog() = default;
 
 QString SmsDialog::message() const
 {

@@ -10,6 +10,8 @@
 
 #include <KJob>
 
+#include <memory>
+
 namespace KContacts
 {
 class Addressee;
@@ -18,6 +20,8 @@ class Addressee;
 namespace Akonadi
 {
 class Collection;
+class AddContactJobPrivate;
+
 /**
  * @short A job to add a new contact to Akonadi.
  *
@@ -64,9 +68,8 @@ public:
 
 private:
     //@cond PRIVATE
-    class Private;
-    Private *const d;
+    friend class AddContactJobPrivate;
+    std::unique_ptr<AddContactJobPrivate> const d;
     //@endcond
 };
 }
-

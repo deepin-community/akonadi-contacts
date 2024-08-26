@@ -1,7 +1,7 @@
 /*
     This file is part of Contact Editor.
 
-    SPDX-FileCopyrightText: 2017-2021 Laurent Montel <montel@kde.org>
+    SPDX-FileCopyrightText: 2017-2022 Laurent Montel <montel@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -14,9 +14,7 @@ CategoriesEditAbstractWidget::CategoriesEditAbstractWidget(QWidget *parent)
 {
 }
 
-CategoriesEditAbstractWidget::~CategoriesEditAbstractWidget()
-{
-}
+CategoriesEditAbstractWidget::~CategoriesEditAbstractWidget() = default;
 
 void CategoriesEditAbstractWidget::loadContact(const KContacts::Addressee &contact)
 {

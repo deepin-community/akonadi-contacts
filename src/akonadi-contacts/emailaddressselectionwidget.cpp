@@ -13,17 +13,17 @@
 #include "emailaddressselectionmodel.h"
 #include "emailaddressselectionproxymodel_p.h"
 
+#include <Akonadi/ChangeRecorder>
+#include <Akonadi/ControlGui>
+#include <Akonadi/EntityDisplayAttribute>
+#include <Akonadi/EntityTreeView>
+#include <Akonadi/ItemFetchScope>
+#include <Akonadi/Session>
+#include <KContacts/Addressee>
+#include <KContacts/ContactGroup>
 #include <KLocalizedString>
-#include <changerecorder.h>
 #include <contactsfilterproxymodel.h>
 #include <contactstreemodel.h>
-#include <controlgui.h>
-#include <entitydisplayattribute.h>
-#include <entitytreeview.h>
-#include <itemfetchscope.h>
-#include <kcontacts/addressee.h>
-#include <kcontacts/contactgroup.h>
-#include <session.h>
 
 #include <QHBoxLayout>
 #include <QHeaderView>
@@ -82,10 +82,10 @@ private:
 /**
  * @internal
  */
-class Q_DECL_HIDDEN EmailAddressSelectionWidget::Private
+class Akonadi::EmailAddressSelectionWidgetPrivate
 {
 public:
-    Private(bool showOnlyContactWithEmail, EmailAddressSelectionWidget *qq, QAbstractItemModel *model)
+    EmailAddressSelectionWidgetPrivate(bool showOnlyContactWithEmail, EmailAddressSelectionWidget *qq, QAbstractItemModel *model)
         : q(qq)
         , mModel(model)
         , mShowOnlyContactWithEmail(showOnlyContactWithEmail)
@@ -104,7 +104,7 @@ public:
     bool mShowOnlyContactWithEmail = false;
 };
 
-void EmailAddressSelectionWidget::Private::init()
+void EmailAddressSelectionWidgetPrivate::init()
 {
     // setup internal model if needed
     if (!mModel) {
@@ -114,14 +114,14 @@ void EmailAddressSelectionWidget::Private::init()
 
     // setup ui
     auto layout = new QVBoxLayout(q);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
 
     mDescriptionLabel = new QLabel;
     mDescriptionLabel->hide();
     layout->addWidget(mDescriptionLabel);
 
     auto searchLayout = new QHBoxLayout;
-    searchLayout->setContentsMargins(0, 0, 0, 0);
+    searchLayout->setContentsMargins({});
     layout->addLayout(searchLayout);
 
     mView = new Akonadi::EntityTreeView;
@@ -129,6 +129,7 @@ void EmailAddressSelectionWidget::Private::init()
 
     auto label = new QLabel(i18nc("@label Search in a list of contacts", "Search:"));
     mSearchLine = new SearchLineEdit(mView);
+    mSearchLine->setPlaceholderText(i18n("Search Contact..."));
     label->setBuddy(mSearchLine);
     searchLayout->addWidget(label);
     searchLayout->addWidget(mSearchLine);
@@ -154,7 +155,7 @@ void EmailAddressSelectionWidget::Private::init()
 
     q->connect(mSearchLine, &QLineEdit::textChanged, filter, &ContactsFilterProxyModel::setFilterString);
 
-    q->connect(mView, QOverload<const Akonadi::Item &>::of(&Akonadi::EntityTreeView::doubleClicked), q, [this]() {
+    q->connect(mView, qOverload<const Akonadi::Item &>(&Akonadi::EntityTreeView::doubleClicked), q, [this]() {
         Q_EMIT q->doubleClicked();
     });
     ControlGui::widgetNeedsAkonadi(q);
@@ -170,26 +171,23 @@ void EmailAddressSelectionWidget::Private::init()
 
 EmailAddressSelectionWidget::EmailAddressSelectionWidget(QWidget *parent)
     : QWidget(parent)
-    , d(new Private(true, this, nullptr))
+    , d(new EmailAddressSelectionWidgetPrivate(true, this, nullptr))
 {
 }
 
 EmailAddressSelectionWidget::EmailAddressSelectionWidget(QAbstractItemModel *model, QWidget *parent)
     : QWidget(parent)
-    , d(new Private(true, this, model))
+    , d(new EmailAddressSelectionWidgetPrivate(true, this, model))
 {
 }
 
 EmailAddressSelectionWidget::EmailAddressSelectionWidget(bool showOnlyContactWithEmail, QAbstractItemModel *model, QWidget *parent)
     : QWidget(parent)
-    , d(new Private(showOnlyContactWithEmail, this, model))
+    , d(new EmailAddressSelectionWidgetPrivate(showOnlyContactWithEmail, this, model))
 {
 }
 
-EmailAddressSelectionWidget::~EmailAddressSelectionWidget()
-{
-    delete d;
-}
+EmailAddressSelectionWidget::~EmailAddressSelectionWidget() = default;
 
 EmailAddressSelection::List EmailAddressSelectionWidget::selectedAddresses() const
 {

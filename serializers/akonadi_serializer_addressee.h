@@ -8,10 +8,10 @@
 
 #include <QObject>
 
-#include <AkonadiCore/differencesalgorithminterface.h>
-#include <AkonadiCore/gidextractorinterface.h>
-#include <AkonadiCore/itemserializerplugin.h>
-#include <kcontacts/vcardconverter.h>
+#include <Akonadi/DifferencesAlgorithmInterface>
+#include <Akonadi/GidExtractorInterface>
+#include <Akonadi/ItemSerializerPlugin>
+#include <KContacts/VCardConverter>
 
 namespace Akonadi
 {
@@ -34,4 +34,3 @@ private:
     KContacts::VCardConverter m_converter;
 };
 }
-

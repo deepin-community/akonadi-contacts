@@ -12,6 +12,8 @@
 
 #include <QObject>
 
+#include <memory>
+
 class QUrl;
 
 namespace KContacts
@@ -22,6 +24,8 @@ class PhoneNumber;
 
 namespace Akonadi
 {
+class ContactDefaultActionsPrivate;
+
 /**
  * @short A convenience class that handles different contact related actions.
  *
@@ -57,7 +61,7 @@ namespace Akonadi
  * // first connect all actions
  * actions->connectToView( viewer );
  *
- * // then remove the signle/slot connection you want to overwrite
+ * // then remove the signal/slot connection you want to overwrite
  * disconnect( viewer, SIGNAL(emailClicked(QString,QString)),
  *             actions, SLOT(sendEmail(QString,QString)) );
  *
@@ -126,9 +130,7 @@ public Q_SLOTS:
 
 private:
     //@cond PRIVATE
-    class Private;
-    Private *const d;
+    std::unique_ptr<ContactDefaultActionsPrivate> const d;
     //@endcond PRIVATE
 };
 }
-

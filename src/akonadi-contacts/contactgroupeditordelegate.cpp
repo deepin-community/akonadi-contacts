@@ -11,8 +11,8 @@
 #include "contactcompletionmodel_p.h"
 #include "contactgroupmodel_p.h"
 
+#include <Akonadi/EntityTreeModel>
 #include <KComboBox>
-#include <entitytreemodel.h>
 
 #include <QAbstractItemView>
 #include <QCompleter>
@@ -60,7 +60,7 @@ ContactLineEdit::ContactLineEdit(bool isReference, ContactCompletionModel::Colum
     auto completer = new QCompleter(filter, this);
     completer->setCompletionColumn(column);
     completer->setCaseSensitivity(Qt::CaseInsensitive);
-    connect(completer, QOverload<const QModelIndex &>::of(&QCompleter::activated), this, QOverload<const QModelIndex &>::of(&ContactLineEdit::completed));
+    connect(completer, qOverload<const QModelIndex &>(&QCompleter::activated), this, qOverload<const QModelIndex &>(&ContactLineEdit::completed));
 
     setCompleter(completer);
 
@@ -96,39 +96,36 @@ void ContactLineEdit::slotTextEdited()
     mIsReference = false;
 }
 
-class Q_DECL_HIDDEN ContactGroupEditorDelegate::Private
+class Akonadi::ContactGroupEditorDelegatePrivate
 {
 public:
-    Private()
+    ContactGroupEditorDelegatePrivate()
         : mButtonSize(16, 16)
         , mIcon(QIcon::fromTheme(QStringLiteral("list-remove")))
     {
     }
 
-    QSize mButtonSize;
+    const QSize mButtonSize;
     const QIcon mIcon;
     QAbstractItemView *mItemView = nullptr;
 };
 
 ContactGroupEditorDelegate::ContactGroupEditorDelegate(QAbstractItemView *view, QObject *parent)
     : QStyledItemDelegate(parent)
-    , d(new Private)
+    , d(new ContactGroupEditorDelegatePrivate)
 {
     d->mItemView = view;
 }
 
-ContactGroupEditorDelegate::~ContactGroupEditorDelegate()
-{
-    delete d;
-}
+ContactGroupEditorDelegate::~ContactGroupEditorDelegate() = default;
 
 QWidget *ContactGroupEditorDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
     const bool isReference = index.data(ContactGroupModel::IsReferenceRole).toBool();
     Q_UNUSED(option)
     if (index.column() == 0) {
-        auto edit = new ContactLineEdit(isReference, ContactCompletionModel::EmailColumn, parent);
-        connect(edit, QOverload<QWidget *>::of(&ContactLineEdit::completed), this, &ContactGroupEditorDelegate::completed);
+        auto edit = new ContactLineEdit(isReference, ContactCompletionModel::NameAndEmailColumn, parent);
+        connect(edit, qOverload<QWidget *>(&ContactLineEdit::completed), this, &ContactGroupEditorDelegate::completed);
 
         return edit;
     } else {
@@ -138,8 +135,8 @@ QWidget *ContactGroupEditorDelegate::createEditor(QWidget *parent, const QStyleO
             comboBox->setAutoFillBackground(true);
             return comboBox;
         } else {
-            auto edit = new ContactLineEdit(isReference, ContactCompletionModel::EmailColumn, parent);
-            connect(edit, QOverload<QWidget *>::of(&ContactLineEdit::completed), this, &ContactGroupEditorDelegate::completed);
+            auto edit = new ContactLineEdit(isReference, ContactCompletionModel::NameAndEmailColumn, parent);
+            connect(edit, qOverload<QWidget *>(&ContactLineEdit::completed), this, &ContactGroupEditorDelegate::completed);
             return edit;
         }
     }
@@ -228,7 +225,9 @@ void ContactGroupEditorDelegate::paint(QPainter *painter, const QStyleOptionView
     QStyledItemDelegate::paint(painter, option, index);
 
     if (index.column() == 1 && !isLastRow(index)) {
-        d->mIcon.paint(painter, option.rect, Qt::AlignRight);
+        QRect buttonRect = d->mItemView->visualRect(index);
+        buttonRect.setLeft(buttonRect.right() - d->mButtonSize.width());
+        d->mIcon.paint(painter, buttonRect, Qt::AlignRight);
     }
 }
 
@@ -253,7 +252,6 @@ bool ContactGroupEditorDelegate::editorEvent(QEvent *event, QAbstractItemModel *
             const QMouseEvent *mouseEvent = static_cast<QMouseEvent *>(event);
             QRect buttonRect = d->mItemView->visualRect(index);
             buttonRect.setLeft(buttonRect.right() - d->mButtonSize.width());
-
             if (buttonRect.contains(mouseEvent->pos())) {
                 model->removeRows(index.row(), 1);
                 QTimer::singleShot(0, this, &ContactGroupEditorDelegate::setFirstColumnAsCurrent);

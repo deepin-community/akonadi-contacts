@@ -17,10 +17,10 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN Akonadi::EmailAddressRequester::Private
+class Akonadi::EmailAddressRequesterPrivate
 {
 public:
-    Private(EmailAddressRequester *qq)
+    explicit EmailAddressRequesterPrivate(EmailAddressRequester *qq)
         : q(qq)
     {
     }
@@ -31,7 +31,7 @@ public:
     KLineEdit *mLineEdit = nullptr;
 };
 
-void EmailAddressRequester::Private::slotAddressBook()
+void EmailAddressRequesterPrivate::slotAddressBook()
 {
     QPointer<Akonadi::EmailAddressSelectionDialog> dlg = new Akonadi::EmailAddressSelectionDialog(q);
     dlg->view()->view()->setSelectionMode(QAbstractItemView::MultiSelection);
@@ -63,11 +63,11 @@ void EmailAddressRequester::Private::slotAddressBook()
 
 EmailAddressRequester::EmailAddressRequester(QWidget *parent)
     : QWidget(parent)
-    , d(new Private(this))
+    , d(new EmailAddressRequesterPrivate(this))
 {
     auto layout = new QHBoxLayout(this);
     layout->setSpacing(4);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
 
     d->mLineEdit = new KLineEdit(this);
     d->mLineEdit->setClearButtonEnabled(true);
@@ -86,10 +86,7 @@ EmailAddressRequester::EmailAddressRequester(QWidget *parent)
     connect(d->mLineEdit, &KLineEdit::textChanged, this, &EmailAddressRequester::textChanged);
 }
 
-EmailAddressRequester::~EmailAddressRequester()
-{
-    delete d;
-}
+EmailAddressRequester::~EmailAddressRequester() = default;
 
 void EmailAddressRequester::clear()
 {

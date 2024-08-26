@@ -8,11 +8,12 @@
 
 #include "categorieseditwidget.h"
 
+#include <Akonadi/Item>
+#include <Akonadi/Tag>
+#include <Akonadi/TagWidget>
 #include <KPluginFactory>
 #include <QHBoxLayout>
-#include <item.h>
-#include <tag.h>
-#include <tagwidget.h>
+#include <akonadi/tagcreatejob.h>
 
 K_PLUGIN_CLASS_WITH_JSON(CategoriesEditWidget, "categorieseditwidgetplugin.json")
 
@@ -21,13 +22,11 @@ CategoriesEditWidget::CategoriesEditWidget(QWidget *parent, const QList<QVariant
     , mTagWidget(new Akonadi::TagWidget(this))
 {
     auto layout = new QHBoxLayout(this);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
     layout->addWidget(mTagWidget);
 }
 
-CategoriesEditWidget::~CategoriesEditWidget()
-{
-}
+CategoriesEditWidget::~CategoriesEditWidget() = default;
 
 void CategoriesEditWidget::setReadOnly(bool readOnly)
 {
@@ -41,10 +40,29 @@ void CategoriesEditWidget::loadContact(const KContacts::Addressee &contact)
     const QStringList categories = contact.categories();
     tags.reserve(categories.count());
     for (const QString &category : categories) {
-        tags.append(Akonadi::Tag::fromUrl(QUrl(category)));
+        if (category.startsWith(QLatin1String("akonadi:"))) {
+            tags.append(Akonadi::Tag::fromUrl(QUrl(category)));
+        } else {
+            Akonadi::Tag missingTag = Akonadi::Tag(category);
+            auto createJob = new Akonadi::TagCreateJob(missingTag, this);
+            createJob->setMergeIfExisting(true);
+            connect(createJob, &Akonadi::TagCreateJob::result, this, &CategoriesEditWidget::onMissingTagCreated);
+        }
     }
 
     mTagWidget->setSelection(tags);
+}
+
+void CategoriesEditWidget::onMissingTagCreated(KJob *job)
+{
+    if (job->error()) {
+        return;
+    }
+    auto createJob = static_cast<Akonadi::TagCreateJob *>(job);
+
+    auto selectedTags{mTagWidget->selection()};
+    selectedTags += createJob->tag();
+    mTagWidget->setSelection(selectedTags);
 }
 
 void CategoriesEditWidget::storeContact(KContacts::Addressee &contact) const
@@ -54,7 +72,7 @@ void CategoriesEditWidget::storeContact(KContacts::Addressee &contact) const
     const Akonadi::Tag::List tags = mTagWidget->selection();
     categories.reserve(tags.count());
     for (const Akonadi::Tag &tag : tags) {
-        categories.append(tag.url().url());
+        categories.append(tag.name());
     }
 
     contact.setCategories(categories);

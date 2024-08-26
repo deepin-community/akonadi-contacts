@@ -6,21 +6,21 @@
 */
 
 #include "addemailaddressjob.h"
-#include "akonadi/contact/selectaddressbookdialog.h"
-
-#include <AgentFilterProxyModel>
-#include <AgentInstanceCreateJob>
-#include <AgentType>
-#include <AgentTypeDialog>
-#include <Akonadi/Contact/ContactEditorDialog>
-#include <Akonadi/Contact/ContactSearchJob>
-#include <Collection>
-#include <CollectionDialog>
-#include <CollectionFetchJob>
-#include <CollectionFetchScope>
-#include <Item>
-#include <ItemCreateJob>
+#include "selectaddressbookdialog.h"
+#include <Akonadi/AgentFilterProxyModel>
+#include <Akonadi/AgentInstanceCreateJob>
+#include <Akonadi/AgentType>
+#include <Akonadi/AgentTypeDialog>
+#include <Akonadi/Collection>
+#include <Akonadi/CollectionDialog>
+#include <Akonadi/CollectionFetchJob>
+#include <Akonadi/CollectionFetchScope>
+#include <Akonadi/ContactEditorDialog>
+#include <Akonadi/ContactSearchJob>
+#include <Akonadi/Item>
+#include <Akonadi/ItemCreateJob>
 #include <KContacts/ContactGroup>
+#include <kwidgetsaddons_version.h>
 
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -29,10 +29,10 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN AddEmailAddressJob::Private
+class Akonadi::AddEmailAddressJobPrivate
 {
 public:
-    Private(AddEmailAddressJob *qq, const QString &emailString, QWidget *parentWidget)
+    AddEmailAddressJobPrivate(AddEmailAddressJob *qq, const QString &emailString, QWidget *parentWidget)
         : q(qq)
         , mCompleteAddress(emailString)
         , mParentWidget(parentWidget)
@@ -73,7 +73,7 @@ public:
 
                 KMessageBox::information(mParentWidget, text, QString(), QStringLiteral("alreadyInAddressBook"));
             }
-            q->setError(UserDefinedError);
+            q->setError(KJob::UserDefinedError);
             q->emitResult();
             return;
         }
@@ -116,10 +116,22 @@ public:
 
         const int nbItemCollection(canCreateItemCollections.size());
         if (nbItemCollection == 0) {
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+            if (KMessageBox::questionTwoActions(
+                    mParentWidget,
+#else
             if (KMessageBox::questionYesNo(mParentWidget,
-                                           i18nc("@info", "You must create an address book before adding a contact. Do you want to create an address book?"),
-                                           i18nc("@title:window", "No Address Book Available"))
+
+#endif
+                    i18nc("@info", "You must create an address book before adding a contact. Do you want to create an address book?"),
+                    i18nc("@title:window", "No Address Book Available"),
+                    KGuiItem(i18nc("@action:button", "Create Address Book"), QStringLiteral("address-book-new")),
+                    KStandardGuiItem::cancel())
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+                == KMessageBox::ButtonCode::PrimaryAction) {
+#else
                 == KMessageBox::Yes) {
+#endif
                 QPointer<Akonadi::AgentTypeDialog> dlg = new Akonadi::AgentTypeDialog(mParentWidget);
                 dlg->setWindowTitle(i18nc("@title:window", "Add Address Book"));
                 dlg->agentFilterProxyModel()->addMimeTypeFilter(KContacts::Addressee::mimeType());
@@ -139,19 +151,19 @@ public:
                         delete dlg;
                         return;
                     } else { // if agent is not valid => return error and finish job
-                        q->setError(UserDefinedError);
+                        q->setError(KJob::UserDefinedError);
                         q->emitResult();
                         delete dlg;
                         return;
                     }
                 } else { // Canceled create agent => return error and finish job
-                    q->setError(UserDefinedError);
+                    q->setError(KJob::UserDefinedError);
                     q->emitResult();
                     delete dlg;
                     return;
                 }
             } else {
-                q->setError(UserDefinedError);
+                q->setError(KJob::UserDefinedError);
                 q->emitResult();
                 return;
             }
@@ -165,7 +177,7 @@ public:
             if (dlg->exec()) {
                 addressBook = dlg->selectedCollection();
             } else {
-                q->setError(UserDefinedError);
+                q->setError(KJob::UserDefinedError);
                 q->emitResult();
                 gotIt = false;
             }
@@ -176,14 +188,15 @@ public:
         }
 
         if (!addressBook.isValid()) {
-            q->setError(UserDefinedError);
+            q->setError(KJob::UserDefinedError);
             q->emitResult();
             return;
         }
         KContacts::Addressee contact;
         contact.setNameFromString(mName);
-        contact.insertEmail(mEmail, true);
-
+        KContacts::Email email(mEmail);
+        email.setPreferred(true);
+        contact.addEmail(email);
         // create the new item
         Akonadi::Item item;
         item.setMimeType(KContacts::Addressee::mimeType());
@@ -215,14 +228,28 @@ public:
                                         "<para>Do you want to edit this new contact now?</para>",
                                         mCompleteAddress);
 
-            if (KMessageBox::questionYesNo(mParentWidget, text, QString(), KStandardGuiItem::yes(), KStandardGuiItem::no(), QStringLiteral("addedtokabc"))
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+            if (KMessageBox::questionTwoActions(mParentWidget,
+#else
+            if (KMessageBox::questionYesNo(mParentWidget,
+
+#endif
+                                                text,
+                                                QString(),
+                                                KGuiItem(i18nc("@action:button", "Edit"), QStringLiteral("document-edit")),
+                                                KGuiItem(i18nc("@action:button", "Finish"), QStringLiteral("dialog-ok-apply")),
+                                                QStringLiteral("addedtokabc"))
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+                == KMessageBox::ButtonCode::PrimaryAction) {
+#else
                 == KMessageBox::Yes) {
+#endif
                 QPointer<Akonadi::ContactEditorDialog> dlg = new Akonadi::ContactEditorDialog(Akonadi::ContactEditorDialog::EditMode, mParentWidget);
                 dlg->setContact(mItem);
-                connect(dlg.data(), &Akonadi::ContactEditorDialog::contactStored, q, [this](const Akonadi::Item &item) {
+                QObject::connect(dlg.data(), &Akonadi::ContactEditorDialog::contactStored, q, [this](const Akonadi::Item &item) {
                     contactStored(item);
                 });
-                connect(dlg.data(), &Akonadi::ContactEditorDialog::error, q, [this](const QString &str) {
+                QObject::connect(dlg.data(), &Akonadi::ContactEditorDialog::error, q, [this](const QString &str) {
                     slotContactEditorError(str);
                 });
                 dlg->exec();
@@ -247,24 +274,21 @@ public:
     }
 
     AddEmailAddressJob *const q;
-    QString mCompleteAddress;
+    const QString mCompleteAddress;
     QString mEmail;
     QString mName;
-    QWidget *mParentWidget = nullptr;
+    QWidget *const mParentWidget;
     Akonadi::Item mItem;
     bool mInteractive = false;
 };
 
 AddEmailAddressJob::AddEmailAddressJob(const QString &email, QWidget *parentWidget, QObject *parent)
     : KJob(parent)
-    , d(new Private(this, email, parentWidget))
+    , d(new AddEmailAddressJobPrivate(this, email, parentWidget))
 {
 }
 
-AddEmailAddressJob::~AddEmailAddressJob()
-{
-    delete d;
-}
+AddEmailAddressJob::~AddEmailAddressJob() = default;
 
 void AddEmailAddressJob::start()
 {
@@ -288,3 +312,4 @@ void AddEmailAddressJob::setInteractive(bool b)
 }
 
 #include "moc_addemailaddressjob.cpp"
+#include <kwidgetsaddons_version.h>
