@@ -4,18 +4,24 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
 include /usr/share/dpkg/pkg-info.mk
 
-AbiVirtualPackageVersion = $(call dpkg_late_eval,AbiVirtualPackageVersion,echo '${DEB_VERSION_UPSTREAM}' | sed -e 's/\.[0-9]\+$$//')
+# Starting with a library package $*, remove the ABI and append a
+# -MAJOR.MINOR suffix without the third component of the upstream version.
+ABIVirtualPackage = $(shell echo $* | sed 's/abi[0-9]\+//')-$(basename $(DEB_VERSION_UPSTREAM))
 pkgs_lib = $(filter-out %-dev %-doc %-dbg %-data %-bin %-plugins,$(filter lib%,$(shell dh_listpackages)))
 
 %:
-	dh $@ --with kf5,pkgkde_symbolshelper --buildsystem kf5 --without build_stamp
+	dh $@
 
-override_dh_makeshlibs:
-	for pkg in $(pkgs_lib); do \
-		name=$$( echo "$${pkg}" | sed -e 's/abi[0-9]\+\s*//'); \
-		echo "ABI:VirtualPackage=$${name}-${AbiVirtualPackageVersion}" >> debian/$${pkg}.substvars; \
-		dh_makeshlibs -p$${pkg} -V "$${pkg} (>= $(DEB_VERSION_EPOCH_UPSTREAM)), $${name}-${AbiVirtualPackageVersion}"; \
-	done
+override_dh_makeshlibs: $(pkgs_lib:=-makeshlibs)
+	dh_makeshlibs --remaining-packages
+$(pkgs_lib:=-makeshlibs): %-makeshlibs:
+	dh_makeshlibs -p$* '-V$* (>= $(DEB_VERSION_EPOCH_UPSTREAM)), $(ABIVirtualPackage)'
+
+override_dh_gencontrol: $(pkgs_lib:=-gencontrol)
+	dh_gencontrol --remaining-packages
+$(pkgs_lib:=-gencontrol): %-gencontrol:
+	dh_gencontrol -p$* -- -VABI:VirtualPackage=$(ABIVirtualPackage)
 
 override_dh_auto_test:
+#	Tests disbaled as 32bit archs fail
 #	xvfb-run -- dh_auto_test --no-parallel

@@ -1,0 +1,6 @@
+usr/include/KPim6/AkonadiContactCore/
+usr/include/KPim6/AkonadiContactWidgets/
+usr/lib/*/cmake/KPim6AkonadiContactCore/
+usr/lib/*/cmake/KPim6AkonadiContactWidgets/
+usr/lib/*/libKPim6AkonadiContactCore.so
+usr/lib/*/libKPim6AkonadiContactWidgets.so

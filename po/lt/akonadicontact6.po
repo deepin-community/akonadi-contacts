@@ -1,0 +1,2335 @@
+# Lithuanian translations for akonadicontact package.
+# This file is distributed under the same license as the akonadicontact package.
+#
+# Jonas Česnauskas <upynas@gmail.com>, 2011.
+# Tomas Straupis <tomasstraupis@gmail.com>, 2011.
+# Remigijus Jarmalavičius <remigijus@jarmalavicius.lt>, 2011.
+# Liudas Ališauskas <liudas.alisauskas@gmail.com>, 2011, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: akonadicontact\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"PO-Revision-Date: 2024-08-13 23:53+0300\n"
+"Last-Translator: Liudas Ališauskas <liudas@akmc.lt>\n"
+"Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#: akonadi-contacts-core/contactgroupmodel.cpp:193
+#, kde-format
+msgid "The member with name <b>%1</b> is missing an email address"
+msgstr "Nariui, vardu <b>%1</b>, trūksta el. pašto adreso"
+
+#: akonadi-contacts-core/contactgroupmodel.cpp:240
+#, kde-format
+msgid "Contact does not exist any more"
+msgstr "Adresato daugiau nebėra"
+
+#: akonadi-contacts-core/contactgroupmodel.cpp:394
+#, kde-format
+msgctxt "contact's name"
+msgid "Name"
+msgstr "Vardas"
+
+#: akonadi-contacts-core/contactgroupmodel.cpp:396
+#, kde-format
+msgctxt "contact's email address"
+msgid "EMail"
+msgstr "El. paštas"
+
+#: akonadi-contacts-core/contactstreemodel.cpp:212
+#, kde-format
+msgctxt "@title:column address books overview"
+msgid "Address Books"
+msgstr "Adresų knygos"
+
+#: akonadi-contacts-core/contactstreemodel.cpp:222
+#, kde-format
+msgctxt "@title:column name of a person"
+msgid "Name"
+msgstr "Vardas"
+
+#: akonadi-contacts-core/contactstreemodel.cpp:224
+#, kde-format
+msgctxt "@title:column family name of a person"
+msgid "Family Name"
+msgstr "Pavardė"
+
+#: akonadi-contacts-core/contactstreemodel.cpp:226
+#, kde-format
+msgctxt "@title:column given name of a person"
+msgid "Given Name"
+msgstr "Vardas"
+
+#: akonadi-contacts-core/contactstreemodel.cpp:230
+#, kde-format
+msgctxt "@title:column home address of a person"
+msgid "Home"
+msgstr "Namų"
+
+#: akonadi-contacts-core/contactstreemodel.cpp:232
+#, kde-format
+msgctxt "@title:column work address of a person"
+msgid "Work"
+msgstr "Darbo"
+
+#: akonadi-contacts-core/contactstreemodel.cpp:234
+#, kde-format
+msgctxt "@title:column phone numbers of a person"
+msgid "Phone Numbers"
+msgstr "Telefono numeriai"
+
+#: akonadi-contacts-core/contactstreemodel.cpp:236
+#, kde-format
+msgctxt "@title:column the preferred email addresses of a person"
+msgid "Preferred EMail"
+msgstr "Pageidaujamas el. paštas"
+
+#: akonadi-contacts-core/contactstreemodel.cpp:238
+#, kde-format
+msgctxt "@title:column all email addresses of a person"
+msgid "All EMails"
+msgstr "Visi el. paštai"
+
+#: akonadi-contacts-core/emailaddressselectionproxymodel.cpp:23
+#, kde-format
+msgid "Distribution List %1"
+msgstr "Platinimo sąrašas %1"
+
+#: akonadi-contacts-core/emailaddressselectionproxymodel.cpp:130
+#, kde-format
+msgctxt "Name and email address of a contact"
+msgid "%1 <%2>"
+msgstr "%1 <%2>"
+
+#: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:28
+#: akonadi-contacts-core/standardcontactformatter.cpp:176
+#: akonadi-contacts-widgets/contactgroupviewer.cpp:66
+#, kde-format
+msgid "Address Book"
+msgstr "Adresų knyga"
+
+#: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:33
+#: akonadi-contacts-core/standardcontactformatter.cpp:175
+#, kde-format
+msgid "Anniversary"
+msgstr "Metinės"
+
+#: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:38
+#: akonadi-contacts-core/standardcontactformatter.cpp:170
+#, kde-format
+msgid "Assistant's Name"
+msgstr "Padėjėjo vardas"
+
+#: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:43
+#: akonadi-contacts-core/standardcontactformatter.cpp:171
+#, kde-format
+msgid "Manager's Name"
+msgstr "Administratoriaus vardas"
+
+#: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:48
+#: akonadi-contacts-core/standardcontactformatter.cpp:173
+#, kde-format
+msgid "Office"
+msgstr "Biuras"
+
+#: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:53
+#: akonadi-contacts-core/standardcontactformatter.cpp:169
+#, kde-format
+msgid "Profession"
+msgstr "Profesija"
+
+#: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:58
+#: akonadi-contacts-core/standardcontactformatter.cpp:172
+#, kde-format
+msgctxt "Wife/Husband/..."
+msgid "Partner's Name"
+msgstr "Vyro/Žmonos vardas"
+
+#: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:182
+#: akonadi-contacts-core/standardcontactformatter.cpp:233
+#, kde-format
+msgctxt "Boolean value"
+msgid "yes"
+msgstr "taip"
+
+#: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:184
+#: akonadi-contacts-core/standardcontactformatter.cpp:235
+#, kde-format
+msgctxt "Boolean value"
+msgid "no"
+msgstr "ne"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:95
+#, kde-format
+msgid "(One year old)"
+msgid_plural "(%1 years old)"
+msgstr[0] "(Metų senumo)"
+msgstr[1] "(%1 metų senumo)"
+msgstr[2] "(%1 metų senumo)"
+msgstr[3] "(%1 metų senumo)"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:106
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Send SMS"
+msgstr "Siųsti SMS žinutę"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:115
+#, kde-format
+msgctxt "a contact's email address"
+msgid "Email"
+msgstr "El. paštas"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:130
+#, kde-format
+msgid "Homepage"
+msgstr "Tinklapis"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:136
+#, kde-format
+msgid "Blog Feed"
+msgstr "Tinklaraščio kanalas"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:154
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Show address on map"
+msgstr "Rodyti adresą žemėlapyje"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:161
+#, kde-format
+msgid "Notes"
+msgstr "Pastabos"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:168
+#, kde-format
+msgid "Department"
+msgstr "Padalinys"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:174
+#, kde-format
+msgid "IM Address"
+msgstr "Pokalbių programos adresas"
+
+#: akonadi-contacts-widgets/contacteditor.cpp:162
+#, kde-format
+msgid ""
+"The contact has been changed by someone else.\n"
+"What should be done?"
+msgstr ""
+"Adresatas buvo pakeistas.\n"
+"Ką daryti?"
+
+#: akonadi-contacts-widgets/contacteditor.cpp:163
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:136
+#, kde-format
+msgctxt "@action:button"
+msgid "Take over changes"
+msgstr "Perimti pakeitimus"
+
+#: akonadi-contacts-widgets/contacteditor.cpp:164
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:137
+#, kde-format
+msgctxt "@action:button"
+msgid "Ignore and Overwrite changes"
+msgstr "Nepaisyti ir perrašyti pakeitimus"
+
+#: akonadi-contacts-widgets/contacteditor.cpp:278
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:291
+#: akonadi-contacts-widgets/widgets/selectaddressbookdialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Address Book"
+msgstr "Pasirinkti adresų knygą"
+
+#: akonadi-contacts-widgets/contacteditor.cpp:279
+#, kde-format
+msgid "Select the address book the new contact shall be saved in:"
+msgstr "Pasirinkite į kurią adresų knygą įrašyti naująjį adresatą:"
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:45
+#, kde-format
+msgctxt "@title:window"
+msgid "New Contact"
+msgstr "Naujas adresatas"
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:45
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Contact"
+msgstr "Taisyti adresatą"
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:72
+#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:102
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Add to:"
+msgstr "Pridėti į:"
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:181
+#, kde-format
+msgctxt "@info"
+msgid "Location was not saved. Do you want to close editor?"
+msgstr "Vieta neįrašyta. Ar norite užverti redaktorių?"
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:182
+#: akonadi-contacts-widgets/contacteditordialog.cpp:200
+#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:165
+#, kde-format
+msgctxt "@title:window"
+msgid "Confirmation"
+msgstr "Patvirtinimas"
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:183
+#, kde-format
+msgctxt "@action:button"
+msgid "Close Editor"
+msgstr "Užverti redaktorių"
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:184
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Close"
+msgstr "Neužverti"
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:199
+#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:164
+#, kde-format
+msgctxt "@info"
+msgid "Do you really want to cancel?"
+msgstr "Ar tikrai norite atsisakyti?"
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:201
+#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:166
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel Editing"
+msgstr "Atsisakyti taisymo"
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:202
+#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:167
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Cancel"
+msgstr "Neatsisakyti"
+
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:135
+#, kde-format
+msgid ""
+"The contact group has been changed by someone else.\n"
+"What should be done?"
+msgstr ""
+"Kažkas pakeitė adresatų grupę.\n"
+"Ką daryti?"
+
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:176
+#, kde-format
+msgid "The name of the contact group must not be empty."
+msgstr "Adresatų grupės pavadinimas negali būti tuščias."
+
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:292
+#, kde-format
+msgid "Select the address book the new contact group shall be saved in:"
+msgstr "Pasirinkite į kurią adresų knygą įrašyti naująją adresatų grupę:"
+
+#. i18n: ectx: property (text), widget (QLabel, groupNameLabel)
+#: akonadi-contacts-widgets/contactgroupeditor.ui:29
+#, kde-format
+msgctxt "@label The name of a contact group"
+msgid "Name:"
+msgstr "Pavadinimas:"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: akonadi-contacts-widgets/contactgroupeditor.ui:59
+#, kde-format
+msgctxt "@label"
+msgid "Contact group members:"
+msgstr "Adresatų grupė:"
+
+#. i18n: ectx: property (placeholderText), widget (KLineEdit, searchField)
+#: akonadi-contacts-widgets/contactgroupeditor.ui:66
+#, kde-format
+msgid "Search..."
+msgstr "Ieškoti..."
+
+#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:79
+#, kde-format
+msgctxt "@title:window"
+msgid "New Contact Group"
+msgstr "Nauja adresatų grupė"
+
+#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:79
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Contact Group"
+msgstr "Taisyti adresatų grupę"
+
+#: akonadi-contacts-widgets/contactgroupviewer.cpp:52
+#, kde-format
+msgctxt "@title:window"
+msgid "Contact Group %1"
+msgstr "Adresatų grupė %1"
+
+#: akonadi-contacts-widgets/contactviewer.cpp:64
+#, kde-format
+msgctxt "@title:window"
+msgid "Contact %1"
+msgstr "Adresatas %1"
+
+#: akonadi-contacts-widgets/contactviewerdialog.cpp:64
+#, kde-format
+msgctxt "@title:window"
+msgid "Show Contact"
+msgstr "Rodyti adresatą"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:63
+#, kde-format
+msgid "Remove Address"
+msgstr "Šalinti adresą"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:67
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:277
+#, kde-format
+msgid "Do you really want to delete this address?"
+msgstr "Ar tikrai norite ištrinti šį adresą?"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:46
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add Street"
+msgstr "Pridėti gatvę"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:57
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add Post Office Box"
+msgstr "Pridėti abonentinę pašto dėžutę"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:67
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add Postal Code"
+msgstr "Pridėti pašto kodą"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:77
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add Locality"
+msgstr "Pridėti vietovę"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:87
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add Region"
+msgstr "Pridėti regioną"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:103
+#, kde-format
+msgctxt "street/postal"
+msgid "This is the preferred address"
+msgstr "Pageidaujamas adresas"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:114
+#, kde-format
+msgctxt "@action:button"
+msgid "Add Address"
+msgstr "Pridėti adresą"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:126
+#, kde-format
+msgctxt "@action:button"
+msgid "Remove Address"
+msgstr "Šalinti adresą"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:131
+#, kde-format
+msgctxt "@action:button"
+msgid "Update Address"
+msgstr "Atnaujinti adresą"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:136
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Atsisakyti"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresstypedialog.cpp:24
+#, kde-format
+msgctxt "street/postal"
+msgid "Edit Address Type"
+msgstr "Taisyti adreso tipą"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresstypedialog.cpp:38
+#, kde-format
+msgctxt "street/postal"
+msgid "Address Types"
+msgstr "Adreso tipas"
+
+#: akonadi-contacts-widgets/editor/addresseditor/selectaddresstypecombobox.cpp:61
+#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonecomboboxtype.cpp:66
+#, kde-format
+msgctxt "@item:inlistbox Category of contact info field"
+msgid "Other..."
+msgstr "Kitas..."
+
+#: akonadi-contacts-widgets/editor/addresseditor/selectaddresstypecombobox.cpp:63
+#, kde-format
+msgctxt "@item:inlistbox Category of contact info field"
+msgid "New Address Type"
+msgstr "Naujas adreso tipas"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:47
+#, kde-format
+msgctxt "@label The organization of a contact"
+msgid "Organization:"
+msgstr "Organizacija:"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:51
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add organization's name"
+msgstr "Pridėti organizacijos pavadinimą"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:55
+#, kde-format
+msgctxt "@label The profession of a contact"
+msgid "Profession:"
+msgstr "Profesija:"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:58
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add profession"
+msgstr "Pridėti profesiją"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:63
+#, kde-format
+msgctxt "@label The title of a contact"
+msgid "Title:"
+msgstr "Titulas:"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:66
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add the title"
+msgstr "Pridėti titulą"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:71
+#, kde-format
+msgctxt "@label The department of a contact"
+msgid "Department:"
+msgstr "Padalinys:"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:74
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add the department"
+msgstr "Pridėti padalinį"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:79
+#, kde-format
+msgctxt "@label The office of a contact"
+msgid "Office:"
+msgstr "Biuras:"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:83
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add the office"
+msgstr "Pridėti biurą"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:88
+#, kde-format
+msgctxt "@label The manager's name of a contact"
+msgid "Manager's name:"
+msgstr "Administratoriaus vardas:"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:91
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add manager's name"
+msgstr "Pridėti administratoriaus vardą"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:96
+#, kde-format
+msgctxt "@label The assistant's name of a contact"
+msgid "Assistant's name:"
+msgstr "Padėjėjo vardas:"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:99
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add assistant's name"
+msgstr "Pridėti padėjėjo vardą"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:105
+#, kde-format
+msgctxt "@label The free/busy information of a contact"
+msgid "Free/Busy:"
+msgstr "Laisva(s)/Užimta(s):"
+
+#: akonadi-contacts-widgets/editor/businesseditor/freebusyeditwidget.cpp:28
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add FreeBusy"
+msgstr "Pridėti užimtumą"
+
+#: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:95
+#, kde-format
+msgctxt "@title:tab"
+msgid "Contact"
+msgstr "Adresatas"
+
+#: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:101
+#, kde-format
+msgctxt "@title:tab"
+msgid "Location"
+msgstr "Vieta"
+
+#: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:107
+#, kde-format
+msgctxt "@title:tab"
+msgid "Business"
+msgstr "Verslo"
+
+#: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:113
+#, kde-format
+msgctxt "@title:tab Personal properties of a contact"
+msgid "Personal"
+msgstr "Asmeniniai"
+
+#: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:121
+#, kde-format
+msgctxt "@title:tab"
+msgid "Notes"
+msgstr "Pastabos"
+
+#: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:131
+#, kde-format
+msgctxt "@title:tab"
+msgid "Custom Fields"
+msgstr "Tinkinti laukai"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:25
+#, kde-format
+msgctxt "@action:button"
+msgid "Add Field"
+msgstr "Pridėti lauką"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:26
+#, kde-format
+msgctxt "@option:check"
+msgid "Use field for all contacts"
+msgstr "Naudoti lauką visiems adresatams"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:30
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Custom Field Title"
+msgstr "Tinkinto lauko pavadinimas"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:37
+#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:44
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add name"
+msgstr "Pridėti vardą"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:60
+#, kde-format
+msgid "Text"
+msgstr "Tekstas"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:61
+#, kde-format
+msgid "Numeric"
+msgstr "Skaitmeninis"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:62
+#, kde-format
+msgid "Boolean"
+msgstr "Loginis"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:63
+#, kde-format
+msgid "Date"
+msgstr "Data"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:64
+#, kde-format
+msgid "Time"
+msgstr "Laikas"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:65
+#, kde-format
+msgid "DateTime"
+msgstr "Data, laikas"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:66
+#, kde-format
+msgid "Url"
+msgstr "URL"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:214
+#, kde-format
+msgctxt "Custom Fields"
+msgid "Do you really want to delete the selected custom field?"
+msgstr "Ar tikrai norite ištrinti pažymėtą tinkintą lauką?"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:215
+#, kde-format
+msgctxt "@title:window"
+msgid "Confirm Delete"
+msgstr "Patvirtinti ištrynimą"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldsmodel.cpp:195
+#, kde-format
+msgctxt "custom field title"
+msgid "Title"
+msgstr "Antraštė"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldsmodel.cpp:197
+#, kde-format
+msgctxt "custom field value"
+msgid "Value"
+msgstr "Reikšmė"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:24
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Blog Feed"
+msgstr "Tinklaraščio kanalas"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:29
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add a Blog Feed"
+msgstr "Pridėti tinklaraščio kanalą"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/displaynameeditwidget.cpp:45
+#, kde-format
+msgid "Short Name"
+msgstr "Trumpas vardas"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/displaynameeditwidget.cpp:46
+#, kde-format
+msgid "Full Name"
+msgstr "Visas vardas"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/displaynameeditwidget.cpp:47
+#, kde-format
+msgid "Reverse Name with Comma"
+msgstr "Perstatytas vardas su kableliu"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/displaynameeditwidget.cpp:48
+#, kde-format
+msgid "Reverse Name"
+msgstr "Perstatytas vardas"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/displaynameeditwidget.cpp:49
+#, kde-format
+msgid "Organization"
+msgstr "Organizacija"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/displaynameeditwidget.cpp:50
+#, kde-format
+msgctxt "@item:inlistbox A custom name format"
+msgid "Custom"
+msgstr "Tinkintas"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/maillistwidget.cpp:26
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Email"
+msgstr "El. paštas"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:19
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:20
+#, kde-format
+msgid "Select..."
+msgstr "Pasirinkti..."
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:20
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:21
+#, kde-format
+msgid "Home"
+msgstr "Namų"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:21
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:22
+#, kde-format
+msgid "Work"
+msgstr "Darbo"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:22
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:24
+#, kde-format
+msgid "Other"
+msgstr "Kitas"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:30
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add an Email Account"
+msgstr "Pridėti el. pašto paskyrą"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:40
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Add an Email"
+msgstr "Pridėti el. paštą"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:46
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remove Email"
+msgstr "Šalinti el. paštą"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:22
+#, kde-format
+msgctxt "@option:check"
+msgid "Allow remote content in received HTML messages"
+msgstr "Leisti gautuose HTML laiškuose nuotolinį turinį"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:26
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Show messages received from this contact as:"
+msgstr "Rodyti laiškus, gautus iš šio adresato, kaip:"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:33
+#, kde-format
+msgid "Default"
+msgstr "Pagal numatymą"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:33
+#, kde-format
+msgid "Plain Text"
+msgstr "Grynasis tekstas"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:33
+#, kde-format
+msgid "HTML"
+msgstr "HTML"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messaginglistwidget.cpp:26
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Messaging"
+msgstr "Pranešimų perdavimas"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:34
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add an identifier"
+msgstr "Pridėti identifikatorių"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:40
+#, kde-format
+msgctxt "@item:inlistbox select from a list of IM protocols"
+msgid "Select..."
+msgstr "Pasirinkti..."
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:50
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Add an IM"
+msgstr "Pridėti pokalbių programą"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:56
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remove IM"
+msgstr "Šalinti pokalbių programą"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:22
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Contact Name"
+msgstr "Taisyti adresato vardą"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:48
+#, kde-format
+msgid "Honorific prefixes:"
+msgstr "Pagarbūs priešdėliai:"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:49
+#, kde-format
+msgid "Given name:"
+msgstr "Vardas:"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:50
+#, kde-format
+msgid "Additional names:"
+msgstr "Papildomi vardai:"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:51
+#, kde-format
+msgid "Family names:"
+msgstr "Pavardės:"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:52
+#, kde-format
+msgid "Honorific suffixes:"
+msgstr "Pagarbios priesagos:"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:53
+#, kde-format
+msgid "Display:"
+msgstr "Rodyti:"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:57
+#, kde-format
+msgid "Dr."
+msgstr "Dr."
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:58
+#, kde-format
+msgid "Miss"
+msgstr "Panelė"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:59
+#, kde-format
+msgid "Mr."
+msgstr "Ponas"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:60
+#, kde-format
+msgid "Mrs."
+msgstr "Ponia"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:61
+#, kde-format
+msgid "Ms."
+msgstr "Ponia"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:62
+#, kde-format
+msgid "Prof."
+msgstr "Prof."
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:67
+#, kde-format
+msgid "I"
+msgstr "I"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:68
+#, kde-format
+msgid "II"
+msgstr "II"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:69
+#, kde-format
+msgid "III"
+msgstr "III"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:70
+#, kde-format
+msgid "Jr."
+msgstr "Jaunesnysis"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:71
+#, kde-format
+msgid "Sr."
+msgstr "Vyresnysis"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:28
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Name"
+msgstr "Vardas"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:41
+#, kde-format
+msgid "..."
+msgstr "..."
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:42
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Edit Contact Name"
+msgstr "Taisyti adresato vardą"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:25
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Nickname"
+msgstr "Slapyvardis"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:30
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add a Nickname"
+msgstr "Pridėti slapyvardį"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonelistwidget.cpp:26
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Phone"
+msgstr "Telefonas"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonetypedialog.cpp:24
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Phone Number"
+msgstr "Taisyti telefono numerį"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:32
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add a Phone Number"
+msgstr "Pridėti telefono numerį"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:41
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Add a Phone Number"
+msgstr "Pridėti telefono numerį"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:47
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remove Phone Number"
+msgstr "Šalinti telefono numerį"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/weblistwidget.cpp:27
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Web"
+msgstr "Saitynas"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:23
+#, kde-format
+msgid "Profile"
+msgstr "Profilis"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:31
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add a Web Site"
+msgstr "Pridėti internetinę svetainę"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:41
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Add a Web Site"
+msgstr "Pridėti internetinę svetainę"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:47
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remove Web Site"
+msgstr "Šalinti internetinę svetainę"
+
+#: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:23
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Click to add date"
+msgstr "Spustelėkite norėdami pridėti datą"
+
+#: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:34
+#, kde-format
+msgid "Remove"
+msgstr "Šalinti"
+
+#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:29
+#, kde-format
+msgctxt "@label The birthdate of a contact"
+msgid "Birthdate:"
+msgstr "Gimimo diena:"
+
+#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:35
+#, kde-format
+msgctxt "@label The wedding anniversary of a contact"
+msgid "Anniversary:"
+msgstr "Metinės:"
+
+#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:41
+#, kde-format
+msgctxt "@label The partner's name of a contact"
+msgid "Partner's name:"
+msgstr "Vyro/Žmonos vardas:"
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:78
+#, kde-format
+msgid "This contact's image cannot be found."
+msgstr "Šio adresato atvaizdas nerastas."
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:119
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "The photo of the contact (click to change)"
+msgstr "Adresato nuotrauka (spustelėkite norėdami keisti)"
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:121
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "The logo of the company (click to change)"
+msgstr "Įstaigos logotipas (spustelėkite norėdami keisti)"
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:237
+#, kde-format
+msgid "Change photo..."
+msgstr "Keisti nuotrauką..."
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:238
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:251
+#, kde-format
+msgid "Change URL..."
+msgstr "Keisti URL..."
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:242
+#, kde-format
+msgid "Save photo..."
+msgstr "Įrašyti nuotrauką..."
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:245
+#, kde-format
+msgid "Remove photo"
+msgstr "Šalinti nuotrauką"
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:250
+#, kde-format
+msgid "Change logo..."
+msgstr "Keisti logotipą..."
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:255
+#, kde-format
+msgid "Save logo..."
+msgstr "Įrašyti logotipą..."
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:258
+#, kde-format
+msgid "Remove logo"
+msgstr "Šalinti logotipą"
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:272
+#, kde-format
+msgid "Change image URL"
+msgstr "Keisti atvaizdo URL"
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:272
+#, kde-format
+msgid "Image URL:"
+msgstr "Atvaizdo URL:"
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:301
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:324
+#, kde-format
+msgid "Images (%1)"
+msgstr "Atvaizdai (%1)"
+
+#: akonadi-contacts-widgets/editor/widgets/preferredlineeditwidget.cpp:22
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set as Preferred"
+msgstr "Nustatyti kaip pageidaujamą"
+
+#: akonadi-contacts-widgets/emailaddressrequester.cpp:80
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Open Address Book"
+msgstr "Atverti adresų knygą"
+
+#: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:128
+#, kde-format
+msgctxt "@label Search in a list of contacts"
+msgid "Search:"
+msgstr "Paieška:"
+
+#: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:130
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Search Contact..."
+msgstr "Ieškoti adresato..."
+
+#: akonadi-contacts-widgets/job/addcontactjob.cpp:55
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The vCard's primary email address is already in your address book; however, "
+"you may save the vCard into a file and import it into the address book "
+"manually."
+msgstr ""
+"vCard pirminis el. pašto adresas jau yra jūsų adresų knygoje; vis dėlto, "
+"galite įrašyti vCard į failą ir rankiniu būdu importuoti jį į adresų knygą."
+
+#: akonadi-contacts-widgets/job/addcontactjob.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The vCard was added to your address book; you can add more information to "
+"this entry by opening the address book."
+msgstr ""
+"vCard buvo pridėta į jūsų adresų knygą; atvėrę adresų knygą, galite pridėti "
+"daugiau informacijos į šį įrašą."
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:68
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"A contact with the email address <email>%1</email> is already in your "
+"address book."
+msgstr ""
+"Adresatas, kurio el. paštas <email>%1</email>, jau yra jūsų adresu knygoje."
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:119
+#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:159
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You must create an address book before adding a contact. Do you want to "
+"create an address book?"
+msgstr ""
+"Prieš pridėdami adresatą privalote sukurti adresų knygą. Ar norite sukurti "
+"adresų knygą?"
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:120
+#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:160
+#, kde-format
+msgctxt "@title:window"
+msgid "No Address Book Available"
+msgstr "Nėra prieinamų adresų knygų"
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:121
+#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:161
+#, kde-format
+msgctxt "@action:button"
+msgid "Create Address Book"
+msgstr "Sukurti adresų knygą"
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:125
+#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:165
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:191
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Address Book"
+msgstr "Pridėti adresų knygą"
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:215
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para>A contact for \"%1\" was successfully added to your address book.</"
+"para><para>Do you want to edit this new contact now?</para>"
+msgstr ""
+"<para>„%1“ adresatas buvo sėkmingai pridėtas į jūsų adresų knygą.</"
+"para><para>Ar norite dabar taisyti šį naują adresatą?</para>"
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:223
+#, kde-format
+msgctxt "@action:button"
+msgid "Edit"
+msgstr "Taisyti"
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:224
+#, kde-format
+msgctxt "@action:button"
+msgid "Finish"
+msgstr "Baigti"
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:245
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
+#, kde-format
+msgid "Contact cannot be stored: %1"
+msgstr "Adresatas negali būti saugomas: %1"
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:245
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
+#, kde-format
+msgctxt "@title:window"
+msgid "Failed to store contact"
+msgstr "Nepavyko saugoti adresato"
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:252
+#, kde-format
+msgid "Contact created successfully"
+msgstr "Adresatas sėkmingai sukurtas"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:95
+#, kde-format
+msgid "Add Address Book Folder..."
+msgstr "Pridėti adresų knygos aplanką..."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:98
+#, kde-format
+msgid ""
+"Add a new address book folder to the currently selected address book folder."
+msgstr ""
+"Pridėti naują adresų knygos aplanką į šiuo metu pasirinktą adresų knygos "
+"aplanką."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:101
+#, kde-format
+msgctxt "@title:window"
+msgid "New Address Book Folder"
+msgstr "Naujas adresų knygos aplankas"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:105
+#, kde-format
+msgid "Could not create address book folder: %1"
+msgstr "Nepavyko sukurti adresų knygos aplanko: %1"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:109
+#, kde-format
+msgid "Address book folder creation failed"
+msgstr "Adresų knygos aplanko sukūrimas patyrė nesėkmę"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:115
+#, kde-format
+msgid "Copy Address Book Folder"
+msgid_plural "Copy %1 Address Book Folders"
+msgstr[0] "Kopijuoti adresų knygos aplanką"
+msgstr[1] "Kopijuoti %1 adresų knygos aplankus"
+msgstr[2] "Kopijuoti %1 adresų knygos aplankų"
+msgstr[3] "Kopijuoti %1 adresų knygos aplanką"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:117
+#, kde-format
+msgid "Copy the selected address book folders to the clipboard."
+msgstr "Kopijuoti pasirinktus adresų knygos aplankus į iškarpinę."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:121
+#, kde-format
+msgid "Delete Address Book Folder"
+msgid_plural "Delete %1 Address Book Folders"
+msgstr[0] "Ištrinti adresų knygos aplanką"
+msgstr[1] "Ištrinti %1 adresų knygos aplankus"
+msgstr[2] "Ištrinti %1 adresų knygos aplankų"
+msgstr[3] "Ištrinti %1 adresų knygos aplanką"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:123
+#, kde-format
+msgid "Delete the selected address book folders from the address book."
+msgstr "Ištrinti pasirinktus adresų knygos aplankus iš adresų knygos."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:127
+#, kde-format
+msgid ""
+"Do you really want to delete this address book folder and all its sub-"
+"folders?"
+msgid_plural ""
+"Do you really want to delete %1 address book folders and all their sub-"
+"folders?"
+msgstr[0] ""
+"Ar tikrai norite ištrinti adresų knygos aplanką ir visus jo poaplankius?"
+msgstr[1] ""
+"Ar tikrai norite ištrinti %1 adresų knygos aplankus ir visus jų poaplankius?"
+msgstr[2] ""
+"Ar tikrai norite ištrinti %1 adresų knygos aplankų ir visus jų poaplankius?"
+msgstr[3] ""
+"Ar tikrai norite ištrinti %1 adresų knygos aplanką ir visus jų poaplankius?"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:131
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete address book folder?"
+msgid_plural "Delete address book folders?"
+msgstr[0] "Ištrinti adresų knygos aplanką?"
+msgstr[1] "Ištrinti adresų knygų aplankus?"
+msgstr[2] "Ištrinti adresų knygų aplankus?"
+msgstr[3] "Ištrinti adresų knygų aplankus?"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:135
+#, kde-format
+msgid "Could not delete address book folder: %1"
+msgstr "Nepavyko ištrinti adresų knygos aplanko: %1"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:139
+#, kde-format
+msgid "Address book folder deletion failed"
+msgstr "Adresų knygos aplanko ištrynimas patyrė nesėkmę"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:143
+#, kde-format
+msgid "Update Address Book Folder"
+msgid_plural "Update %1 Address Book Folders"
+msgstr[0] "Atnaujinti adresų knygos aplanką"
+msgstr[1] "Atnaujinti %1 adresų knygos aplankus"
+msgstr[2] "Atnaujinti %1 adresų knygos aplankų"
+msgstr[3] "Atnaujinti %1 adresų knygos aplanką"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:145
+#, kde-format
+msgid "Update the content of the selected address book folders."
+msgstr "Atnaujinti pasirinktos adresų knygos aplankų turinį."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:148
+#, kde-format
+msgid "Cut Address Book Folder"
+msgid_plural "Cut %1 Address Book Folders"
+msgstr[0] "Iškirpti adresų knygos aplanką"
+msgstr[1] "Iškirpti %1 adresų knygos aplankus"
+msgstr[2] "Iškirpti %1 adresų knygos aplankų"
+msgstr[3] "Iškirpti %1 adresų knygos aplanką"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:150
+#, kde-format
+msgid "Cut the selected address book folders from the address book."
+msgstr "Iškirpti pasirinktus adresų knygos aplankus iš adresų knygos."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:153
+#, kde-format
+msgid "Folder Properties..."
+msgstr "Aplanko savybės..."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:155
+#, kde-format
+msgid ""
+"Open a dialog to edit the properties of the selected address book folder."
+msgstr ""
+"Atverti dialogą, skirtą taisyti pasirinktos adresų knygos aplanko savybes."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:158
+#, kde-format
+msgctxt "@title:window"
+msgid "Properties of Address Book Folder %1"
+msgstr "Adresų knygos aplanko savybės %1"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:161
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:290
+#, kde-format
+msgid "Copy Contact"
+msgid_plural "Copy %1 Contacts"
+msgstr[0] "Kopijuoti adresatą"
+msgstr[1] "Kopijuoti %1 adresatus"
+msgstr[2] "Kopijuoti %1 adresatų"
+msgstr[3] "Kopijuoti %1 adresatą"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:162
+#, kde-format
+msgid "Copy the selected contacts to the clipboard."
+msgstr "Kopijuoti pasirinktus adresatus į iškarpinę."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:165
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:301
+#, kde-format
+msgid "Delete Contact"
+msgid_plural "Delete %1 Contacts"
+msgstr[0] "Ištrinti adresatą"
+msgstr[1] "Ištrinti %1 adresatus"
+msgstr[2] "Ištrinti %1 adresatų"
+msgstr[3] "Ištrinti %1 adresatą"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:166
+#, kde-format
+msgid "Delete the selected contacts from the address book."
+msgstr "Ištrinti pasirinktus adresatus iš adresų knygos."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:169
+#, kde-format
+msgid "Do you really want to delete the selected contact?"
+msgid_plural "Do you really want to delete %1 contacts?"
+msgstr[0] "Ar tikrai norite ištrinti pasirinktą adresatą?"
+msgstr[1] "Ar tikrai norite ištrinti %1 adresatus?"
+msgstr[2] "Ar tikrai norite ištrinti %1 adresatų?"
+msgstr[3] "Ar tikrai norite ištrinti %1 adresatą?"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:173
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Contact?"
+msgid_plural "Delete Contacts?"
+msgstr[0] "Ištrinti adresatą?"
+msgstr[1] "Ištrinti adresatus?"
+msgstr[2] "Ištrinti adresatus?"
+msgstr[3] "Ištrinti adresatus?"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:175
+#, kde-format
+msgid "Could not delete contact: %1"
+msgstr "Nepavyko ištrinti adresato: %1"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:177
+#, kde-format
+msgid "Contact deletion failed"
+msgstr "Adresato ištrynimas patyrė nesėkmę"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:180
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:304
+#, kde-format
+msgid "Cut Contact"
+msgid_plural "Cut %1 Contacts"
+msgstr[0] "Iškirpti adresatą"
+msgstr[1] "Iškirpti %1 adresatus"
+msgstr[2] "Iškirpti %1 adresatų"
+msgstr[3] "Iškirpti %1 adresatą"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:181
+#, kde-format
+msgid "Cut the selected contacts from the address book."
+msgstr "Iškirpti pasirinktus adresatus iš adresų knygos."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:184
+#, kde-format
+msgid "Add &Address Book..."
+msgstr "Pridėti &adresų knygą..."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:186
+#, kde-format
+msgid ""
+"Add a new address book<p>You will be presented with a dialog where you can "
+"select the type of the address book that shall be added.</p>"
+msgstr ""
+"Pridėti naują adresų knygą<p>Pateiktame lange galėsite pasirinkti norimos "
+"pridėti adresų knygos tipą.</p>"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:195
+#, kde-format
+msgid "Could not create address book: %1"
+msgstr "Nepavyko sukurti adresų knygos: %1"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:199
+#, kde-format
+msgid "Address book creation failed"
+msgstr "Adresų knygos sukūrimas patyrė nesėkmę"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:203
+#, kde-format
+msgid "&Delete Address Book"
+msgid_plural "&Delete %1 Address Books"
+msgstr[0] "Ištrinti a&dresų knygą"
+msgstr[1] "Ištrinti %1 a&dresų knygas"
+msgstr[2] "Ištrinti %1 a&dresų knygų"
+msgstr[3] "Ištrinti %1 a&dresų knygą"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:205
+#, kde-format
+msgid ""
+"Delete the selected address books<p>The currently selected address books "
+"will be deleted, along with all the contacts and contact groups they contain."
+"</p>"
+msgstr ""
+"Ištrinti pasirinktas adresų knygas<p>Šiuo metu pasirinktos adresų knygos bus "
+"ištrintos kartu su visais jose esančiais adresatais ir adresatų grupėmis.</p>"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:210
+#, kde-format
+msgid "Do you really want to delete this address book?"
+msgid_plural "Do you really want to delete %1 address books?"
+msgstr[0] "Ar tikrai norite ištrinti šią adresų knygą?"
+msgstr[1] "Ar tikrai norite ištrinti %1 adresų knygas?"
+msgstr[2] "Ar tikrai norite ištrinti %1 adresų knygų?"
+msgstr[3] "Ar tikrai norite ištrinti %1 adresų knygą?"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:214
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Address Book?"
+msgid_plural "Delete Address Books?"
+msgstr[0] "Ištrinti adresų knygą?"
+msgstr[1] "Ištrinti adresų knygas?"
+msgstr[2] "Ištrinti adresų knygas?"
+msgstr[3] "Ištrinti adresų knygas?"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:219
+#, kde-format
+msgid "Address Book Properties..."
+msgstr "Adresų knygos savybės..."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:221
+#, kde-format
+msgid "Open a dialog to edit properties of the selected address book."
+msgstr "Atverti pasirinktos adresų knygos savybių taisymo langą."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:224
+#, kde-format
+msgid "Update Address Book"
+msgid_plural "Update %1 Address Books"
+msgstr[0] "Atnaujinti adresų knygą"
+msgstr[1] "Atnaujinti %1 adresų knygas"
+msgstr[2] "Atnaujinti %1 adresų knygų"
+msgstr[3] "Atnaujinti %1 adresų knygą"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:227
+#, kde-format
+msgid "Updates the content of all folders of the selected address books."
+msgstr "Atnaujina pasirinktų adresų knygų visų aplankų turinį."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:231
+#, kde-format
+msgid "Could not paste contact: %1"
+msgstr "Nepavyko įdėti adresato: %1"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:233
+#, kde-format
+msgid "Paste failed"
+msgstr "Įdėti nepavyko"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:294
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:298
+#, kde-format
+msgid "Copy Contact To"
+msgstr "Kopijuoti adresatą į"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:308
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:312
+#, kde-format
+msgid "Move Contact To"
+msgstr "Perkelti adresatą į"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:316
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:553
+#, kde-format
+msgid "Edit Contact..."
+msgstr "Taisyti adresatą..."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:320
+#, kde-format
+msgid "Copy Group"
+msgid_plural "Copy %1 Groups"
+msgstr[0] "Kopijuoti grupę"
+msgstr[1] "Kopijuoti %1 grupes"
+msgstr[2] "Kopijuoti %1 grupių"
+msgstr[3] "Kopijuoti %1 grupę"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:324
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:328
+#, kde-format
+msgid "Copy Group To"
+msgstr "Kopijuoti grupę į"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:331
+#, kde-format
+msgid "Delete Group"
+msgid_plural "Delete %1 Groups"
+msgstr[0] "Ištrinti grupę"
+msgstr[1] "Ištrinti %1 grupes"
+msgstr[2] "Ištrinti %1 grupių"
+msgstr[3] "Ištrinti %1 grupę"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:334
+#, kde-format
+msgid "Cut Group"
+msgid_plural "Cut %1 Groups"
+msgstr[0] "Iškirpti grupę"
+msgstr[1] "Iškirpti %1 grupes"
+msgstr[2] "Iškirpti %1 grupių"
+msgstr[3] "Iškirpti %1 grupę"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:338
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:342
+#, kde-format
+msgid "Move Group To"
+msgstr "Perkelti grupę į"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:346
+#, kde-format
+msgid "Edit Group..."
+msgstr "Taisyti grupę..."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:528
+#, kde-format
+msgid "New &Contact..."
+msgstr "Naujas a&dresatas..."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:530
+#, kde-format
+msgid ""
+"Create a new contact<p>You will be presented with a dialog where you can add "
+"data about a person, including addresses and phone numbers.</p>"
+msgstr ""
+"Sukurti naują adresatą<p>Pateiktame lange galite pridėti duomenis apie "
+"asmenį, tame tarpe adresą ir telefono numerius.</p>"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:541
+#, kde-format
+msgid "New &Group..."
+msgstr "Nauja &grupė..."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:542
+#, kde-format
+msgid ""
+"Create a new group<p>You will be presented with a dialog where you can add a "
+"new group of contacts.</p>"
+msgstr ""
+"Sukurti naują grupę<p>Pateiktame lange galėsite pridėti naują adresatų grupę."
+"</p>"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:555
+#, kde-format
+msgid ""
+"Edit the selected contact<p>You will be presented with a dialog where you "
+"can edit the data stored about a person, including addresses and phone "
+"numbers.</p>"
+msgstr ""
+"Taisyti pasirinktą adresatą<p>Pateiktame lange galite keisti saugomus "
+"duomenis apie asmenį, tame tarpe adresą ir telefono numerius.</p>"
+
+#: akonadi-contacts-widgets/textbrowser.cpp:57
+#, kde-format
+msgctxt "@action:inmenu Copy the text of a general item"
+msgid "Copy Item"
+msgstr "Kopijuoti elementą"
+
+#: akonadi-contacts-widgets/textbrowser.cpp:66
+#, kde-format
+msgctxt "@action:inmenu Copy a displayed email address"
+msgid "Copy Email Address"
+msgstr "Kopijuoti el. pašto adresą"
+
+#: akonadi-contacts-widgets/textbrowser.cpp:75
+#, kde-format
+msgctxt "@action:inmenu Copy a link URL"
+msgid "Copy Link URL"
+msgstr "Kopijuoti nuorodos URL"
+
+#: akonadi-contacts-widgets/textbrowser.cpp:102
+#, kde-format
+msgctxt "@action:inmenu Copy a contact photo"
+msgid "Copy Photo"
+msgstr "Kopijuoti nuotrauką"
+
+#: akonadi-contacts-widgets/textbrowser.cpp:105
+#, kde-format
+msgctxt "@action:inmenu Copy a QR code image"
+msgid "Copy Code"
+msgstr "Kopijuoti kodą"
+
+#: akonadi-contacts-widgets/waitingoverlay.cpp:35
+#, kde-format
+msgid "<p style=\"color: white;\"><b>Waiting for operation</b><br/></p>"
+msgstr "<p style=\"color: white;\"><b>Laukiama operacijos</b><br/></p>"
+
+#: akonadi-contacts-widgets/widgets/selectaddressbookdialog.cpp:29
+#, kde-format
+msgctxt "@info"
+msgid "Select the address book where the contact will be saved:"
+msgstr "Pasirinkite į kurią adresų knygą įrašyti adresatą:"
+
+#~ msgid "Phone Command"
+#~ msgstr "Telefono komanda"
+
+#~ msgid ""
+#~ "This command defines the application that shall be executed to dial a "
+#~ "contact's phone number."
+#~ msgstr ""
+#~ "Komanda apibūdina programą, kuri turi būti vykdoma surinkti kontakto "
+#~ "telefono numerį."
+
+#~ msgid ""
+#~ "The following placeholders can be used in the command:\n"
+#~ "   %N: The raw number as stored in the address book.\n"
+#~ "   %n: The normalized number with all non-digit characters removed."
+#~ msgstr ""
+#~ "Sekantys vietos rezervavimo ženklai gali būti panaudoti komandoje:\n"
+#~ "   %N: Numeris kaip išsaugotas adresų knygoje.\n"
+#~ "   %n: Pakeistas numeris su pašalintais visais ne skaitmeniniais "
+#~ "simboliais."
+
+#, fuzzy
+#~| msgid ""
+#~| "Defines which application shall be used to send an SMS to the phone "
+#~| "number of a contact. If 'Skype' is selected the Skype application will "
+#~| "be started (if installed on the computer) and the SMS is sent via Skype. "
+#~| "If 'External Application' is selected, a command with placeholders can "
+#~| "be defined."
+#~ msgid ""
+#~ "Defines which application shall be used to send an SMS to the phone "
+#~ "number of a contact. If 'System Default' is selected the default handler "
+#~ "for SMS messages on your system will be used (e.g. KDE Connect), "
+#~ "otherwise the selected application will be used to send the SMS message "
+#~ "(if installed on the computer). If 'External Application' is selected, a "
+#~ "command with placeholders can be defined."
+#~ msgstr ""
+#~ "Nurodo programą, kuri turi būti vykdoma siųsti SMS į kontakto telefono "
+#~ "numerį. Jei „Skype“ yra pažymėta Skype programa bus paleista (jei įdiegta "
+#~ "kompiuteryje) ir SMS bus nusiųsta per Skype. Jei „Išorinė programa“ yra "
+#~ "pažymėta, gali būti nurodyta komanda su vietos rezervavimo ženklais."
+
+#~ msgid "SMS Command"
+#~ msgstr "SMS komanda"
+
+#~ msgid ""
+#~ "This command defines the application that shall be executed to send an "
+#~ "SMS to a contact's phone number."
+#~ msgstr ""
+#~ "Komanda apibūdina programą, kuri turi būti vykdoma siųsti SMS į kontakto "
+#~ "telefono numerį."
+
+#~ msgid ""
+#~ "The following placeholders can be used in the command:\n"
+#~ "   %N: The raw number as stored in the address book.\n"
+#~ "   %n: The normalized number with all non-digit characters removed.\n"
+#~ "   %t: The text"
+#~ msgstr ""
+#~ "Sekantys vietos rezervavimo ženklai gali būti panaudoti komandoje:\n"
+#~ "   %N: Numeris kaip išsaugotas adresų knygoje.\n"
+#~ "   %n: Pakeistas numeris su pašalintais visais ne skaitmeniniais "
+#~ "simboliais.\n"
+#~ "   %t: Tekstas"
+
+#~ msgid ""
+#~ "There is no application set which could be executed.\n"
+#~ "Please go to the settings dialog and configure one."
+#~ msgstr ""
+#~ "Nėra parinktos programos, kuri galėtų būti įvykdyta.\n"
+#~ "Vieną pasirinkite nuostatų lange."
+
+#~ msgid "Dialing a number is not supported"
+#~ msgstr "Numerių rinkimas nepalaikomas"
+
+#~ msgid "Sending an SMS is not supported"
+#~ msgstr "SMS siuntimas nepalaikomas"
+
+#~ msgid ""
+#~ "Unable to start ekiga process, check that ekiga executable is in your "
+#~ "PATH variable."
+#~ msgstr ""
+#~ "Nepavyko paleisti ekiga procesą, įsitikinkite, kad ekiga vykdomasis yra "
+#~ "jūsų PATH kintamajame."
+
+#~ msgid "Ekiga Public API (D-Bus) seems to be disabled."
+#~ msgstr "Ekiga viešas API (D-Bus) atrodo, kad išjungtas."
+
+#~ msgid "Sending an SMS is currently not supported on Ekiga."
+#~ msgstr "SMS siuntimas dar nerealizuotas Ekiga programoje"
+
+#~ msgid ""
+#~ "Unable to start sflphone-client-kde process, check that sflphone-client-"
+#~ "kde executable is in your PATH variable."
+#~ msgstr ""
+#~ "Nepavyko paleisti sflphone-client-kde procesą, įsitikinkite, kad sflphone-"
+#~ "client-kde vykdomasis yra jūsų PATH kintamajame."
+
+#~ msgid ""
+#~ "Unable to start skype process, check that skype executable is in your "
+#~ "PATH variable."
+#~ msgstr ""
+#~ "Nepavyko paleisti Skype procesą, įsitikinkite, kad \"Skype\" vykdomasis "
+#~ "yra jūsų nuostatų kelyje."
+
+#~ msgid "Skype Public API (D-Bus) seems to be disabled."
+#~ msgstr "„Skype\" viešas API (D-Bus) atrodo, kad išjungtas."
+
+#~ msgid "Skype registration failed."
+#~ msgstr "Skype registracija nepavyko."
+
+#~ msgid "Protocol mismatch."
+#~ msgstr "Protokolo neatitikimas."
+
+#, fuzzy
+#~| msgid "SMS text"
+#~ msgctxt "@title:window"
+#~ msgid "SMS text"
+#~ msgstr "SMS tekstas"
+
+#~ msgid "Please insert SMS text for an SMS to the following number: %1"
+#~ msgstr "Prašome įterpti SMS tekstą SMS`ui šiuo numeriu: %1"
+
+#~ msgid "%1/%2 (%3 SMS)"
+#~ msgstr "%1/%2 (%3 SMS)"
+
+#, fuzzy
+#~| msgid "Add Email"
+#~ msgid "Add a Country"
+#~ msgstr "Pridėti el. paštą"
+
+#~ msgctxt "@option today"
+#~ msgid "&Today"
+#~ msgstr "Šian&dien"
+
+#~ msgctxt "@option tomorrow"
+#~ msgid "To&morrow"
+#~ msgstr "&Rytoj"
+
+#~ msgctxt "@option next week"
+#~ msgid "Next &Week"
+#~ msgstr "Sekanti sa&vaitė"
+
+#~ msgctxt "@option next month"
+#~ msgid "Next M&onth"
+#~ msgstr "Sekantis mėnu&o"
+
+#~ msgctxt "@option do not specify a date"
+#~ msgid "No Date"
+#~ msgstr "Datos nėra"
+
+#~ msgid ""
+#~ "Defines which application shall be used to show the postal address of a "
+#~ "contact on a map. If 'Web Browser' is selected, an URL can be defined "
+#~ "with placeholders for the single address parts. If 'External Application' "
+#~ "is selected, a command with placeholders can be defined."
+#~ msgstr ""
+#~ "Nurodo programą, kuri turi būti vykdoma rodyti kontakto pašto adresą "
+#~ "žemėlapyje. Jei „Žiniatinklio naršyklė“ yra pažymėta, URL gali būti "
+#~ "aprašytas su vietos rezervavimo ženklais pavienėms adreso dalims.  Jei "
+#~ "„Išorinė programa“ yra pažymėta, gali būti nurodyta komanda su vietos "
+#~ "rezervavimo ženklais."
+
+#~ msgid ""
+#~ "This URL defines the website that shall be used to show a contact's "
+#~ "postal address."
+#~ msgstr ""
+#~ "Šis URL nurodo svetainę, kuri turi būti naudojama rodyti kontakto pašto "
+#~ "adresą."
+
+#~ msgid ""
+#~ "The following placeholders can be used in the URL:\n"
+#~ "   %s: Street\n"
+#~ "   %r: Region\n"
+#~ "   %l: Location\n"
+#~ "   %z: Zip Code\n"
+#~ "   %c: Country ISO Code"
+#~ msgstr ""
+#~ "Sekantys vietos rezervavimo ženklai gali būti panaudoti URL:\n"
+#~ "   %s: Gatvė\n"
+#~ "   %r: Regionas\n"
+#~ "   %l: Vieta\n"
+#~ "   %z: Zip kodas\n"
+#~ "   %c: Šalies ISO kodas"
+
+#~ msgid "Address Command"
+#~ msgstr "Adresų komanda"
+
+#~ msgid ""
+#~ "This command defines the application that shall be executed to show a "
+#~ "contact's postal address."
+#~ msgstr ""
+#~ "Komanda apibūdina programą, kuri turi būti vykdoma rodyti kontakto pašto "
+#~ "adresą"
+
+#~ msgid ""
+#~ "The following placeholders can be used in the command:\n"
+#~ "   %s: Street\n"
+#~ "   %r: Region\n"
+#~ "   %l: Location\n"
+#~ "   %z: Zip Code\n"
+#~ "   %c: Country ISO Code"
+#~ msgstr ""
+#~ "Sekantys vietos rezervavimo ženklai gali būti panaudoti komandoje:\n"
+#~ "   %s: Gatvė\n"
+#~ "   %r: Regionas\n"
+#~ "   %l: Vieta\n"
+#~ "   %z: Zip kodas\n"
+#~ "   %c: Šalies ISO kodas"
+
+#, fuzzy
+#~| msgid "Show Contact Group"
+#~ msgctxt "@title:window"
+#~ msgid "Show Contact Group"
+#~ msgstr "Rodyti adresato grupę"
+
+#~ msgid "Select Address Book"
+#~ msgstr "Parinkti adresų knygą"
+
+#, fuzzy
+#~| msgid "SMS Command"
+#~ msgid "KdeConnect SMS Command"
+#~ msgstr "SMS komanda"
+
+#~ msgid ""
+#~ "Defines which application shall be used to dial the phone number of a "
+#~ "contact. If 'Skype' is selected the Skype application will be started (if "
+#~ "installed on the computer) and the number is dialed. If 'External "
+#~ "Application' is selected, a command with placeholders can be defined."
+#~ msgstr ""
+#~ "Nurodo programą, kuri turi būti vykdoma surinkti kontakto telefono "
+#~ "numerį. Jei „Skype“ yra pažymėta Skype programa bus paleista (jei įdiegta "
+#~ "kompiuteryje) ir numeris bus surinktas. Jei „Išorinė programa“ yra "
+#~ "pažymėta, gali būti nurodyta komanda su vietos rezervavimo ženklais."
+
+#, fuzzy
+#~| msgid "Phone Command"
+#~ msgid "kdeconnect Command"
+#~ msgstr "Telefono komanda"
+
+#, fuzzy
+#~| msgid "Add to:"
+#~ msgid "Add IM"
+#~ msgstr "Pridėti į:"
+
+#, fuzzy
+#~| msgctxt "street/postal"
+#~| msgid "Edit Address"
+#~ msgid "Edit Address"
+#~ msgstr "Keisti adresą"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Jonas Česnauskas, Liudas Ališauskas"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "upynas@gmail.com, liudas@akmc.lt"
+
+#~ msgid "Show Address"
+#~ msgstr "Rodyti adresą"
+
+#~ msgid "Url:"
+#~ msgstr "Url:"
+
+#~ msgid "Command:"
+#~ msgstr "Komanda:"
+
+#~ msgid "Dial Phone Number"
+#~ msgstr "Telefono numeris"
+
+#~ msgid "Send SMS"
+#~ msgstr "Siųsti SMS"
+
+#~ msgid "Contact Actions Settings"
+#~ msgstr "Kontaktų veiksmų nuostatos"
+
+#~ msgid "(c) 2009 Tobias Koenig"
+#~ msgstr "(c) 2009 Tobias Koenig"
+
+#~ msgid "Tobias Koenig"
+#~ msgstr "Tobias Koenig"
+
+#~ msgid "Skype"
+#~ msgstr "Skype"
+
+#~ msgid "Ekiga"
+#~ msgstr "Ekiga"
+
+#~ msgid "SflPhone"
+#~ msgstr "SflPhone"
+
+#~ msgid "External Application"
+#~ msgstr "Išorinė programa"
+
+#~ msgid "Web Browser"
+#~ msgstr "Žiniatinklio naršyklė"
+
+#~ msgid "Google map"
+#~ msgstr "Google žemėlapis"
+
+#~ msgid "Map quest"
+#~ msgstr "Map quest"
+
+#~ msgid "Select preferred email address"
+#~ msgstr "Parinkite pageidaujamą elektroninio pašto adresą"
+
+#, fuzzy
+#~| msgid "Edit Custom Field"
+#~ msgid "Title Custom Type"
+#~ msgstr "Keisti savą lauką"
+
+#~ msgid "This is the preferred phone number"
+#~ msgstr "Pageidautinas numeris"
+
+#~ msgid "Types"
+#~ msgstr "Tipai"
+
+#~ msgid "Edit Email Addresses"
+#~ msgstr "Keisti el. pašto adresus"
+
+#~ msgid "Add..."
+#~ msgstr "Pridėti..."
+
+#~ msgid "New Email:"
+#~ msgstr "Naujas el. paštas"
+
+#~ msgid "Edit Email"
+#~ msgstr "Keisti el. paštą"
+
+#~ msgctxt "@label:textbox Inputfield for an email address"
+#~ msgid "Email:"
+#~ msgstr "El. Paštas:"
+
+#~ msgid ""
+#~ "<qt>Are you sure that you want to remove the email address <b>%1</b>?</qt>"
+#~ msgstr "<qt>Ar tikrai norite naikinti el. pašto adresus <b>%1</b>?</qt>"
+
+#~ msgid "Confirm Remove"
+#~ msgstr "Patvirtinti naikinimą"
+
+#~ msgid "&Delete"
+#~ msgstr "Šalinti"
+
+#~ msgctxt "@title:group Name related properties of a contact"
+#~ msgid "Name"
+#~ msgstr "Vardas"
+
+#~ msgctxt "@title:group"
+#~ msgid "Internet"
+#~ msgstr "Internetas"
+
+#~ msgctxt "@title:group"
+#~ msgid "Phones"
+#~ msgstr "Telefonai"
+
+#~ msgctxt "@label The name of a contact"
+#~ msgid "Name:"
+#~ msgstr "Vardas:"
+
+#~ msgctxt "@label The nickname of a contact"
+#~ msgid "Nickname:"
+#~ msgstr "Slapyvardis:"
+
+#~ msgctxt "@label The email address of a contact"
+#~ msgid "Email:"
+#~ msgstr "El. paštas"
+
+#~ msgctxt "@label The homepage URL of a contact"
+#~ msgid "Homepage:"
+#~ msgstr "Tinklapis:"
+
+#~ msgctxt "@label The blog URL of a contact"
+#~ msgid "Blog:"
+#~ msgstr "Tinklaraštis:"
+
+#~ msgctxt "@label The instant messaging address of a contact"
+#~ msgid "Messaging:"
+#~ msgstr "Pranešimai:"
+
+#~ msgctxt "@label The categories of a contact"
+#~ msgid "Categories:"
+#~ msgstr "Kategorijos:"
+
+#~ msgid "Messages"
+#~ msgstr "Pranešimai"
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Instant Messaging Addresses"
+#~ msgstr "Redaguoti tikralaikių pokalbių adresus"
+
+#~ msgctxt "@action:button"
+#~ msgid "Add..."
+#~ msgstr "Pridėti..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Edit..."
+#~ msgstr "Keisti..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Remove"
+#~ msgstr "Pašalinti"
+
+#~ msgctxt "@action:button"
+#~ msgid "Set as Standard"
+#~ msgstr "Nustatyti tipiniu"
+
+#~ msgctxt "@title:window"
+#~ msgid "Add IM Address"
+#~ msgstr "Pridėti TP adresus"
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit IM Address"
+#~ msgstr "Keisti TP adresus"
+
+#~ msgctxt "@info Instant messaging"
+#~ msgid ""
+#~ "Do you really want to delete the selected <resource>%1</resource> address?"
+#~ msgstr "Ar tikrai norite pašalinti pažymėtą <resource>%1</resource> adresą?"
+
+#~ msgctxt "@title:window"
+#~ msgid "Confirm Delete Resource"
+#~ msgstr "Patvirtinti išteklio trynimą"
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Protocol:"
+#~ msgstr "Protokolas:"
+
+#~ msgctxt "@label:textbox IM address"
+#~ msgid "Address:"
+#~ msgstr "Adresas:"
+
+#~ msgctxt "instant messaging protocol"
+#~ msgid "Protocol"
+#~ msgstr "Protokolas"
+
+#~ msgctxt "instant messaging address"
+#~ msgid "Address"
+#~ msgstr "Adresas"
+
+#~ msgid "Add"
+#~ msgstr "Pridėti"
+
+#~ msgid "Edit Custom Field"
+#~ msgstr "Keisti savą lauką"
+
+#~ msgctxt "The title of a custom field"
+#~ msgid "Title"
+#~ msgstr "Antraštė"
+
+#~ msgctxt "The type of a custom field"
+#~ msgid "Type"
+#~ msgstr "Tipas"
+
+#~ msgid "Key"
+#~ msgstr "Raktas"
+
+#, fuzzy
+#~| msgctxt "@label Opens the advanced dialog"
+#~| msgid "Advanced"
+#~ msgid "Advanced"
+#~ msgstr "Išplėstinis"
+
+#~ msgctxt "recent contacts folder"
+#~ msgid "Recent Contacts"
+#~ msgstr "Pastarieji adresatai"
+
+#~ msgid ""
+#~ "Id of the resource containing the default recent contacts collection."
+#~ msgstr "ID išteklių kurių sudėtyje numatytasis pastarojo adresatų rinkinys."
+
+#~ msgid ""
+#~ "Id of the contacts resource containing the recent contacts collection."
+#~ msgstr "Adresatų išteklių ID kurių sudėtyje pastarasis adresatų rinkinys."
+
+#~ msgctxt "@label:listbox type of address"
+#~ msgid "Address type:"
+#~ msgstr "Adreso tipas:"
+
+#~ msgctxt "@action:button street/postal"
+#~ msgid "New..."
+#~ msgstr "Naujas..."
+
+#~ msgctxt "@action:button street/postal"
+#~ msgid "Edit..."
+#~ msgstr "Keisti..."
+
+#~ msgctxt "@action:button street/postal"
+#~ msgid "Delete"
+#~ msgstr "Trinti"
+
+#~ msgctxt "street/postal"
+#~ msgid "Edit Address"
+#~ msgstr "Keisti adresą"
+
+#~ msgctxt "<streetLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgctxt "<postOfficeBoxLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgctxt "<localityLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgctxt "<regionLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgctxt "<postalCodeLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgctxt "<countryLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgid "Edit Label..."
+#~ msgstr "Keisti etiketę"
+
+#~ msgctxt "@label The pronunciation of a contact's name"
+#~ msgid "Pronunciation:"
+#~ msgstr "Tarimas:"
+
+#~ msgctxt "@title:group"
+#~ msgid "Addresses"
+#~ msgstr "Adresai"
+
+#~ msgctxt "@title:group"
+#~ msgid "Coordinates"
+#~ msgstr "Koordinatės"
+
+#~ msgctxt "@label"
+#~ msgid "Latitude:"
+#~ msgstr "Platuma:"
+
+#~ msgctxt "@label"
+#~ msgid "Longitude:"
+#~ msgstr "Ilguma:"
+
+#~ msgctxt "@label Change the coordinates"
+#~ msgid "Change..."
+#~ msgstr "Keisti..."
+
+#~ msgctxt "@label Coordinates are not available"
+#~ msgid "n/a"
+#~ msgstr "nėra"
+
+#~ msgctxt "@label The formatted coordinates"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgctxt "@title:window"
+#~ msgid "Coordinate Selection"
+#~ msgstr "Koordinačių parinkimas"
+
+#~ msgctxt "@title:group Decimal representation of coordinates"
+#~ msgid "Decimal"
+#~ msgstr "Dešimtainis"
+
+#~ msgctxt "@label:spinbox"
+#~ msgid "Latitude:"
+#~ msgstr "Platuma:"
+
+#~ msgctxt "@label:spinbox"
+#~ msgid "Longitude:"
+#~ msgstr "Ilguma:"
+
+#~ msgctxt "@title:group"
+#~ msgid "Sexagesimal"
+#~ msgstr "Šešiasdešimtainė"
+
+#~ msgctxt "@item:inlistbox Latitude direction"
+#~ msgid "North"
+#~ msgstr "Šiaurė"
+
+#~ msgctxt "@item:inlistbox Latitude direction"
+#~ msgid "South"
+#~ msgstr "Pietūs"
+
+#~ msgctxt "@item:inlistbox Longtitude direction"
+#~ msgid "East"
+#~ msgstr "Rytai"
+
+#~ msgctxt "@item:inlistbox Longtitude direction"
+#~ msgid "West"
+#~ msgstr "Vakarai"
+
+#~ msgctxt "@item:inlistbox Undefined location"
+#~ msgid "Undefined"
+#~ msgstr "Nenurodytas"
+
+#~ msgid "This contact's sound cannot be found."
+#~ msgstr "Šio adresato garsas nerastas."
+
+#~ msgid "Click to play pronunciation"
+#~ msgstr "Spausti tarimo paleidimui"
+
+#~ msgid "No pronunciation available"
+#~ msgstr "Tarimas negalimas"
+
+#~ msgid "Play"
+#~ msgstr "Leisti"
+
+#~ msgid "Change..."
+#~ msgstr "Keisti..."
+
+#~ msgid "Save..."
+#~ msgstr "Įrašyti..."
+
+#~ msgctxt "@title:group General properties of a contact"
+#~ msgid "General"
+#~ msgstr "Įprastas"
+
+#~ msgctxt "@title:group"
+#~ msgid "Groupware"
+#~ msgstr "Grupinė įranga"
+
+#~ msgctxt "@title:group Date related properties of a contact"
+#~ msgid "Dates"
+#~ msgstr "Datos"
+
+#~ msgctxt "@title:group Family related properties of a contact"
+#~ msgid "Family"
+#~ msgstr "Pavardė"
+
+#, fuzzy
+#~| msgid "Change..."
+#~ msgid "Change url..."
+#~ msgstr "Keisti..."

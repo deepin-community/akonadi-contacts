@@ -10,31 +10,70 @@ Comment: Numerous people, too many to count, have contributed to kdepimlibs as
 Upstream-Contact: kde-devel@kde.org
 
 Files: *
-Copyright: 2010, Bjoern Ricks <bjoern.ricks@intevation.de>
-           2004, Bram Schoenmakers <bramschoenmakers@kde.nl>
-           2013, Christian Mollekopf <mollekopf@kolabsys.com>
+Copyright: 2013, Christian Mollekopf <mollekopf@kolabsys.com>
            2009, Constantin Berzan <exit3219@gmail.com>
            2017, David Faure <faure@kde.org>
-           2009, David Jarvie <djarvie@kde.org>
-           2010, Felix Mauch <felix_mauch@web.de>
-           2009, Free Software Foundation, Inc
+           2016, eyeOS S.L.U., a Telefonica company, sales@eyeos.com
            2010, KDAB
            2008, Kevin Krammer <kevin.krammer@gmx.at>
-           2016-2018, Laurent Montel <laurent.montel@kdab.com>
+           2016-2020, Laurent Montel <montel.org>
+           2012-2024, Laurent Montel <montel@kde.org>
            2001, Marc Mutz <mutz@kde.org>
-           2012-2018, Laurent Montel <montel@kde.org>
-           2010, Rosetta Contributors and Canonical Ltd 2010
+           2010, Nicolas Lécureuil <nicolas.lecureuil@free.fr>
            2009, Stephen Kelly <steveire@gmail.com>
-           2009-2018, This_file_is_part_of_KDE
            2007, Till Adam <adam@kde.org>
            2007-2010, Tobias Koenig <tokoe@kde.org>
-           2008, Volker Krause <vkrause@kde.org>
-           2016, eyeOS S.L.U., a Telefonica company <sales@eyeos.com>
+           2008-2019, Volker Krause <vkrause@kde.org>
 License: LGPL-2+
 
-Files: debian/*
-Copyright: 2007-2015, Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Files: src/akonadi-contacts-core/autotests/grantleeprinttest.cpp
+       src/akonadi-contacts-core/autotests/grantleeprinttest.h
+       src/akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp
+       src/akonadi-contacts-core/grantlee/contactgrantleewrapper.h
+       src/akonadi-contacts-core/grantlee/grantleeprint.cpp
+       src/akonadi-contacts-core/grantlee/grantleeprint.h
+       src/akonadi-contacts-widgets/abstractemailaddressselectiondialog.cpp
+       src/akonadi-contacts-widgets/abstractemailaddressselectiondialog.h
+       src/akonadi-contacts-widgets/editor/widgets/kwidgetlister.cpp
+       src/akonadi-contacts-widgets/editor/widgets/kwidgetlister_p.h
+       src/akonadi-contacts-widgets/grantlee/grantleecontactviewer.cpp
+       src/akonadi-contacts-widgets/grantlee/grantleecontactviewer.h
+Copyright: 2013-2024, Laurent Montel <montel@kde.org>
+           2001, Marc Mutz <mutz@kde.org>
+           2019, Volker Krause <vkrause@kde.org>
 License: GPL-2+
+
+Files: CMakeLists.txt
+       CMakePresets.json
+       serializers/autotests/CMakeLists.txt
+       serializers/CMakeLists.txt
+       src/akonadi-contacts-core/autotests/CMakeLists.txt
+       src/akonadi-contacts-core/CMakeLists.txt
+       src/akonadi-contacts-core/tests/CMakeLists.txt
+       src/akonadi-contacts-widgets/CMakeLists.txt
+       src/akonadi-contacts-widgets/editor/addresseditor/autotests/CMakeLists.txt
+       src/akonadi-contacts-widgets/editor/customfieldeditor/autotests/CMakeLists.txt
+       src/akonadi-contacts-widgets/editor/customfieldeditor/tests/CMakeLists.txt
+       src/akonadi-contacts-widgets/editor/generalinfoeditor/autotests/CMakeLists.txt
+       src/akonadi-contacts-widgets/editor/widgets/autotests/CMakeLists.txt
+       src/akonadi-contacts-widgets/tests/CMakeLists.txt
+       src/CMakeLists.txt
+Copyright: 2021-2024, Laurent Montel <montel@kde.org>
+           None
+License: BSD-3-Clause
+
+Files: .git-blame-ignore-revs
+       .gitignore
+       .gitlab-ci.yml
+       .kde-ci.yml
+       metainfo.yaml
+       README.md
+       sanitizers.supp
+       src/Messages.sh
+Copyright: 2016, Daniel Vrátil <dvratil@kde.org>
+           2020-2024, Laurent Montel <montel@kde.org>
+           None
+License: CC0-1.0
 
 Files: po/ca/*
        po/ca@valencia/*
@@ -42,31 +81,14 @@ Files: po/ca/*
 Copyright: 2009-2017, This_file_is_part_of_KDE
 License: LGPL-2.1+3+KDEeV
 
-Files: src/contact-editor/editor/widgets/kwidgetlister.cpp
-       src/contact-editor/editor/widgets/kwidgetlister_p.h
-Copyright: 2001, Marc Mutz <mutz@kde.org>
-License: GPL-2
-
-Files: src/contact-editor/editor/data/*
+Files: src/akonadi-contacts-widgets/editor/data/*
 Copyright: No copyright claimed
 License: public-domain
 
-License: GPL-2
- This program is free software; you can redistribute it and/or modify it
- under the terms of the GNU General Public License, version 2, as
- published by the Free Software Foundation.
- .
- This program is distributed in the hope that it will be useful, but
- WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- General Public License for more details.
- .
- You should have received a copy of the GNU General Public License
- along with this program; if not, write to the Free Software
- Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
- .
- On Debian systems, the complete text of the GNU General Public License
- version 2 can be found in `/usr/share/common-licenses/GPL-2'.
+Files: debian/*
+Copyright: 2007-2015, Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+           2024 Patrick Franz <deltaone@debian.org>
+License: GPL-2+
 
 License: GPL-2+
  This program is free software; you can redistribute it and/or modify
@@ -104,6 +126,49 @@ License: LGPL-2+
  .
  On Debian systems, the complete text of the GNU Library General Public
  License version 2 can be found in `/usr/share/common-licenses/LGPL-2'.
+
+License: BSD-3-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ 1. Redistributions of source code must retain the copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ 3. The name of the author may not be used to endorse or promote products
+    derived from this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+ IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+ OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+ IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+ NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: CC0-1.0
+ CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE LEGAL
+ SERVICES. DISTRIBUTION OF THIS DOCUMENT DOES NOT CREATE AN ATTORNEY-CLIENT
+ RELATIONSHIP. CREATIVE COMMONS PROVIDES THIS INFORMATION ON AN "AS-IS" BASIS.
+ CREATIVE COMMONS MAKES NO WARRANTIES REGARDING THE USE OF THIS DOCUMENT OR
+ THE INFORMATION OR WORKS PROVIDED HEREUNDER, AND DISCLAIMS LIABILITY FOR
+ DAMAGES RESULTING FROM THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS
+ PROVIDED HEREUNDER.
+ .
+ Statement of Purpose
+ .
+ The laws of most jurisdictions throughout the world automatically confer
+ exclusive Copyright and Related Rights (defined below) upon the creator and
+ subsequent owner(s) (each and all, an "owner") of an original work of
+ authorship and/or a database (each, a "Work").
+ .
+ On Debian systems, the complete text of the Creative Commons Zero v1.0 Universal
+ license can be found in "/usr/share/common-licenses/CC0-1.0".
 
 License: LGPL-2.1+3+KDEeV
  This file is distributed under the license LGPL version 2.1 or

@@ -1,0 +1,4 @@
+usr/lib/*/libKPim6AkonadiContactCore.so.6
+usr/lib/*/libKPim6AkonadiContactCore.so.6.*
+usr/lib/*/qt6/plugins/akonadi_serializer_addressee.so
+usr/lib/*/qt6/plugins/akonadi_serializer_contactgroup.so
