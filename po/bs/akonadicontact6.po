@@ -1,0 +1,2471 @@
+# Bosnian translation for kdepimlibs
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the kdepimlibs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepimlibs\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"PO-Revision-Date: 2014-01-31 20:39+0100\n"
+"Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
+"Language-Team: Bosnian <bs@li.org>\n"
+"Language: bs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Launchpad (build 16877)\n"
+"X-Launchpad-Export-Date: 2013-12-28 05:35+0000\n"
+
+#: akonadi-contacts-core/contactgroupmodel.cpp:193
+#, kde-format
+msgid "The member with name <b>%1</b> is missing an email address"
+msgstr "Članu s imenom <b>%1</b> nedostaje email adresa"
+
+#: akonadi-contacts-core/contactgroupmodel.cpp:240
+#, kde-format
+msgid "Contact does not exist any more"
+msgstr "Kontakt više ne postoji"
+
+#: akonadi-contacts-core/contactgroupmodel.cpp:394
+#, kde-format
+msgctxt "contact's name"
+msgid "Name"
+msgstr "Ime"
+
+#: akonadi-contacts-core/contactgroupmodel.cpp:396
+#, kde-format
+msgctxt "contact's email address"
+msgid "EMail"
+msgstr "Email"
+
+#: akonadi-contacts-core/contactstreemodel.cpp:212
+#, kde-format
+msgctxt "@title:column address books overview"
+msgid "Address Books"
+msgstr "Adresari"
+
+#: akonadi-contacts-core/contactstreemodel.cpp:222
+#, kde-format
+msgctxt "@title:column name of a person"
+msgid "Name"
+msgstr "Ime"
+
+#: akonadi-contacts-core/contactstreemodel.cpp:224
+#, kde-format
+msgctxt "@title:column family name of a person"
+msgid "Family Name"
+msgstr "Prezime"
+
+#: akonadi-contacts-core/contactstreemodel.cpp:226
+#, kde-format
+msgctxt "@title:column given name of a person"
+msgid "Given Name"
+msgstr "Ime"
+
+#: akonadi-contacts-core/contactstreemodel.cpp:230
+#, kde-format
+msgctxt "@title:column home address of a person"
+msgid "Home"
+msgstr "Kuća"
+
+#: akonadi-contacts-core/contactstreemodel.cpp:232
+#, kde-format
+msgctxt "@title:column work address of a person"
+msgid "Work"
+msgstr "Posao"
+
+#: akonadi-contacts-core/contactstreemodel.cpp:234
+#, kde-format
+msgctxt "@title:column phone numbers of a person"
+msgid "Phone Numbers"
+msgstr "Brojevi telefona"
+
+#: akonadi-contacts-core/contactstreemodel.cpp:236
+#, kde-format
+msgctxt "@title:column the preferred email addresses of a person"
+msgid "Preferred EMail"
+msgstr "Poželjna adresa e-pošte"
+
+#: akonadi-contacts-core/contactstreemodel.cpp:238
+#, kde-format
+msgctxt "@title:column all email addresses of a person"
+msgid "All EMails"
+msgstr "Sve adrese e-pošte"
+
+#: akonadi-contacts-core/emailaddressselectionproxymodel.cpp:23
+#, kde-format
+msgid "Distribution List %1"
+msgstr "Distribuciona lista %1"
+
+#: akonadi-contacts-core/emailaddressselectionproxymodel.cpp:130
+#, kde-format
+msgctxt "Name and email address of a contact"
+msgid "%1 <%2>"
+msgstr "%1 <%2>"
+
+#: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:28
+#: akonadi-contacts-core/standardcontactformatter.cpp:176
+#: akonadi-contacts-widgets/contactgroupviewer.cpp:66
+#, kde-format
+msgid "Address Book"
+msgstr "Adresar"
+
+#: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:33
+#: akonadi-contacts-core/standardcontactformatter.cpp:175
+#, kde-format
+msgid "Anniversary"
+msgstr "Godišnjica"
+
+#: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:38
+#: akonadi-contacts-core/standardcontactformatter.cpp:170
+#, kde-format
+msgid "Assistant's Name"
+msgstr "Ime pomoćnika"
+
+#: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:43
+#: akonadi-contacts-core/standardcontactformatter.cpp:171
+#, kde-format
+msgid "Manager's Name"
+msgstr "Ime upravnika"
+
+#: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:48
+#: akonadi-contacts-core/standardcontactformatter.cpp:173
+#, kde-format
+msgid "Office"
+msgstr "Ured"
+
+#: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:53
+#: akonadi-contacts-core/standardcontactformatter.cpp:169
+#, kde-format
+msgid "Profession"
+msgstr "Zanimanje"
+
+#: akonadi-contacts-core/grantlee/contactgrantleewrapper.cpp:58
+#: akonadi-contacts-core/standardcontactformatter.cpp:172
+#, kde-format
+msgctxt "Wife/Husband/..."
+msgid "Partner's Name"
+msgstr "Ime partnera"
+
+#: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:182
+#: akonadi-contacts-core/standardcontactformatter.cpp:233
+#, kde-format
+msgctxt "Boolean value"
+msgid "yes"
+msgstr "da"
+
+#: akonadi-contacts-core/grantlee/grantleecontactformatter.cpp:184
+#: akonadi-contacts-core/standardcontactformatter.cpp:235
+#, kde-format
+msgctxt "Boolean value"
+msgid "no"
+msgstr "ne"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:95
+#, kde-format
+msgid "(One year old)"
+msgid_plural "(%1 years old)"
+msgstr[0] "(%1 godinu staro)"
+msgstr[1] "(%1 godine staro)"
+msgstr[2] "(%1 godina staro)"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:106
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Send SMS"
+msgstr "Pošalji SMS"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:115
+#, kde-format
+msgctxt "a contact's email address"
+msgid "Email"
+msgstr "E-pošta"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:130
+#, kde-format
+msgid "Homepage"
+msgstr "Početna stranica"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:136
+#, kde-format
+msgid "Blog Feed"
+msgstr "Dovod blogova"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:154
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Show address on map"
+msgstr "Prikaži adresu na mapi"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:161
+#, kde-format
+msgid "Notes"
+msgstr "Bilješke"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:168
+#, kde-format
+msgid "Department"
+msgstr "Odjeljenje"
+
+#: akonadi-contacts-core/standardcontactformatter.cpp:174
+#, kde-format
+msgid "IM Address"
+msgstr "IM adresa"
+
+#: akonadi-contacts-widgets/contacteditor.cpp:162
+#, kde-format
+msgid ""
+"The contact has been changed by someone else.\n"
+"What should be done?"
+msgstr ""
+"Neko drugi je izmijenio kontakt.\n"
+"Šta treba učiniti?"
+
+#: akonadi-contacts-widgets/contacteditor.cpp:163
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:136
+#, fuzzy, kde-format
+#| msgid "Take over changes"
+msgctxt "@action:button"
+msgid "Take over changes"
+msgstr "Preuzmi promjene"
+
+#: akonadi-contacts-widgets/contacteditor.cpp:164
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:137
+#, fuzzy, kde-format
+#| msgid "Ignore and Overwrite changes"
+msgctxt "@action:button"
+msgid "Ignore and Overwrite changes"
+msgstr "Ignoriši i piši preko promjena"
+
+#: akonadi-contacts-widgets/contacteditor.cpp:278
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:291
+#: akonadi-contacts-widgets/widgets/selectaddressbookdialog.cpp:28
+#, fuzzy, kde-format
+#| msgid "Select Address Book"
+msgctxt "@title:window"
+msgid "Select Address Book"
+msgstr "Izaberi adresar"
+
+#: akonadi-contacts-widgets/contacteditor.cpp:279
+#, kde-format
+msgid "Select the address book the new contact shall be saved in:"
+msgstr "Izaberi adresar u koji će se sačuvati novi kontakt:"
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:45
+#, fuzzy, kde-format
+#| msgid "New Contact"
+msgctxt "@title:window"
+msgid "New Contact"
+msgstr "Novi kontakt"
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:45
+#, fuzzy, kde-format
+#| msgid "Edit Contact"
+msgctxt "@title:window"
+msgid "Edit Contact"
+msgstr "Izmijeni kontakt"
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:72
+#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:102
+#, fuzzy, kde-format
+#| msgid "Add to:"
+msgctxt "@label:textbox"
+msgid "Add to:"
+msgstr "Dodaj u:"
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:181
+#, kde-format
+msgctxt "@info"
+msgid "Location was not saved. Do you want to close editor?"
+msgstr ""
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:182
+#: akonadi-contacts-widgets/contacteditordialog.cpp:200
+#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:165
+#, fuzzy, kde-format
+#| msgid "Confirm Delete"
+msgctxt "@title:window"
+msgid "Confirmation"
+msgstr "Potvrda brisanja"
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:183
+#, kde-format
+msgctxt "@action:button"
+msgid "Close Editor"
+msgstr ""
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:184
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Close"
+msgstr ""
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:199
+#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:164
+#, fuzzy, kde-format
+#| msgid "Do you really want to delete this address?"
+msgctxt "@info"
+msgid "Do you really want to cancel?"
+msgstr "Da li zaista želite obrisati ovu adresu?"
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:201
+#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:166
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Cancel"
+msgctxt "@action:button"
+msgid "Cancel Editing"
+msgstr "Otkaži"
+
+#: akonadi-contacts-widgets/contacteditordialog.cpp:202
+#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:167
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Cancel"
+msgctxt "@action:button"
+msgid "Do Not Cancel"
+msgstr "Otkaži"
+
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:135
+#, kde-format
+msgid ""
+"The contact group has been changed by someone else.\n"
+"What should be done?"
+msgstr ""
+"Neko drugi je izmijenio grupu kontakata.\n"
+"Šta treba učiniti?"
+
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:176
+#, kde-format
+msgid "The name of the contact group must not be empty."
+msgstr "Ime grupe kontakata ne smije biti prazno."
+
+#: akonadi-contacts-widgets/contactgroupeditor.cpp:292
+#, kde-format
+msgid "Select the address book the new contact group shall be saved in:"
+msgstr "Izaberi adresar u koji će se sačuvati nova grupa kontakata:"
+
+#. i18n: ectx: property (text), widget (QLabel, groupNameLabel)
+#: akonadi-contacts-widgets/contactgroupeditor.ui:29
+#, kde-format
+msgctxt "@label The name of a contact group"
+msgid "Name:"
+msgstr "Ime:"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: akonadi-contacts-widgets/contactgroupeditor.ui:59
+#, kde-format
+msgctxt "@label"
+msgid "Contact group members:"
+msgstr "Članovi grupe kontakata:"
+
+#. i18n: ectx: property (placeholderText), widget (KLineEdit, searchField)
+#: akonadi-contacts-widgets/contactgroupeditor.ui:66
+#, fuzzy, kde-format
+#| msgctxt "@label Search in a list of contacts"
+#| msgid "Search:"
+msgid "Search..."
+msgstr "Pretraga:"
+
+#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:79
+#, fuzzy, kde-format
+#| msgid "New Contact Group"
+msgctxt "@title:window"
+msgid "New Contact Group"
+msgstr "Nova grupa kontakata"
+
+#: akonadi-contacts-widgets/contactgroupeditordialog.cpp:79
+#, fuzzy, kde-format
+#| msgid "Edit Contact Group"
+msgctxt "@title:window"
+msgid "Edit Contact Group"
+msgstr "Izmijeni grupu kontakata"
+
+#: akonadi-contacts-widgets/contactgroupviewer.cpp:52
+#, fuzzy, kde-format
+#| msgid "Contact Group %1"
+msgctxt "@title:window"
+msgid "Contact Group %1"
+msgstr "Grupa kontakata %1"
+
+#: akonadi-contacts-widgets/contactviewer.cpp:64
+#, fuzzy, kde-format
+#| msgid "Contact %1"
+msgctxt "@title:window"
+msgid "Contact %1"
+msgstr "Kontakt %1"
+
+#: akonadi-contacts-widgets/contactviewerdialog.cpp:64
+#, fuzzy, kde-format
+#| msgid "Show Contact"
+msgctxt "@title:window"
+msgid "Show Contact"
+msgstr "Prikaži kontakt"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:63
+#, fuzzy, kde-format
+#| msgctxt "instant messaging address"
+#| msgid "Address"
+msgid "Remove Address"
+msgstr "Adresa"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresseslocationwidget.cpp:67
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:277
+#, fuzzy, kde-format
+#| msgid "Do you really want to delete this address book?"
+#| msgid_plural "Do you really want to delete %1 address books?"
+msgid "Do you really want to delete this address?"
+msgstr "Želite li zaista da obrišete %1 adresar?"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:46
+#, fuzzy, kde-format
+#| msgctxt "@label The free/busy information of a contact"
+#| msgid "Free/Busy:"
+msgctxt "@info:placeholder"
+msgid "Add Street"
+msgstr "Slobodno/zauzeto:"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:57
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add Post Office Box"
+msgstr ""
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:67
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add Postal Code"
+msgstr ""
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:77
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add Locality"
+msgstr ""
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:87
+#, fuzzy, kde-format
+#| msgid "Profession"
+msgctxt "@info:placeholder"
+msgid "Add Region"
+msgstr "Zanimanje"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:103
+#, kde-format
+msgctxt "street/postal"
+msgid "This is the preferred address"
+msgstr "Ovo je poželjna adresa"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:114
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add IM Address"
+msgctxt "@action:button"
+msgid "Add Address"
+msgstr "Dodaj IM adresu"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:126
+#, fuzzy, kde-format
+#| msgctxt "instant messaging address"
+#| msgid "Address"
+msgctxt "@action:button"
+msgid "Remove Address"
+msgstr "Adresa"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:131
+#, fuzzy, kde-format
+#| msgid "Update Address Book"
+#| msgid_plural "Update %1 Address Books"
+msgctxt "@action:button"
+msgid "Update Address"
+msgstr "Ažuriraj %1 adresar"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresslocationwidget.cpp:136
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Cancel"
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Otkaži"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresstypedialog.cpp:24
+#, kde-format
+msgctxt "street/postal"
+msgid "Edit Address Type"
+msgstr "Izmijeni vrstu adrese"
+
+#: akonadi-contacts-widgets/editor/addresseditor/addresstypedialog.cpp:38
+#, kde-format
+msgctxt "street/postal"
+msgid "Address Types"
+msgstr "Vrste adrese"
+
+#: akonadi-contacts-widgets/editor/addresseditor/selectaddresstypecombobox.cpp:61
+#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonecomboboxtype.cpp:66
+#, kde-format
+msgctxt "@item:inlistbox Category of contact info field"
+msgid "Other..."
+msgstr "Ostalo..."
+
+#: akonadi-contacts-widgets/editor/addresseditor/selectaddresstypecombobox.cpp:63
+#, fuzzy, kde-format
+#| msgctxt "street/postal"
+#| msgid "Address Types"
+msgctxt "@item:inlistbox Category of contact info field"
+msgid "New Address Type"
+msgstr "Vrste adrese"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:47
+#, kde-format
+msgctxt "@label The organization of a contact"
+msgid "Organization:"
+msgstr "Organizacija:"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:51
+#, fuzzy, kde-format
+#| msgid "Additional names:"
+msgctxt "@info:placeholder"
+msgid "Add organization's name"
+msgstr "Dodatna imena:"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:55
+#, kde-format
+msgctxt "@label The profession of a contact"
+msgid "Profession:"
+msgstr "Zanimanje:"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:58
+#, fuzzy, kde-format
+#| msgid "Profession"
+msgctxt "@info:placeholder"
+msgid "Add profession"
+msgstr "Zanimanje"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:63
+#, kde-format
+msgctxt "@label The title of a contact"
+msgid "Title:"
+msgstr "Pozicija:"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:66
+#, fuzzy, kde-format
+#| msgid "Department"
+msgctxt "@info:placeholder"
+msgid "Add the title"
+msgstr "Odjeljenje"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:71
+#, kde-format
+msgctxt "@label The department of a contact"
+msgid "Department:"
+msgstr "Odjel:"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:74
+#, fuzzy, kde-format
+#| msgid "Department"
+msgctxt "@info:placeholder"
+msgid "Add the department"
+msgstr "Odjeljenje"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:79
+#, kde-format
+msgctxt "@label The office of a contact"
+msgid "Office:"
+msgstr "Ured:"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:83
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add the office"
+msgstr ""
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:88
+#, kde-format
+msgctxt "@label The manager's name of a contact"
+msgid "Manager's name:"
+msgstr "Ime menadžera:"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:91
+#, fuzzy, kde-format
+#| msgctxt "@label The manager's name of a contact"
+#| msgid "Manager's name:"
+msgctxt "@info:placeholder"
+msgid "Add manager's name"
+msgstr "Ime menadžera:"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:96
+#, kde-format
+msgctxt "@label The assistant's name of a contact"
+msgid "Assistant's name:"
+msgstr "Ime pomoćnika:"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:99
+#, fuzzy, kde-format
+#| msgctxt "@label The assistant's name of a contact"
+#| msgid "Assistant's name:"
+msgctxt "@info:placeholder"
+msgid "Add assistant's name"
+msgstr "Ime pomoćnika:"
+
+#: akonadi-contacts-widgets/editor/businesseditor/businesseditorwidget.cpp:105
+#, kde-format
+msgctxt "@label The free/busy information of a contact"
+msgid "Free/Busy:"
+msgstr "Slobodno/zauzeto:"
+
+#: akonadi-contacts-widgets/editor/businesseditor/freebusyeditwidget.cpp:28
+#, fuzzy, kde-format
+#| msgctxt "@label The free/busy information of a contact"
+#| msgid "Free/Busy:"
+msgctxt "@info:placeholder"
+msgid "Add FreeBusy"
+msgstr "Slobodno/zauzeto:"
+
+#: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:95
+#, kde-format
+msgctxt "@title:tab"
+msgid "Contact"
+msgstr "Kontakt"
+
+#: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:101
+#, kde-format
+msgctxt "@title:tab"
+msgid "Location"
+msgstr "Lokacija"
+
+#: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:107
+#, kde-format
+msgctxt "@title:tab"
+msgid "Business"
+msgstr "Posao"
+
+#: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:113
+#, kde-format
+msgctxt "@title:tab Personal properties of a contact"
+msgid "Personal"
+msgstr "Lični"
+
+#: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:121
+#, kde-format
+msgctxt "@title:tab"
+msgid "Notes"
+msgstr "Bilješke"
+
+#: akonadi-contacts-widgets/editor/contacteditorwidget.cpp:131
+#, kde-format
+msgctxt "@title:tab"
+msgid "Custom Fields"
+msgstr "Posebna polja"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:25
+#, fuzzy, kde-format
+#| msgid "Add Email"
+msgctxt "@action:button"
+msgid "Add Field"
+msgstr "Dodaj e-mail"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:26
+#, fuzzy, kde-format
+#| msgid "Use field for all contacts"
+msgctxt "@option:check"
+msgid "Use field for all contacts"
+msgstr "Koristi polje za sve kontakte"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:30
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "Custom Fields"
+msgctxt "@label:textbox"
+msgid "Custom Field Title"
+msgstr "Posebna polja"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:37
+#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:44
+#, fuzzy, kde-format
+#| msgid "Additional names:"
+msgctxt "@info:placeholder"
+msgid "Add name"
+msgstr "Dodatna imena:"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:60
+#, kde-format
+msgid "Text"
+msgstr "Tekst"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:61
+#, kde-format
+msgid "Numeric"
+msgstr "Numerično"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:62
+#, kde-format
+msgid "Boolean"
+msgstr "Logički"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:63
+#, kde-format
+msgid "Date"
+msgstr "Datum"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:64
+#, kde-format
+msgid "Time"
+msgstr "Vrijeme"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:65
+#, kde-format
+msgid "DateTime"
+msgstr "DatumVrijeme"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldeditorwidget.cpp:66
+#, kde-format
+msgid "Url"
+msgstr "Url"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:214
+#, kde-format
+msgctxt "Custom Fields"
+msgid "Do you really want to delete the selected custom field?"
+msgstr "Da li zaista želite obrisati izabrano prilagođeno polje?"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldslistdelegate.cpp:215
+#, fuzzy, kde-format
+#| msgid "Confirm Delete"
+msgctxt "@title:window"
+msgid "Confirm Delete"
+msgstr "Potvrda brisanja"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldsmodel.cpp:195
+#, kde-format
+msgctxt "custom field title"
+msgid "Title"
+msgstr "naslov"
+
+#: akonadi-contacts-widgets/editor/customfieldeditor/customfieldsmodel.cpp:197
+#, kde-format
+msgctxt "custom field value"
+msgid "Value"
+msgstr "vrijednost"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:24
+#, fuzzy, kde-format
+#| msgid "Blog Feed"
+msgctxt "@label:textbox"
+msgid "Blog Feed"
+msgstr "Dovod blogova"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/blogfeedwidget.cpp:29
+#, fuzzy, kde-format
+#| msgid "Blog Feed"
+msgctxt "@info:placeholder"
+msgid "Add a Blog Feed"
+msgstr "Dovod blogova"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/displaynameeditwidget.cpp:45
+#, kde-format
+msgid "Short Name"
+msgstr "kratko ime"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/displaynameeditwidget.cpp:46
+#, kde-format
+msgid "Full Name"
+msgstr "puno ime"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/displaynameeditwidget.cpp:47
+#, kde-format
+msgid "Reverse Name with Comma"
+msgstr "obrnuto ime sa zarezom"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/displaynameeditwidget.cpp:48
+#, kde-format
+msgid "Reverse Name"
+msgstr "obrnuto ime"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/displaynameeditwidget.cpp:49
+#, kde-format
+msgid "Organization"
+msgstr "organizacija"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/displaynameeditwidget.cpp:50
+#, kde-format
+msgctxt "@item:inlistbox A custom name format"
+msgid "Custom"
+msgstr "specijalno"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/maillistwidget.cpp:26
+#, fuzzy, kde-format
+#| msgctxt "a contact's email address"
+#| msgid "Email"
+msgctxt "@label:textbox"
+msgid "Email"
+msgstr "E-pošta"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:19
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:20
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox select from a list of IM protocols"
+#| msgid "Select..."
+msgid "Select..."
+msgstr "Izaberite..."
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:20
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:21
+#, fuzzy, kde-format
+#| msgctxt "@title:column home address of a person"
+#| msgid "Home"
+msgid "Home"
+msgstr "Kuća"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:21
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:22
+#, fuzzy, kde-format
+#| msgctxt "@title:column work address of a person"
+#| msgid "Work"
+msgid "Work"
+msgstr "Posao"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailtypecombobox.cpp:22
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:24
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox Category of contact info field"
+#| msgid "Other..."
+msgid "Other"
+msgstr "Ostalo..."
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:30
+#, fuzzy, kde-format
+#| msgid "Add Email"
+msgctxt "@info:placeholder"
+msgid "Add an Email Account"
+msgstr "Dodaj e-mail"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:40
+#, fuzzy, kde-format
+#| msgid "Add Email"
+msgctxt "@info:tooltip"
+msgid "Add an Email"
+msgstr "Dodaj e-mail"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/mail/mailwidget.cpp:46
+#, fuzzy, kde-format
+#| msgid "Remove logo"
+msgctxt "@info:tooltip"
+msgid "Remove Email"
+msgstr "Ukloni logo"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:22
+#, fuzzy, kde-format
+#| msgid "Allow remote content in received HTML messages"
+msgctxt "@option:check"
+msgid "Allow remote content in received HTML messages"
+msgstr "Dopusti udaljeni sadrzaj u primljenim HTML porukama"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:26
+#, fuzzy, kde-format
+#| msgid "Show messages received from this contact as:"
+msgctxt "@label:textbox"
+msgid "Show messages received from this contact as:"
+msgstr "Prikaži poruke primljene od stranr ovog osobe kao:"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:33
+#, kde-format
+msgid "Default"
+msgstr "Podrazumijevana"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:33
+#, kde-format
+msgid "Plain Text"
+msgstr "Običan tekst"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messageformattingwidget.cpp:33
+#, kde-format
+msgid "HTML"
+msgstr "HTML"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messaginglistwidget.cpp:26
+#, fuzzy, kde-format
+#| msgctxt "@label The instant messaging address of a contact"
+#| msgid "Messaging:"
+msgctxt "@label:textbox"
+msgid "Messaging"
+msgstr "Glasništvo:"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:34
+#, fuzzy, kde-format
+#| msgid "Additional names:"
+msgctxt "@info:placeholder"
+msgid "Add an identifier"
+msgstr "Dodatna imena:"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:40
+#, kde-format
+msgctxt "@item:inlistbox select from a list of IM protocols"
+msgid "Select..."
+msgstr "Izaberite..."
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:50
+#, fuzzy, kde-format
+#| msgid "Additional names:"
+msgctxt "@info:tooltip"
+msgid "Add an IM"
+msgstr "Dodatna imena:"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/messaging/messagingwidget.cpp:56
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@info:tooltip"
+msgid "Remove IM"
+msgstr "Ukloni"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:22
+#, fuzzy, kde-format
+#| msgid "Edit Contact Name"
+msgctxt "@title:window"
+msgid "Edit Contact Name"
+msgstr "Izmijeni ime kontakt osobe"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:48
+#, kde-format
+msgid "Honorific prefixes:"
+msgstr "Počasni prefiksi:"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:49
+#, kde-format
+msgid "Given name:"
+msgstr "Ime:"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:50
+#, kde-format
+msgid "Additional names:"
+msgstr "Dodatna imena:"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:51
+#, kde-format
+msgid "Family names:"
+msgstr "Prezimena:"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:52
+#, kde-format
+msgid "Honorific suffixes:"
+msgstr "Počasni sufiksi:"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:53
+#, fuzzy, kde-format
+#| msgctxt "@label The display name of a contact"
+#| msgid "Display:"
+msgid "Display:"
+msgstr "Prikazno ime:"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:57
+#, kde-format
+msgid "Dr."
+msgstr "Dr."
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:58
+#, kde-format
+msgid "Miss"
+msgstr "Gđica"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:59
+#, kde-format
+msgid "Mr."
+msgstr "Gdin."
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:60
+#, kde-format
+msgid "Mrs."
+msgstr "Gđa."
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:61
+#, kde-format
+msgid "Ms."
+msgstr "gđica"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:62
+#, kde-format
+msgid "Prof."
+msgstr "Prof."
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:67
+#, kde-format
+msgid "I"
+msgstr "I"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:68
+#, kde-format
+msgid "II"
+msgstr "II"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:69
+#, kde-format
+msgid "III"
+msgstr "III"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:70
+#, kde-format
+msgid "Jr."
+msgstr "Ml."
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nameeditdialog.cpp:71
+#, kde-format
+msgid "Sr."
+msgstr "St."
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:28
+#, fuzzy, kde-format
+#| msgctxt "contact's name"
+#| msgid "Name"
+msgctxt "@label:textbox"
+msgid "Name"
+msgstr "Ime"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:41
+#, kde-format
+msgid "..."
+msgstr "..."
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/namewidget.cpp:42
+#, fuzzy, kde-format
+#| msgid "Edit Contact Name"
+msgctxt "@info:tooltip"
+msgid "Edit Contact Name"
+msgstr "Izmijeni ime kontakt osobe"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:25
+#, fuzzy, kde-format
+#| msgctxt "@label The nickname of a contact"
+#| msgid "Nickname:"
+msgctxt "@label:textbox"
+msgid "Nickname"
+msgstr "Nadimak:"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/nicknamewidget.cpp:30
+#, fuzzy, kde-format
+#| msgid "Additional names:"
+msgctxt "@info:placeholder"
+msgid "Add a Nickname"
+msgstr "Dodatna imena:"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonelistwidget.cpp:26
+#, fuzzy, kde-format
+#| msgctxt "@title:group"
+#| msgid "Phones"
+msgctxt "@label:textbox"
+msgid "Phone"
+msgstr "Telefoni"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonetypedialog.cpp:24
+#, fuzzy, kde-format
+#| msgid "Edit Phone Number"
+msgctxt "@title:window"
+msgid "Edit Phone Number"
+msgstr "Izmijeni broj telefona"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:32
+#, fuzzy, kde-format
+#| msgid "Edit Phone Number"
+msgctxt "@info:placeholder"
+msgid "Add a Phone Number"
+msgstr "Izmijeni broj telefona"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:41
+#, fuzzy, kde-format
+#| msgid "Edit Phone Number"
+msgctxt "@info:tooltip"
+msgid "Add a Phone Number"
+msgstr "Izmijeni broj telefona"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/phone/phonewidget.cpp:47
+#, fuzzy, kde-format
+#| msgctxt "@title:column phone numbers of a person"
+#| msgid "Phone Numbers"
+msgctxt "@info:tooltip"
+msgid "Remove Phone Number"
+msgstr "Brojevi telefona"
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/weblistwidget.cpp:27
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Web"
+msgstr ""
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webselecttypecombobox.cpp:23
+#, fuzzy, kde-format
+#| msgid "Prof."
+msgid "Profile"
+msgstr "Prof."
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:31
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add a Web Site"
+msgstr ""
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:41
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Add a Web Site"
+msgstr ""
+
+#: akonadi-contacts-widgets/editor/generalinfoeditor/web/webwidget.cpp:47
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remove Web Site"
+msgstr ""
+
+#: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:23
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Click to add date"
+msgstr ""
+
+#: akonadi-contacts-widgets/editor/personaleditor/dateeditwidget.cpp:34
+#, kde-format
+msgid "Remove"
+msgstr "Ukloni"
+
+#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:29
+#, kde-format
+msgctxt "@label The birthdate of a contact"
+msgid "Birthdate:"
+msgstr "Datum rođenja:"
+
+#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:35
+#, kde-format
+msgctxt "@label The wedding anniversary of a contact"
+msgid "Anniversary:"
+msgstr "Godišnjica:"
+
+#: akonadi-contacts-widgets/editor/personaleditor/personaleditorwidget.cpp:41
+#, kde-format
+msgctxt "@label The partner's name of a contact"
+msgid "Partner's name:"
+msgstr "Ime partnera:"
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:78
+#, kde-format
+msgid "This contact's image cannot be found."
+msgstr "Slika ovog kontakta ne može biti pronađena."
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:119
+#, fuzzy, kde-format
+#| msgid "The photo of the contact (click to change)"
+msgctxt "@info:tooltip"
+msgid "The photo of the contact (click to change)"
+msgstr "Fotografija kontakta (kliknite za izmjenu)"
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:121
+#, fuzzy, kde-format
+#| msgid "The logo of the company (click to change)"
+msgctxt "@info:tooltip"
+msgid "The logo of the company (click to change)"
+msgstr "Logo firme (klikni za izmjenu)"
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:237
+#, kde-format
+msgid "Change photo..."
+msgstr "Promijeni fotografiju..."
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:238
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:251
+#, fuzzy, kde-format
+#| msgid "Change..."
+msgid "Change URL..."
+msgstr "Izmijeni..."
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:242
+#, kde-format
+msgid "Save photo..."
+msgstr "Sačuvaj fotografiju..."
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:245
+#, kde-format
+msgid "Remove photo"
+msgstr "Ukloni fotografiju"
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:250
+#, kde-format
+msgid "Change logo..."
+msgstr "Promijeni logo..."
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:255
+#, kde-format
+msgid "Save logo..."
+msgstr "Sačuvaj logo..."
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:258
+#, kde-format
+msgid "Remove logo"
+msgstr "Ukloni logo"
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:272
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Change Tags"
+msgid "Change image URL"
+msgstr "Izmijeni oznake"
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:272
+#, kde-format
+msgid "Image URL:"
+msgstr ""
+
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:301
+#: akonadi-contacts-widgets/editor/widgets/imagewidget.cpp:324
+#, kde-format
+msgid "Images (%1)"
+msgstr ""
+
+#: akonadi-contacts-widgets/editor/widgets/preferredlineeditwidget.cpp:22
+#, fuzzy, kde-format
+#| msgid "Set as Standard"
+msgctxt "@info:tooltip"
+msgid "Set as Preferred"
+msgstr "Postavi kao standardno"
+
+#: akonadi-contacts-widgets/emailaddressrequester.cpp:80
+#, fuzzy, kde-format
+#| msgid "Update Address Book"
+#| msgid_plural "Update %1 Address Books"
+msgctxt "@info:tooltip"
+msgid "Open Address Book"
+msgstr "Ažuriraj %1 adresar"
+
+#: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:128
+#, kde-format
+msgctxt "@label Search in a list of contacts"
+msgid "Search:"
+msgstr "Pretraga:"
+
+#: akonadi-contacts-widgets/emailaddressselectionwidget.cpp:130
+#, fuzzy, kde-format
+#| msgid "New &Contact..."
+msgctxt "@info:placeholder"
+msgid "Search Contact..."
+msgstr "Novi &kontakt..."
+
+#: akonadi-contacts-widgets/job/addcontactjob.cpp:55
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The vCard's primary email address is already in your address book; however, "
+"you may save the vCard into a file and import it into the address book "
+"manually."
+msgstr ""
+
+#: akonadi-contacts-widgets/job/addcontactjob.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The vCard was added to your address book; you can add more information to "
+"this entry by opening the address book."
+msgstr ""
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:68
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"A contact with the email address <email>%1</email> is already in your "
+"address book."
+msgstr ""
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:119
+#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:159
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You must create an address book before adding a contact. Do you want to "
+"create an address book?"
+msgstr ""
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:120
+#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:160
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "New Address Book Folder"
+msgctxt "@title:window"
+msgid "No Address Book Available"
+msgstr "Nova fascikla adresara"
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:121
+#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:161
+#, fuzzy, kde-format
+#| msgid "Update Address Book"
+#| msgid_plural "Update %1 Address Books"
+msgctxt "@action:button"
+msgid "Create Address Book"
+msgstr "Ažuriraj %1 adresar"
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:125
+#: akonadi-contacts-widgets/job/addemaildisplayjob.cpp:165
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:191
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Address Book"
+msgstr "Dodaj adresar"
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:215
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para>A contact for \"%1\" was successfully added to your address book.</"
+"para><para>Do you want to edit this new contact now?</para>"
+msgstr ""
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:223
+#, fuzzy, kde-format
+#| msgid "Edit..."
+msgctxt "@action:button"
+msgid "Edit"
+msgstr "Izmijeni..."
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:224
+#, kde-format
+msgctxt "@action:button"
+msgid "Finish"
+msgstr ""
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:245
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
+#, kde-format
+msgid "Contact cannot be stored: %1"
+msgstr "Kontakt se ne može smjestiti %1"
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:245
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:466
+#, fuzzy, kde-format
+#| msgid "Failed to store contact"
+msgctxt "@title:window"
+msgid "Failed to store contact"
+msgstr "Ne mogu da sačuvam kontakt"
+
+#: akonadi-contacts-widgets/job/addemailaddressjob.cpp:252
+#, kde-format
+msgid "Contact created successfully"
+msgstr ""
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:95
+#, kde-format
+msgid "Add Address Book Folder..."
+msgstr "Dodaj fasciklu adresara..."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:98
+#, kde-format
+msgid ""
+"Add a new address book folder to the currently selected address book folder."
+msgstr "Dodajte novi adresar u trenutno odabranu fasciklu adresara."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:101
+#, kde-format
+msgctxt "@title:window"
+msgid "New Address Book Folder"
+msgstr "Nova fascikla adresara"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:105
+#, kde-format
+msgid "Could not create address book folder: %1"
+msgstr "Ne mogu da napravim fasciklu adresara: %1"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:109
+#, kde-format
+msgid "Address book folder creation failed"
+msgstr "Neuspjelo stvaranje fascikle adresara"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:115
+#, kde-format
+msgid "Copy Address Book Folder"
+msgid_plural "Copy %1 Address Book Folders"
+msgstr[0] "Umnoži %1 fasciklu adresara"
+msgstr[1] "Umnoži %1 fascikle adresara"
+msgstr[2] "Umnoži %1 fascikli adresara"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:117
+#, kde-format
+msgid "Copy the selected address book folders to the clipboard."
+msgstr "Umnožite odabranu fasciklu adresara u bilježnicu."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:121
+#, kde-format
+msgid "Delete Address Book Folder"
+msgid_plural "Delete %1 Address Book Folders"
+msgstr[0] "Izbriši %1 fasciklu adresara"
+msgstr[1] "Izbriši %1 fascikle adresara"
+msgstr[2] "Izbriši %1 fascikli adresara"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:123
+#, kde-format
+msgid "Delete the selected address book folders from the address book."
+msgstr "Izbrišite odabrane fascikle adresara iz adresara."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:127
+#, kde-format
+msgid ""
+"Do you really want to delete this address book folder and all its sub-"
+"folders?"
+msgid_plural ""
+"Do you really want to delete %1 address book folders and all their sub-"
+"folders?"
+msgstr[0] ""
+"Želite li zaista da obrišete %1 fasciklu adresara i sve njihove potfascikle?"
+msgstr[1] ""
+"Želite li zaista da obrišete %1 fascikle adresara i sve njihove potfascikle?"
+msgstr[2] ""
+"Želite li zaista da obrišete %1 fascikli adresara i sve njihove potfascikle?"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:131
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete address book folder?"
+msgid_plural "Delete address book folders?"
+msgstr[0] "Obrisati fascikle adresara?"
+msgstr[1] "Obrisati fascikle adresara?"
+msgstr[2] "Obrisati fascikle adresara?"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:135
+#, kde-format
+msgid "Could not delete address book folder: %1"
+msgstr "Ne mogu da obrišem fasciklu adresara: %1"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:139
+#, kde-format
+msgid "Address book folder deletion failed"
+msgstr "Neuspjelo brisanje fascikle adresara"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:143
+#, kde-format
+msgid "Update Address Book Folder"
+msgid_plural "Update %1 Address Book Folders"
+msgstr[0] "Ažuriraj %1 fasciklu adresara"
+msgstr[1] "Ažuriraj %1 fascikle adresara"
+msgstr[2] "Ažuriraj %1 fascikli adresara"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:145
+#, kde-format
+msgid "Update the content of the selected address book folders."
+msgstr "Ažurira sadržaj izabranih fascikli u adresaru."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:148
+#, kde-format
+msgid "Cut Address Book Folder"
+msgid_plural "Cut %1 Address Book Folders"
+msgstr[0] "Isijeci %1 fasciklu adresara"
+msgstr[1] "Isijeci %1 fascikle adresara"
+msgstr[2] "Isijeci %1 fascikli adresara"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:150
+#, kde-format
+msgid "Cut the selected address book folders from the address book."
+msgstr "Isijecite odabrane fascikle adresara iz adresara."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:153
+#, kde-format
+msgid "Folder Properties..."
+msgstr "Podaci fascikle..."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:155
+#, kde-format
+msgid ""
+"Open a dialog to edit the properties of the selected address book folder."
+msgstr ""
+"Otvorite prozorčić da biste uredili podatke odabrane fascikle adresara."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:158
+#, kde-format
+msgctxt "@title:window"
+msgid "Properties of Address Book Folder %1"
+msgstr "Svojstva fascikle adresara %1"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:161
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:290
+#, kde-format
+msgid "Copy Contact"
+msgid_plural "Copy %1 Contacts"
+msgstr[0] "Umnoži %1 kontakt"
+msgstr[1] "Umnoži %1 kontakta"
+msgstr[2] "Umnoži %1 kontakta"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:162
+#, kde-format
+msgid "Copy the selected contacts to the clipboard."
+msgstr "Umnožite odabrane kontakte u bilježnicu."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:165
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:301
+#, kde-format
+msgid "Delete Contact"
+msgid_plural "Delete %1 Contacts"
+msgstr[0] "Izbriši %1 kontakt"
+msgstr[1] "Izbriši %1 kontakta"
+msgstr[2] "Izbriši %1 kontakta"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:166
+#, kde-format
+msgid "Delete the selected contacts from the address book."
+msgstr "Izbrišite odabrane kontakte iz adresara."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:169
+#, kde-format
+msgid "Do you really want to delete the selected contact?"
+msgid_plural "Do you really want to delete %1 contacts?"
+msgstr[0] "Želite li zaista da obrišete %1 kontakt?"
+msgstr[1] "Želite li zaista da obrišete %1 kontakta?"
+msgstr[2] "Želite li zaista da obrišete %1 kontakata?"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:173
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Contact?"
+msgid_plural "Delete Contacts?"
+msgstr[0] "Obrisati kontakt?"
+msgstr[1] "Obrisati kontakte?"
+msgstr[2] "Obrisati kontakte?"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:175
+#, kde-format
+msgid "Could not delete contact: %1"
+msgstr "Ne mogu da obrišem kontakt: %1"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:177
+#, kde-format
+msgid "Contact deletion failed"
+msgstr "Neuspjelo brisanje kontakta"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:180
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:304
+#, kde-format
+msgid "Cut Contact"
+msgid_plural "Cut %1 Contacts"
+msgstr[0] "Isijeci %1 kontakt"
+msgstr[1] "Isijeci %1 kontakta"
+msgstr[2] "Isijeci %1 kontakta"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:181
+#, kde-format
+msgid "Cut the selected contacts from the address book."
+msgstr "Isijecite odabrane kontakte iz adresara."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:184
+#, kde-format
+msgid "Add &Address Book..."
+msgstr "Dodaj &adresar..."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:186
+#, kde-format
+msgid ""
+"Add a new address book<p>You will be presented with a dialog where you can "
+"select the type of the address book that shall be added.</p>"
+msgstr ""
+"Dodajte novi adresar<p>Biće vam predstavljen prozorčić u kome ćete moći da "
+"odaberete tip adresara koji će biti dodat.</p>"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:195
+#, kde-format
+msgid "Could not create address book: %1"
+msgstr "Ne mogu da napravim adresar: %1"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:199
+#, kde-format
+msgid "Address book creation failed"
+msgstr "Neuspjelo stvaranje adresara"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:203
+#, kde-format
+msgid "&Delete Address Book"
+msgid_plural "&Delete %1 Address Books"
+msgstr[0] "&Obriši %1 adresar"
+msgstr[1] "&Obriši %1 adresara"
+msgstr[2] "&Obriši %1 adresara"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:205
+#, kde-format
+msgid ""
+"Delete the selected address books<p>The currently selected address books "
+"will be deleted, along with all the contacts and contact groups they contain."
+"</p>"
+msgstr ""
+"<p>Briše izabrane adresare.</p><p>Adresari će biti obrisani zajedno sa svim "
+"kontaktima i grupama koje sadrže.</p>"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:210
+#, kde-format
+msgid "Do you really want to delete this address book?"
+msgid_plural "Do you really want to delete %1 address books?"
+msgstr[0] "Želite li zaista da obrišete %1 adresar?"
+msgstr[1] "Želite li zaista da obrišete %1 adresara?"
+msgstr[2] "Želite li zaista da obrišete %1 adresara?"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:214
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Address Book?"
+msgid_plural "Delete Address Books?"
+msgstr[0] "Da izbrišem adresar?"
+msgstr[1] "Obrisati adresare?"
+msgstr[2] "Obrisati adresare?"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:219
+#, kde-format
+msgid "Address Book Properties..."
+msgstr "Podaci adresara..."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:221
+#, kde-format
+msgid "Open a dialog to edit properties of the selected address book."
+msgstr "Otvorite prozorčić da biste uredili podatke odabranog adresara."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:224
+#, kde-format
+msgid "Update Address Book"
+msgid_plural "Update %1 Address Books"
+msgstr[0] "Ažuriraj %1 adresar"
+msgstr[1] "Ažuriraj %1 adresara"
+msgstr[2] "Ažuriraj %1 adresara"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:227
+#, kde-format
+msgid "Updates the content of all folders of the selected address books."
+msgstr "Ažurira sadržaj svih fascikli u izabranim adresarima."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:231
+#, kde-format
+msgid "Could not paste contact: %1"
+msgstr "Ne mogu da umetnem kontakt: %1"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:233
+#, kde-format
+msgid "Paste failed"
+msgstr "Neuspjelo umetanje"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:294
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:298
+#, kde-format
+msgid "Copy Contact To"
+msgstr "Kopiraj kontakt u"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:308
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:312
+#, kde-format
+msgid "Move Contact To"
+msgstr "Premjesti kontakt u"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:316
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:553
+#, kde-format
+msgid "Edit Contact..."
+msgstr "Izmijeni kontakt..."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:320
+#, kde-format
+msgid "Copy Group"
+msgid_plural "Copy %1 Groups"
+msgstr[0] "Kopiraj %1 grupu"
+msgstr[1] "Kopiraj %1 grupe"
+msgstr[2] "Kopiraj %1 grupa"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:324
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:328
+#, kde-format
+msgid "Copy Group To"
+msgstr "Kopiraj grupu u"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:331
+#, kde-format
+msgid "Delete Group"
+msgid_plural "Delete %1 Groups"
+msgstr[0] "Obriši %1 grupu"
+msgstr[1] "Obriši %1 grupe"
+msgstr[2] "Obriši %1 grupa"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:334
+#, kde-format
+msgid "Cut Group"
+msgid_plural "Cut %1 Groups"
+msgstr[0] "Isijeci %1 grupu"
+msgstr[1] "Isijeci %1 grupe"
+msgstr[2] "Isijeci %1 grupa"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:338
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:342
+#, kde-format
+msgid "Move Group To"
+msgstr "Premjesti grupu u"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:346
+#, kde-format
+msgid "Edit Group..."
+msgstr "Izmijeni grupu..."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:528
+#, kde-format
+msgid "New &Contact..."
+msgstr "Novi &kontakt..."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:530
+#, kde-format
+msgid ""
+"Create a new contact<p>You will be presented with a dialog where you can add "
+"data about a person, including addresses and phone numbers.</p>"
+msgstr ""
+"Napravite novi kontakt<p>Biće vam predstavljeno prozorčić u kome ćete moći "
+"da dodate podatke o osobi, uključujući adrese i brojeve telefona.</p>"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:541
+#, kde-format
+msgid "New &Group..."
+msgstr "Nova &grupa..."
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:542
+#, kde-format
+msgid ""
+"Create a new group<p>You will be presented with a dialog where you can add a "
+"new group of contacts.</p>"
+msgstr ""
+"Napravite novu grupu<p>Biće vam predstavljen prozorčić u kome ćete moći da "
+"dodate novu grupu kontakta.</p>"
+
+#: akonadi-contacts-widgets/standardcontactactionmanager.cpp:555
+#, kde-format
+msgid ""
+"Edit the selected contact<p>You will be presented with a dialog where you "
+"can edit the data stored about a person, including addresses and phone "
+"numbers.</p>"
+msgstr ""
+"Izmijeni odabrani kontakt<p>Biće vam predstavljen prozorčić u kome ćete moći "
+"da uredite pribilježene podatke o osobi, uključujući adrese i brojeve "
+"telefona.</p>"
+
+#: akonadi-contacts-widgets/textbrowser.cpp:57
+#, kde-format
+msgctxt "@action:inmenu Copy the text of a general item"
+msgid "Copy Item"
+msgstr "Kopiraj  stavku"
+
+#: akonadi-contacts-widgets/textbrowser.cpp:66
+#, kde-format
+msgctxt "@action:inmenu Copy a displayed email address"
+msgid "Copy Email Address"
+msgstr "Kopiraj adresu e-pošte"
+
+#: akonadi-contacts-widgets/textbrowser.cpp:75
+#, kde-format
+msgctxt "@action:inmenu Copy a link URL"
+msgid "Copy Link URL"
+msgstr "Kopiraj link URL"
+
+#: akonadi-contacts-widgets/textbrowser.cpp:102
+#, kde-format
+msgctxt "@action:inmenu Copy a contact photo"
+msgid "Copy Photo"
+msgstr "Kopiraj sliku"
+
+#: akonadi-contacts-widgets/textbrowser.cpp:105
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu Copy a QR or Datamatrix image"
+#| msgid "Copy Code"
+msgctxt "@action:inmenu Copy a QR code image"
+msgid "Copy Code"
+msgstr "Kopiraj kod"
+
+#: akonadi-contacts-widgets/waitingoverlay.cpp:35
+#, kde-format
+msgid "<p style=\"color: white;\"><b>Waiting for operation</b><br/></p>"
+msgstr "<p style=\"color: white;\"><b>Čekam na postupak</b><br/></p>"
+
+#: akonadi-contacts-widgets/widgets/selectaddressbookdialog.cpp:29
+#, fuzzy, kde-format
+#| msgid "Select the address book the new contact shall be saved in:"
+msgctxt "@info"
+msgid "Select the address book where the contact will be saved:"
+msgstr "Izaberi adresar u koji će se sačuvati novi kontakt:"
+
+#~ msgid "Phone Command"
+#~ msgstr "Naredba telefona"
+
+#~ msgid ""
+#~ "This command defines the application that shall be executed to dial a "
+#~ "contact's phone number."
+#~ msgstr ""
+#~ "Ova naredba određuje program koji se izvršava za pozivanje telefonskog "
+#~ "broja kontakta."
+
+#~ msgid ""
+#~ "The following placeholders can be used in the command:\n"
+#~ "   %N: The raw number as stored in the address book.\n"
+#~ "   %n: The normalized number with all non-digit characters removed."
+#~ msgstr ""
+#~ "U naredbi se mogu upotrijebiti sljedeća predviđena mjesta:\n"
+#~ "   %N: Sirovi broj, tačno kako je zapisan u adresaru.\n"
+#~ "   %n: Normalizovani broj, bez svih znakova koji nisu cifre."
+
+#, fuzzy
+#~| msgid ""
+#~| "Defines which application shall be used to send an SMS to the phone "
+#~| "number of a contact. If 'Skype' is selected the Skype application will "
+#~| "be started (if installed on the computer) and the SMS is sent via Skype. "
+#~| "If 'External Application' is selected, a command with placeholders can "
+#~| "be defined."
+#~ msgid ""
+#~ "Defines which application shall be used to send an SMS to the phone "
+#~ "number of a contact. If 'System Default' is selected the default handler "
+#~ "for SMS messages on your system will be used (e.g. KDE Connect), "
+#~ "otherwise the selected application will be used to send the SMS message "
+#~ "(if installed on the computer). If 'External Application' is selected, a "
+#~ "command with placeholders can be defined."
+#~ msgstr ""
+#~ "Definiše aplikacija koja se koristi da pošaljete SMS na broj telefona za "
+#~ "kontakt. Ako je \"Skype\" izabrano Skype aplikacija će biti pokrenuta "
+#~ "(ako je instalirana na računaru), a SMS poruka se šalje preko Skype-a. "
+#~ "Ako je \"Spoljašnji program\" izabrano, komanda na navedenom mjesta može "
+#~ "da se definiše."
+
+#~ msgid "SMS Command"
+#~ msgstr "SMS komanda"
+
+#~ msgid ""
+#~ "This command defines the application that shall be executed to send an "
+#~ "SMS to a contact's phone number."
+#~ msgstr ""
+#~ "Ova komanda definiše aplikaciju koja se izvršava da pošaljete SMS na broj "
+#~ "telefona kontakta."
+
+#~ msgid ""
+#~ "The following placeholders can be used in the command:\n"
+#~ "   %N: The raw number as stored in the address book.\n"
+#~ "   %n: The normalized number with all non-digit characters removed.\n"
+#~ "   %t: The text"
+#~ msgstr ""
+#~ "Sljedeća mjesta se koriste u komandi:\n"
+#~ "   %N: Neobrađen broj kakav je u adresaru.\n"
+#~ "   %n: Normalizovani broj s uklonjenim nenumeričkim znakovima.\n"
+#~ "   %t: Tekst"
+
+#~ msgid ""
+#~ "There is no application set which could be executed.\n"
+#~ "Please go to the settings dialog and configure one."
+#~ msgstr ""
+#~ "Ne postoji skup aplikacija koje se mogu pokrenuti.\n"
+#~ " Molim idite na dijalog postavki i podesite ga."
+
+#~ msgid "Dialing a number is not supported"
+#~ msgstr "Okretanje broja nije podržano."
+
+#~ msgid "Sending an SMS is not supported"
+#~ msgstr "Slanje SMS‑a nije podržano."
+
+#~ msgid ""
+#~ "Unable to start ekiga process, check that ekiga executable is in your "
+#~ "PATH variable."
+#~ msgstr ""
+#~ "Nemoguće započeti proces ekiga, provjerite da li je naredba ekiga "
+#~ "dostupna kroz promjenljivu PATH."
+
+#~ msgid "Ekiga Public API (D-Bus) seems to be disabled."
+#~ msgstr "Izgleda da je javni API Ekiga (D‑Bus) isključen."
+
+#~ msgid "Sending an SMS is currently not supported on Ekiga."
+#~ msgstr "Slanje SMS‑a trenutno nije podržano na Ekiga."
+
+#~ msgid ""
+#~ "Unable to start sflphone-client-kde process, check that sflphone-client-"
+#~ "kde executable is in your PATH variable."
+#~ msgstr ""
+#~ "Nemoguće započeti proces sflphone-client-kde, provjerite da li je naredba "
+#~ "sflphone-client-kde dostupna kroz promjenljivu PATH."
+
+#~ msgid ""
+#~ "Unable to start skype process, check that skype executable is in your "
+#~ "PATH variable."
+#~ msgstr ""
+#~ "Nemoguće započeti proces skype, provjerite da li je naredba skype "
+#~ "dostupna kroz promjenljivu PATH."
+
+#~ msgid "Skype Public API (D-Bus) seems to be disabled."
+#~ msgstr "Izgleda da je javni API Skypea (D‑Bus) isključen."
+
+#~ msgid "Skype registration failed."
+#~ msgstr "Skype registracija nije uspjela."
+
+#~ msgid "Protocol mismatch."
+#~ msgstr "Protokoli nisu usklađeni."
+
+#, fuzzy
+#~| msgid "SMS text"
+#~ msgctxt "@title:window"
+#~ msgid "SMS text"
+#~ msgstr "SMS tekst"
+
+#~ msgid "Please insert SMS text for an SMS to the following number: %1"
+#~ msgstr "Unesite tekst za slanje SMS‑a na sljedeći broj: %1"
+
+#~ msgid "%1/%2 (%3 SMS)"
+#~ msgstr "%1/%2 (%3 SMS)"
+
+#, fuzzy
+#~| msgctxt "@title:window"
+#~| msgid "Add Tags"
+#~ msgid "Tags"
+#~ msgstr "Dodaj oznake"
+
+#, fuzzy
+#~| msgid "Add Email"
+#~ msgid "Add a Country"
+#~ msgstr "Dodaj e-mail"
+
+#~ msgctxt "@option today"
+#~ msgid "&Today"
+#~ msgstr "&Danas"
+
+#~ msgctxt "@option tomorrow"
+#~ msgid "To&morrow"
+#~ msgstr "&Sutra"
+
+#~ msgctxt "@option next week"
+#~ msgid "Next &Week"
+#~ msgstr "Sljedeće &sedmice"
+
+#~ msgctxt "@option next month"
+#~ msgid "Next M&onth"
+#~ msgstr "Sljedeći &mjesec"
+
+#~ msgctxt "@option do not specify a date"
+#~ msgid "No Date"
+#~ msgstr "Bez datuma"
+
+#~ msgid ""
+#~ "Defines which application shall be used to show the postal address of a "
+#~ "contact on a map. If 'Web Browser' is selected, an URL can be defined "
+#~ "with placeholders for the single address parts. If 'External Application' "
+#~ "is selected, a command with placeholders can be defined."
+#~ msgstr ""
+#~ "Definiše koji će se program koristiti za prikazivanje poštanske adrese "
+#~ "kontakta na mapi. Ako se izabere 'Web Browser', može se definisati URL sa "
+#~ "predviđenim mjestima za pojedine dijelove adrese. Ako se izabere "
+#~ "'External Application', može se definisati naredba sa predviđenim "
+#~ "mjestima."
+
+#~ msgid ""
+#~ "This URL defines the website that shall be used to show a contact's "
+#~ "postal address."
+#~ msgstr ""
+#~ "Ovaj URL određuje web stranicu koja će se koristiti da se prikaže "
+#~ "poštanska adresa kontakta."
+
+#~ msgid ""
+#~ "The following placeholders can be used in the URL:\n"
+#~ "   %s: Street\n"
+#~ "   %r: Region\n"
+#~ "   %l: Location\n"
+#~ "   %z: Zip Code\n"
+#~ "   %c: Country ISO Code"
+#~ msgstr ""
+#~ "U URL‑u se mogu koristiti sljedeća predviđena mjesta:\n"
+#~ "   %s: ulica\n"
+#~ "   %r: regija\n"
+#~ "   %l: lokacija\n"
+#~ "   %z: poštanski broj\n"
+#~ "   %c: ISO kô̂d države"
+
+#~ msgid "Address Command"
+#~ msgstr "Naredba adrese"
+
+#~ msgid ""
+#~ "This command defines the application that shall be executed to show a "
+#~ "contact's postal address."
+#~ msgstr ""
+#~ "Ova naredba određuje program koji se izvršava za prikazivanje poštanske "
+#~ "adrese kontakta."
+
+#~ msgid ""
+#~ "The following placeholders can be used in the command:\n"
+#~ "   %s: Street\n"
+#~ "   %r: Region\n"
+#~ "   %l: Location\n"
+#~ "   %z: Zip Code\n"
+#~ "   %c: Country ISO Code"
+#~ msgstr ""
+#~ "U naredbi se mogu upotrijebiti sljedeća predviđena mjesta:\n"
+#~ "   %s: ulica\n"
+#~ "   %r: regija\n"
+#~ "   %l: lokacija\n"
+#~ "   %z: poštanski broj\n"
+#~ "   %c: ISO kô̂d države"
+
+#, fuzzy
+#~| msgid "Show Contact Group"
+#~ msgctxt "@title:window"
+#~ msgid "Show Contact Group"
+#~ msgstr "Prikaži grupu kontakata"
+
+#~ msgid "Select Address Book"
+#~ msgstr "Izaberi adresar"
+
+#, fuzzy
+#~| msgid "SMS Command"
+#~ msgid "KdeConnect SMS Command"
+#~ msgstr "SMS komanda"
+
+#~ msgid ""
+#~ "Defines which application shall be used to dial the phone number of a "
+#~ "contact. If 'Skype' is selected the Skype application will be started (if "
+#~ "installed on the computer) and the number is dialed. If 'External "
+#~ "Application' is selected, a command with placeholders can be defined."
+#~ msgstr ""
+#~ "Određuje program koji se izvršava za pozivanje telefonskog broja "
+#~ "kontakta. Ako se izabere 'Skype', pokreće se program Skype (ako je "
+#~ "instaliran na računaru) i poziva se broj. Ako se izabere 'External "
+#~ "Application', može se zadati naredba sa predviđenim mjestima."
+
+#, fuzzy
+#~| msgid "Phone Command"
+#~ msgid "kdeconnect Command"
+#~ msgstr "Naredba telefona"
+
+#, fuzzy
+#~| msgid "Add to:"
+#~ msgid "Add IM"
+#~ msgstr "Dodaj u:"
+
+#, fuzzy
+#~| msgctxt "street/postal"
+#~| msgid "Edit Address"
+#~ msgid "Edit Address"
+#~ msgstr "Izmijeni adresu"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Mirna Milic,Samir Ribić,Vedran Ljubovic,memsud"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "mm@etf.ba,samir.ribic@etf.unsa.ba,vljubovic@smartnet.ba,dedovic."
+#~ "memsud94@hotmail.com"
+
+#, fuzzy
+#~| msgctxt "instant messaging address"
+#~| msgid "Address"
+#~ msgid "Show Address"
+#~ msgstr "Adresa"
+
+#, fuzzy
+#~| msgid "SMS Command"
+#~ msgid "Command:"
+#~ msgstr "SMS komanda"
+
+#, fuzzy
+#~| msgid "Edit Phone Number"
+#~ msgid "Dial Phone Number"
+#~ msgstr "Izmijeni broj telefona"
+
+#, fuzzy
+#~| msgctxt "@info:tooltip"
+#~| msgid "Send SMS"
+#~ msgid "Send SMS"
+#~ msgstr "Pošalji SMS"
+
+#, fuzzy
+#~| msgctxt "@title:group"
+#~| msgid "Phones"
+#~ msgid "SflPhone"
+#~ msgstr "Telefoni"
+
+#~ msgid "Select preferred email address"
+#~ msgstr "Izaberi željenu email adresu"
+
+#, fuzzy
+#~| msgid "Edit Custom Field"
+#~ msgid "Title Custom Type"
+#~ msgstr "Izmijeni prilagođeno polje"
+
+#~ msgid "This is the preferred phone number"
+#~ msgstr "Ovo je poželjni telefonski broj"
+
+#~ msgid "Types"
+#~ msgstr "Vrste"
+
+#~ msgid "Edit Email Addresses"
+#~ msgstr "Izmijeni e-mail adresu"
+
+#~ msgid "Add..."
+#~ msgstr "Dodaj..."
+
+#~ msgid "New Email:"
+#~ msgstr "Novi e-mail"
+
+#~ msgid "Edit Email"
+#~ msgstr "Izmijeni e-mail"
+
+#~ msgctxt "@label:textbox Inputfield for an email address"
+#~ msgid "Email:"
+#~ msgstr "El. pošta:"
+
+#~ msgid ""
+#~ "<qt>Are you sure that you want to remove the email address <b>%1</b>?</qt>"
+#~ msgstr ""
+#~ "<qt> Da li ste sigurni da želite ukloniti e-mail adresu <b>%1</b>?</qt>"
+
+#~ msgid "Confirm Remove"
+#~ msgstr "Potvrdi uklanjanje"
+
+#~ msgid "&Delete"
+#~ msgstr "&Obriši"
+
+#~ msgctxt "@title:group Name related properties of a contact"
+#~ msgid "Name"
+#~ msgstr "Ime"
+
+#~ msgctxt "@title:group"
+#~ msgid "Internet"
+#~ msgstr "Internet"
+
+#~ msgctxt "@title:group"
+#~ msgid "Phones"
+#~ msgstr "Telefoni"
+
+#~ msgctxt "@label The name of a contact"
+#~ msgid "Name:"
+#~ msgstr "Ime:"
+
+#~ msgctxt "@label The nickname of a contact"
+#~ msgid "Nickname:"
+#~ msgstr "Nadimak:"
+
+#~ msgctxt "@label The email address of a contact"
+#~ msgid "Email:"
+#~ msgstr "Email:"
+
+#~ msgctxt "@label The homepage URL of a contact"
+#~ msgid "Homepage:"
+#~ msgstr "Početna strana:"
+
+#~ msgctxt "@label The blog URL of a contact"
+#~ msgid "Blog:"
+#~ msgstr "Blog:"
+
+#~ msgctxt "@label The instant messaging address of a contact"
+#~ msgid "Messaging:"
+#~ msgstr "Glasništvo:"
+
+#~ msgctxt "@label The categories of a contact"
+#~ msgid "Categories:"
+#~ msgstr "Kategorije:"
+
+#~ msgid "Messages"
+#~ msgstr "Poruke"
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Instant Messaging Addresses"
+#~ msgstr "Uređivanje adrese instant poruka"
+
+#~ msgctxt "@action:button"
+#~ msgid "Add..."
+#~ msgstr "Dodaj..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Edit..."
+#~ msgstr "Izmijeni..."
+
+#~ msgctxt "@action:button"
+#~ msgid "Remove"
+#~ msgstr "Ukloni"
+
+#~ msgctxt "@action:button"
+#~ msgid "Set as Standard"
+#~ msgstr "Postavi kao standardno"
+
+#~ msgctxt "@title:window"
+#~ msgid "Add IM Address"
+#~ msgstr "Dodaj IM adresu"
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit IM Address"
+#~ msgstr "Izmijeni IM adresu"
+
+#~ msgctxt "@info Instant messaging"
+#~ msgid ""
+#~ "Do you really want to delete the selected <resource>%1</resource> address?"
+#~ msgstr ""
+#~ "Da li zaista želite obrisati odabranu <resource>%1</resource> adresu?"
+
+#~ msgctxt "@title:window"
+#~ msgid "Confirm Delete Resource"
+#~ msgstr "Potvrdi brisanje resursa"
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Protocol:"
+#~ msgstr "Protokol:"
+
+#~ msgctxt "@label:textbox IM address"
+#~ msgid "Address:"
+#~ msgstr "Adresa:"
+
+#~ msgctxt "instant messaging protocol"
+#~ msgid "Protocol"
+#~ msgstr "Protokol"
+
+#~ msgctxt "instant messaging address"
+#~ msgid "Address"
+#~ msgstr "Adresa"
+
+#~ msgid "Add"
+#~ msgstr "Dodaj"
+
+#~ msgid "Edit Custom Field"
+#~ msgstr "Izmijeni prilagođeno polje"
+
+#~ msgctxt "The title of a custom field"
+#~ msgid "Title"
+#~ msgstr "Naslov"
+
+#~ msgctxt "The type of a custom field"
+#~ msgid "Type"
+#~ msgstr "Vrsta"
+
+#~ msgid "Key"
+#~ msgstr "Ključ"
+
+#, fuzzy
+#~| msgctxt "@label Opens the advanced dialog"
+#~| msgid "Advanced"
+#~ msgid "Advanced"
+#~ msgstr "Napredno"
+
+#~ msgctxt "recent contacts folder"
+#~ msgid "Recent Contacts"
+#~ msgstr "Skorašnji kontakti"
+
+#~ msgid ""
+#~ "Id of the resource containing the default recent contacts collection."
+#~ msgstr ""
+#~ "Id resursa koji sadrži podrazumijevanu kolekciju skorašnjih kontakata."
+
+#~ msgid ""
+#~ "Id of the contacts resource containing the recent contacts collection."
+#~ msgstr "ID resursa kontakata koji sadrži kolekciju skorašnjih kontakata."
+
+#~ msgctxt "@label:listbox type of address"
+#~ msgid "Address type:"
+#~ msgstr "Vrsta adrese:"
+
+#~ msgctxt "@action:button street/postal"
+#~ msgid "New..."
+#~ msgstr "Nova..."
+
+#~ msgctxt "@action:button street/postal"
+#~ msgid "Edit..."
+#~ msgstr "Izmijeni..."
+
+#~ msgctxt "@action:button street/postal"
+#~ msgid "Delete"
+#~ msgstr "Izbriši"
+
+#~ msgctxt "street/postal"
+#~ msgid "Edit Address"
+#~ msgstr "Izmijeni adresu"
+
+#~ msgctxt "<streetLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgctxt "<postOfficeBoxLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgctxt "<localityLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgctxt "<regionLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgctxt "<postalCodeLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgctxt "<countryLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgid "Edit Label..."
+#~ msgstr "Izmijeni oznaku..."
+
+#~ msgctxt "@label The pronunciation of a contact's name"
+#~ msgid "Pronunciation:"
+#~ msgstr "Izgovor:"
+
+#~ msgctxt "@title:group"
+#~ msgid "Addresses"
+#~ msgstr "Adrese"
+
+#~ msgctxt "@title:group"
+#~ msgid "Coordinates"
+#~ msgstr "Koordinate"
+
+#~ msgctxt "@label"
+#~ msgid "Latitude:"
+#~ msgstr "Geografska širina:"
+
+#~ msgctxt "@label"
+#~ msgid "Longitude:"
+#~ msgstr "Geografska dužina:"
+
+#~ msgctxt "@label Change the coordinates"
+#~ msgid "Change..."
+#~ msgstr "Izmijeni..."
+
+#~ msgctxt "@label Coordinates are not available"
+#~ msgid "n/a"
+#~ msgstr "n/d"
+
+#~ msgctxt "@label The formatted coordinates"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgctxt "@title:window"
+#~ msgid "Coordinate Selection"
+#~ msgstr "Izbor koordinata"
+
+#~ msgctxt "@title:group Decimal representation of coordinates"
+#~ msgid "Decimal"
+#~ msgstr "Decimalno"
+
+#~ msgctxt "@label:spinbox"
+#~ msgid "Latitude:"
+#~ msgstr "Geografska širina:"
+
+#~ msgctxt "@label:spinbox"
+#~ msgid "Longitude:"
+#~ msgstr "Geografska dužina:"
+
+#~ msgctxt "@title:group"
+#~ msgid "Sexagesimal"
+#~ msgstr "Heksagezimalne"
+
+#~ msgctxt "@item:inlistbox Latitude direction"
+#~ msgid "North"
+#~ msgstr "Sjever"
+
+#~ msgctxt "@item:inlistbox Latitude direction"
+#~ msgid "South"
+#~ msgstr "Jug"
+
+#~ msgctxt "@item:inlistbox Longtitude direction"
+#~ msgid "East"
+#~ msgstr "Istok"
+
+#~ msgctxt "@item:inlistbox Longtitude direction"
+#~ msgid "West"
+#~ msgstr "Zapad"
+
+#~ msgctxt "@item:inlistbox Undefined location"
+#~ msgid "Undefined"
+#~ msgstr "Nedefinisano"
+
+#~ msgid "This contact's sound cannot be found."
+#~ msgstr "Zvuk ove kontakt osobe se ne može pronaći."
+
+#~ msgid "Click to play pronunciation"
+#~ msgstr "Kliknite da pustite izgovor."
+
+#~ msgid "No pronunciation available"
+#~ msgstr "Izgovor nije dostupan."
+
+#~ msgid "Play"
+#~ msgstr "Pusti"
+
+#~ msgid "Change..."
+#~ msgstr "Izmijeni..."
+
+#~ msgid "Save..."
+#~ msgstr "Sačuvaj..."
+
+#~ msgctxt "@title:group General properties of a contact"
+#~ msgid "General"
+#~ msgstr "Općenito"
+
+#~ msgctxt "@title:group"
+#~ msgid "Groupware"
+#~ msgstr "Grupver"
+
+#~ msgctxt "@title:group Date related properties of a contact"
+#~ msgid "Dates"
+#~ msgstr "Datumi"
+
+#~ msgctxt "@title:group Family related properties of a contact"
+#~ msgid "Family"
+#~ msgstr "Porodica"
+
+#, fuzzy
+#~| msgid "Change..."
+#~ msgid "Change url..."
+#~ msgstr "Izmijeni..."
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Configure which tags should be applied."
+#~ msgstr "Podesite koje oznake treba primijeniti."
+
+#, fuzzy
+#~| msgctxt "@label"
+#~| msgid "Create new tag:"
+#~ msgctxt "@label"
+#~ msgid "Create new tag"
+#~ msgstr "Napravi novu oznaku:"
+
+#~ msgctxt "@info"
+#~ msgid "Delete tag"
+#~ msgstr "Obriši oznaku"
+
+#, fuzzy
+#~| msgid "Failed to store contact"
+#~ msgid "Failed to create a new tag"
+#~ msgstr "Ne mogu da sačuvam kontakt"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Should the tag <resource>%1</resource> really be deleted for all files?"
+#~ msgstr ""
+#~ "Da li oznaku <resource>%1</resource>zaista treba obrisati iz svih "
+#~ "datoteka?"
+
+#~ msgctxt "@title"
+#~ msgid "Delete tag"
+#~ msgstr "Obriši oznaku"
+
+#~ msgctxt "@action:button"
+#~ msgid "Delete"
+#~ msgstr "Obriši"
+
+#~ msgid ""
+#~ "There is no application set which could be executed. Please go to the "
+#~ "settings dialog and configure one."
+#~ msgstr ""
+#~ "Ne postoji skup aplikacija koje se mogu pokrenuti. Molim idite na dijalog "
+#~ "postavki i podesite ga."
+
+#~ msgid "Sending an SMS is currently not supported on Ekiga"
+#~ msgstr "Slanje SMS‑a trenutno nije podržano na Ekiga."
+
+#~ msgid "Could not call phone number %1"
+#~ msgstr "Ne mogu da pozovem broj telefona %1"
+
+#~ msgid "Sending an SMS is currently not supported on WinCE"
+#~ msgstr "Slanje SMS‑a trenutno nije podržano na Windowsu CE."
+
+#~ msgctxt "@label The anniversary of a contact"
+#~ msgid "Anniversary:"
+#~ msgstr "Godišnjica:"
+
+#~ msgctxt "street/postal"
+#~ msgid "Edit..."
+#~ msgstr "Izmijeni..."
+
+#~ msgid "Prefers to receive messages formatted as:"
+#~ msgstr "Više voli primati poruke formatirane kao:"
+
+#~ msgid "Unknown"
+#~ msgstr "Nepoznato"

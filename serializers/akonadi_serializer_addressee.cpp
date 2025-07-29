@@ -6,12 +6,13 @@
 
 #include "akonadi_serializer_addressee.h"
 
-#include <AkonadiCore/AbstractDifferencesReporter>
-#include <AkonadiCore/Item>
+#include <Akonadi/AbstractDifferencesReporter>
+#include <Akonadi/Item>
 
 #include "serializer_debug.h"
 #include <KContacts/Addressee>
 #include <KLocalizedString>
+#include <QIODevice>
 
 using namespace Akonadi;
 
@@ -75,7 +76,8 @@ void SerializerPluginAddressee::serialize(const Item &item, const QByteArray &la
         return;
     }
 
-    KContacts::Addressee addr, temp;
+    KContacts::Addressee addr;
+    KContacts::Addressee temp;
 
     temp = item.payload<KContacts::Addressee>();
 
@@ -104,7 +106,7 @@ void SerializerPluginAddressee::serialize(const Item &item, const QByteArray &la
 
 //// DifferencesAlgorithmInterface interface
 
-static bool compareString(const QString &left, const QString &right)
+[[nodiscard]] static bool compareString(const QString &left, const QString &right)
 {
     if (left.isEmpty() && right.isEmpty()) {
         return true;
@@ -113,22 +115,23 @@ static bool compareString(const QString &left, const QString &right)
     }
 }
 
-static QString toString(const KContacts::PhoneNumber &phoneNumber)
+[[nodiscard]] static QString toString(const KContacts::PhoneNumber &phoneNumber)
 {
     return phoneNumber.number();
 }
 
-static QString toString(const KContacts::Address &address)
+[[nodiscard]] static QString toString(const KContacts::Address &address)
 {
     return address.toString();
 }
 
-static QString toString(const QString &value)
+[[nodiscard]] static QString toString(const QString &value)
 {
     return value;
 }
 
-template<class T> static void compareList(Akonadi::AbstractDifferencesReporter *reporter, const QString &id, const QList<T> &left, const QList<T> &right)
+template<class T>
+static void compareList(Akonadi::AbstractDifferencesReporter *reporter, const QString &id, const QList<T> &left, const QList<T> &right)
 {
     for (int i = 0; i < left.count(); ++i) {
         if (!right.contains(left[i])) {
@@ -143,7 +146,8 @@ template<class T> static void compareList(Akonadi::AbstractDifferencesReporter *
     }
 }
 
-template<class T> static void compareVector(Akonadi::AbstractDifferencesReporter *reporter, const QString &id, const QVector<T> &left, const QVector<T> &right)
+template<class T>
+static void compareVector(Akonadi::AbstractDifferencesReporter *reporter, const QString &id, const QList<T> &left, const QList<T> &right)
 {
     for (int i = 0; i < left.count(); ++i) {
         if (!right.contains(left[i])) {
@@ -305,7 +309,9 @@ void SerializerPluginAddressee::compare(Akonadi::AbstractDifferencesReporter *re
 QString SerializerPluginAddressee::extractGid(const Item &item) const
 {
     if (!item.hasPayload<KContacts::Addressee>()) {
-        return QString();
+        return {};
     }
     return item.payload<KContacts::Addressee>().uid();
 }
+
+#include "moc_akonadi_serializer_addressee.cpp"
