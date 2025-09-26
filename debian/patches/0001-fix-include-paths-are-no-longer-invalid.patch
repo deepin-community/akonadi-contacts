@@ -1,0 +1,868 @@
+From fdb3b949b1e87d12a4b6c12c0f991725f6d85194 Mon Sep 17 00:00:00 2001
+From: sisungo <sisungo@icloud.com>
+Date: Fri, 26 Sep 2025 22:41:46 +0800
+Subject: [PATCH] fix: include paths are no longer invalid
+
+---
+ serializers/akonadi_serializer_addressee.cpp  |  4 ++--
+ serializers/akonadi_serializer_addressee.h    |  6 ++---
+ .../abstractcontactformatter.cpp              |  2 +-
+ .../abstractcontactgroupformatter.cpp         |  2 +-
+ .../attributes/attributeregistrar.cpp         |  2 +-
+ .../attributes/contactmetadataattribute_p.h   |  2 +-
+ .../collectionfiltermodel.cpp                 |  2 +-
+ .../collectionfiltermodel_p.h                 |  2 +-
+ .../contactcompletionmodel.cpp                |  8 +++----
+ .../contactcompletionmodel_p.h                |  2 +-
+ src/akonadi-contacts/contacteditor.cpp        | 16 +++++++-------
+ src/akonadi-contacts/contacteditordialog.cpp  |  4 ++--
+ src/akonadi-contacts/contactgroupeditor.cpp   | 16 +++++++-------
+ src/akonadi-contacts/contactgroupeditor_p.h   |  4 ++--
+ .../contactgroupeditordelegate.cpp            |  2 +-
+ .../contactgroupeditordelegate_p.h            |  2 +-
+ .../contactgroupeditordialog.cpp              |  4 ++--
+ src/akonadi-contacts/contactgroupmodel.cpp    |  4 ++--
+ src/akonadi-contacts/contactgroupviewer.cpp   | 10 ++++-----
+ src/akonadi-contacts/contactgroupviewer.h     |  2 +-
+ .../contactgroupviewerdialog.cpp              |  2 +-
+ .../contactmetadataakonadi.cpp                |  2 +-
+ .../contactsfilterproxymodel.cpp              |  2 +-
+ src/akonadi-contacts/contactstreemodel.h      |  2 +-
+ src/akonadi-contacts/contactviewer.cpp        | 10 ++++-----
+ src/akonadi-contacts/contactviewer.h          |  2 +-
+ src/akonadi-contacts/contactviewerdialog.cpp  |  2 +-
+ .../emailaddressselection_p.h                 |  2 +-
+ .../emailaddressselectionmodel.cpp            |  8 +++----
+ .../emailaddressselectionproxymodel.cpp       |  2 +-
+ .../emailaddressselectionwidget.cpp           | 12 +++++-----
+ .../emailaddressselectionwidget.h             |  2 +-
+ .../grantlee/grantleecontactformatter.cpp     |  2 +-
+ .../grantleecontactgroupformatter.cpp         |  2 +-
+ src/akonadi-contacts/job/addcontactjob.cpp    |  6 ++---
+ .../job/addemailaddressjob.cpp                | 20 ++++++++---------
+ .../job/addemaildisplayjob.cpp                | 22 +++++++++----------
+ src/akonadi-contacts/job/addemaildisplayjob.h |  2 +-
+ .../job/contactgroupexpandjob.cpp             |  6 ++---
+ .../job/contactgroupsearchjob.cpp             |  4 ++--
+ .../job/contactgroupsearchjob.h               |  4 ++--
+ src/akonadi-contacts/job/contactsearchjob.cpp |  4 ++--
+ src/akonadi-contacts/job/contactsearchjob.h   |  2 +-
+ .../job/openemailaddressjob.cpp               |  6 ++---
+ .../plugins/categorieseditwidget.cpp          |  6 ++---
+ .../selectaddressbookdialog.h                 |  2 +-
+ .../standardcontactactionmanager.cpp          |  4 ++--
+ .../standardcontactactionmanager.h            |  2 +-
+ .../standardcontactformatter.cpp              |  2 +-
+ .../standardcontactgroupformatter.cpp         |  2 +-
+ 51 files changed, 122 insertions(+), 122 deletions(-)
+
+diff --git a/serializers/akonadi_serializer_addressee.cpp b/serializers/akonadi_serializer_addressee.cpp
+index 87c6a24..ca2b1d7 100644
+--- a/serializers/akonadi_serializer_addressee.cpp
++++ b/serializers/akonadi_serializer_addressee.cpp
+@@ -6,8 +6,8 @@
+ 
+ #include "akonadi_serializer_addressee.h"
+ 
+-#include <AkonadiCore/AbstractDifferencesReporter>
+-#include <AkonadiCore/Item>
++#include <AkonadiCore/Akonadi/AbstractDifferencesReporter>
++#include <AkonadiCore/Akonadi/Item>
+ 
+ #include "serializer_debug.h"
+ #include <KContacts/Addressee>
+diff --git a/serializers/akonadi_serializer_addressee.h b/serializers/akonadi_serializer_addressee.h
+index 5080dbf..09bfc62 100644
+--- a/serializers/akonadi_serializer_addressee.h
++++ b/serializers/akonadi_serializer_addressee.h
+@@ -8,9 +8,9 @@
+ 
+ #include <QObject>
+ 
+-#include <AkonadiCore/differencesalgorithminterface.h>
+-#include <AkonadiCore/gidextractorinterface.h>
+-#include <AkonadiCore/itemserializerplugin.h>
++#include <AkonadiCore/akonadi/differencesalgorithminterface.h>
++#include <AkonadiCore/akonadi/gidextractorinterface.h>
++#include <AkonadiCore/akonadi/itemserializerplugin.h>
+ #include <kcontacts/vcardconverter.h>
+ 
+ namespace Akonadi
+diff --git a/src/akonadi-contacts/abstractcontactformatter.cpp b/src/akonadi-contacts/abstractcontactformatter.cpp
+index ff8dad2..61bfdd5 100644
+--- a/src/akonadi-contacts/abstractcontactformatter.cpp
++++ b/src/akonadi-contacts/abstractcontactformatter.cpp
+@@ -8,7 +8,7 @@
+ 
+ #include "abstractcontactformatter.h"
+ 
+-#include <item.h>
++#include <AkonadiCore/akonadi/item.h>
+ #include <kcontacts/addressee.h>
+ 
+ using namespace Akonadi;
+diff --git a/src/akonadi-contacts/abstractcontactgroupformatter.cpp b/src/akonadi-contacts/abstractcontactgroupformatter.cpp
+index 356a644..3164f6d 100644
+--- a/src/akonadi-contacts/abstractcontactgroupformatter.cpp
++++ b/src/akonadi-contacts/abstractcontactgroupformatter.cpp
+@@ -8,7 +8,7 @@
+ 
+ #include "abstractcontactgroupformatter.h"
+ 
+-#include <item.h>
++#include <AkonadiCore/akonadi/item.h>
+ #include <kcontacts/contactgroup.h>
+ 
+ using namespace Akonadi;
+diff --git a/src/akonadi-contacts/attributes/attributeregistrar.cpp b/src/akonadi-contacts/attributes/attributeregistrar.cpp
+index fbe2ff8..0454f4d 100644
+--- a/src/akonadi-contacts/attributes/attributeregistrar.cpp
++++ b/src/akonadi-contacts/attributes/attributeregistrar.cpp
+@@ -8,7 +8,7 @@
+ 
+ #include "attributes/contactmetadataattribute_p.h"
+ 
+-#include <attributefactory.h>
++#include <AkonadiCore/akonadi/attributefactory.h>
+ 
+ namespace
+ {
+diff --git a/src/akonadi-contacts/attributes/contactmetadataattribute_p.h b/src/akonadi-contacts/attributes/contactmetadataattribute_p.h
+index 63ad7fb..d0f63a0 100644
+--- a/src/akonadi-contacts/attributes/contactmetadataattribute_p.h
++++ b/src/akonadi-contacts/attributes/contactmetadataattribute_p.h
+@@ -10,7 +10,7 @@
+ 
+ #include "akonadi-contact_export.h"
+ 
+-#include <attribute.h>
++#include <AkonadiCore/akonadi/attribute.h>
+ 
+ #include <QVariant>
+ 
+diff --git a/src/akonadi-contacts/collectionfiltermodel.cpp b/src/akonadi-contacts/collectionfiltermodel.cpp
+index ba68f12..ec6250d 100644
+--- a/src/akonadi-contacts/collectionfiltermodel.cpp
++++ b/src/akonadi-contacts/collectionfiltermodel.cpp
+@@ -8,7 +8,7 @@
+ 
+ #include "collectionfiltermodel_p.h"
+ 
+-#include <entitytreemodel.h>
++#include <AkonadiCore/akonadi/entitytreemodel.h>
+ 
+ CollectionFilterModel::CollectionFilterModel(QObject *parent)
+     : QSortFilterProxyModel(parent)
+diff --git a/src/akonadi-contacts/collectionfiltermodel_p.h b/src/akonadi-contacts/collectionfiltermodel_p.h
+index 4874aad..43b9e8c 100644
+--- a/src/akonadi-contacts/collectionfiltermodel_p.h
++++ b/src/akonadi-contacts/collectionfiltermodel_p.h
+@@ -10,7 +10,7 @@
+ 
+ #include <QSortFilterProxyModel>
+ 
+-#include <collection.h>
++#include <AkonadiCore/akonadi/collection.h>
+ 
+ /**
+  * @short A filter model for Akonadi collections.
+diff --git a/src/akonadi-contacts/contactcompletionmodel.cpp b/src/akonadi-contacts/contactcompletionmodel.cpp
+index 527075b..3e0bd61 100644
+--- a/src/akonadi-contacts/contactcompletionmodel.cpp
++++ b/src/akonadi-contacts/contactcompletionmodel.cpp
+@@ -8,10 +8,10 @@
+ 
+ #include "contactcompletionmodel_p.h"
+ 
+-#include <entitymimetypefiltermodel.h>
+-#include <itemfetchscope.h>
+-#include <monitor.h>
+-#include <session.h>
++#include <AkonadiCore/akonadi/entitymimetypefiltermodel.h>
++#include <AkonadiCore/akonadi/itemfetchscope.h>
++#include <AkonadiCore/akonadi/monitor.h>
++#include <AkonadiCore/akonadi/session.h>
+ 
+ #include <kcontacts/addressee.h>
+ 
+diff --git a/src/akonadi-contacts/contactcompletionmodel_p.h b/src/akonadi-contacts/contactcompletionmodel_p.h
+index da7a824..3745478 100644
+--- a/src/akonadi-contacts/contactcompletionmodel_p.h
++++ b/src/akonadi-contacts/contactcompletionmodel_p.h
+@@ -8,7 +8,7 @@
+ 
+ #pragma once
+ 
+-#include <entitytreemodel.h>
++#include <AkonadiCore/akonadi/entitytreemodel.h>
+ 
+ namespace Akonadi
+ {
+diff --git a/src/akonadi-contacts/contacteditor.cpp b/src/akonadi-contacts/contacteditor.cpp
+index a1ae43c..4a237cb 100644
+--- a/src/akonadi-contacts/contacteditor.cpp
++++ b/src/akonadi-contacts/contacteditor.cpp
+@@ -14,15 +14,15 @@
+ #include "editor/contacteditorwidget.h"
+ 
+ #include <KLocalizedString>
+-#include <collectiondialog.h>
+-#include <collectionfetchjob.h>
+-#include <itemcreatejob.h>
+-#include <itemfetchjob.h>
+-#include <itemfetchscope.h>
+-#include <itemmodifyjob.h>
++#include <AkonadiWidgets/akonadi/collectiondialog.h>
++#include <AkonadiCore/akonadi/collectionfetchjob.h>
++#include <AkonadiCore/akonadi/itemcreatejob.h>
++#include <AkonadiCore/akonadi/itemfetchjob.h>
++#include <AkonadiCore/akonadi/itemfetchscope.h>
++#include <AkonadiCore/akonadi/itemmodifyjob.h>
+ #include <kcontacts/addressee.h>
+-#include <monitor.h>
+-#include <session.h>
++#include <AkonadiCore/akonadi/monitor.h>
++#include <AkonadiCore/akonadi/session.h>
+ 
+ #include <QMessageBox>
+ #include <QPointer>
+diff --git a/src/akonadi-contacts/contacteditordialog.cpp b/src/akonadi-contacts/contacteditordialog.cpp
+index 6cd8a34..dce823c 100644
+--- a/src/akonadi-contacts/contacteditordialog.cpp
++++ b/src/akonadi-contacts/contacteditordialog.cpp
+@@ -10,8 +10,8 @@
+ 
+ #include "contacteditor.h"
+ 
+-#include <collectioncombobox.h>
+-#include <item.h>
++#include <AkonadiWidgets/akonadi/collectioncombobox.h>
++#include <AkonadiCore/akonadi/item.h>
+ 
+ #include <kcontacts/addressee.h>
+ 
+diff --git a/src/akonadi-contacts/contactgroupeditor.cpp b/src/akonadi-contacts/contactgroupeditor.cpp
+index 02337f5..778c3a3 100644
+--- a/src/akonadi-contacts/contactgroupeditor.cpp
++++ b/src/akonadi-contacts/contactgroupeditor.cpp
+@@ -16,15 +16,15 @@
+ #include <KColorScheme>
+ #include <KLocalizedString>
+ #include <KMessageBox>
+-#include <collectiondialog.h>
+-#include <collectionfetchjob.h>
+-#include <itemcreatejob.h>
+-#include <itemfetchjob.h>
+-#include <itemfetchscope.h>
+-#include <itemmodifyjob.h>
++#include <AkonadiWidgets/akonadi/collectiondialog.h>
++#include <AkonadiCore/akonadi/collectionfetchjob.h>
++#include <AkonadiCore/akonadi/itemcreatejob.h>
++#include <AkonadiCore/akonadi/itemfetchjob.h>
++#include <AkonadiCore/akonadi/itemfetchscope.h>
++#include <AkonadiCore/akonadi/itemmodifyjob.h>
+ #include <kcontacts/contactgroup.h>
+-#include <monitor.h>
+-#include <session.h>
++#include <AkonadiCore/akonadi/monitor.h>
++#include <AkonadiCore/akonadi/session.h>
+ 
+ #include <QMessageBox>
+ #include <QTimer>
+diff --git a/src/akonadi-contacts/contactgroupeditor_p.h b/src/akonadi-contacts/contactgroupeditor_p.h
+index f49931d..382fb7e 100644
+--- a/src/akonadi-contacts/contactgroupeditor_p.h
++++ b/src/akonadi-contacts/contactgroupeditor_p.h
+@@ -12,8 +12,8 @@
+ 
+ #include "ui_contactgroupeditor.h"
+ 
+-#include <collection.h>
+-#include <item.h>
++#include <AkonadiCore/akonadi/collection.h>
++#include <AkonadiCore/akonadi/item.h>
+ 
+ class KJob;
+ 
+diff --git a/src/akonadi-contacts/contactgroupeditordelegate.cpp b/src/akonadi-contacts/contactgroupeditordelegate.cpp
+index e45d6b5..9e85088 100644
+--- a/src/akonadi-contacts/contactgroupeditordelegate.cpp
++++ b/src/akonadi-contacts/contactgroupeditordelegate.cpp
+@@ -12,7 +12,7 @@
+ #include "contactgroupmodel_p.h"
+ 
+ #include <KComboBox>
+-#include <entitytreemodel.h>
++#include <AkonadiCore/akonadi/entitytreemodel.h>
+ 
+ #include <QAbstractItemView>
+ #include <QCompleter>
+diff --git a/src/akonadi-contacts/contactgroupeditordelegate_p.h b/src/akonadi-contacts/contactgroupeditordelegate_p.h
+index b3a1190..2e446d5 100644
+--- a/src/akonadi-contacts/contactgroupeditordelegate_p.h
++++ b/src/akonadi-contacts/contactgroupeditordelegate_p.h
+@@ -13,7 +13,7 @@
+ #include <QStyledItemDelegate>
+ 
+ #include "contactcompletionmodel_p.h"
+-#include <item.h>
++#include <AkonadiCore/akonadi/item.h>
+ 
+ namespace Akonadi
+ {
+diff --git a/src/akonadi-contacts/contactgroupeditordialog.cpp b/src/akonadi-contacts/contactgroupeditordialog.cpp
+index 3b91a8f..b1b62bd 100644
+--- a/src/akonadi-contacts/contactgroupeditordialog.cpp
++++ b/src/akonadi-contacts/contactgroupeditordialog.cpp
+@@ -12,8 +12,8 @@
+ #include "contactgroupeditor_p.h"
+ 
+ #include <KLocalizedString>
+-#include <collectioncombobox.h>
+-#include <item.h>
++#include <AkonadiWidgets/akonadi/collectioncombobox.h>
++#include <AkonadiCore/akonadi/item.h>
+ #include <kcontacts/contactgroup.h>
+ 
+ #include <KConfig>
+diff --git a/src/akonadi-contacts/contactgroupmodel.cpp b/src/akonadi-contacts/contactgroupmodel.cpp
+index 45d7ca6..49e9350 100644
+--- a/src/akonadi-contacts/contactgroupmodel.cpp
++++ b/src/akonadi-contacts/contactgroupmodel.cpp
+@@ -8,8 +8,8 @@
+ 
+ #include "contactgroupmodel_p.h"
+ 
+-#include <itemfetchjob.h>
+-#include <itemfetchscope.h>
++#include <AkonadiCore/akonadi/itemfetchjob.h>
++#include <AkonadiCore/akonadi/itemfetchscope.h>
+ #include <kcontacts/addressee.h>
+ 
+ #include <KIconEngine>
+diff --git a/src/akonadi-contacts/contactgroupviewer.cpp b/src/akonadi-contacts/contactgroupviewer.cpp
+index 3ae2c66..807caa2 100644
+--- a/src/akonadi-contacts/contactgroupviewer.cpp
++++ b/src/akonadi-contacts/contactgroupviewer.cpp
+@@ -13,11 +13,11 @@
+ #include "textbrowser_p.h"
+ 
+ #include <KColorScheme>
+-#include <collectionfetchjob.h>
+-#include <entitydisplayattribute.h>
+-#include <item.h>
+-#include <itemfetchjob.h>
+-#include <itemfetchscope.h>
++#include <AkonadiCore/akonadi/collectionfetchjob.h>
++#include <AkonadiCore/akonadi/entitydisplayattribute.h>
++#include <AkonadiCore/akonadi/item.h>
++#include <AkonadiCore/akonadi/itemfetchjob.h>
++#include <AkonadiCore/akonadi/itemfetchscope.h>
+ #include <kcontacts/addressee.h>
+ #include <kcontacts/contactgroup.h>
+ 
+diff --git a/src/akonadi-contacts/contactgroupviewer.h b/src/akonadi-contacts/contactgroupviewer.h
+index 8f1174b..2c37e01 100644
+--- a/src/akonadi-contacts/contactgroupviewer.h
++++ b/src/akonadi-contacts/contactgroupviewer.h
+@@ -10,7 +10,7 @@
+ 
+ #include "akonadi-contact_export.h"
+ 
+-#include <itemmonitor.h>
++#include <AkonadiCore/akonadi/itemmonitor.h>
+ 
+ #include <QWidget>
+ 
+diff --git a/src/akonadi-contacts/contactgroupviewerdialog.cpp b/src/akonadi-contacts/contactgroupviewerdialog.cpp
+index 5a9f65f..96efd78 100644
+--- a/src/akonadi-contacts/contactgroupviewerdialog.cpp
++++ b/src/akonadi-contacts/contactgroupviewerdialog.cpp
+@@ -11,7 +11,7 @@
+ #include "contactgroupviewer.h"
+ 
+ #include <KLocalizedString>
+-#include <item.h>
++#include <AkonadiCore/akonadi/item.h>
+ 
+ #include <QDialogButtonBox>
+ #include <QPushButton>
+diff --git a/src/akonadi-contacts/contactmetadataakonadi.cpp b/src/akonadi-contacts/contactmetadataakonadi.cpp
+index ebb49a0..2366df2 100644
+--- a/src/akonadi-contacts/contactmetadataakonadi.cpp
++++ b/src/akonadi-contacts/contactmetadataakonadi.cpp
+@@ -10,7 +10,7 @@
+ 
+ #include "attributes/contactmetadataattribute_p.h"
+ 
+-#include <item.h>
++#include <AkonadiCore/akonadi/item.h>
+ 
+ using namespace Akonadi;
+ 
+diff --git a/src/akonadi-contacts/contactsfilterproxymodel.cpp b/src/akonadi-contacts/contactsfilterproxymodel.cpp
+index bc3afa2..fc71f16 100644
+--- a/src/akonadi-contacts/contactsfilterproxymodel.cpp
++++ b/src/akonadi-contacts/contactsfilterproxymodel.cpp
+@@ -10,7 +10,7 @@
+ 
+ #include "contactstreemodel.h"
+ 
+-#include <entitytreemodel.h>
++#include <AkonadiCore/akonadi/entitytreemodel.h>
+ #include <kcontacts/addressee.h>
+ #include <kcontacts/contactgroup.h>
+ 
+diff --git a/src/akonadi-contacts/contactstreemodel.h b/src/akonadi-contacts/contactstreemodel.h
+index bd6f3e1..14f4260 100644
+--- a/src/akonadi-contacts/contactstreemodel.h
++++ b/src/akonadi-contacts/contactstreemodel.h
+@@ -11,7 +11,7 @@
+ 
+ #include "akonadi-contact_export.h"
+ 
+-#include <entitytreemodel.h>
++#include <AkonadiCore/akonadi/entitytreemodel.h>
+ 
+ namespace Akonadi
+ {
+diff --git a/src/akonadi-contacts/contactviewer.cpp b/src/akonadi-contacts/contactviewer.cpp
+index d16d4e0..8848935 100644
+--- a/src/akonadi-contacts/contactviewer.cpp
++++ b/src/akonadi-contacts/contactviewer.cpp
+@@ -18,11 +18,11 @@
+ #include <KConfigGroup>
+ #include <KIOCore/kio/transferjob.h>
+ #include <KLocalizedString>
+-#include <collection.h>
+-#include <collectionfetchjob.h>
+-#include <entitydisplayattribute.h>
+-#include <item.h>
+-#include <itemfetchscope.h>
++#include <AkonadiCore/akonadi/collection.h>
++#include <AkonadiCore/akonadi/collectionfetchjob.h>
++#include <AkonadiCore/akonadi/entitydisplayattribute.h>
++#include <AkonadiCore/akonadi/item.h>
++#include <AkonadiCore/akonadi/itemfetchscope.h>
+ #include <kcontacts/addressee.h>
+ 
+ #include <QGuiApplication>
+diff --git a/src/akonadi-contacts/contactviewer.h b/src/akonadi-contacts/contactviewer.h
+index 27c3e52..8f23ac3 100644
+--- a/src/akonadi-contacts/contactviewer.h
++++ b/src/akonadi-contacts/contactviewer.h
+@@ -10,7 +10,7 @@
+ 
+ #include "akonadi-contact_export.h"
+ 
+-#include <itemmonitor.h>
++#include <AkonadiCore/akonadi/itemmonitor.h>
+ 
+ #include <QWidget>
+ 
+diff --git a/src/akonadi-contacts/contactviewerdialog.cpp b/src/akonadi-contacts/contactviewerdialog.cpp
+index b0b4d92..23ff5e9 100644
+--- a/src/akonadi-contacts/contactviewerdialog.cpp
++++ b/src/akonadi-contacts/contactviewerdialog.cpp
+@@ -10,7 +10,7 @@
+ #include "contactdefaultactions.h"
+ #include "contactviewer.h"
+ 
+-#include <item.h>
++#include <AkonadiCore/akonadi/item.h>
+ using namespace Akonadi;
+ 
+ #include <KConfig>
+diff --git a/src/akonadi-contacts/emailaddressselection_p.h b/src/akonadi-contacts/emailaddressselection_p.h
+index 1e72e5b..913c573 100644
+--- a/src/akonadi-contacts/emailaddressselection_p.h
++++ b/src/akonadi-contacts/emailaddressselection_p.h
+@@ -12,7 +12,7 @@
+ #include <QSharedData>
+ #include <QString>
+ 
+-#include <item.h>
++#include <AkonadiCore/akonadi/item.h>
+ 
+ namespace Akonadi
+ {
+diff --git a/src/akonadi-contacts/emailaddressselectionmodel.cpp b/src/akonadi-contacts/emailaddressselectionmodel.cpp
+index 3125265..e08e63c 100644
+--- a/src/akonadi-contacts/emailaddressselectionmodel.cpp
++++ b/src/akonadi-contacts/emailaddressselectionmodel.cpp
+@@ -8,10 +8,10 @@
+ 
+ #include "emailaddressselectionmodel.h"
+ #include <Akonadi/Contact/ContactsTreeModel>
+-#include <AkonadiCore/ChangeRecorder>
+-#include <AkonadiCore/EntityDisplayAttribute>
+-#include <AkonadiCore/ItemFetchScope>
+-#include <AkonadiCore/Session>
++#include <AkonadiCore/Akonadi/ChangeRecorder>
++#include <AkonadiCore/Akonadi/EntityDisplayAttribute>
++#include <AkonadiCore/Akonadi/ItemFetchScope>
++#include <AkonadiCore/Akonadi/Session>
+ #include <KContacts/Addressee>
+ #include <KContacts/ContactGroup>
+ 
+diff --git a/src/akonadi-contacts/emailaddressselectionproxymodel.cpp b/src/akonadi-contacts/emailaddressselectionproxymodel.cpp
+index 3241212..f97a5ce 100644
+--- a/src/akonadi-contacts/emailaddressselectionproxymodel.cpp
++++ b/src/akonadi-contacts/emailaddressselectionproxymodel.cpp
+@@ -10,7 +10,7 @@
+ #include "emailaddressselectionproxymodel_p.h"
+ 
+ #include <KLocalizedString>
+-#include <item.h>
++#include <AkonadiCore/akonadi/item.h>
+ #include <kcontacts/addressee.h>
+ #include <kcontacts/contactgroup.h>
+ 
+diff --git a/src/akonadi-contacts/emailaddressselectionwidget.cpp b/src/akonadi-contacts/emailaddressselectionwidget.cpp
+index 1cb5de1..75210ad 100644
+--- a/src/akonadi-contacts/emailaddressselectionwidget.cpp
++++ b/src/akonadi-contacts/emailaddressselectionwidget.cpp
+@@ -14,16 +14,16 @@
+ #include "emailaddressselectionproxymodel_p.h"
+ 
+ #include <KLocalizedString>
+-#include <changerecorder.h>
++#include <AkonadiCore/akonadi/changerecorder.h>
+ #include <contactsfilterproxymodel.h>
+ #include <contactstreemodel.h>
+-#include <controlgui.h>
+-#include <entitydisplayattribute.h>
+-#include <entitytreeview.h>
+-#include <itemfetchscope.h>
++#include <AkonadiWidgets/akonadi/controlgui.h>
++#include <AkonadiCore/akonadi/entitydisplayattribute.h>
++#include <AkonadiWidgets/akonadi/entitytreeview.h>
++#include <AkonadiCore/akonadi/itemfetchscope.h>
+ #include <kcontacts/addressee.h>
+ #include <kcontacts/contactgroup.h>
+-#include <session.h>
++#include <AkonadiCore/akonadi/session.h>
+ 
+ #include <QHBoxLayout>
+ #include <QHeaderView>
+diff --git a/src/akonadi-contacts/emailaddressselectionwidget.h b/src/akonadi-contacts/emailaddressselectionwidget.h
+index 7880c66..ca0e913 100644
+--- a/src/akonadi-contacts/emailaddressselectionwidget.h
++++ b/src/akonadi-contacts/emailaddressselectionwidget.h
+@@ -13,7 +13,7 @@
+ 
+ #include "emailaddressselection.h"
+ 
+-#include <item.h>
++#include <AkonadiCore/akonadi/item.h>
+ 
+ #include <QAbstractItemView>
+ #include <QWidget>
+diff --git a/src/akonadi-contacts/grantlee/grantleecontactformatter.cpp b/src/akonadi-contacts/grantlee/grantleecontactformatter.cpp
+index 679b6b9..e591020 100644
+--- a/src/akonadi-contacts/grantlee/grantleecontactformatter.cpp
++++ b/src/akonadi-contacts/grantlee/grantleecontactformatter.cpp
+@@ -19,7 +19,7 @@
+ #include <grantlee/metatype.h>
+ #include <grantlee/templateloader.h>
+ 
+-#include <AkonadiCore/Item>
++#include <AkonadiCore/Akonadi/Item>
+ 
+ #include <KColorScheme>
+ 
+diff --git a/src/akonadi-contacts/grantlee/grantleecontactgroupformatter.cpp b/src/akonadi-contacts/grantlee/grantleecontactgroupformatter.cpp
+index b06c7d3..9b60d87 100644
+--- a/src/akonadi-contacts/grantlee/grantleecontactgroupformatter.cpp
++++ b/src/akonadi-contacts/grantlee/grantleecontactgroupformatter.cpp
+@@ -15,7 +15,7 @@
+ #include <grantlee/templateloader.h>
+ 
+ #include <Akonadi/Contact/ContactGroupExpandJob>
+-#include <AkonadiCore/Item>
++#include <AkonadiCore/Akonadi/Item>
+ 
+ #include <KColorScheme>
+ 
+diff --git a/src/akonadi-contacts/job/addcontactjob.cpp b/src/akonadi-contacts/job/addcontactjob.cpp
+index 25ac89f..6108b34 100644
+--- a/src/akonadi-contacts/job/addcontactjob.cpp
++++ b/src/akonadi-contacts/job/addcontactjob.cpp
+@@ -6,13 +6,13 @@
+ 
+ #include "addcontactjob.h"
+ #include "akonadi/contact/selectaddressbookdialog.h"
+-#include <Collection>
++#include <AkonadiCore/Akonadi/Collection>
+ 
+ #include <Akonadi/Contact/ContactSearchJob>
+ #include <KLocalizedString>
+ #include <KMessageBox>
+-#include <item.h>
+-#include <itemcreatejob.h>
++#include <AkonadiCore/akonadi/item.h>
++#include <AkonadiCore/akonadi/itemcreatejob.h>
+ #include <kcontacts/addressee.h>
+ 
+ #include <QPointer>
+diff --git a/src/akonadi-contacts/job/addemailaddressjob.cpp b/src/akonadi-contacts/job/addemailaddressjob.cpp
+index 76f7e65..fa545ed 100644
+--- a/src/akonadi-contacts/job/addemailaddressjob.cpp
++++ b/src/akonadi-contacts/job/addemailaddressjob.cpp
+@@ -8,18 +8,18 @@
+ #include "addemailaddressjob.h"
+ #include "akonadi/contact/selectaddressbookdialog.h"
+ 
+-#include <AgentFilterProxyModel>
+-#include <AgentInstanceCreateJob>
+-#include <AgentType>
+-#include <AgentTypeDialog>
++#include <AkonadiCore/Akonadi/AgentFilterProxyModel>
++#include <AkonadiCore/Akonadi/AgentInstanceCreateJob>
++#include <AkonadiCore/Akonadi/AgentType>
++#include <AkonadiWidgets/Akonadi/AgentTypeDialog>
+ #include <Akonadi/Contact/ContactEditorDialog>
+ #include <Akonadi/Contact/ContactSearchJob>
+-#include <Collection>
+-#include <CollectionDialog>
+-#include <CollectionFetchJob>
+-#include <CollectionFetchScope>
+-#include <Item>
+-#include <ItemCreateJob>
++#include <AkonadiCore/Akonadi/Collection>
++#include <AkonadiWidgets/Akonadi/CollectionDialog>
++#include <AkonadiCore/Akonadi/CollectionFetchJob>
++#include <AkonadiCore/Akonadi/CollectionFetchScope>
++#include <AkonadiCore/Akonadi/Item>
++#include <AkonadiCore/Akonadi/ItemCreateJob>
+ #include <KContacts/ContactGroup>
+ 
+ #include <KLocalizedString>
+diff --git a/src/akonadi-contacts/job/addemaildisplayjob.cpp b/src/akonadi-contacts/job/addemaildisplayjob.cpp
+index a99ea41..d2b0d58 100644
+--- a/src/akonadi-contacts/job/addemaildisplayjob.cpp
++++ b/src/akonadi-contacts/job/addemaildisplayjob.cpp
+@@ -7,19 +7,19 @@
+ #include "addemaildisplayjob.h"
+ #include "akonadi/contact/selectaddressbookdialog.h"
+ 
+-#include <AgentFilterProxyModel>
+-#include <AgentInstanceCreateJob>
+-#include <AgentType>
+-#include <AgentTypeDialog>
++#include <AkonadiCore/Akonadi/AgentFilterProxyModel>
++#include <AkonadiCore/Akonadi/AgentInstanceCreateJob>
++#include <AkonadiCore/Akonadi/AgentType>
++#include <AkonadiWidgets/Akonadi/AgentTypeDialog>
+ #include <Akonadi/Contact/ContactEditorDialog>
+ #include <Akonadi/Contact/ContactSearchJob>
+-#include <Collection>
+-#include <CollectionDialog>
+-#include <CollectionFetchJob>
+-#include <CollectionFetchScope>
+-#include <Item>
+-#include <ItemCreateJob>
+-#include <ItemModifyJob>
++#include <AkonadiCore/Akonadi/Collection>
++#include <AkonadiWidgets/Akonadi/CollectionDialog>
++#include <AkonadiCore/Akonadi/CollectionFetchJob>
++#include <AkonadiCore/Akonadi/CollectionFetchScope>
++#include <AkonadiCore/Akonadi/Item>
++#include <AkonadiCore/Akonadi/ItemCreateJob>
++#include <AkonadiCore/Akonadi/ItemModifyJob>
+ 
+ #include <KContacts/ContactGroup>
+ #include <KLocalizedString>
+diff --git a/src/akonadi-contacts/job/addemaildisplayjob.h b/src/akonadi-contacts/job/addemaildisplayjob.h
+index 9f7d17c..cf1c3dd 100644
+--- a/src/akonadi-contacts/job/addemaildisplayjob.h
++++ b/src/akonadi-contacts/job/addemaildisplayjob.h
+@@ -7,7 +7,7 @@
+ #pragma once
+ 
+ #include "akonadi-contact_export.h"
+-#include <AkonadiCore/Item>
++#include <AkonadiCore/Akonadi/Item>
+ #include <KJob>
+ 
+ namespace Akonadi
+diff --git a/src/akonadi-contacts/job/contactgroupexpandjob.cpp b/src/akonadi-contacts/job/contactgroupexpandjob.cpp
+index 49236ce..a72edf1 100644
+--- a/src/akonadi-contacts/job/contactgroupexpandjob.cpp
++++ b/src/akonadi-contacts/job/contactgroupexpandjob.cpp
+@@ -9,9 +9,9 @@
+ #include "contactgroupexpandjob.h"
+ #include "akonadi_contact_debug.h"
+ #include "job/contactgroupsearchjob.h"
+-#include <itemfetchjob.h>
+-#include <itemfetchscope.h>
+-#include <itemsearchjob.h>
++#include <AkonadiCore/akonadi/itemfetchjob.h>
++#include <AkonadiCore/akonadi/itemfetchscope.h>
++#include <AkonadiCore/akonadi/itemsearchjob.h>
+ 
+ using namespace Akonadi;
+ 
+diff --git a/src/akonadi-contacts/job/contactgroupsearchjob.cpp b/src/akonadi-contacts/job/contactgroupsearchjob.cpp
+index f7a5196..f578aaf 100644
+--- a/src/akonadi-contacts/job/contactgroupsearchjob.cpp
++++ b/src/akonadi-contacts/job/contactgroupsearchjob.cpp
+@@ -9,8 +9,8 @@
+ #include "contactgroupsearchjob.h"
+ 
+ #include <QStringList>
+-#include <itemfetchscope.h>
+-#include <searchquery.h>
++#include <AkonadiCore/akonadi/itemfetchscope.h>
++#include <AkonadiCore/akonadi/searchquery.h>
+ 
+ using namespace Akonadi;
+ 
+diff --git a/src/akonadi-contacts/job/contactgroupsearchjob.h b/src/akonadi-contacts/job/contactgroupsearchjob.h
+index 8bb6ded..4e09823 100644
+--- a/src/akonadi-contacts/job/contactgroupsearchjob.h
++++ b/src/akonadi-contacts/job/contactgroupsearchjob.h
+@@ -10,8 +10,8 @@
+ 
+ #include "akonadi-contact_export.h"
+ 
+-#include <item.h>
+-#include <itemsearchjob.h>
++#include <AkonadiCore/akonadi/item.h>
++#include <AkonadiCore/akonadi/itemsearchjob.h>
+ #include <kcontacts/contactgroup.h>
+ 
+ namespace Akonadi
+diff --git a/src/akonadi-contacts/job/contactsearchjob.cpp b/src/akonadi-contacts/job/contactsearchjob.cpp
+index 1012702..7978921 100644
+--- a/src/akonadi-contacts/job/contactsearchjob.cpp
++++ b/src/akonadi-contacts/job/contactsearchjob.cpp
+@@ -7,9 +7,9 @@
+ */
+ 
+ #include "contactsearchjob.h"
+-#include <searchquery.h>
++#include <AkonadiCore/akonadi/searchquery.h>
+ 
+-#include <itemfetchscope.h>
++#include <AkonadiCore/akonadi/itemfetchscope.h>
+ 
+ using namespace Akonadi;
+ 
+diff --git a/src/akonadi-contacts/job/contactsearchjob.h b/src/akonadi-contacts/job/contactsearchjob.h
+index 8510cce..d95e8ac 100644
+--- a/src/akonadi-contacts/job/contactsearchjob.h
++++ b/src/akonadi-contacts/job/contactsearchjob.h
+@@ -10,7 +10,7 @@
+ 
+ #include "akonadi-contact_export.h"
+ 
+-#include <itemsearchjob.h>
++#include <AkonadiCore/akonadi/itemsearchjob.h>
+ #include <kcontacts/addressee.h>
+ 
+ namespace Akonadi
+diff --git a/src/akonadi-contacts/job/openemailaddressjob.cpp b/src/akonadi-contacts/job/openemailaddressjob.cpp
+index 1e14132..ce33d08 100644
+--- a/src/akonadi-contacts/job/openemailaddressjob.cpp
++++ b/src/akonadi-contacts/job/openemailaddressjob.cpp
+@@ -11,9 +11,9 @@
+ #include <Akonadi/Contact/ContactEditorDialog>
+ #include <Akonadi/Contact/ContactSearchJob>
+ #include <QPointer>
+-#include <collectiondialog.h>
+-#include <item.h>
+-#include <itemcreatejob.h>
++#include <AkonadiWidgets/akonadi/collectiondialog.h>
++#include <AkonadiCore/akonadi/item.h>
++#include <AkonadiCore/akonadi/itemcreatejob.h>
+ #include <kcontacts/addressee.h>
+ 
+ using namespace Akonadi;
+diff --git a/src/akonadi-contacts/plugins/categorieseditwidget.cpp b/src/akonadi-contacts/plugins/categorieseditwidget.cpp
+index 9704029..9f48270 100644
+--- a/src/akonadi-contacts/plugins/categorieseditwidget.cpp
++++ b/src/akonadi-contacts/plugins/categorieseditwidget.cpp
+@@ -10,9 +10,9 @@
+ 
+ #include <KPluginFactory>
+ #include <QHBoxLayout>
+-#include <item.h>
+-#include <tag.h>
+-#include <tagwidget.h>
++#include <AkonadiCore/akonadi/item.h>
++#include <AkonadiCore/akonadi/tag.h>
++#include <AkonadiWidgets/akonadi/tagwidget.h>
+ 
+ K_PLUGIN_CLASS_WITH_JSON(CategoriesEditWidget, "categorieseditwidgetplugin.json")
+ 
+diff --git a/src/akonadi-contacts/selectaddressbookdialog.h b/src/akonadi-contacts/selectaddressbookdialog.h
+index 5e641ce..3cd39c7 100644
+--- a/src/akonadi-contacts/selectaddressbookdialog.h
++++ b/src/akonadi-contacts/selectaddressbookdialog.h
+@@ -6,7 +6,7 @@
+ #pragma once
+ 
+ #include "akonadi-contact_export.h"
+-#include <AkonadiWidgets/CollectionDialog>
++#include <AkonadiWidgets/Akonadi/CollectionDialog>
+ 
+ namespace Akonadi
+ {
+diff --git a/src/akonadi-contacts/standardcontactactionmanager.cpp b/src/akonadi-contacts/standardcontactactionmanager.cpp
+index b11d463..af61119 100644
+--- a/src/akonadi-contacts/standardcontactactionmanager.cpp
++++ b/src/akonadi-contacts/standardcontactactionmanager.cpp
+@@ -11,10 +11,10 @@
+ #include "contacteditordialog.h"
+ #include "contactgroupeditordialog.h"
+ 
+-#include <entitytreemodel.h>
++#include <AkonadiCore/akonadi/entitytreemodel.h>
+ #include <kcontacts/addressee.h>
+ #include <kcontacts/contactgroup.h>
+-#include <mimetypechecker.h>
++#include <AkonadiCore/akonadi/mimetypechecker.h>
+ 
+ #include <KActionCollection>
+ #include <KLocalizedString>
+diff --git a/src/akonadi-contacts/standardcontactactionmanager.h b/src/akonadi-contacts/standardcontactactionmanager.h
+index 06cdb5c..248cc47 100644
+--- a/src/akonadi-contacts/standardcontactactionmanager.h
++++ b/src/akonadi-contacts/standardcontactactionmanager.h
+@@ -10,7 +10,7 @@
+ 
+ #include "akonadi-contact_export.h"
+ 
+-#include <standardactionmanager.h>
++#include <AkonadiWidgets/akonadi/standardactionmanager.h>
+ 
+ #include <QObject>
+ 
+diff --git a/src/akonadi-contacts/standardcontactformatter.cpp b/src/akonadi-contacts/standardcontactformatter.cpp
+index 3afd5d7..796a9c1 100644
+--- a/src/akonadi-contacts/standardcontactformatter.cpp
++++ b/src/akonadi-contacts/standardcontactformatter.cpp
+@@ -10,7 +10,7 @@
+ 
+ #include <KColorScheme>
+ #include <KConfigGroup>
+-#include <item.h>
++#include <AkonadiCore/akonadi/item.h>
+ #include <kcontacts/addressee.h>
+ 
+ #include <KLocalizedString>
+diff --git a/src/akonadi-contacts/standardcontactgroupformatter.cpp b/src/akonadi-contacts/standardcontactgroupformatter.cpp
+index 04a1f3f..9211e58 100644
+--- a/src/akonadi-contacts/standardcontactgroupformatter.cpp
++++ b/src/akonadi-contacts/standardcontactgroupformatter.cpp
+@@ -10,7 +10,7 @@
+ 
+ #include "job/contactgroupexpandjob.h"
+ #include <KColorScheme>
+-#include <item.h>
++#include <AkonadiCore/akonadi/item.h>
+ #include <kcontacts/addressee.h>
+ 
+ using namespace Akonadi;
+
